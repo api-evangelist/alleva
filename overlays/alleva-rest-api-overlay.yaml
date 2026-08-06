@@ -1,0 +1,54 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for the Alleva REST API
+  version: 1.0.0
+extends: openapi/alleva-rest-api-openapi.yml
+x-generated: '2026-08-06'
+x-method: generated
+x-source: >-
+  Enhancements API Evangelist observed but Alleva does not declare in its own OpenAPI. The harvested spec
+  at openapi/_original/alleva-openapi.json is never mutated; everything we add lives here.
+actions:
+- target: $.info
+  update:
+    description: >-
+      REST API for the Alleva behavioral health operations platform (EMR/EHR, CRM, admissions, billing).
+      424 operations across 37 resource groups. Authentication is a JWT bearer token in the Authorization
+      header. Versioning is available three ways in parallel: a /v{version}/ path prefix, an api-version
+      query parameter, and an X-Version header. List endpoints use cursor pagination (Cursor + Limit)
+      with StartDate/EndDate filtering and a `fields` sparse-fieldset parameter.
+    contact:
+      name: Alleva Support
+      url: https://support.helloalleva.com/
+    x-apievangelist-slug: alleva
+    x-apievangelist-harvested: '2026-08-06'
+    x-apievangelist-source: https://api.helloalleva.com/swagger/v1/swagger.json
+- target: $
+  update:
+    servers:
+    - url: https://api.helloalleva.com
+      description: >-
+        Production host. The harvested spec declares no servers[] block at all; this URL is the host the
+        spec was itself served from and the host that answers 401 WWW-Authenticate Bearer.
+    externalDocs:
+      description: Alleva Swagger UI (publicly reachable)
+      url: https://api.helloalleva.com/swagger/index.html
+- target: $.components.securitySchemes.Bearer
+  update:
+    x-apievangelist-note: >-
+      Declared as type apiKey in the Authorization header — the Swashbuckle idiom for a bearer JWT. The
+      semantically correct declaration is type http, scheme bearer, bearerFormat JWT. Recorded here rather
+      than rewritten so the harvested spec stays verbatim.
+- target: $.info
+  update:
+    x-apievangelist-contract-gaps:
+      operation_ids: 0 of 424 operations declare an operationId
+      summaries: 0 of 424 operations declare a summary
+      descriptions: 0 of 424 operations declare a description
+      error_responses: 0 — every operation declares only a 200 response
+      examples: none in-spec
+      idempotency: no Idempotency-Key contract on 223 write operations
+      rate_limits: no RateLimit-* signaling documented
+      note: >-
+        This is unedited Swashbuckle reflection output. The single highest-leverage improvement Alleva
+        could make is adding operationIds, summaries and 4xx/5xx responses at the source.

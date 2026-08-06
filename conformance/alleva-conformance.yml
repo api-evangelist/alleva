@@ -1,0 +1,72 @@
+generated: '2026-08-06'
+method: derived
+source: >-
+  openapi/alleva-rest-api-openapi.yml, https://helloalleva.com/.well-known/oauth-authorization-server,
+  https://helloalleva.com/.well-known/oauth-protected-resource, security/alleva-trust-center.yml
+standards:
+- id: openapi-3.0
+  conforms: true
+  evidence: 'api.helloalleva.com/swagger/v1/swagger.json declares openapi: 3.0.1 with 299 paths / 424 operations'
+- id: oauth2
+  conforms: true
+  scope: MCP surface only (helloalleva.com), not the REST API
+  evidence: RFC 8414 metadata advertises authorization_code + refresh_token with S256 PKCE
+- id: rfc8414-authorization-server-metadata
+  conforms: true
+  evidence: https://helloalleva.com/.well-known/oauth-authorization-server returns 200 application/json
+- id: rfc9728-protected-resource-metadata
+  conforms: true
+  evidence: >-
+    https://helloalleva.com/.well-known/oauth-protected-resource returns 200 and the MCP endpoint answers
+    401 with WWW-Authenticate Bearer resource_metadata=...
+- id: mcp
+  conforms: true
+  evidence: hosted MCP server at https://helloalleva.com/wp-json/mcp/mcp-oauth-server (tools/list OAuth-gated)
+- id: oidc
+  conforms: false
+  evidence: /.well-known/openid-configuration returns 404 on every host
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: no application/problem+json anywhere in the spec; no 4xx/5xx response is described at all
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404 on helloalleva.com, api.helloalleva.com and support.helloalleva.com
+- id: rfc8594-sunset-header
+  conforms: false
+  evidence: no Sunset or Deprecation header documented; no deprecated operations in the spec
+- id: rfc9615-api-catalog
+  conforms: false
+  evidence: /.well-known/api-catalog returns 404
+- id: a2a-agent-card
+  conforms: false
+  evidence: /.well-known/agent-card.json and /.well-known/agent.json return 404 (or 401 on the API host)
+- id: asyncapi
+  conforms: false
+  evidence: no event, webhook or streaming surface found in the spec or on the public site
+- id: fhir-r4
+  conforms: false
+  evidence: >-
+    No FHIR resource shapes, no /fhir base path, no CapabilityStatement. The 135 schemas are Alleva's own
+    domain model (Client, Bed, TreatmentPlan, AdvancedForm), not FHIR resources — notable for a certified
+    health IT platform where third parties assume a FHIR facade.
+- id: hl7-v2
+  conforms: false
+  evidence: no HL7 v2 interface documented on the public surface
+- id: hipaa
+  conforms: true
+  kind: regulatory
+  evidence: >-
+    asserted by Alleva (press release 2025-11-26) and surfaced via the Vanta trust center; see
+    security/alleva-trust-center.yml
+- id: soc2-type-ii
+  conforms: true
+  kind: attestation
+  evidence: asserted by Alleva (press release 2025-11-26); trust center at https://trust.helloalleva.com/
+- id: onc-health-it-certification
+  conforms: true
+  kind: certification
+  evidence: asserted by Alleva (press release 2025-11-26)
+notes: >-
+  The compliance posture (ONC / SOC 2 Type II / HIPAA) is materially stronger than the API-contract
+  posture. The contract itself carries no error semantics, no idempotency, no rate-limit signaling, no
+  operationIds, no summaries and no descriptions — it is unedited Swashbuckle reflection output.

@@ -1,0 +1,61 @@
+generated: '2026-08-06'
+method: probed
+source: >-
+  https://status.helloalleva.com/api/v2/summary.json + openapi/alleva-rest-api-openapi.yml
+versioning:
+  scheme: path + query + header (see conventions/alleva-conventions.yml)
+  current: v1
+  docs: null
+  docs_note: no published versioning policy
+deprecation:
+  policy_url: null
+  sunset_header: false
+  deprecation_header: false
+  note: >-
+    No deprecation or sunset policy is published, and no operation in the 424-operation OpenAPI carries
+    `deprecated: true`. The unversioned/{version}-prefixed path duplication suggests an in-flight
+    versioning migration with no stated retirement path for the unversioned routes.
+sla:
+  url: null
+  uptime_target: null
+  note: no published SLA or uptime commitment
+status_page: https://status.helloalleva.com/
+status_page_provider: Atlassian Statuspage
+status_page_id: ghhhnvrss9kh
+status_page_components:
+- EMR Core
+- Forms 3.0
+- E-Prescribe
+- Core Functions
+- Rest API
+- Client List
+- Features
+- Insights
+- Integrations
+- CRM +
+- Mobile App
+- Scheduler
+- System Settings
+- Alleva Live Chat
+- Family Portal
+- User Management
+- Zoom Video (Inbound/Outbound)
+- Zoom Zoom Meetings
+- Billing
+- Echo
+status_page_note: >-
+  "Rest API" and "Integrations" are tracked as first-class status components, so the API is an operated
+  product surface with its own incident history — a meaningfully stronger signal than a marketing claim
+  of "an open API".
+changelog: null
+changelog_note: no dated API changelog or release-notes page found
+roadmap: null
+deprecated_operations: []
+x-evidence:
+  fetched: '2026-08-06'
+  probes:
+  - url: https://status.helloalleva.com/api/v2/summary.json
+    http_status: 200
+    content_type: application/json
+  - url: https://helloalleva.com/pricing
+    http_status: 404

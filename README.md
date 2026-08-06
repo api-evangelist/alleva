@@ -42,5 +42,15 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Alleva is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Alleva is a behavioral health operations platform — an EMR/EHR, CRM, admissions, scheduling, clinical
+documentation and revenue-cycle system built for substance use disorder and mental health treatment
+providers. Alleva publishes a public OpenAPI 3.0.1 description of its REST API (424 operations across 37
+resource groups) and a Swagger UI at `api.helloalleva.com`, plus an OAuth-protected MCP server on its
+marketing host. It holds ONC Certification and SOC 2 Type II attestation.
+
+- Website: https://helloalleva.com/
+- API reference (Swagger UI): https://api.helloalleva.com/swagger/index.html
+- OpenAPI: https://api.helloalleva.com/swagger/v1/swagger.json
+- Status page: https://status.helloalleva.com/
+- Trust center: https://trust.helloalleva.com/
+- Support: https://support.helloalleva.com/

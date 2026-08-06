@@ -1,0 +1,34 @@
+generated: '2026-08-06'
+method: searched
+probe: true
+url: https://trust.helloalleva.com/
+provider: Vanta
+title: Alleva Trust Center
+certifications:
+- SOC 2 Type II
+- HIPAA
+- ONC Certification (ONC Health IT Certification Program)
+certification_source: >-
+  Alleva press release, 26 November 2025 — "Alleva Achieves ONC Certification, SOC 2, and HIPAA
+  Compliance for Its Behavioral Health Platform". The certifications are asserted by Alleva in that
+  release and the release directs readers to the trust center below. The trust center page itself is a
+  JS-rendered Vanta SPA whose report data (/api/trust-report) is not readable anonymously, so the
+  certification list could not be re-verified from the trust center HTML.
+evidence:
+- source: https://trust.helloalleva.com/
+  http_status: 200
+  keywords: [Alleva Trust Center, Vanta]
+  note: >-
+    verified real, not a wildcard — the page title is "Alleva Trust Center" and it loads the Vanta
+    trust-report bundle from assets.vanta.com; a control probe of zzznotreal.helloalleva.com failed DNS
+- source: https://www.prnewswire.com/news-releases/alleva-achieves-onc-certification-soc-2-and-hipaa-compliance-for-its-behavioral-health-platform-302626242.html
+  kind: press-release
+  date: '2025-11-26'
+limitations:
+  trust_report_readable: false
+  trust_report_note: >-
+    https://trust.helloalleva.com/api/trust-report returns the SPA HTML shell, and
+    https://api.vanta.com/v1/public/trust-page/helloalleva returns 401 — no machine-readable attestation
+    inventory, audit date, or report-request flow could be captured.
+x-evidence:
+  fetched: '2026-08-06'

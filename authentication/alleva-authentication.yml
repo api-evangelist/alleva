@@ -1,0 +1,61 @@
+generated: '2026-08-06'
+method: probed
+source: openapi/alleva-rest-api-openapi.yml + https://helloalleva.com/.well-known/oauth-authorization-server
+docs: null
+docs_note: >-
+  Alleva publishes no human-readable authentication guide. Everything below was read from the live
+  OpenAPI description and the live RFC 8414/RFC 9728 discovery documents.
+summary:
+  types: [apiKey, oauth2]
+  api_key_in: [header]
+  oauth2_flows: [authorizationCode]
+  surfaces: 2
+  note: >-
+    Two independent auth models on two different hosts. The EMR REST API on api.helloalleva.com takes a
+    JWT bearer token pasted into the Authorization header (declared in OpenAPI as an apiKey scheme, which
+    is the Swashbuckle idiom for bearer JWT — not a query/cookie key). The MCP server on the
+    helloalleva.com WordPress host uses real OAuth 2.0 authorization_code + PKCE. There is no published
+    token-issuance endpoint, credential-provisioning flow, or self-serve key process for the REST API.
+schemes:
+- name: Bearer
+  type: apiKey
+  in: header
+  parameter: Authorization
+  scheme_effective: bearer
+  bearer_format: JWT
+  applies_to: https://api.helloalleva.com
+  applied_globally: true
+  description: "JWT Authorization header using the Bearer scheme. Enter Bearer [space] and then your token."
+  sources:
+  - openapi/alleva-rest-api-openapi.yml
+- name: Alleva MCP OAuth 2.0
+  type: oauth2
+  applies_to: https://helloalleva.com/wp-json/mcp/mcp-oauth-server
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://helloalleva.com/oauth/authorize
+    tokenUrl: https://helloalleva.com/oauth/token
+    revocationUrl: https://helloalleva.com/oauth/revoke
+    scopes: [mcp]
+    code_challenge_methods: [S256]
+  dynamic_client_registration: client_id_metadata_document
+  sources:
+  - https://helloalleva.com/.well-known/oauth-authorization-server
+  - https://helloalleva.com/.well-known/oauth-protected-resource
+token_acquisition:
+  rest_api: undocumented
+  rest_api_note: >-
+    No public token endpoint, login flow, or credential-request page was found for api.helloalleva.com.
+    Every path on that host, including /.well-known/*, returns 401 with WWW-Authenticate: Bearer. Access
+    appears to be provisioned to customers out of band.
+  mcp: https://helloalleva.com/oauth/token
+x-evidence:
+  fetched: '2026-08-06'
+  probes:
+  - url: https://api.helloalleva.com/swagger/v1/swagger.json
+    http_status: 200
+  - url: https://api.helloalleva.com/
+    http_status: 401
+    www_authenticate: Bearer
+  - url: https://helloalleva.com/.well-known/oauth-authorization-server
+    http_status: 200

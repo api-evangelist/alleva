@@ -1,0 +1,92 @@
+generated: '2026-08-06'
+method: derived
+source: openapi/alleva-rest-api-openapi.yml (424 operations, 299 paths, 135 schemas)
+docs: null
+docs_note: >-
+  Alleva publishes no written API guide — no conventions page, no getting-started, no error reference.
+  Everything below is derived from the live OpenAPI description and observed HTTP behaviour, and is
+  explicitly marked where the answer is "not present".
+authentication:
+  style: bearer-jwt
+  header: Authorization
+  value: 'Bearer <jwt>'
+  applied: globally (root-level security requirement on every operation)
+  see: authentication/alleva-authentication.yml
+versioning:
+  scheme: triple — path prefix, query parameter, and header, in parallel
+  current: v1
+  mechanisms:
+  - kind: path
+    form: /v{version}/<resource>
+    coverage: 211 of 424 operations have a /v{version}/ twin of an unversioned path
+  - kind: query
+    parameter: api-version
+    coverage: 424 of 424 operations
+  - kind: header
+    parameter: X-Version
+    coverage: 424 of 424 operations
+  note: >-
+    Every resource is published twice — once unversioned (/appointments) and once version-prefixed
+    (/v{version}/appointments) — and both accept api-version and X-Version. The provider documents no
+    precedence rule between the three.
+pagination:
+  style: cursor
+  parameters:
+    cursor: Cursor
+    limit: Limit
+  additional_filters: [StartDate, EndDate]
+  coverage: 60 operations (the list endpoints)
+  response_fields: undocumented
+  response_note: >-
+    The spec declares only a 200 response with no described envelope on most collection endpoints, so the
+    name of the next-cursor field in the response body could not be determined from the contract.
+sparse_fieldsets:
+  supported: true
+  parameter: fields
+  location: query
+  coverage: 60 operations
+  note: field-selection parameter present alongside Cursor/Limit on the list endpoints
+field_expansion:
+  supported: false
+  note: no expand/include parameter present in the contract
+metadata:
+  supported: false
+  note: no generic metadata bag on any schema
+idempotency:
+  supported: false
+  evidence: >-
+    No Idempotency-Key header, no idempotency parameter, and no idempotency wording appears anywhere in
+    the 942KB OpenAPI description. 126 POST, 50 PATCH, 9 PUT and 38 DELETE operations are exposed with no
+    documented replay-safety contract. No `Idempotency` pointer is emitted in apis.yml because the
+    provider has no idempotency contract to point at.
+request_tracing:
+  supported: false
+  note: no X-Request-Id / correlation-id header in the contract or in observed responses
+error_envelope:
+  documented: false
+  evidence: >-
+    All 424 operations declare exactly one response — 200 — and nothing else. No 4xx or 5xx response,
+    schema, or content type is described anywhere in the spec. Observed live behaviour on the API host is
+    a bare 401 with Content-Length: 0 and a WWW-Authenticate: Bearer header (no body). The MCP surface on
+    the marketing host does return a structured JSON error
+    ({"code":"mcp_unauthorized","message":"...","data":{"status":401}}), but that is WordPress, not the API.
+  rfc9457: false
+rate_limit_signaling:
+  documented: false
+  headers_observed: []
+  note: no RateLimit-* / X-RateLimit-* headers in the contract or on observed responses
+content_type:
+  request: application/json (plus text/json and application/*+json accepted)
+  response: application/json
+http_methods:
+  get: 201
+  post: 126
+  patch: 50
+  delete: 38
+  put: 9
+cross_links:
+  authentication: authentication/alleva-authentication.yml
+  scopes: scopes/alleva-scopes.yml
+  lifecycle: lifecycle/alleva-lifecycle.yml
+  data_model: data-model/alleva-data-model.yml
+  conformance: conformance/alleva-conformance.yml

@@ -1,0 +1,45 @@
+generated: '2026-08-06'
+method: searched
+status: published
+source: https://helloalleva.com/.well-known/oauth-protected-resource
+server:
+  name: alleva-wordpress-mcp
+  transport: http
+  url: https://helloalleva.com/wp-json/mcp/mcp-oauth-server
+  allow: [POST, GET, DELETE]
+  platform: WordPress REST (wp-json) behind WP Engine + Cloudflare
+authentication:
+  type: oauth2
+  scheme: Bearer
+  authorization_server: https://helloalleva.com
+  resource_metadata: https://helloalleva.com/.well-known/oauth-protected-resource
+  authorization_endpoint: https://helloalleva.com/oauth/authorize
+  token_endpoint: https://helloalleva.com/oauth/token
+  revocation_endpoint: https://helloalleva.com/oauth/revoke
+  grant_types: [authorization_code, refresh_token]
+  pkce: S256
+  dynamic_client_registration: client_id_metadata_document
+  scopes: [mcp]
+tools: []
+tools_note: >-
+  tools/list is auth-gated. An anonymous JSON-RPC POST of {"jsonrpc":"2.0","id":1,"method":"tools/list"}
+  returned HTTP 401 {"code":"mcp_unauthorized","message":"MCP authentication required."} with a proper
+  RFC 9728 WWW-Authenticate challenge. Real input schemas require an authenticated introspection pass;
+  no tool list is asserted here because none was observed.
+surface_note: >-
+  IMPORTANT — this MCP server sits on the helloalleva.com marketing/WordPress host, NOT on the EMR
+  product API at api.helloalleva.com. It is a site-content MCP surface; it does not front the 424-operation
+  Alleva REST API. See mcp/alleva-tool-crosswalk.yml for the recorded divergence.
+x-evidence:
+  fetched: '2026-08-06'
+  probes:
+  - url: https://helloalleva.com/.well-known/oauth-protected-resource
+    http_status: 200
+    content_type: application/json
+  - url: https://helloalleva.com/.well-known/oauth-authorization-server
+    http_status: 200
+    content_type: application/json
+  - url: https://helloalleva.com/wp-json/mcp/mcp-oauth-server
+    method: POST tools/list
+    http_status: 401
+    body: '{"code":"mcp_unauthorized","message":"MCP authentication required.","data":{"status":401}}'

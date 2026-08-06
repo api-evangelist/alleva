@@ -1,0 +1,110 @@
+generated: '2026-08-06'
+method: derived
+source: openapi/alleva-rest-api-openapi.yml + mcp/alleva-mcp.yml
+note: 'Recorded as a SURFACE DIVERGENCE, not a mapping. Alleva publishes an MCP server and an OpenAPI, but they
+  front different systems: the MCP server runs on the helloalleva.com WordPress marketing host (/wp-json/mcp/mcp-oauth-server)
+  while the 424-operation REST API runs on api.helloalleva.com. No MCP tool could be bound to a REST operation because
+  tools/list is OAuth-gated (401) and no tool list is published anywhere. Nothing is mapped by guess.'
+surfaces:
+  openapi:
+    file: openapi/alleva-rest-api-openapi.yml
+    host: https://api.helloalleva.com
+    gated: true
+    gate: every operation requires a JWT bearer token; the OpenAPI description itself is public at /swagger/v1/swagger.json
+    operations: 424
+    operation_ids: 0
+    operation_id_note: the spec is raw Swashbuckle output and declares no operationId on any operation; crosswalk
+      rows would have to key on METHOD + PATH
+  graphql: null
+  mcp:
+    url: https://helloalleva.com/wp-json/mcp/mcp-oauth-server
+    gated: true
+    gate: tools/list returns 401 mcp_unauthorized; OAuth 2.0 authorization_code + PKCE, scope "mcp"
+    tools_observed: 0
+crosswalk: []
+mcp_only: []
+mcp_only_note: unknown — the tool list is auth-gated and unpublished; asserting tools here would be fabrication
+rest_only:
+- group: AdvancedForm
+  operations: 10
+- group: AdvancedFormDataBackup
+  operations: 2
+- group: AdvancedFormElement
+  operations: 2
+- group: AdvancedFormInstance
+  operations: 4
+- group: Appointments
+  operations: 4
+- group: Bed
+  operations: 10
+- group: BedOccupancy
+  operations: 36
+- group: BedReservation
+  operations: 32
+- group: ClientDevice
+  operations: 6
+- group: Clients
+  operations: 50
+- group: DataFacet
+  operations: 2
+- group: DataValue
+  operations: 4
+- group: DischargePlan
+  operations: 4
+- group: Document
+  operations: 12
+- group: Facilities
+  operations: 8
+- group: Homework
+  operations: 10
+- group: IncidentReport
+  operations: 4
+- group: Intake
+  operations: 10
+- group: LevelOfCare
+  operations: 10
+- group: ManageIntake
+  operations: 18
+- group: MasterCodes
+  operations: 2
+- group: Medications
+  operations: 4
+- group: Organizations
+  operations: 6
+- group: Pronoun
+  operations: 10
+- group: Prospects
+  operations: 16
+- group: ReferralCompanies
+  operations: 24
+- group: ReferralContacts
+  operations: 24
+- group: Rehab
+  operations: 8
+- group: Room
+  operations: 10
+- group: Sessions
+  operations: 2
+- group: ShiftRounds
+  operations: 10
+- group: Snapshot
+  operations: 8
+- group: Survey
+  operations: 6
+- group: TreatmentPlans
+  operations: 10
+- group: TreatmentReviews
+  operations: 4
+- group: UserLicense
+  operations: 10
+- group: Users
+  operations: 32
+rest_only_note: 'every REST operation is rest_only by observation: no MCP tool is known to back any of them'
+coverage:
+  tools_named: 0
+  tools_bound: 0
+  mcp_only: null
+  rest_operations: 424
+  rest_operations_with_tool: 0
+  confidence: high that the two surfaces are disjoint (different hosts, different auth models); zero tool-level
+    mapping possible

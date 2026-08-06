@@ -1,23 +1,129 @@
 aid: alleva
 name: Alleva
-description: 'Alleva is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Alleva is a behavioral health operations platform — an EMR/EHR, CRM, admissions, scheduling, clinical
+  documentation, and revenue-cycle system purpose-built for substance use disorder and mental health
+  treatment providers across the residential, PHP, IOP, and outpatient continuum. The platform covers
+  client intake and prospect management, bed and facility census, treatment plans and reviews, discharge
+  planning, medications and e-prescribe, group and individual sessions, shift rounds, incident reports,
+  homework and surveys, and configurable advanced forms, with AI-assisted documentation (Echo ambient
+  scribe, Alleva Intelligence) and a built-in GRC module (InCheck). A public ASP.NET REST API at
+  api.helloalleva.com exposes 424 operations across 37 resource groups under JWT bearer authentication,
+  with a publicly reachable Swagger UI and machine-readable OpenAPI 3.0.1 description. Alleva holds ONC
+  Certification and SOC 2 Type II attestation and publishes a Vanta trust center and an Atlassian status
+  page that tracks the REST API as a first-class component.
+image: https://helloalleva.com/wp-content/uploads/2026/02/int_4.png
 url: https://raw.githubusercontent.com/api-evangelist/alleva/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
-specificationVersion: '0.20'
+specificationVersion: '0.21'
 created: '2026-08-06'
 modified: '2026-08-06'
 tags:
-- Company
-apis: []
+- behavioral-health
+- electronic-health-records
+- emr
+- ehr
+- substance-use-disorder
+- mental-health
+- healthcare
+- treatment-centers
+- clinical-documentation
+- revenue-cycle-management
+- patient-intake
+- healthcare-compliance
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: Alleva REST API
+  description: >-
+    The Alleva REST API ("Alleva Rest Api", OpenAPI 3.0.1) exposes 424 operations across 37 resource
+    groups covering clients, prospects and intake, appointments and sessions, beds/rooms/occupancy and
+    reservations, treatment plans and reviews, discharge plans, medications, documents, advanced forms
+    and form instances, homework, surveys, shift rounds, incident reports, facilities, organizations,
+    users and user licenses, referral companies and contacts, level of care, master codes, and data
+    facets/values. Authentication is a JWT bearer token supplied in the Authorization header. The API is
+    versioned three ways in parallel — an api-version query parameter, an X-Version header, and a
+    /v{version}/ path prefix — and list endpoints use cursor pagination (Cursor + Limit) with optional
+    StartDate/EndDate filtering and a sparse-fieldset `fields` parameter.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - behavioral-health
+  - electronic-health-records
+  - emr
+  - healthcare
+  - clinical-documentation
+  - patient-intake
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-rest-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: Overlay
+    url: overlays/alleva-rest-api-overlay.yaml
+  - type: MCPServer
+    url: mcp/alleva-mcp.yml
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
 common:
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://helloalleva.com/
+- type: Documentation
+  url: https://api.helloalleva.com/swagger/index.html
+- type: APIReference
+  url: https://api.helloalleva.com/swagger/index.html
+- type: Support
+  url: https://support.helloalleva.com/
+- type: HelpCenter
+  url: https://helloalleva.com/help-center/
+- type: Blog
+  url: https://helloalleva.com/blog/
+- type: BlogRSS
+  url: https://helloalleva.com/feed/
+- type: TermsOfService
+  url: https://helloalleva.com/msa/
+- type: PrivacyPolicy
+  url: https://helloalleva.com/privacy-policy/
+- type: StatusPage
+  url: https://status.helloalleva.com/
+- type: TrustCenter
+  url: security/alleva-trust-center.yml
+- type: Compliance
+  url: https://trust.helloalleva.com/
+- type: LLMsTxt
+  url: llms/alleva-llms.txt
+- type: Authentication
+  url: authentication/alleva-authentication.yml
+- type: OAuthScopes
+  url: scopes/alleva-scopes.yml
+- type: MCPServer
+  url: mcp/alleva-mcp.yml
+- type: Conventions
+  url: conventions/alleva-conventions.yml
+- type: Conformance
+  url: conformance/alleva-conformance.yml
+- type: Lifecycle
+  url: lifecycle/alleva-lifecycle.yml
+- type: DataModel
+  url: data-model/alleva-data-model.yml
+- type: WellKnown
+  url: well-known/alleva-well-known.yml
+- type: DomainSecurity
+  url: security/alleva-domain-security.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Overlay
+  url: overlays/alleva-rest-api-overlay.yaml
+- type: ToolCrosswalk
+  url: mcp/alleva-tool-crosswalk.yml
+x-enrichment:
+  date: '2026-08-06'
+  status: enriched
+  artifacts_added: 22
+  pass: local-v1

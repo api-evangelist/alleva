@@ -1,0 +1,29 @@
+generated: '2026-08-06'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: helloalleva.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep 30 00:13:09 2026 GMT
+  hsts: true
+  hsts_max_age: 63072000
+- host: api.helloalleva.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec  9 23:59:59 2026 GMT
+  hsts: true
+  hsts_max_age: 2592000
+  hsts_note: >-
+    The automated probe recorded null because the host answers 401 to an unauthenticated HEAD on /. A
+    manual HEAD of https://api.helloalleva.com/health (HTTP 200) returned
+    "Strict-Transport-Security: max-age=2592000" — 30 days, well below the 1-year preload threshold and
+    much shorter than the 63072000 the marketing host sets.
+  server: Microsoft-IIS/10.0 (ASP.NET)
+domains:
+- domain: helloalleva.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none

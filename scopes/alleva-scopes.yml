@@ -1,0 +1,41 @@
+generated: '2026-08-06'
+method: probed
+source: https://helloalleva.com/.well-known/oauth-authorization-server
+docs: null
+docs_note: >-
+  Alleva publishes no human-readable scopes/permissions reference. The single scope below was read from
+  the RFC 8414 authorization-server metadata document, not from documentation.
+scope_surface: >-
+  The OAuth 2.0 scope surface belongs to the MCP server on the helloalleva.com WordPress host — NOT to
+  the Alleva REST API at api.helloalleva.com, which uses a JWT bearer token in the Authorization header
+  and declares no oauth2 security scheme and no scopes in its OpenAPI.
+schemes:
+- name: Alleva MCP OAuth 2.0
+  source: https://helloalleva.com/.well-known/oauth-authorization-server
+  issuer: https://helloalleva.com
+  protected_resource: https://helloalleva.com/wp-json/mcp/mcp-oauth-server
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://helloalleva.com/oauth/authorize
+    tokenUrl: https://helloalleva.com/oauth/token
+    revocationUrl: https://helloalleva.com/oauth/revoke
+    code_challenge_methods: [S256]
+    grant_types: [authorization_code, refresh_token]
+    token_endpoint_auth_methods: [none]
+    dynamic_client_registration: client_id_metadata_document
+scopes:
+- scope: mcp
+  description: >-
+    Access to the Alleva MCP server resource. This is the only scope advertised in scopes_supported; the
+    provider publishes no per-capability scope breakdown.
+  flows: [authorizationCode]
+  sources: [https://helloalleva.com/.well-known/oauth-authorization-server]
+x-evidence:
+  fetched: '2026-08-06'
+  url: https://helloalleva.com/.well-known/oauth-authorization-server
+  http_status: 200
+  content_type: application/json
+  control_probe:
+    url: https://helloalleva.com/.well-known/zzz-not-real-abc
+    http_status: 404
+    note: control returned an HTML 404 shell, confirming the 200 above is a real document

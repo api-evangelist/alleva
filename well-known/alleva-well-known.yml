@@ -1,0 +1,64 @@
+generated: '2026-08-06'
+method: probed
+source: live probes of every apis.yml host
+note: >-
+  helloalleva.com serves a WordPress 404 HTML shell for unknown /.well-known/* paths (control probe
+  /.well-known/zzz-not-real-abc returned an HTML 404), so the two 200s below are genuine documents and
+  not a catch-all. api.helloalleva.com answers 401 for every path including /.well-known/*, so its
+  discovery surface could not be read anonymously.
+hosts:
+- host: https://helloalleva.com
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: application/json
+    file: alleva-oauth-authorization-server.json
+    spec: RFC 8414
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    content_type: application/json
+    file: alleva-oauth-protected-resource.json
+    spec: RFC 9728
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://api.helloalleva.com
+  note: every path returns 401 Unauthorized with WWW-Authenticate Bearer
+  documents:
+  - path: /.well-known/security.txt
+    status: 401
+  - path: /.well-known/openid-configuration
+    status: 401
+  - path: /.well-known/oauth-authorization-server
+    status: 401
+  - path: /.well-known/oauth-protected-resource
+    status: 401
+  - path: /.well-known/api-catalog
+    status: 401
+  - path: /.well-known/ai-plugin.json
+    status: 401
+  - path: /.well-known/agent-card.json
+    status: 401
+  - path: /.well-known/agent.json
+    status: 401
+- host: https://support.helloalleva.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+security_txt: null
+security_txt_note: no /.well-known/security.txt published on any Alleva host

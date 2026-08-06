@@ -1,0 +1,932 @@
+generated: '2026-08-06'
+method: derived
+source: openapi/alleva-rest-api-openapi.yml
+note: 'Entity graph derived mechanically from OpenAPI components.schemas: $ref properties become has_one/has_many,
+  and *Id / *Ids scalar fields that name another schema become belongs_to/has_many. Alleva publishes no object reference,
+  so no id-prefix or domain data could be added.'
+summary:
+  entities: 135
+  entities_with_relationships: 70
+  relationships: 181
+  root_resources:
+  - AdvancedForm
+  - AdvancedFormDataBackup
+  - AdvancedFormElement
+  - AdvancedFormInstance
+  - Appointments
+  - Bed
+  - BedOccupancy
+  - BedReservation
+  - ClientDevice
+  - Clients
+  - DataFacet
+  - DataValue
+  - DischargePlan
+  - Document
+  - Facilities
+  - Homework
+  - IncidentReport
+  - Intake
+  - LevelOfCare
+  - ManageIntake
+  - MasterCodes
+  - Medications
+  - Organizations
+  - Pronoun
+  - Prospects
+  - ReferralCompanies
+  - ReferralContacts
+  - Rehab
+  - Room
+  - Sessions
+  - ShiftRounds
+  - Snapshot
+  - Survey
+  - TreatmentPlans
+  - TreatmentReviews
+  - UserLicense
+  - Users
+entities:
+- entity: ASAMModel
+  properties: 41
+  relationships:
+  - to: Client
+    kind: belongs_to
+    via: clientID
+- entity: Address
+  properties: 7
+- entity: AdmissionScreening
+  properties: 60
+- entity: AdvancedForm
+  properties: 11
+  relationships:
+  - to: Facility
+    kind: belongs_to
+    via: facilityId
+- entity: AdvancedFormDataBackup
+  properties: 6
+  relationships:
+  - to: AdvancedForm
+    kind: belongs_to
+    via: advancedFormId
+  - to: AdvancedFormInstance
+    kind: belongs_to
+    via: advancedFormInstanceId
+- entity: AdvancedFormElement
+  properties: 13
+  relationships:
+  - to: AdvancedForm
+    kind: belongs_to
+    via: advancedFormId
+  - to: DataFacet
+    kind: belongs_to
+    via: dataFacetId
+- entity: AdvancedFormInstance
+  properties: 14
+  relationships:
+  - to: AdvancedForm
+    kind: belongs_to
+    via: advancedFormId
+  - to: CustomFormSourceType
+    kind: has_one
+    via: sourceTypeId
+  - to: UserType
+    kind: has_one
+    via: createdByUserType
+  - to: UserType
+    kind: has_one
+    via: updatedByUserType
+- entity: AdvancedFormSaveRequest
+  properties: 1
+  relationships:
+  - to: DataValueRequest
+    kind: has_many
+    via: dataValues
+- entity: AlertReadBy
+  properties: 2
+  relationships:
+  - to: User
+    kind: has_one
+    via: user
+- entity: Appointment
+  properties: 22
+  relationships:
+  - to: ResourceLink
+    kind: has_many
+    via: clients
+  - to: ResourceLink
+    kind: has_one
+    via: staff
+  - to: Facility
+    kind: has_many
+    via: facilities
+  - to: Transport
+    kind: has_one
+    via: transport
+  - to: ZoomMeetingDetails
+    kind: has_one
+    via: meeting
+- entity: AssessmentVitals
+  properties: 6
+- entity: AutofillRequest
+  properties: 3
+  relationships:
+  - to: AdvancedForm
+    kind: belongs_to
+    via: advancedFormId
+  - to: Facility
+    kind: has_many
+    via: facilityIds
+- entity: Bed
+  properties: 10
+  relationships:
+  - to: Room
+    kind: has_one
+    via: room
+- entity: BedOccupancy
+  properties: 9
+  relationships:
+  - to: Occupant
+    kind: has_one
+    via: client
+  - to: Bed
+    kind: has_one
+    via: bed
+- entity: BedReservation
+  properties: 7
+  relationships:
+  - to: Occupant
+    kind: has_one
+    via: client
+  - to: Bed
+    kind: has_one
+    via: bed
+- entity: BehavioralDefinition
+  properties: 2
+- entity: BillingCodesDataModel
+  properties: 14
+- entity: BillingIntake
+  properties: 0
+- entity: BulkProspect
+  properties: 6
+  relationships:
+  - to: Prospect
+    kind: has_one
+    via: prospect
+  - to: ClientInsurances
+    kind: has_many
+    via: insurance
+  - to: Document
+    kind: has_one
+    via: documents
+  - to: AdmissionScreening
+    kind: has_one
+    via: admissionScreening
+  - to: FaceToFace
+    kind: has_one
+    via: faceToFace
+  - to: BillingIntake
+    kind: has_one
+    via: billingIntake
+- entity: BulkProspectReturn
+  properties: 3
+  relationships:
+  - to: Prospect
+    kind: belongs_to
+    via: prospectId
+  - to: BulkProspectReturnObject
+    kind: has_one
+    via: bulkProspect
+- entity: BulkProspectReturnObject
+  properties: 5
+  relationships:
+  - to: InsuranceReturn
+    kind: has_many
+    via: insurance
+- entity: Ciwa
+  properties: 18
+- entity: Client
+  properties: 34
+  relationships:
+  - to: ClientName
+    kind: has_one
+    via: name
+  - to: Address
+    kind: has_one
+    via: address
+  - to: Phone
+    kind: has_one
+    via: phone
+  - to: Client
+    kind: belongs_to
+    via: clientId
+  - to: ClientContact
+    kind: has_one
+    via: contact
+  - to: ClientReferralContact
+    kind: has_one
+    via: referral
+  - to: Facility
+    kind: belongs_to
+    via: facilityId
+  - to: ClientImageUrl
+    kind: has_one
+    via: profileImage
+  - to: ClientOccupation
+    kind: has_one
+    via: occupation
+  - to: ResourceLink
+    kind: has_one
+    via: primaryClinician
+  - to: Room
+    kind: has_one
+    via: room
+- entity: ClientAssessmentsCiwa
+  properties: 4
+  relationships:
+  - to: Ciwa
+    kind: has_one
+    via: ciwa
+  - to: Reviewer
+    kind: has_many
+    via: reviewers
+  - to: AssessmentVitals
+    kind: has_one
+    via: vitals
+- entity: ClientAssessmentsCows
+  properties: 4
+  relationships:
+  - to: Cows
+    kind: has_one
+    via: cows
+  - to: Reviewer
+    kind: has_many
+    via: reviewers
+  - to: AssessmentVitals
+    kind: has_one
+    via: vitals
+- entity: ClientContact
+  properties: 8
+- entity: ClientDevice
+  properties: 5
+  relationships:
+  - to: Client
+    kind: belongs_to
+    via: clientId
+- entity: ClientDiagnosis
+  properties: 21
+  relationships:
+  - to: Client
+    kind: belongs_to
+    via: clientId
+  - to: Problem
+    kind: belongs_to
+    via: problemId
+  - to: User
+    kind: has_one
+    via: createdBy
+  - to: DiagnosisPriority
+    kind: has_one
+    via: priority
+- entity: ClientDocument
+  properties: 13
+  relationships:
+  - to: ClientDocument
+    kind: belongs_to
+    via: clientDocumentId
+  - to: DocumentData
+    kind: has_many
+    via: uploadedDocuments
+- entity: ClientHistory
+  properties: 5
+  relationships:
+  - to: Client
+    kind: has_one
+    via: client
+- entity: ClientImageUrl
+  properties: 3
+- entity: ClientInsurances
+  properties: 28
+  relationships:
+  - to: Document
+    kind: has_one
+    via: documents
+  - to: ExternalData
+    kind: has_one
+    via: externalId
+- entity: ClientList
+  properties: 17
+  relationships:
+  - to: Client
+    kind: belongs_to
+    via: clientId
+- entity: ClientLogoData
+  properties: 2
+- entity: ClientName
+  properties: 8
+- entity: ClientOccupation
+  properties: 4
+- entity: ClientPronoun
+  properties: 2
+  relationships:
+  - to: Client
+    kind: has_one
+    via: client
+  - to: Pronoun
+    kind: has_many
+    via: pronoun
+- entity: ClientReferralContact
+  properties: 5
+- entity: ClientShiftRounds
+  properties: 4
+  relationships:
+  - to: Client
+    kind: has_one
+    via: client
+  - to: ShiftRoundLocation
+    kind: has_one
+    via: location
+- entity: ClientUrgentAlert
+  properties: 7
+  relationships:
+  - to: ClientUrgentAlert
+    kind: belongs_to
+    via: clientUrgentAlertId
+  - to: User
+    kind: has_one
+    via: createdBy
+  - to: AlertReadBy
+    kind: has_many
+    via: readBy
+- entity: Contact
+  properties: 14
+  relationships:
+  - to: Facility
+    kind: belongs_to
+    via: facilityId
+  - to: Facility
+    kind: has_one
+    via: facility
+  - to: Client
+    kind: has_one
+    via: client
+  - to: Roi
+    kind: has_many
+    via: roi
+- entity: CopyParameters
+  properties: 1
+- entity: Cows
+  properties: 19
+- entity: CreateOperationResult
+  properties: 0
+- entity: CreateResult
+  properties: 4
+  relationships:
+  - to: CreateOperationResult
+    kind: has_one
+    via: operationResult
+- entity: CustomFormSourceType
+  properties: 0
+- entity: DataFacet
+  properties: 21
+  relationships:
+  - to: DataKind
+    kind: has_one
+    via: dataKind
+  - to: DataScopeKind
+    kind: has_one
+    via: scopeKind
+- entity: DataKind
+  properties: 0
+- entity: DataScopeKind
+  properties: 0
+- entity: DataValueRequest
+  properties: 13
+  relationships:
+  - to: AdvancedFormInstance
+    kind: belongs_to
+    via: advancedFormInstanceId
+  - to: DataFacet
+    kind: belongs_to
+    via: dataFacetId
+- entity: DataValueWithKind
+  properties: 21
+  relationships:
+  - to: AdvancedFormInstance
+    kind: belongs_to
+    via: advancedFormInstanceId
+  - to: UserType
+    kind: has_one
+    via: createdByUserType
+  - to: DataFacet
+    kind: belongs_to
+    via: dataFacetId
+  - to: UserType
+    kind: has_one
+    via: modifiedByUserType
+  - to: DataKind
+    kind: has_one
+    via: dataKind
+- entity: DataValueWithKindResponse
+  properties: 15
+  relationships:
+  - to: AdvancedFormInstance
+    kind: belongs_to
+    via: advancedFormInstanceId
+  - to: DataFacet
+    kind: belongs_to
+    via: dataFacetId
+  - to: DataKind
+    kind: has_one
+    via: dataKind
+- entity: DataValuesSearch
+  properties: 4
+  relationships:
+  - to: AdvancedFormInstance
+    kind: belongs_to
+    via: advancedFormInstanceId
+  - to: AdvancedForm
+    kind: belongs_to
+    via: advancedFormId
+- entity: DiagnosisPriority
+  properties: 2
+- entity: DischargePlan
+  properties: 30
+  relationships:
+  - to: DischargePlan
+    kind: belongs_to
+    via: dischargePlanId
+- entity: Document
+  properties: 17
+  relationships:
+  - to: ClientDocument
+    kind: belongs_to
+    via: clientDocumentId
+  - to: ResourceLink
+    kind: has_one
+    via: client
+  - to: DocumentUrl
+    kind: has_one
+    via: url
+  - to: DocumentData
+    kind: has_many
+    via: uploadedDocuments
+- entity: DocumentData
+  properties: 4
+  relationships:
+  - to: ExternalData
+    kind: has_one
+    via: externalId
+- entity: DocumentTypeModal
+  properties: 2
+- entity: DocumentUrl
+  properties: 3
+- entity: ExternalData
+  properties: 4
+- entity: ExternalProviderLogoData
+  properties: 3
+- entity: FaceToFace
+  properties: 12
+- entity: Facility
+  properties: 14
+- entity: FacilityLogoData
+  properties: 2
+- entity: Gad7Model
+  properties: 24
+  relationships:
+  - to: Client
+    kind: belongs_to
+    via: clientId
+- entity: Goal
+  properties: 3
+  relationships:
+  - to: Objective
+    kind: has_many
+    via: objectives
+- entity: Homework
+  properties: 15
+  relationships:
+  - to: ResourceLink
+    kind: has_one
+    via: client
+  - to: ResourceLink
+    kind: has_one
+    via: treatmentPlan
+  - to: HomeworkNote
+    kind: has_many
+    via: notes
+- entity: HomeworkNote
+  properties: 7
+- entity: IncidentReport
+  properties: 26
+  relationships:
+  - to: Signature
+    kind: has_many
+    via: staff
+  - to: Signature
+    kind: has_many
+    via: reviewer
+- entity: InsuranceReturn
+  properties: 2
+  relationships:
+  - to: Document
+    kind: has_many
+    via: documentIds
+- entity: IntakeSectionCustomForm
+  properties: 6
+  relationships:
+  - to: AdvancedForm
+    kind: belongs_to
+    via: advancedFormId
+- entity: IntakeSectionCustomFormUpdate
+  properties: 3
+  relationships:
+  - to: Facility
+    kind: belongs_to
+    via: facilityId
+  - to: IntakeSectionCustomForm
+    kind: has_many
+    via: forms
+- entity: IntakeSectionDetails
+  properties: 7
+  relationships:
+  - to: AdvancedForm
+    kind: belongs_to
+    via: advancedFormId
+- entity: IntakeSectionOrder
+  properties: 3
+  relationships:
+  - to: Facility
+    kind: belongs_to
+    via: facilityId
+  - to: MasterIntakeSections
+    kind: has_many
+    via: sections
+- entity: IntakeTypes
+  properties: 2
+- entity: Intervention
+  properties: 3
+- entity: JToken
+  properties: 0
+- entity: LevelOfCare
+  properties: 10
+- entity: MasterCodesResponse
+  properties: 2
+- entity: MasterCodesSearch
+  properties: 1
+- entity: MasterIntakeSections
+  properties: 12
+  relationships:
+  - to: Facility
+    kind: belongs_to
+    via: facilityId
+  - to: IntakeSectionDetails
+    kind: has_one
+    via: details
+- entity: MedicationData
+  properties: 12
+- entity: MentalStatusExamModel
+  properties: 193
+- entity: Objective
+  properties: 4
+  relationships:
+  - to: Intervention
+    kind: has_many
+    via: interventions
+- entity: OccupancyTransfer
+  properties: 4
+  relationships:
+  - to: BedOccupancy
+    kind: belongs_to
+    via: bedOccupancyId
+- entity: Occupant
+  properties: 7
+  relationships:
+  - to: ClientName
+    kind: has_one
+    via: name
+- entity: Organization
+  properties: 5
+- entity: OutreachSessionNote
+  properties: 17
+  relationships:
+  - to: Appointment
+    kind: belongs_to
+    via: appointmentId
+  - to: TimeSpan
+    kind: has_one
+    via: startSession
+  - to: TimeSpan
+    kind: has_one
+    via: endSession
+- entity: Phone
+  properties: 5
+- entity: Phq9Model
+  properties: 26
+  relationships:
+  - to: Client
+    kind: belongs_to
+    via: clientId
+- entity: Problem
+  properties: 5
+  relationships:
+  - to: ClientDiagnosis
+    kind: has_many
+    via: diagnoses
+  - to: BehavioralDefinition
+    kind: has_many
+    via: behavioralDefinitions
+  - to: Goal
+    kind: has_many
+    via: goals
+- entity: Pronoun
+  properties: 5
+- entity: Prospect
+  properties: 24
+  relationships:
+  - to: ClientName
+    kind: has_one
+    via: name
+  - to: Address
+    kind: has_one
+    via: address
+  - to: Phone
+    kind: has_one
+    via: phone
+  - to: ClientContact
+    kind: has_one
+    via: contact
+  - to: ClientImageUrl
+    kind: has_one
+    via: profileImage
+  - to: ReferralCompany
+    kind: belongs_to
+    via: referralCompanyId
+  - to: ReferralContact
+    kind: belongs_to
+    via: referralContactId
+  - to: ExternalData
+    kind: has_one
+    via: externalId
+- entity: ReferralCompany
+  properties: 10
+  relationships:
+  - to: Phone
+    kind: has_one
+    via: phone
+  - to: Address
+    kind: has_one
+    via: address
+  - to: ExternalData
+    kind: has_one
+    via: externalId
+- entity: ReferralContact
+  properties: 13
+  relationships:
+  - to: ReferralCompany
+    kind: belongs_to
+    via: referralCompanyId
+  - to: Phone
+    kind: has_one
+    via: phone
+  - to: Address
+    kind: has_one
+    via: address
+  - to: ExternalData
+    kind: has_one
+    via: externalId
+- entity: ReferralLogoData
+  properties: 2
+- entity: ReferralNoteCreationApiStruct
+  properties: 7
+- entity: Rehab
+  properties: 5
+- entity: RehabDocument
+  properties: 4
+  relationships:
+  - to: Facility
+    kind: belongs_to
+    via: facilityId
+  - to: DocumentData
+    kind: has_many
+    via: uploadedDocuments
+- entity: RehabLogoData
+  properties: 2
+- entity: ResourceLink
+  properties: 2
+- entity: Reviewer
+  properties: 1
+- entity: Roi
+  properties: 21
+  relationships:
+  - to: Roi
+    kind: belongs_to
+    via: roiId
+  - to: RoiInformationList
+    kind: has_many
+    via: permissionScreenList
+  - to: RoiInformationList
+    kind: has_many
+    via: informationReleaseList
+  - to: RoiInformationList
+    kind: has_many
+    via: informationIncludeList
+  - to: User
+    kind: has_one
+    via: staff
+  - to: RoiRevoke
+    kind: has_one
+    via: revoke
+- entity: RoiInformationList
+  properties: 3
+- entity: RoiRevoke
+  properties: 3
+- entity: Room
+  properties: 6
+  relationships:
+  - to: Facility
+    kind: belongs_to
+    via: facilityId
+- entity: SectionSignatures
+  properties: 4
+- entity: SectionSignaturesWithUser
+  properties: 5
+  relationships:
+  - to: SignatureType
+    kind: has_one
+    via: signatureTypeId
+- entity: Session
+  properties: 55
+  relationships:
+  - to: Appointment
+    kind: belongs_to
+    via: appointmentId
+  - to: TimeSpan
+    kind: has_one
+    via: startTime
+  - to: TimeSpan
+    kind: has_one
+    via: endTime
+  - to: User
+    kind: belongs_to
+    via: userId
+  - to: Facility
+    kind: belongs_to
+    via: facilityId
+  - to: Client
+    kind: belongs_to
+    via: clientId
+  - to: ReferralContact
+    kind: belongs_to
+    via: referralContactId
+  - to: SessionDetail
+    kind: has_one
+    via: details
+- entity: SessionDetail
+  properties: 9
+  relationships:
+  - to: OutreachSessionNote
+    kind: has_one
+    via: sessionNote
+  - to: User
+    kind: has_one
+    via: groupLeader
+  - to: MentalStatusExamModel
+    kind: has_one
+    via: mentalStatusModel
+  - to: ASAMModel
+    kind: has_one
+    via: asamModel
+  - to: SectionSignatures
+    kind: has_one
+    via: signatures
+  - to: Phq9Model
+    kind: has_one
+    via: phq9Model
+  - to: Gad7Model
+    kind: has_one
+    via: gad7Model
+  - to: BillingCodesDataModel
+    kind: has_one
+    via: billingCode
+  - to: SectionSignaturesWithUser
+    kind: has_many
+    via: staffSignature
+- entity: ShiftRoundLocation
+  properties: 2
+- entity: ShiftRounds
+  properties: 10
+  relationships:
+  - to: User
+    kind: has_one
+    via: signedBy
+  - to: User
+    kind: has_one
+    via: createdBy
+  - to: Facility
+    kind: belongs_to
+    via: facilityId
+  - to: ClientShiftRounds
+    kind: has_many
+    via: clients
+- entity: Signature
+  properties: 5
+- entity: SignatureType
+  properties: 0
+- entity: Snapshot
+  properties: 8
+- entity: SnapshotType
+  properties: 0
+- entity: State
+  properties: 6
+  relationships:
+  - to: State
+    kind: belongs_to
+    via: stateId
+- entity: Survey
+  properties: 4
+  relationships:
+  - to: SurveyQuestion
+    kind: has_many
+    via: surveyQuestions
+- entity: SurveyAnswer
+  properties: 6
+  relationships:
+  - to: Client
+    kind: belongs_to
+    via: clientId
+- entity: SurveyQuestion
+  properties: 2
+- entity: TimeSpan
+  properties: 11
+- entity: Transport
+  properties: 2
+- entity: TreatmentPlan
+  properties: 18
+  relationships:
+  - to: ResourceLink
+    kind: has_one
+    via: client
+  - to: Problem
+    kind: has_many
+    via: problems
+  - to: Signature
+    kind: has_one
+    via: clientSignature
+  - to: Signature
+    kind: has_one
+    via: guardianSignature
+- entity: TxReviewDetails
+  properties: 37
+- entity: UpdateOperationResult
+  properties: 0
+- entity: UpdateResult
+  properties: 5
+  relationships:
+  - to: UpdateOperationResult
+    kind: has_one
+    via: operationResult
+- entity: User
+  properties: 19
+  relationships:
+  - to: UserName
+    kind: has_one
+    via: name
+  - to: Address
+    kind: has_one
+    via: address
+  - to: Facility
+    kind: has_one
+    via: facility
+  - to: UserImageUrl
+    kind: has_one
+    via: profileImage
+  - to: UserLicense
+    kind: has_many
+    via: licenses
+- entity: UserImageUrl
+  properties: 3
+- entity: UserLicense
+  properties: 11
+  relationships:
+  - to: UserLicenseType
+    kind: has_one
+    via: type
+  - to: User
+    kind: has_one
+    via: user
+  - to: State
+    kind: has_one
+    via: state
+- entity: UserLicenseType
+  properties: 7
+- entity: UserLogoData
+  properties: 2
+- entity: UserName
+  properties: 4
+- entity: UserType
+  properties: 0
+- entity: UserUrgentAlertMarkAsRead
+  properties: 3
+- entity: ZoomMeetingDetails
+  properties: 2

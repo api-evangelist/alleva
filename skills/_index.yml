@@ -1,0 +1,61 @@
+generated: '2026-08-06'
+method: generated
+source: openapi/alleva-rest-api-openapi.yml
+note: >-
+  The Alleva OpenAPI declares no operationId on any of its 424 operations, so every skill grounds its
+  steps on the literal METHOD + PATH pairs that exist verbatim in the spec. No operationId is cited
+  because none exists. Alleva publishes no AGENTS.md or provider-authored skills.
+skills:
+- file: alleva-admit-a-prospect.md
+  name: Admit a prospect into Alleva
+  description: Create a prospect, attach insurance and contacts, then read the resulting client record and its intake sections.
+  api: openapi/alleva-rest-api-openapi.yml
+  operations:
+  - 'POST /prospects'
+  - 'POST /prospects/{id}/insurances'
+  - 'POST /prospects/{id}/contacts'
+  - 'GET /prospects/{id}'
+  - 'GET /intakes/types'
+  - 'POST /intakes/{intakeType}/sections/{sectionType}'
+  - 'GET /clients/{id}'
+- file: alleva-bed-census-and-placement.md
+  name: Manage bed census, reservations and placement
+  description: Read facility bed inventory, reserve a bed for a lead, convert the reservation to an occupancy, transfer, and end a stay.
+  api: openapi/alleva-rest-api-openapi.yml
+  operations:
+  - 'GET /facilities'
+  - 'GET /rooms'
+  - 'GET /beds'
+  - 'POST /bed/{bedId}/reservations'
+  - 'GET /bed/-/reservations'
+  - 'POST /bed/{bedId}/reservations/occupy'
+  - 'GET /bed/-/occupancies/occupants'
+  - 'POST /bed/{bedId}/occupancies/transfer'
+  - 'DELETE /bed/{bedId}/occupancies/end/{id}'
+- file: alleva-clinical-assessments-and-alerts.md
+  name: Record clinical assessments and urgent alerts
+  description: Submit CIWA and COWS withdrawal assessments for a client, manage urgent alerts, and log shift rounds and incident reports.
+  api: openapi/alleva-rest-api-openapi.yml
+  operations:
+  - 'POST /clients/{id}/assessments/ciwa'
+  - 'PATCH /clients/{id}/assessments/ciwa/{ciwaId}'
+  - 'POST /clients/{id}/assessments/cows'
+  - 'PATCH /clients/{id}/assessments/cows/{cowsId}'
+  - 'GET /clients/{id}/urgent-alerts'
+  - 'POST /clients/{id}/urgent-alerts'
+  - 'POST /clients/{id}/urgent-alerts/read'
+  - 'GET /clients/{id}/history'
+- file: alleva-treatment-plan-and-discharge.md
+  name: Read treatment plans, capture signatures, and reach discharge
+  description: Pull a client's treatment plan and diagnoses, capture plan and review signatures, read treatment reviews, and retrieve the discharge plan.
+  api: openapi/alleva-rest-api-openapi.yml
+  operations:
+  - 'GET /treatment-plans'
+  - 'GET /treatment-plans/{id}'
+  - 'GET /treatment-plans/{id}/diagnosis'
+  - 'POST /treatment-plans/{id}/signature'
+  - 'POST /treatment-plans/{id}/review-signature'
+  - 'GET /treatment-reviews'
+  - 'GET /treatment-reviews/{id}'
+  - 'GET /discharge-plan'
+  - 'GET /discharge-plan/{id}'
