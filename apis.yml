@@ -38,37 +38,596 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 apis:
-- name: Alleva REST API
-  description: >-
-    The Alleva REST API ("Alleva Rest Api", OpenAPI 3.0.1) exposes 424 operations across 37 resource
-    groups covering clients, prospects and intake, appointments and sessions, beds/rooms/occupancy and
-    reservations, treatment plans and reviews, discharge plans, medications, documents, advanced forms
-    and form instances, homework, surveys, shift rounds, incident reports, facilities, organizations,
-    users and user licenses, referral companies and contacts, level of care, master codes, and data
-    facets/values. Authentication is a JWT bearer token supplied in the Authorization header. The API is
-    versioned three ways in parallel — an api-version query parameter, an X-Version header, and a
-    /v{version}/ path prefix — and list endpoints use cursor pagination (Cursor + Limit) with optional
-    StartDate/EndDate filtering and a sparse-fieldset `fields` parameter.
+- aid: alleva:alleva-advancedform-api
+  name: Alleva Advanced Form API
+  description: The AdvancedForm API from Alleva — 8 operation(s) for advancedform.
   humanURL: https://api.helloalleva.com/swagger/index.html
   baseURL: https://api.helloalleva.com
   tags:
-  - behavioral-health
-  - electronic-health-records
-  - emr
-  - healthcare
-  - clinical-documentation
-  - patient-intake
+  - AdvancedForm
   properties:
   - type: OpenAPI
-    url: openapi/alleva-rest-api-openapi.yml
+    url: openapi/alleva-advancedform-api-openapi.yml
   - type: Documentation
     url: https://api.helloalleva.com/swagger/index.html
   - type: APIReference
     url: https://api.helloalleva.com/swagger/index.html
-  - type: Overlay
-    url: overlays/alleva-rest-api-overlay.yaml
-  - type: MCPServer
-    url: mcp/alleva-mcp.yml
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-advancedformdatabackup-api
+  name: Alleva Advanced Form Data Backup API
+  description: The AdvancedFormDataBackup API from Alleva — 2 operation(s) for advancedformdatabackup.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - AdvancedFormDataBackup
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-advancedformdatabackup-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-advancedformelement-api
+  name: Alleva Advanced Form Element API
+  description: The AdvancedFormElement API from Alleva — 2 operation(s) for advancedformelement.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - AdvancedFormElement
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-advancedformelement-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-advancedforminstance-api
+  name: Alleva Advanced Form Instance API
+  description: The AdvancedFormInstance API from Alleva — 2 operation(s) for advancedforminstance.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - AdvancedFormInstance
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-advancedforminstance-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-appointments-api
+  name: Alleva Appointments API
+  description: The Appointments API from Alleva — 4 operation(s) for appointments.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - Appointments
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-appointments-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-bed-api
+  name: Alleva Bed API
+  description: The Bed API from Alleva — 4 operation(s) for bed.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - Bed
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-bed-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-bedoccupancy-api
+  name: Alleva Bed Occupancy API
+  description: The BedOccupancy API from Alleva — 28 operation(s) for bedoccupancy.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - BedOccupancy
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-bedoccupancy-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-bedreservation-api
+  name: Alleva Bed Reservation API
+  description: The BedReservation API from Alleva — 20 operation(s) for bedreservation.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - BedReservation
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-bedreservation-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-clientdevice-api
+  name: Alleva Client Device API
+  description: The ClientDevice API from Alleva — 4 operation(s) for clientdevice.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - ClientDevice
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-clientdevice-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-clients-api
+  name: Alleva Clients API
+  description: The Clients API from Alleva — 38 operation(s) for clients.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - Clients
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-clients-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-datafacet-api
+  name: Alleva Data Facet API
+  description: The DataFacet API from Alleva — 2 operation(s) for datafacet.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - DataFacet
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-datafacet-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-datavalue-api
+  name: Alleva Data Value API
+  description: The DataValue API from Alleva — 4 operation(s) for datavalue.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - DataValue
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-datavalue-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-dischargeplan-api
+  name: Alleva Discharge Plan API
+  description: The DischargePlan API from Alleva — 4 operation(s) for dischargeplan.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - DischargePlan
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-dischargeplan-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-document-api
+  name: Alleva Document API
+  description: The Document API from Alleva — 6 operation(s) for document.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - Document
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-document-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-facilities-api
+  name: Alleva Facilities API
+  description: The Facilities API from Alleva — 8 operation(s) for facilities.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - Facilities
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-facilities-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-homework-api
+  name: Alleva Homework API
+  description: The Homework API from Alleva — 8 operation(s) for homework.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - Homework
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-homework-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-incidentreport-api
+  name: Alleva Incident Report API
+  description: The IncidentReport API from Alleva — 4 operation(s) for incidentreport.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - IncidentReport
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-incidentreport-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-intake-api
+  name: Alleva Intake API
+  description: The Intake API from Alleva — 8 operation(s) for intake.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - Intake
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-intake-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-levelofcare-api
+  name: Alleva Level Of Care API
+  description: The LevelOfCare API from Alleva — 4 operation(s) for levelofcare.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - LevelOfCare
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-levelofcare-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-manageintake-api
+  name: Alleva Manage Intake API
+  description: The ManageIntake API from Alleva — 12 operation(s) for manageintake.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - ManageIntake
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-manageintake-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-mastercodes-api
+  name: Alleva Master Codes API
+  description: The MasterCodes API from Alleva — 2 operation(s) for mastercodes.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - MasterCodes
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-mastercodes-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-medications-api
+  name: Alleva Medications API
+  description: The Medications API from Alleva — 4 operation(s) for medications.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - Medications
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-medications-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-organizations-api
+  name: Alleva Organizations API
+  description: The Organizations API from Alleva — 6 operation(s) for organizations.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - Organizations
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-organizations-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-pronoun-api
+  name: Alleva Pronoun API
+  description: The Pronoun API from Alleva — 4 operation(s) for pronoun.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - Pronoun
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-pronoun-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-prospects-api
+  name: Alleva Prospects API
+  description: The Prospects API from Alleva — 12 operation(s) for prospects.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - Prospects
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-prospects-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-referralcompanies-api
+  name: Alleva Referral Companies API
+  description: The ReferralCompanies API from Alleva — 14 operation(s) for referralcompanies.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - ReferralCompanies
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-referralcompanies-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-referralcontacts-api
+  name: Alleva Referral Contacts API
+  description: The ReferralContacts API from Alleva — 14 operation(s) for referralcontacts.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - ReferralContacts
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-referralcontacts-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-rehab-api
+  name: Alleva Rehab API
+  description: The Rehab API from Alleva — 8 operation(s) for rehab.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - Rehab
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-rehab-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-room-api
+  name: Alleva Room API
+  description: The Room API from Alleva — 4 operation(s) for room.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - Room
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-room-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-sessions-api
+  name: Alleva Sessions API
+  description: The Sessions API from Alleva — 1 operation(s) for sessions.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - Sessions
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-sessions-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-shiftrounds-api
+  name: Alleva Shift Rounds API
+  description: The ShiftRounds API from Alleva — 6 operation(s) for shiftrounds.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - ShiftRounds
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-shiftrounds-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-snapshot-api
+  name: Alleva Snapshot API
+  description: The Snapshot API from Alleva — 8 operation(s) for snapshot.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - Snapshot
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-snapshot-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-survey-api
+  name: Alleva Survey API
+  description: The Survey API from Alleva — 6 operation(s) for survey.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - Survey
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-survey-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-treatmentplans-api
+  name: Alleva Treatment Plans API
+  description: The TreatmentPlans API from Alleva — 10 operation(s) for treatmentplans.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - TreatmentPlans
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-treatmentplans-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-treatmentreviews-api
+  name: Alleva Treatment Reviews API
+  description: The TreatmentReviews API from Alleva — 4 operation(s) for treatmentreviews.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - TreatmentReviews
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-treatmentreviews-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-userlicense-api
+  name: Alleva User License API
+  description: The UserLicense API from Alleva — 4 operation(s) for userlicense.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - UserLicense
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-userlicense-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-users-api
+  name: Alleva Users API
+  description: The Users API from Alleva — 20 operation(s) for users.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - Users
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-users-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
   - type: ToolCrosswalk
     url: mcp/alleva-tool-crosswalk.yml
 common:
