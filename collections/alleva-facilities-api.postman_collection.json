@@ -1,0 +1,1159 @@
+{
+  "item": [
+    {
+      "id": "14013d47-0a80-4372-a039-8b6397328c19",
+      "name": "Facilities",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3b28e3ec-0cba-403d-a2aa-dccce96806d3",
+          "name": "/facilities/:id/logo",
+          "request": {
+            "name": "/facilities/:id/logo",
+            "description": {},
+            "url": {
+              "path": [
+                "facilities",
+                ":id",
+                "logo"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fileName\": \"<string,null>\",\n  \"base64String\": \"<string,null>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "90890f39-d1b4-4fa5-aa67-643f9b784e87",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "facilities",
+                    ":id",
+                    "logo"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fileName\": \"<string,null>\",\n  \"base64String\": \"<string,null>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"operationResult\": 3,\n  \"success\": false,\n  \"id\": 385,\n  \"messages\": null,\n  \"reason\": null\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9b470d3a-11e7-4cf9-a508-36925ba33abe",
+          "name": "/v{{version}}/facilities/:id/logo",
+          "request": {
+            "name": "/v{{version}}/facilities/:id/logo",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "facilities",
+                ":id",
+                "logo"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fileName\": \"<string,null>\",\n  \"base64String\": \"<string,null>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0cb831f9-4539-492b-a224-00ef003ea5ca",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "facilities",
+                    ":id",
+                    "logo"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fileName\": \"<string,null>\",\n  \"base64String\": \"<string,null>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"operationResult\": 3,\n  \"success\": false,\n  \"id\": 385,\n  \"messages\": null,\n  \"reason\": null\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fd8f3b20-e15a-432d-bd51-e321b77332d1",
+          "name": "/facilities/:id/npi",
+          "request": {
+            "name": "/facilities/:id/npi",
+            "description": {},
+            "url": {
+              "path": [
+                "facilities",
+                ":id",
+                "npi"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<string>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c343e380-4ad1-409b-a090-c90ffd3b7615",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "facilities",
+                    ":id",
+                    "npi"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<string>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"operationResult\": 3,\n  \"success\": false,\n  \"id\": 385,\n  \"messages\": null,\n  \"reason\": null\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d6eb18f0-90bc-498d-9e6f-971fa1b51231",
+          "name": "/v{{version}}/facilities/:id/npi",
+          "request": {
+            "name": "/v{{version}}/facilities/:id/npi",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "facilities",
+                ":id",
+                "npi"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<string>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5b0c0381-e540-482d-8851-b8c9e766a7f3",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "facilities",
+                    ":id",
+                    "npi"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<string>",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"operationResult\": 3,\n  \"success\": false,\n  \"id\": 385,\n  \"messages\": null,\n  \"reason\": null\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8812b112-f296-46dc-85c9-c2d6914a58a3",
+          "name": "/facilities",
+          "request": {
+            "name": "/facilities",
+            "description": {},
+            "url": {
+              "path": [
+                "facilities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7ae74e51-42a0-421e-8450-adc965b61576",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "facilities"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 605,\n    \"href\": \"string\",\n    \"name\": \"string\",\n    \"rehabName\": \"string\",\n    \"domainName\": null,\n    \"email\": \"string\",\n    \"officePhone\": null,\n    \"fax\": null,\n    \"address1\": null,\n    \"address2\": null,\n    \"state\": \"string\",\n    \"city\": \"string\",\n    \"postalCode\": null,\n    \"country\": null\n  },\n  {\n    \"id\": 3093,\n    \"href\": \"string\",\n    \"name\": \"string\",\n    \"rehabName\": null,\n    \"domainName\": null,\n    \"email\": \"string\",\n    \"officePhone\": \"string\",\n    \"fax\": null,\n    \"address1\": null,\n    \"address2\": \"string\",\n    \"state\": \"string\",\n    \"city\": null,\n    \"postalCode\": null,\n    \"country\": null\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c5f84bd1-4d91-42b4-8b55-24ef30bfd3fc",
+          "name": "/v{{version}}/facilities",
+          "request": {
+            "name": "/v{{version}}/facilities",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "facilities"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d963d90c-1789-48bc-aa76-f5a8e06b05da",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "facilities"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 605,\n    \"href\": \"string\",\n    \"name\": \"string\",\n    \"rehabName\": \"string\",\n    \"domainName\": null,\n    \"email\": \"string\",\n    \"officePhone\": null,\n    \"fax\": null,\n    \"address1\": null,\n    \"address2\": null,\n    \"state\": \"string\",\n    \"city\": \"string\",\n    \"postalCode\": null,\n    \"country\": null\n  },\n  {\n    \"id\": 3093,\n    \"href\": \"string\",\n    \"name\": \"string\",\n    \"rehabName\": null,\n    \"domainName\": null,\n    \"email\": \"string\",\n    \"officePhone\": \"string\",\n    \"fax\": null,\n    \"address1\": null,\n    \"address2\": \"string\",\n    \"state\": \"string\",\n    \"city\": null,\n    \"postalCode\": null,\n    \"country\": null\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2d2eb5ce-7666-47a9-9131-b43256136b8f",
+          "name": "/facilities/:id",
+          "request": {
+            "name": "/facilities/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "facilities",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8998a6bb-c5f7-4593-8345-1ed49ed16b0d",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "facilities",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": 2346,\n  \"href\": null,\n  \"name\": null,\n  \"rehabName\": null,\n  \"domainName\": \"string\",\n  \"email\": \"string\",\n  \"officePhone\": null,\n  \"fax\": \"string\",\n  \"address1\": \"string\",\n  \"address2\": \"string\",\n  \"state\": \"string\",\n  \"city\": null,\n  \"postalCode\": null,\n  \"country\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4aaad6a3-434a-4eca-ab0d-00d854897308",
+          "name": "/v{{version}}/facilities/:id",
+          "request": {
+            "name": "/v{{version}}/facilities/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "facilities",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3337a216-a013-4b42-9494-f257dadc55d3",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "facilities",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": 2346,\n  \"href\": null,\n  \"name\": null,\n  \"rehabName\": null,\n  \"domainName\": \"string\",\n  \"email\": \"string\",\n  \"officePhone\": null,\n  \"fax\": \"string\",\n  \"address1\": \"string\",\n  \"address2\": \"string\",\n  \"state\": \"string\",\n  \"city\": null,\n  \"postalCode\": null,\n  \"country\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.helloalleva.com",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "version"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a20df789-147f-46aa-90aa-8c2f6010cd65",
+    "name": "Alleva Rest Facilities API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

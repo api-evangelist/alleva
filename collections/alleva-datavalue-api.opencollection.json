@@ -1,0 +1,154 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Alleva Rest Data Value API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "DataValue",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "POST /data-values/search",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/data-values/search",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "POST /v{version}/data-values/search",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/v:version/data-values/search",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "PUT /data-values/{dataFacetId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.helloalleva.com/data-values/:dataFacetId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "dataFacetId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "PUT /v{version}/data-values/{dataFacetId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.helloalleva.com/v:version/data-values/:dataFacetId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "dataFacetId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

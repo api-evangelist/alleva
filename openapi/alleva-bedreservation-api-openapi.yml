@@ -1,0 +1,1613 @@
+openapi: 3.2.0
+info:
+  title: Alleva Rest Bed Reservation API
+  version: '1.0'
+security:
+- Bearer: []
+tags:
+- name: BedReservation
+paths:
+  /bed/-/reservations:
+    post:
+      tags:
+      - BedReservation
+      parameters:
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedReservation'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedReservation'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedReservation'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedReservation'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+    get:
+      tags:
+      - BedReservation
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedReservation'
+  /bed/{bedId}/reservations:
+    post:
+      tags:
+      - BedReservation
+      parameters:
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedReservation'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedReservation'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedReservation'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedReservation'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+    get:
+      tags:
+      - BedReservation
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedReservation'
+  /v{version}/bed/-/reservations:
+    post:
+      tags:
+      - BedReservation
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedReservation'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedReservation'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedReservation'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedReservation'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+    get:
+      tags:
+      - BedReservation
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedReservation'
+  /v{version}/bed/{bedId}/reservations:
+    post:
+      tags:
+      - BedReservation
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedReservation'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedReservation'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedReservation'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedReservation'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+    get:
+      tags:
+      - BedReservation
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedReservation'
+  /bed/-/reservations/occupy:
+    post:
+      tags:
+      - BedReservation
+      parameters:
+      - name: leadId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+  /bed/{bedId}/reservations/occupy:
+    post:
+      tags:
+      - BedReservation
+      parameters:
+      - name: leadId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+  /v{version}/bed/-/reservations/occupy:
+    post:
+      tags:
+      - BedReservation
+      parameters:
+      - name: leadId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+  /v{version}/bed/{bedId}/reservations/occupy:
+    post:
+      tags:
+      - BedReservation
+      parameters:
+      - name: leadId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+  /bed/-/reservations/{id}:
+    delete:
+      tags:
+      - BedReservation
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+    patch:
+      tags:
+      - BedReservation
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+    get:
+      tags:
+      - BedReservation
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+  /bed/{bedId}/reservations/{id}:
+    delete:
+      tags:
+      - BedReservation
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+    patch:
+      tags:
+      - BedReservation
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+    get:
+      tags:
+      - BedReservation
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+  /v{version}/bed/-/reservations/{id}:
+    delete:
+      tags:
+      - BedReservation
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+    patch:
+      tags:
+      - BedReservation
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+    get:
+      tags:
+      - BedReservation
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+  /v{version}/bed/{bedId}/reservations/{id}:
+    delete:
+      tags:
+      - BedReservation
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+    patch:
+      tags:
+      - BedReservation
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+    get:
+      tags:
+      - BedReservation
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedReservation'
+  /bed/-/reservations/remove-lead/{leadId}:
+    delete:
+      tags:
+      - BedReservation
+      parameters:
+      - name: leadId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+  /bed/{bedId}/reservations/remove-lead/{leadId}:
+    delete:
+      tags:
+      - BedReservation
+      parameters:
+      - name: leadId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+  /v{version}/bed/-/reservations/remove-lead/{leadId}:
+    delete:
+      tags:
+      - BedReservation
+      parameters:
+      - name: leadId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+  /v{version}/bed/{bedId}/reservations/remove-lead/{leadId}:
+    delete:
+      tags:
+      - BedReservation
+      parameters:
+      - name: leadId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+  /bed/-/reservations/occupants:
+    get:
+      tags:
+      - BedReservation
+      parameters:
+      - name: facilityId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: clientName
+        in: query
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+  /bed/{bedId}/reservations/occupants:
+    get:
+      tags:
+      - BedReservation
+      parameters:
+      - name: facilityId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: clientName
+        in: query
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+  /v{version}/bed/-/reservations/occupants:
+    get:
+      tags:
+      - BedReservation
+      parameters:
+      - name: facilityId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: clientName
+        in: query
+        schema:
+          type: string
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+  /v{version}/bed/{bedId}/reservations/occupants:
+    get:
+      tags:
+      - BedReservation
+      parameters:
+      - name: facilityId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: clientName
+        in: query
+        schema:
+          type: string
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+components:
+  schemas:
+    BedOccupancy:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        client:
+          $ref: '#/components/schemas/Occupant'
+        createdBy:
+          type: integer
+          format: int32
+        comments:
+          type:
+          - string
+          - 'null'
+        startDate:
+          type: string
+          format: date-time
+        endDate:
+          type: string
+          format: date-time
+        bed:
+          $ref: '#/components/schemas/Bed'
+        fromTransfer:
+          type: boolean
+          writeOnly: true
+      additionalProperties: false
+    ClientName:
+      type: object
+      properties:
+        clientFullName:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        first:
+          type:
+          - string
+          - 'null'
+        last:
+          type:
+          - string
+          - 'null'
+        middle:
+          type:
+          - string
+          - 'null'
+        isLegalName:
+          type:
+          - boolean
+          - 'null'
+        former:
+          type:
+          - string
+          - 'null'
+        prefix:
+          type:
+          - string
+          - 'null'
+        preferred:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Occupant:
+      type: object
+      properties:
+        leadId:
+          type: integer
+          format: int32
+        name:
+          $ref: '#/components/schemas/ClientName'
+        gender:
+          type:
+          - string
+          - 'null'
+        admissionDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        dischargeDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        dateOfBirth:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        imageUrl:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
+    BedReservation:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        client:
+          $ref: '#/components/schemas/Occupant'
+        createdBy:
+          type: integer
+          format: int32
+        startDate:
+          type: string
+          format: date-time
+        endDate:
+          type: string
+          format: date-time
+        bed:
+          $ref: '#/components/schemas/Bed'
+      additionalProperties: false
+    Room:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        facilityId:
+          type: integer
+          format: int32
+        roomName:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        totalBeds:
+          type: integer
+          format: int32
+      additionalProperties: false
+    Bed:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        forFemale:
+          type: boolean
+        isActive:
+          type: boolean
+        isMaintenance:
+          type: boolean
+        isOccupied:
+          type:
+          - boolean
+          - 'null'
+        isReserved:
+          type:
+          - boolean
+          - 'null'
+        room:
+          $ref: '#/components/schemas/Room'
+      additionalProperties: false
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
+        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      name: Authorization
+      in: header
+servers:
+- url: https://api.helloalleva.com
+  description: Base URL reconciled from apis.yml

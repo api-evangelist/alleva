@@ -1,0 +1,1316 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Alleva Rest Bed Occupancy API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "BedOccupancy",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /bed/-/occupancies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/bed/-/occupancies",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "Limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Cursor",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "StartDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "EndDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "POST /bed/-/occupancies",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/bed/-/occupancies",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "GET /bed/{bedId}/occupancies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/bed/:bedId/occupancies",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "Limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Cursor",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "StartDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "EndDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "POST /bed/{bedId}/occupancies",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/bed/:bedId/occupancies",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "GET /v{version}/bed/-/occupancies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/v:version/bed/-/occupancies",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "Limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Cursor",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "StartDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "EndDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "POST /v{version}/bed/-/occupancies",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/v:version/bed/-/occupancies",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "GET /v{version}/bed/{bedId}/occupancies",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/v:version/bed/:bedId/occupancies",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "Limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Cursor",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "StartDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "EndDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "POST /v{version}/bed/{bedId}/occupancies",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/v:version/bed/:bedId/occupancies",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "GET /bed/-/occupancies/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/bed/-/occupancies/:id",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "DELETE /bed/-/occupancies/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.helloalleva.com/bed/-/occupancies/:id",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /bed/{bedId}/occupancies/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/bed/:bedId/occupancies/:id",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "DELETE /bed/{bedId}/occupancies/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.helloalleva.com/bed/:bedId/occupancies/:id",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /v{version}/bed/-/occupancies/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/v:version/bed/-/occupancies/:id",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "DELETE /v{version}/bed/-/occupancies/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.helloalleva.com/v:version/bed/-/occupancies/:id",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /v{version}/bed/{bedId}/occupancies/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/v:version/bed/:bedId/occupancies/:id",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "DELETE /v{version}/bed/{bedId}/occupancies/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.helloalleva.com/v:version/bed/:bedId/occupancies/:id",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "DELETE /bed/-/occupancies/end-lead/{leadId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.helloalleva.com/bed/-/occupancies/end-lead/:leadId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "DELETE /bed/{bedId}/occupancies/end-lead/{leadId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.helloalleva.com/bed/:bedId/occupancies/end-lead/:leadId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "DELETE /v{version}/bed/-/occupancies/end-lead/{leadId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.helloalleva.com/v:version/bed/-/occupancies/end-lead/:leadId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "DELETE /v{version}/bed/{bedId}/occupancies/end-lead/{leadId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.helloalleva.com/v:version/bed/:bedId/occupancies/end-lead/:leadId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "DELETE /bed/-/occupancies/end/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.helloalleva.com/bed/-/occupancies/end/:id",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "DELETE /bed/{bedId}/occupancies/end/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.helloalleva.com/bed/:bedId/occupancies/end/:id",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "DELETE /v{version}/bed/-/occupancies/end/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.helloalleva.com/v:version/bed/-/occupancies/end/:id",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "DELETE /v{version}/bed/{bedId}/occupancies/end/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.helloalleva.com/v:version/bed/:bedId/occupancies/end/:id",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "POST /bed/-/occupancies/transfer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/bed/-/occupancies/transfer",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "POST /bed/{bedId}/occupancies/transfer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/bed/:bedId/occupancies/transfer",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "POST /v{version}/bed/-/occupancies/transfer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/v:version/bed/-/occupancies/transfer",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "POST /v{version}/bed/{bedId}/occupancies/transfer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/v:version/bed/:bedId/occupancies/transfer",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "GET /bed/-/occupancies/occupants",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/bed/-/occupancies/occupants",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "facilityId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "clientName",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /bed/{bedId}/occupancies/occupants",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/bed/:bedId/occupancies/occupants",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "facilityId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "clientName",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /v{version}/bed/-/occupancies/occupants",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/v:version/bed/-/occupancies/occupants",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "facilityId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "clientName",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /v{version}/bed/{bedId}/occupancies/occupants",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/v:version/bed/:bedId/occupancies/occupants",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "facilityId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "clientName",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /bed/-/occupancies/occupants/{leadId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/bed/-/occupancies/occupants/:leadId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /bed/{bedId}/occupancies/occupants/{leadId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/bed/:bedId/occupancies/occupants/:leadId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /v{version}/bed/-/occupancies/occupants/{leadId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/v:version/bed/-/occupancies/occupants/:leadId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /v{version}/bed/{bedId}/occupancies/occupants/{leadId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/v:version/bed/:bedId/occupancies/occupants/:leadId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "bedId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,599 @@
+{
+  "item": [
+    {
+      "id": "8f947c4f-43cf-415c-91c7-3e3dc44989a7",
+      "name": "Appointments",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a839602b-a585-4cf2-82de-832ed4e9c53c",
+          "name": "/appointments",
+          "request": {
+            "name": "/appointments",
+            "description": {},
+            "url": {
+              "path": [
+                "appointments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a5684f01-5a3a-48ba-8da0-b611105c13ab",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "appointments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 722,\n    \"href\": null,\n    \"clients\": null,\n    \"startDateTime\": \"2000-07-04T04:46:02.472Z\",\n    \"endDateTime\": \"1985-09-23T15:23:57.759Z\",\n    \"staff\": {\n      \"id\": 5400,\n      \"route\": \"string\"\n    },\n    \"facilities\": [\n      \"\",\n      \"\"\n    ],\n    \"appointmentType\": null,\n    \"topic\": \"string\",\n    \"status\": null,\n    \"description\": null,\n    \"isAllDay\": true,\n    \"isRecurring\": true,\n    \"isVideoSession\": true,\n    \"isGroupSession\": true,\n    \"isRecTherapy\": false,\n    \"location\": null,\n    \"transport\": {\n      \"pickupAddress\": \"string\",\n      \"dropoffAddress\": null\n    },\n    \"notes\": null,\n    \"meeting\": {\n      \"id\": null,\n      \"password\": null\n    },\n    \"appointmentStartDateTime\": \"1947-08-27T19:59:27.940Z\",\n    \"appointmentEndDateTime\": \"1952-12-23T05:54:48.653Z\"\n  },\n  {\n    \"id\": 3846,\n    \"href\": \"string\",\n    \"clients\": [\n      \"\",\n      \"\"\n    ],\n    \"startDateTime\": \"1950-07-26T05:21:42.724Z\",\n    \"endDateTime\": \"1960-02-17T15:18:42.507Z\",\n    \"staff\": {\n      \"id\": 301,\n      \"route\": null\n    },\n    \"facilities\": null,\n    \"appointmentType\": \"string\",\n    \"topic\": \"string\",\n    \"status\": null,\n    \"description\": null,\n    \"isAllDay\": true,\n    \"isRecurring\": false,\n    \"isVideoSession\": true,\n    \"isGroupSession\": false,\n    \"isRecTherapy\": false,\n    \"location\": null,\n    \"transport\": {\n      \"pickupAddress\": \"string\",\n      \"dropoffAddress\": null\n    },\n    \"notes\": null,\n    \"meeting\": {\n      \"id\": null,\n      \"password\": null\n    },\n    \"appointmentStartDateTime\": \"1952-06-06T11:23:45.009Z\",\n    \"appointmentEndDateTime\": \"2012-08-01T06:26:06.117Z\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0509d90f-2034-4700-833d-c9efe8f71189",
+          "name": "/v{{version}}/appointments",
+          "request": {
+            "name": "/v{{version}}/appointments",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "appointments"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "efd6bfea-d3d6-4eae-9057-b2aae2017163",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "appointments"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 722,\n    \"href\": null,\n    \"clients\": null,\n    \"startDateTime\": \"2000-07-04T04:46:02.472Z\",\n    \"endDateTime\": \"1985-09-23T15:23:57.759Z\",\n    \"staff\": {\n      \"id\": 5400,\n      \"route\": \"string\"\n    },\n    \"facilities\": [\n      \"\",\n      \"\"\n    ],\n    \"appointmentType\": null,\n    \"topic\": \"string\",\n    \"status\": null,\n    \"description\": null,\n    \"isAllDay\": true,\n    \"isRecurring\": true,\n    \"isVideoSession\": true,\n    \"isGroupSession\": true,\n    \"isRecTherapy\": false,\n    \"location\": null,\n    \"transport\": {\n      \"pickupAddress\": \"string\",\n      \"dropoffAddress\": null\n    },\n    \"notes\": null,\n    \"meeting\": {\n      \"id\": null,\n      \"password\": null\n    },\n    \"appointmentStartDateTime\": \"1947-08-27T19:59:27.940Z\",\n    \"appointmentEndDateTime\": \"1952-12-23T05:54:48.653Z\"\n  },\n  {\n    \"id\": 3846,\n    \"href\": \"string\",\n    \"clients\": [\n      \"\",\n      \"\"\n    ],\n    \"startDateTime\": \"1950-07-26T05:21:42.724Z\",\n    \"endDateTime\": \"1960-02-17T15:18:42.507Z\",\n    \"staff\": {\n      \"id\": 301,\n      \"route\": null\n    },\n    \"facilities\": null,\n    \"appointmentType\": \"string\",\n    \"topic\": \"string\",\n    \"status\": null,\n    \"description\": null,\n    \"isAllDay\": true,\n    \"isRecurring\": false,\n    \"isVideoSession\": true,\n    \"isGroupSession\": false,\n    \"isRecTherapy\": false,\n    \"location\": null,\n    \"transport\": {\n      \"pickupAddress\": \"string\",\n      \"dropoffAddress\": null\n    },\n    \"notes\": null,\n    \"meeting\": {\n      \"id\": null,\n      \"password\": null\n    },\n    \"appointmentStartDateTime\": \"1952-06-06T11:23:45.009Z\",\n    \"appointmentEndDateTime\": \"2012-08-01T06:26:06.117Z\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c9230e3d-e09c-445c-92fd-6aafb45b3ea5",
+          "name": "/appointments/:id",
+          "request": {
+            "name": "/appointments/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "appointments",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fb9b2a32-f288-4de4-81b2-4d51a91e409b",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "appointments",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": 2345,\n  \"href\": \"string\",\n  \"clients\": [\n    \"\",\n    \"\"\n  ],\n  \"startDateTime\": \"2026-04-24T10:35:31.319Z\",\n  \"endDateTime\": \"2025-09-19T20:21:26.148Z\",\n  \"staff\": {\n    \"id\": 5871,\n    \"route\": \"string\"\n  },\n  \"facilities\": [\n    \"\",\n    \"\"\n  ],\n  \"appointmentType\": null,\n  \"topic\": \"string\",\n  \"status\": \"string\",\n  \"description\": \"string\",\n  \"isAllDay\": false,\n  \"isRecurring\": false,\n  \"isVideoSession\": true,\n  \"isGroupSession\": true,\n  \"isRecTherapy\": false,\n  \"location\": \"string\",\n  \"transport\": {\n    \"pickupAddress\": \"string\",\n    \"dropoffAddress\": null\n  },\n  \"notes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"meeting\": {\n    \"id\": null,\n    \"password\": \"string\"\n  },\n  \"appointmentStartDateTime\": \"1964-10-28T01:03:05.825Z\",\n  \"appointmentEndDateTime\": \"1948-06-10T16:26:55.705Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1c0524b7-b70a-41b5-bc88-1f16c79e20a1",
+          "name": "/v{{version}}/appointments/:id",
+          "request": {
+            "name": "/v{{version}}/appointments/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "appointments",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7e158fb9-bdb6-46d0-a8d1-6724f48f56a1",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "appointments",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": 2345,\n  \"href\": \"string\",\n  \"clients\": [\n    \"\",\n    \"\"\n  ],\n  \"startDateTime\": \"2026-04-24T10:35:31.319Z\",\n  \"endDateTime\": \"2025-09-19T20:21:26.148Z\",\n  \"staff\": {\n    \"id\": 5871,\n    \"route\": \"string\"\n  },\n  \"facilities\": [\n    \"\",\n    \"\"\n  ],\n  \"appointmentType\": null,\n  \"topic\": \"string\",\n  \"status\": \"string\",\n  \"description\": \"string\",\n  \"isAllDay\": false,\n  \"isRecurring\": false,\n  \"isVideoSession\": true,\n  \"isGroupSession\": true,\n  \"isRecTherapy\": false,\n  \"location\": \"string\",\n  \"transport\": {\n    \"pickupAddress\": \"string\",\n    \"dropoffAddress\": null\n  },\n  \"notes\": [\n    \"string\",\n    \"string\"\n  ],\n  \"meeting\": {\n    \"id\": null,\n    \"password\": \"string\"\n  },\n  \"appointmentStartDateTime\": \"1964-10-28T01:03:05.825Z\",\n  \"appointmentEndDateTime\": \"1948-06-10T16:26:55.705Z\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.helloalleva.com",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "version"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "8f539140-bb65-402a-a494-74481bedc23a",
+    "name": "Alleva Rest Appointments API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

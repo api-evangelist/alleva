@@ -1,0 +1,400 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Alleva Rest Snapshot API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Snapshot",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /snapshots/{snapshotType}/{snapshotId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/snapshots/:snapshotType/:snapshotId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "snapshotType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "snapshotId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /v{version}/snapshots/{snapshotType}/{snapshotId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/v:version/snapshots/:snapshotType/:snapshotId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "snapshotType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "snapshotId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "POST /snapshots/{snapshotType}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/snapshots/:snapshotType",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "snapshotType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "multipart-form",
+              "data": [
+                {
+                  "name": "ContentType",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "ContentDisposition",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "Headers",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "Length",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "Name",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "FileName",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "leadId",
+                  "type": "text",
+                  "value": ""
+                }
+              ]
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "POST /v{version}/snapshots/{snapshotType}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/v:version/snapshots/:snapshotType",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "snapshotType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "multipart-form",
+              "data": [
+                {
+                  "name": "ContentType",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "ContentDisposition",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "Headers",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "Length",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "Name",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "FileName",
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "name": "leadId",
+                  "type": "text",
+                  "value": ""
+                }
+              ]
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "GET /snapshots",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/snapshots",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "Limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Cursor",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "StartDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "EndDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /v{version}/snapshots",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/v:version/snapshots",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "Limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Cursor",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "StartDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "EndDate",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fields",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /snapshots/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/snapshots/:id",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /v{version}/snapshots/{id}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/v:version/snapshots/:id",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

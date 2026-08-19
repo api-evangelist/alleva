@@ -1,0 +1,397 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Alleva Rest Intake API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Intake",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /intakes/types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/intakes/types",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /v{version}/intakes/types",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/v:version/intakes/types",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /intakes/{intakeType}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/intakes/:intakeType",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "intakeType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /v{version}/intakes/{intakeType}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/v:version/intakes/:intakeType",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "intakeType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /intakes/{intakeType}/sections/{sectionType}/{intakeId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/intakes/:intakeType/sections/:sectionType/:intakeId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "intakeType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "sectionType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "intakeId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "PUT /intakes/{intakeType}/sections/{sectionType}/{intakeId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.helloalleva.com/intakes/:intakeType/sections/:sectionType/:intakeId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "intakeType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "sectionType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "intakeId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "GET /v{version}/intakes/{intakeType}/sections/{sectionType}/{intakeId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/v:version/intakes/:intakeType/sections/:sectionType/:intakeId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "intakeType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "sectionType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "intakeId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "PUT /v{version}/intakes/{intakeType}/sections/{sectionType}/{intakeId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://api.helloalleva.com/v:version/intakes/:intakeType/sections/:sectionType/:intakeId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "intakeType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "sectionType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "intakeId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "POST /intakes/{intakeType}/sections/{sectionType}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/intakes/:intakeType/sections/:sectionType",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "intakeType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "sectionType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "POST /v{version}/intakes/{intakeType}/sections/{sectionType}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/v:version/intakes/:intakeType/sections/:sectionType",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "intakeType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "sectionType",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

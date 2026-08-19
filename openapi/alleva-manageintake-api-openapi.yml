@@ -1,0 +1,1008 @@
+openapi: 3.2.0
+info:
+  title: Alleva Rest Manage Intake API
+  version: '1.0'
+security:
+- Bearer: []
+tags:
+- name: ManageIntake
+paths:
+  /manage-intake:
+    post:
+      tags:
+      - ManageIntake
+      parameters:
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/MasterIntakeSections'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/MasterIntakeSections'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/MasterIntakeSections'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/MasterIntakeSections'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/MasterIntakeSections'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/MasterIntakeSections'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/MasterIntakeSections'
+    get:
+      tags:
+      - ManageIntake
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MasterIntakeSections'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MasterIntakeSections'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MasterIntakeSections'
+  /v{version}/manage-intake:
+    post:
+      tags:
+      - ManageIntake
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/MasterIntakeSections'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/MasterIntakeSections'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/MasterIntakeSections'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/MasterIntakeSections'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/MasterIntakeSections'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/MasterIntakeSections'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/MasterIntakeSections'
+    get:
+      tags:
+      - ManageIntake
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MasterIntakeSections'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MasterIntakeSections'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MasterIntakeSections'
+  /manage-intake/get-list-at-time:
+    get:
+      tags:
+      - ManageIntake
+      parameters:
+      - name: facilityId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: intakeType
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: time
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MasterIntakeSections'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MasterIntakeSections'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MasterIntakeSections'
+  /v{version}/manage-intake/get-list-at-time:
+    get:
+      tags:
+      - ManageIntake
+      parameters:
+      - name: facilityId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: intakeType
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: time
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MasterIntakeSections'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MasterIntakeSections'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MasterIntakeSections'
+  /manage-intake/{id}:
+    patch:
+      tags:
+      - ManageIntake
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/MasterIntakeSections'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/MasterIntakeSections'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/MasterIntakeSections'
+    get:
+      tags:
+      - ManageIntake
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/MasterIntakeSections'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/MasterIntakeSections'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/MasterIntakeSections'
+  /v{version}/manage-intake/{id}:
+    patch:
+      tags:
+      - ManageIntake
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/MasterIntakeSections'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/MasterIntakeSections'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/MasterIntakeSections'
+    get:
+      tags:
+      - ManageIntake
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/MasterIntakeSections'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/MasterIntakeSections'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/MasterIntakeSections'
+  /manage-intake/order:
+    post:
+      tags:
+      - ManageIntake
+      parameters:
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionOrder'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionOrder'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionOrder'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionOrder'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+  /v{version}/manage-intake/order:
+    post:
+      tags:
+      - ManageIntake
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionOrder'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionOrder'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionOrder'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionOrder'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+  /manage-intake/custom-forms:
+    get:
+      tags:
+      - ManageIntake
+      parameters:
+      - name: facilityId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: intakeType
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IntakeSectionCustomForm'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IntakeSectionCustomForm'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IntakeSectionCustomForm'
+    post:
+      tags:
+      - ManageIntake
+      parameters:
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionCustomFormUpdate'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionCustomFormUpdate'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionCustomFormUpdate'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionCustomFormUpdate'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+  /v{version}/manage-intake/custom-forms:
+    get:
+      tags:
+      - ManageIntake
+      parameters:
+      - name: facilityId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: intakeType
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IntakeSectionCustomForm'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IntakeSectionCustomForm'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IntakeSectionCustomForm'
+    post:
+      tags:
+      - ManageIntake
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionCustomFormUpdate'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionCustomFormUpdate'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionCustomFormUpdate'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionCustomFormUpdate'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+  /manage-intake/custom-sections:
+    post:
+      tags:
+      - ManageIntake
+      parameters:
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionOrder'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionOrder'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionOrder'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionOrder'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+  /v{version}/manage-intake/custom-sections:
+    post:
+      tags:
+      - ManageIntake
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionOrder'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionOrder'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionOrder'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/IntakeSectionOrder'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+components:
+  schemas:
+    MasterIntakeSections:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        createdBy:
+          type: integer
+          format: int32
+        facilityId:
+          type: integer
+          format: int32
+        intakeType:
+          type: integer
+          format: int32
+        isActiveRequire:
+          type: boolean
+        isCopyAvailable:
+          type: boolean
+        isDefaultSection:
+          type: boolean
+        isDeleted:
+          type: boolean
+        sectionCode:
+          type:
+          - string
+          - 'null'
+        sectionName:
+          type:
+          - string
+          - 'null'
+        details:
+          $ref: '#/components/schemas/IntakeSectionDetails'
+      additionalProperties: false
+    CreateResult:
+      type: object
+      properties:
+        operationResult:
+          $ref: '#/components/schemas/CreateOperationResult'
+        id:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        messages:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        reason:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
+    IntakeSectionOrder:
+      type: object
+      properties:
+        facilityId:
+          type: integer
+          format: int32
+        intakeId:
+          type: integer
+          format: int32
+        sections:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/MasterIntakeSections'
+      additionalProperties: false
+    IntakeSectionCustomFormUpdate:
+      type: object
+      properties:
+        facilityId:
+          type: integer
+          format: int32
+        intakeId:
+          type: integer
+          format: int32
+        forms:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/IntakeSectionCustomForm'
+      additionalProperties: false
+    IntakeSectionCustomForm:
+      type: object
+      properties:
+        advancedFormId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        createdDate:
+          type: string
+          format: date-time
+        formId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        formInfoId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        title:
+          type:
+          - string
+          - 'null'
+        version:
+          type: integer
+          format: int32
+      additionalProperties: false
+    IntakeSectionDetails:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        advancedFormId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        isActive:
+          type: boolean
+        isCopyIntakeSection:
+          type: boolean
+        sortOrder:
+          type: integer
+          format: int32
+        formId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        formInfoId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+      additionalProperties: false
+    CreateOperationResult:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
+        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      name: Authorization
+      in: header
+servers:
+- url: https://api.helloalleva.com
+  description: Base URL reconciled from apis.yml

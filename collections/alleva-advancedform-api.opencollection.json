@@ -1,0 +1,375 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Alleva Rest Advanced Form API",
+    "version": "1.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "AdvancedForm",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /advanced-forms/{id}/published",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/advanced-forms/:id/published",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "time",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /v{version}/advanced-forms/{id}/published",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/v:version/advanced-forms/:id/published",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "time",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "GET /advanced-forms/{id}/data/{leadId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/advanced-forms/:id/data/:leadId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "POST /advanced-forms/{id}/data/{leadId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/advanced-forms/:id/data/:leadId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "GET /v{version}/advanced-forms/{id}/data/{leadId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.helloalleva.com/v:version/advanced-forms/:id/data/:leadId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          }
+        },
+        {
+          "info": {
+            "name": "POST /v{version}/advanced-forms/{id}/data/{leadId}",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/v:version/advanced-forms/:id/data/:leadId",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "leadId",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "POST /advanced-forms/{id}/copy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/advanced-forms/:id/copy",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "POST /v{version}/advanced-forms/{id}/copy",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/v:version/advanced-forms/:id/copy",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "POST /advanced-forms/update-autofill",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/advanced-forms/update-autofill",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        },
+        {
+          "info": {
+            "name": "POST /v{version}/advanced-forms/update-autofill",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.helloalleva.com/v:version/advanced-forms/update-autofill",
+            "headers": [
+              {
+                "name": "X-Version",
+                "value": ""
+              }
+            ],
+            "params": [
+              {
+                "name": "version",
+                "value": "",
+                "type": "path"
+              },
+              {
+                "name": "api-version",
+                "value": "",
+                "type": "query"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

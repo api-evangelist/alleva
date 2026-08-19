@@ -1,0 +1,1650 @@
+openapi: 3.2.0
+info:
+  title: Alleva Rest Prospects API
+  version: '1.0'
+security:
+- Bearer: []
+tags:
+- name: Prospects
+paths:
+  /prospects:
+    post:
+      tags:
+      - Prospects
+      parameters:
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/Prospect'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/Prospect'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/Prospect'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/Prospect'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Prospect'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Prospect'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Prospect'
+    get:
+      tags:
+      - Prospects
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Prospect'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Prospect'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Prospect'
+  /v{version}/prospects:
+    post:
+      tags:
+      - Prospects
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/Prospect'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/Prospect'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/Prospect'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/Prospect'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Prospect'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Prospect'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Prospect'
+    get:
+      tags:
+      - Prospects
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Prospect'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Prospect'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Prospect'
+  /prospects/{id}:
+    patch:
+      tags:
+      - Prospects
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Prospect'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Prospect'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Prospect'
+    get:
+      tags:
+      - Prospects
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Prospect'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Prospect'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Prospect'
+  /v{version}/prospects/{id}:
+    patch:
+      tags:
+      - Prospects
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Prospect'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Prospect'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Prospect'
+    get:
+      tags:
+      - Prospects
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Prospect'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Prospect'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Prospect'
+  /prospects/{id}/contacts:
+    post:
+      tags:
+      - Prospects
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientContact'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientContact'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientContact'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientContact'
+      responses:
+        '200':
+          description: Success
+  /v{version}/prospects/{id}/contacts:
+    post:
+      tags:
+      - Prospects
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientContact'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientContact'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientContact'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientContact'
+      responses:
+        '200':
+          description: Success
+  /prospects/{id}/insurances:
+    post:
+      tags:
+      - Prospects
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientInsurances'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientInsurances'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientInsurances'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientInsurances'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/InsuranceReturn'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/InsuranceReturn'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/InsuranceReturn'
+  /v{version}/prospects/{id}/insurances:
+    post:
+      tags:
+      - Prospects
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientInsurances'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientInsurances'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientInsurances'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientInsurances'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/InsuranceReturn'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/InsuranceReturn'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/InsuranceReturn'
+  /prospects/insurances/{id}:
+    patch:
+      tags:
+      - Prospects
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientInsurances'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientInsurances'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientInsurances'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientInsurances'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/ClientInsurances'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/ClientInsurances'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/ClientInsurances'
+  /v{version}/prospects/insurances/{id}:
+    patch:
+      tags:
+      - Prospects
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientInsurances'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientInsurances'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientInsurances'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ClientInsurances'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/ClientInsurances'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/ClientInsurances'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/ClientInsurances'
+  /prospects/import:
+    post:
+      tags:
+      - Prospects
+      parameters:
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/BulkProspect'
+          application/json; ver=1.0:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/BulkProspect'
+          text/json; ver=1.0:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/BulkProspect'
+          application/*+json; ver=1.0:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/BulkProspect'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BulkProspectReturn'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BulkProspectReturn'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BulkProspectReturn'
+  /v{version}/prospects/import:
+    post:
+      tags:
+      - Prospects
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/BulkProspect'
+          application/json; ver=1.0:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/BulkProspect'
+          text/json; ver=1.0:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/BulkProspect'
+          application/*+json; ver=1.0:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/BulkProspect'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BulkProspectReturn'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BulkProspectReturn'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BulkProspectReturn'
+components:
+  schemas:
+    DocumentUrl:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        host:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        path:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+      additionalProperties: false
+    BulkProspectReturn:
+      type: object
+      properties:
+        prospectId:
+          type: integer
+          format: int32
+        bulkProspect:
+          $ref: '#/components/schemas/BulkProspectReturnObject'
+        errors:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+      additionalProperties: false
+    BulkProspect:
+      type: object
+      properties:
+        prospect:
+          $ref: '#/components/schemas/Prospect'
+        insurance:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/ClientInsurances'
+        documents:
+          $ref: '#/components/schemas/Document'
+        admissionScreening:
+          $ref: '#/components/schemas/AdmissionScreening'
+        faceToFace:
+          $ref: '#/components/schemas/FaceToFace'
+        billingIntake:
+          $ref: '#/components/schemas/BillingIntake'
+      additionalProperties: false
+    Document:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        clientDocumentId:
+          type: integer
+          format: int64
+        name:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        fileName:
+          type:
+          - string
+          - 'null'
+        client:
+          $ref: '#/components/schemas/ResourceLink'
+        status:
+          type:
+          - string
+          - 'null'
+        type:
+          type:
+          - string
+          - 'null'
+        typeId:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        uploadDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        url:
+          $ref: '#/components/schemas/DocumentUrl'
+        tableId:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        tableName:
+          type:
+          - string
+          - 'null'
+        path:
+          type:
+          - string
+          - 'null'
+        documentTypeId:
+          type: integer
+          format: int32
+        uploadedDocuments:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/DocumentData'
+      additionalProperties: false
+    FaceToFace:
+      type: object
+      properties:
+        levelOfCare:
+          type:
+          - string
+          - 'null'
+        treatments:
+          type:
+          - string
+          - 'null'
+        referralCompanyName:
+          type:
+          - string
+          - 'null'
+        referralContactName:
+          type:
+          - string
+          - 'null'
+        facility:
+          type:
+          - string
+          - 'null'
+        admissionDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        dischargeOrTransfer:
+          type:
+          - string
+          - 'null'
+        leadIntakeBy:
+          type:
+          - string
+          - 'null'
+        firstContactDate:
+          type: string
+          format: date-time
+        leadSelfStatusName:
+          type:
+          - string
+          - 'null'
+        status:
+          type:
+          - string
+          - 'null'
+        primaryClinicianName:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ResourceLink:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        route:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    BillingIntake:
+      type: object
+      additionalProperties: false
+    Prospect:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          $ref: '#/components/schemas/ClientName'
+        gender:
+          type:
+          - string
+          - 'null'
+        primaryLanguage:
+          type:
+          - string
+          - 'null'
+        ssn:
+          type:
+          - string
+          - 'null'
+        dateOfBirth:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        address:
+          $ref: '#/components/schemas/Address'
+        phone:
+          $ref: '#/components/schemas/Phone'
+        email:
+          type:
+          - string
+          - 'null'
+        contact:
+          $ref: '#/components/schemas/ClientContact'
+        facilityName:
+          type:
+          - string
+          - 'null'
+        status:
+          type:
+          - string
+          - 'null'
+        selfStatus:
+          type:
+          - string
+          - 'null'
+        mrn:
+          type:
+          - string
+          - 'null'
+        admissionDate:
+          type:
+          - string
+          - 'null'
+          writeOnly: true
+        firstContactDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        profileImage:
+          $ref: '#/components/schemas/ClientImageUrl'
+        referralCompanyId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        referralContactId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        referralCompanyName:
+          type:
+          - string
+          - 'null'
+        referralContactName:
+          type:
+          - string
+          - 'null'
+        luin:
+          type:
+          - string
+          - 'null'
+          format: uuid
+        externalId:
+          $ref: '#/components/schemas/ExternalData'
+      additionalProperties: false
+    ClientInsurances:
+      type: object
+      properties:
+        insuranceName:
+          type:
+          - string
+          - 'null'
+        relationship:
+          type:
+          - string
+          - 'null'
+        priority:
+          type:
+          - string
+          - 'null'
+        plan:
+          type:
+          - string
+          - 'null'
+        policyId:
+          type:
+          - string
+          - 'null'
+        groupNumber:
+          type:
+          - string
+          - 'null'
+        coPay:
+          type:
+          - string
+          - 'null'
+        subscriberName:
+          type:
+          - string
+          - 'null'
+        subscriberFirstName:
+          type:
+          - string
+          - 'null'
+        subscriberLastName:
+          type:
+          - string
+          - 'null'
+        subscriberBirthDate:
+          type:
+          - string
+          - 'null'
+        subscriberAddress:
+          type:
+          - string
+          - 'null'
+        subscriberCity:
+          type:
+          - string
+          - 'null'
+        subscriberState:
+          type:
+          - string
+          - 'null'
+        subscriberZip:
+          type:
+          - string
+          - 'null'
+        subscriberCountry:
+          type:
+          - string
+          - 'null'
+        subscriberPhone:
+          type:
+          - string
+          - 'null'
+        isVerified:
+          type: boolean
+        isPrimary:
+          type: boolean
+        verificationDate:
+          type:
+          - string
+          - 'null'
+        verifiedBy:
+          type:
+          - string
+          - 'null'
+        verificationNo:
+          type:
+          - string
+          - 'null'
+        notes:
+          type:
+          - string
+          - 'null'
+        insurancePhone:
+          type:
+          - string
+          - 'null'
+        policyEffectiveDate:
+          type:
+          - string
+          - 'null'
+        documents:
+          $ref: '#/components/schemas/Document'
+        externalId:
+          $ref: '#/components/schemas/ExternalData'
+        documentBytes:
+          type:
+          - string
+          - 'null'
+          format: byte
+      additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
+    ClientContact:
+      type: object
+      properties:
+        firstName:
+          type:
+          - string
+          - 'null'
+        lastName:
+          type:
+          - string
+          - 'null'
+        name:
+          type:
+          - string
+          - 'null'
+        phone:
+          type:
+          - string
+          - 'null'
+        relationship:
+          type:
+          - string
+          - 'null'
+        email:
+          type:
+          - string
+          - 'null'
+        isPrimary:
+          type: boolean
+          writeOnly: true
+        isEmergencyContact:
+          type: boolean
+      additionalProperties: false
+    ClientName:
+      type: object
+      properties:
+        clientFullName:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        first:
+          type:
+          - string
+          - 'null'
+        last:
+          type:
+          - string
+          - 'null'
+        middle:
+          type:
+          - string
+          - 'null'
+        isLegalName:
+          type:
+          - boolean
+          - 'null'
+        former:
+          type:
+          - string
+          - 'null'
+        prefix:
+          type:
+          - string
+          - 'null'
+        preferred:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ExternalData:
+      type: object
+      properties:
+        externalId:
+          type:
+          - string
+          - 'null'
+        externalIdType:
+          type:
+          - string
+          - 'null'
+        serviceIdentifier:
+          type:
+          - string
+          - 'null'
+        serviceId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+      additionalProperties: false
+    AdmissionScreening:
+      type: object
+      properties:
+        isCurrentlyEmployed:
+          type:
+          - boolean
+          - 'null'
+        isJobAtRisk:
+          type:
+          - boolean
+          - 'null'
+        seekingTreatmentReason:
+          type:
+          - string
+          - 'null'
+        willingTreatment:
+          type:
+          - string
+          - 'null'
+        isPreviouslyDiagnosed:
+          type:
+          - boolean
+          - 'null'
+        hasHistoryOfChronicPain:
+          type:
+          - boolean
+          - 'null'
+        painLevel:
+          type: integer
+          format: int32
+        assesmentByNursingStaff:
+          type:
+          - string
+          - 'null'
+        isHistoryofAddictions:
+          type:
+          - boolean
+          - 'null'
+        medicalHistory:
+          type:
+          - string
+          - 'null'
+        outstandingIssues:
+          type:
+          - string
+          - 'null'
+        isPregnant:
+          type:
+          - boolean
+          - 'null'
+        hasPossibilityOfPregnancy:
+          type:
+          - boolean
+          - 'null'
+        allergies:
+          type:
+          - string
+          - 'null'
+        hasWorkSchoolProblem:
+          type:
+          - boolean
+          - 'null'
+        hasFamilyFunctioning:
+          type:
+          - boolean
+          - 'null'
+        hasPersonalityChanges:
+          type:
+          - boolean
+          - 'null'
+        doStaysAllNight:
+          type:
+          - boolean
+          - 'null'
+        impulseControl:
+          type:
+          - boolean
+          - 'null'
+        personalityChanges:
+          type:
+          - boolean
+          - 'null'
+        isolating:
+          type:
+          - boolean
+          - 'null'
+        previousTreatment:
+          type:
+          - boolean
+          - 'null'
+        sadOrAngryOften:
+          type:
+          - boolean
+          - 'null'
+        lackOfHygiene:
+          type:
+          - boolean
+          - 'null'
+        violentOutbursts:
+          type:
+          - boolean
+          - 'null'
+        explosiveOutbursts:
+          type:
+          - boolean
+          - 'null'
+        inabilityToThinkClearly:
+          type:
+          - boolean
+          - 'null'
+        severeMoodSwings:
+          type:
+          - boolean
+          - 'null'
+        moneyManaging:
+          type:
+          - boolean
+          - 'null'
+        sexualOffense:
+          type:
+          - boolean
+          - 'null'
+        historyOfViolence:
+          type:
+          - boolean
+          - 'null'
+        voilenceHistory:
+          type:
+          - string
+          - 'null'
+        historyOfSeizures:
+          type:
+          - boolean
+          - 'null'
+        historyOfChronicPain:
+          type:
+          - boolean
+          - 'null'
+        isCurrentSuicidalIdeations:
+          type:
+          - boolean
+          - 'null'
+        currentSuicidalIdeations:
+          type:
+          - string
+          - 'null'
+        isCurrentHomicidalIdeations:
+          type:
+          - boolean
+          - 'null'
+        currentHomicidalIdeations:
+          type:
+          - string
+          - 'null'
+        patientHaveMeans:
+          type:
+          - boolean
+          - 'null'
+        suicidalAttempts:
+          type:
+          - boolean
+          - 'null'
+        noOfSuicidalAttempts:
+          type:
+          - string
+          - 'null'
+        historyOfSuicidal:
+          type:
+          - string
+          - 'null'
+        historyOfTrauma:
+          type:
+          - string
+          - 'null'
+        haveLegalHistory:
+          type:
+          - boolean
+          - 'null'
+        beenArrested:
+          type:
+          - boolean
+          - 'null'
+        currentlyCharged:
+          type:
+          - boolean
+          - 'null'
+        pendingCourtDecision:
+          type:
+          - boolean
+          - 'null'
+        notes:
+          type:
+          - string
+          - 'null'
+        dateOfHearing:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        canLeaveState:
+          type:
+          - boolean
+          - 'null'
+        afterDischargePlan:
+          type:
+          - string
+          - 'null'
+        additionalNotes:
+          type:
+          - string
+          - 'null'
+        means:
+          type:
+          - string
+          - 'null'
+        differentAboutTreatment:
+          type:
+          - string
+          - 'null'
+        manageSelf:
+          type:
+          - boolean
+          - 'null'
+        eatingDisorderHistory:
+          type:
+          - boolean
+          - 'null'
+        isPhysicalOffense:
+          type: boolean
+        historyofAddictionDesc:
+          type:
+          - string
+          - 'null'
+        needAssistanceWithFMLA:
+          type: boolean
+        painNote:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Address:
+      type: object
+      properties:
+        line1:
+          type:
+          - string
+          - 'null'
+        line2:
+          type:
+          - string
+          - 'null'
+        city:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        stateAbbr:
+          type:
+          - string
+          - 'null'
+        country:
+          type:
+          - string
+          - 'null'
+        zipCode:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    BulkProspectReturnObject:
+      type: object
+      properties:
+        insurance:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/InsuranceReturn'
+        documents:
+          type:
+          - array
+          - 'null'
+          items:
+            type: integer
+            format: int64
+        admissionScreening:
+          type: boolean
+          default: false
+        faceToFace:
+          type: boolean
+          default: false
+        billingIntake:
+          type: boolean
+          default: false
+      additionalProperties: false
+    ClientImageUrl:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        host:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        path:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+      additionalProperties: false
+    InsuranceReturn:
+      type: object
+      properties:
+        insuranceId:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        documentIds:
+          type:
+          - array
+          - 'null'
+          items:
+            type: integer
+            format: int64
+      additionalProperties: false
+    DocumentData:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type:
+          - string
+          - 'null'
+        base64String:
+          type:
+          - string
+          - 'null'
+        externalId:
+          $ref: '#/components/schemas/ExternalData'
+      additionalProperties: false
+    Phone:
+      type: object
+      properties:
+        home:
+          type:
+          - string
+          - 'null'
+        office:
+          type:
+          - string
+          - 'null'
+        other:
+          type:
+          - string
+          - 'null'
+        number:
+          type:
+          - string
+          - 'null'
+        fax:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
+        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      name: Authorization
+      in: header
+servers:
+- url: https://api.helloalleva.com
+  description: Base URL reconciled from apis.yml

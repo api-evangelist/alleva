@@ -1,0 +1,273 @@
+openapi: 3.2.0
+info:
+  title: Alleva Rest Advanced Form Instance API
+  version: '1.0'
+security:
+- Bearer: []
+tags:
+- name: AdvancedFormInstance
+paths:
+  /advanced-forms/instance:
+    post:
+      tags:
+      - AdvancedFormInstance
+      parameters:
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AdvancedFormInstance'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AdvancedFormInstance'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AdvancedFormInstance'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AdvancedFormInstance'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/AdvancedFormInstance'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/AdvancedFormInstance'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/AdvancedFormInstance'
+    get:
+      tags:
+      - AdvancedFormInstance
+      parameters:
+      - name: AdvancedFormId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: LeadId
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: SourceKey
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: SourceTypeId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/AdvancedFormInstance'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/AdvancedFormInstance'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/AdvancedFormInstance'
+  /v{version}/advanced-forms/instance:
+    post:
+      tags:
+      - AdvancedFormInstance
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AdvancedFormInstance'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AdvancedFormInstance'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AdvancedFormInstance'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AdvancedFormInstance'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/AdvancedFormInstance'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/AdvancedFormInstance'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/AdvancedFormInstance'
+    get:
+      tags:
+      - AdvancedFormInstance
+      parameters:
+      - name: AdvancedFormId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: LeadId
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: SourceKey
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: SourceTypeId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/AdvancedFormInstance'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/AdvancedFormInstance'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/AdvancedFormInstance'
+components:
+  schemas:
+    AdvancedFormInstance:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        advancedFormId:
+          type: integer
+          format: int32
+        leadId:
+          type: integer
+          format: int64
+        sourceKey:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        sourceTypeId:
+          $ref: '#/components/schemas/CustomFormSourceType'
+        isDeleted:
+          type: boolean
+        deletedDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        deletedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        updatedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        updateDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        createdBy:
+          type: integer
+          format: int32
+        createdByUserType:
+          $ref: '#/components/schemas/UserType'
+        updatedByUserType:
+          $ref: '#/components/schemas/UserType'
+        createdDate:
+          type: string
+          format: date-time
+      additionalProperties: false
+    UserType:
+      enum:
+      - 0
+      - 1
+      - 2
+      type: integer
+      format: int32
+    CustomFormSourceType:
+      enum:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      type: integer
+      format: int32
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
+        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      name: Authorization
+      in: header
+servers:
+- url: https://api.helloalleva.com
+  description: Base URL reconciled from apis.yml

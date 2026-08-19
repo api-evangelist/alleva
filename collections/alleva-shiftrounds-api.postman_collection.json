@@ -1,0 +1,1317 @@
+{
+  "item": [
+    {
+      "id": "59671ebf-568a-4e55-9956-c1a51d198fc2",
+      "name": "ShiftRounds",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "da1052e3-aa12-4686-adf2-59bac221a46f",
+          "name": "/rounds",
+          "request": {
+            "name": "/rounds",
+            "description": {},
+            "url": {
+              "path": [
+                "rounds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"isSigned\": \"<boolean>\",\n  \"signedBy\": {\n    \"id\": \"<integer>\",\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\"\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"signature\": \"<string,null>\",\n  \"createdDate\": \"<dateTime>\",\n  \"createdBy\": {\n    \"id\": \"<integer>\",\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\"\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"roundName\": \"<string,null>\",\n  \"facilityId\": \"<integer>\",\n  \"clients\": \"<array,null>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "32af8613-215a-44d9-8eb9-74fbf339b1ec",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rounds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"isSigned\": \"<boolean>\",\n  \"signedBy\": {\n    \"id\": \"<integer>\",\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\"\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"signature\": \"<string,null>\",\n  \"createdDate\": \"<dateTime>\",\n  \"createdBy\": {\n    \"id\": \"<integer>\",\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\"\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"roundName\": \"<string,null>\",\n  \"facilityId\": \"<integer>\",\n  \"clients\": \"<array,null>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"isSigned\": \"<boolean>\",\n  \"signedBy\": {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"href\": \"string\",\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": null,\n      \"path\": null\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"signature\": \"<string,null>\",\n  \"createdDate\": \"<dateTime>\",\n  \"createdBy\": {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"href\": null,\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": \"string\",\n      \"path\": null\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"roundName\": \"<string,null>\",\n  \"facilityId\": \"<integer>\",\n  \"clients\": \"<array,null>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6b758b69-c7f8-46d6-aeff-71530b6c1f6f",
+          "name": "/rounds",
+          "request": {
+            "name": "/rounds",
+            "description": {},
+            "url": {
+              "path": [
+                "rounds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "459d3a1a-1268-4f73-8bb4-e24c91d9bf17",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rounds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"isSigned\": \"<boolean>\",\n    \"signedBy\": {\n      \"id\": \"<integer>\",\n      \"href\": null,\n      \"name\": {\n        \"first\": \"<string,null>\",\n        \"last\": \"<string,null>\",\n        \"prefix\": \"<string,null>\",\n        \"suffix\": \"<string,null>\"\n      },\n      \"gender\": \"<string,null>\",\n      \"userName\": \"<string,null>\",\n      \"birthDate\": \"<string,null-date-time>\",\n      \"ssn\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"phone\": \"<string,null>\",\n      \"address\": {\n        \"line1\": \"<string,null>\",\n        \"line2\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"stateAbbr\": \"<string,null>\",\n        \"country\": \"<string,null>\",\n        \"zipCode\": \"<string,null>\"\n      },\n      \"facility\": {\n        \"id\": \"<integer>\",\n        \"href\": \"string\",\n        \"name\": \"<string,null>\",\n        \"rehabName\": \"<string,null>\",\n        \"domainName\": \"<string,null>\",\n        \"email\": \"<string,null>\",\n        \"officePhone\": \"<string,null>\",\n        \"fax\": \"<string,null>\",\n        \"address1\": \"<string,null>\",\n        \"address2\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"postalCode\": \"<string,null>\",\n        \"country\": \"<string,null>\"\n      },\n      \"tenant\": \"<string,null>\",\n      \"role\": \"<string,null>\",\n      \"profileImage\": {\n        \"fileName\": \"<string,null>\",\n        \"host\": null,\n        \"path\": null\n      },\n      \"isMedicalProvider\": \"<boolean,null>\",\n      \"hireDate\": \"<string,null-date-time>\",\n      \"startDate\": \"<string,null-date-time>\",\n      \"endDate\": \"<string,null-date-time>\",\n      \"licenses\": \"<array,null>\"\n    },\n    \"signature\": \"<string,null>\",\n    \"createdDate\": \"<dateTime>\",\n    \"createdBy\": {\n      \"id\": \"<integer>\",\n      \"href\": null,\n      \"name\": {\n        \"first\": \"<string,null>\",\n        \"last\": \"<string,null>\",\n        \"prefix\": \"<string,null>\",\n        \"suffix\": \"<string,null>\"\n      },\n      \"gender\": \"<string,null>\",\n      \"userName\": \"<string,null>\",\n      \"birthDate\": \"<string,null-date-time>\",\n      \"ssn\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"phone\": \"<string,null>\",\n      \"address\": {\n        \"line1\": \"<string,null>\",\n        \"line2\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"stateAbbr\": \"<string,null>\",\n        \"country\": \"<string,null>\",\n        \"zipCode\": \"<string,null>\"\n      },\n      \"facility\": {\n        \"id\": \"<integer>\",\n        \"href\": \"string\",\n        \"name\": \"<string,null>\",\n        \"rehabName\": \"<string,null>\",\n        \"domainName\": \"<string,null>\",\n        \"email\": \"<string,null>\",\n        \"officePhone\": \"<string,null>\",\n        \"fax\": \"<string,null>\",\n        \"address1\": \"<string,null>\",\n        \"address2\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"postalCode\": \"<string,null>\",\n        \"country\": \"<string,null>\"\n      },\n      \"tenant\": \"<string,null>\",\n      \"role\": \"<string,null>\",\n      \"profileImage\": {\n        \"fileName\": \"<string,null>\",\n        \"host\": \"string\",\n        \"path\": \"string\"\n      },\n      \"isMedicalProvider\": \"<boolean,null>\",\n      \"hireDate\": \"<string,null-date-time>\",\n      \"startDate\": \"<string,null-date-time>\",\n      \"endDate\": \"<string,null-date-time>\",\n      \"licenses\": \"<array,null>\"\n    },\n    \"roundName\": \"<string,null>\",\n    \"facilityId\": \"<integer>\",\n    \"clients\": \"<array,null>\"\n  },\n  {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"isSigned\": \"<boolean>\",\n    \"signedBy\": {\n      \"id\": \"<integer>\",\n      \"href\": null,\n      \"name\": {\n        \"first\": \"<string,null>\",\n        \"last\": \"<string,null>\",\n        \"prefix\": \"<string,null>\",\n        \"suffix\": \"<string,null>\"\n      },\n      \"gender\": \"<string,null>\",\n      \"userName\": \"<string,null>\",\n      \"birthDate\": \"<string,null-date-time>\",\n      \"ssn\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"phone\": \"<string,null>\",\n      \"address\": {\n        \"line1\": \"<string,null>\",\n        \"line2\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"stateAbbr\": \"<string,null>\",\n        \"country\": \"<string,null>\",\n        \"zipCode\": \"<string,null>\"\n      },\n      \"facility\": {\n        \"id\": \"<integer>\",\n        \"href\": null,\n        \"name\": \"<string,null>\",\n        \"rehabName\": \"<string,null>\",\n        \"domainName\": \"<string,null>\",\n        \"email\": \"<string,null>\",\n        \"officePhone\": \"<string,null>\",\n        \"fax\": \"<string,null>\",\n        \"address1\": \"<string,null>\",\n        \"address2\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"postalCode\": \"<string,null>\",\n        \"country\": \"<string,null>\"\n      },\n      \"tenant\": \"<string,null>\",\n      \"role\": \"<string,null>\",\n      \"profileImage\": {\n        \"fileName\": \"<string,null>\",\n        \"host\": \"string\",\n        \"path\": \"string\"\n      },\n      \"isMedicalProvider\": \"<boolean,null>\",\n      \"hireDate\": \"<string,null-date-time>\",\n      \"startDate\": \"<string,null-date-time>\",\n      \"endDate\": \"<string,null-date-time>\",\n      \"licenses\": \"<array,null>\"\n    },\n    \"signature\": \"<string,null>\",\n    \"createdDate\": \"<dateTime>\",\n    \"createdBy\": {\n      \"id\": \"<integer>\",\n      \"href\": null,\n      \"name\": {\n        \"first\": \"<string,null>\",\n        \"last\": \"<string,null>\",\n        \"prefix\": \"<string,null>\",\n        \"suffix\": \"<string,null>\"\n      },\n      \"gender\": \"<string,null>\",\n      \"userName\": \"<string,null>\",\n      \"birthDate\": \"<string,null-date-time>\",\n      \"ssn\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"phone\": \"<string,null>\",\n      \"address\": {\n        \"line1\": \"<string,null>\",\n        \"line2\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"stateAbbr\": \"<string,null>\",\n        \"country\": \"<string,null>\",\n        \"zipCode\": \"<string,null>\"\n      },\n      \"facility\": {\n        \"id\": \"<integer>\",\n        \"href\": \"string\",\n        \"name\": \"<string,null>\",\n        \"rehabName\": \"<string,null>\",\n        \"domainName\": \"<string,null>\",\n        \"email\": \"<string,null>\",\n        \"officePhone\": \"<string,null>\",\n        \"fax\": \"<string,null>\",\n        \"address1\": \"<string,null>\",\n        \"address2\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"postalCode\": \"<string,null>\",\n        \"country\": \"<string,null>\"\n      },\n      \"tenant\": \"<string,null>\",\n      \"role\": \"<string,null>\",\n      \"profileImage\": {\n        \"fileName\": \"<string,null>\",\n        \"host\": null,\n        \"path\": null\n      },\n      \"isMedicalProvider\": \"<boolean,null>\",\n      \"hireDate\": \"<string,null-date-time>\",\n      \"startDate\": \"<string,null-date-time>\",\n      \"endDate\": \"<string,null-date-time>\",\n      \"licenses\": \"<array,null>\"\n    },\n    \"roundName\": \"<string,null>\",\n    \"facilityId\": \"<integer>\",\n    \"clients\": \"<array,null>\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6cdf6ba5-62b9-49ef-8529-0bf2c8f344f7",
+          "name": "/v{{version}}/rounds",
+          "request": {
+            "name": "/v{{version}}/rounds",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "rounds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"isSigned\": \"<boolean>\",\n  \"signedBy\": {\n    \"id\": \"<integer>\",\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\"\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"signature\": \"<string,null>\",\n  \"createdDate\": \"<dateTime>\",\n  \"createdBy\": {\n    \"id\": \"<integer>\",\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\"\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"roundName\": \"<string,null>\",\n  \"facilityId\": \"<integer>\",\n  \"clients\": \"<array,null>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "69261100-1111-40cc-94fa-9144d092d4ac",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "rounds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"isSigned\": \"<boolean>\",\n  \"signedBy\": {\n    \"id\": \"<integer>\",\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\"\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"signature\": \"<string,null>\",\n  \"createdDate\": \"<dateTime>\",\n  \"createdBy\": {\n    \"id\": \"<integer>\",\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\"\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"roundName\": \"<string,null>\",\n  \"facilityId\": \"<integer>\",\n  \"clients\": \"<array,null>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"isSigned\": \"<boolean>\",\n  \"signedBy\": {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"href\": \"string\",\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": null,\n      \"path\": null\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"signature\": \"<string,null>\",\n  \"createdDate\": \"<dateTime>\",\n  \"createdBy\": {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"href\": null,\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": \"string\",\n      \"path\": null\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"roundName\": \"<string,null>\",\n  \"facilityId\": \"<integer>\",\n  \"clients\": \"<array,null>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e25fa057-9a51-4c6d-9de7-554ec51a1b79",
+          "name": "/v{{version}}/rounds",
+          "request": {
+            "name": "/v{{version}}/rounds",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "rounds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b54f5a25-e71f-4779-96d8-16d036cb3aa9",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "rounds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"isSigned\": \"<boolean>\",\n    \"signedBy\": {\n      \"id\": \"<integer>\",\n      \"href\": null,\n      \"name\": {\n        \"first\": \"<string,null>\",\n        \"last\": \"<string,null>\",\n        \"prefix\": \"<string,null>\",\n        \"suffix\": \"<string,null>\"\n      },\n      \"gender\": \"<string,null>\",\n      \"userName\": \"<string,null>\",\n      \"birthDate\": \"<string,null-date-time>\",\n      \"ssn\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"phone\": \"<string,null>\",\n      \"address\": {\n        \"line1\": \"<string,null>\",\n        \"line2\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"stateAbbr\": \"<string,null>\",\n        \"country\": \"<string,null>\",\n        \"zipCode\": \"<string,null>\"\n      },\n      \"facility\": {\n        \"id\": \"<integer>\",\n        \"href\": \"string\",\n        \"name\": \"<string,null>\",\n        \"rehabName\": \"<string,null>\",\n        \"domainName\": \"<string,null>\",\n        \"email\": \"<string,null>\",\n        \"officePhone\": \"<string,null>\",\n        \"fax\": \"<string,null>\",\n        \"address1\": \"<string,null>\",\n        \"address2\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"postalCode\": \"<string,null>\",\n        \"country\": \"<string,null>\"\n      },\n      \"tenant\": \"<string,null>\",\n      \"role\": \"<string,null>\",\n      \"profileImage\": {\n        \"fileName\": \"<string,null>\",\n        \"host\": null,\n        \"path\": null\n      },\n      \"isMedicalProvider\": \"<boolean,null>\",\n      \"hireDate\": \"<string,null-date-time>\",\n      \"startDate\": \"<string,null-date-time>\",\n      \"endDate\": \"<string,null-date-time>\",\n      \"licenses\": \"<array,null>\"\n    },\n    \"signature\": \"<string,null>\",\n    \"createdDate\": \"<dateTime>\",\n    \"createdBy\": {\n      \"id\": \"<integer>\",\n      \"href\": null,\n      \"name\": {\n        \"first\": \"<string,null>\",\n        \"last\": \"<string,null>\",\n        \"prefix\": \"<string,null>\",\n        \"suffix\": \"<string,null>\"\n      },\n      \"gender\": \"<string,null>\",\n      \"userName\": \"<string,null>\",\n      \"birthDate\": \"<string,null-date-time>\",\n      \"ssn\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"phone\": \"<string,null>\",\n      \"address\": {\n        \"line1\": \"<string,null>\",\n        \"line2\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"stateAbbr\": \"<string,null>\",\n        \"country\": \"<string,null>\",\n        \"zipCode\": \"<string,null>\"\n      },\n      \"facility\": {\n        \"id\": \"<integer>\",\n        \"href\": \"string\",\n        \"name\": \"<string,null>\",\n        \"rehabName\": \"<string,null>\",\n        \"domainName\": \"<string,null>\",\n        \"email\": \"<string,null>\",\n        \"officePhone\": \"<string,null>\",\n        \"fax\": \"<string,null>\",\n        \"address1\": \"<string,null>\",\n        \"address2\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"postalCode\": \"<string,null>\",\n        \"country\": \"<string,null>\"\n      },\n      \"tenant\": \"<string,null>\",\n      \"role\": \"<string,null>\",\n      \"profileImage\": {\n        \"fileName\": \"<string,null>\",\n        \"host\": \"string\",\n        \"path\": \"string\"\n      },\n      \"isMedicalProvider\": \"<boolean,null>\",\n      \"hireDate\": \"<string,null-date-time>\",\n      \"startDate\": \"<string,null-date-time>\",\n      \"endDate\": \"<string,null-date-time>\",\n      \"licenses\": \"<array,null>\"\n    },\n    \"roundName\": \"<string,null>\",\n    \"facilityId\": \"<integer>\",\n    \"clients\": \"<array,null>\"\n  },\n  {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"isSigned\": \"<boolean>\",\n    \"signedBy\": {\n      \"id\": \"<integer>\",\n      \"href\": null,\n      \"name\": {\n        \"first\": \"<string,null>\",\n        \"last\": \"<string,null>\",\n        \"prefix\": \"<string,null>\",\n        \"suffix\": \"<string,null>\"\n      },\n      \"gender\": \"<string,null>\",\n      \"userName\": \"<string,null>\",\n      \"birthDate\": \"<string,null-date-time>\",\n      \"ssn\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"phone\": \"<string,null>\",\n      \"address\": {\n        \"line1\": \"<string,null>\",\n        \"line2\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"stateAbbr\": \"<string,null>\",\n        \"country\": \"<string,null>\",\n        \"zipCode\": \"<string,null>\"\n      },\n      \"facility\": {\n        \"id\": \"<integer>\",\n        \"href\": null,\n        \"name\": \"<string,null>\",\n        \"rehabName\": \"<string,null>\",\n        \"domainName\": \"<string,null>\",\n        \"email\": \"<string,null>\",\n        \"officePhone\": \"<string,null>\",\n        \"fax\": \"<string,null>\",\n        \"address1\": \"<string,null>\",\n        \"address2\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"postalCode\": \"<string,null>\",\n        \"country\": \"<string,null>\"\n      },\n      \"tenant\": \"<string,null>\",\n      \"role\": \"<string,null>\",\n      \"profileImage\": {\n        \"fileName\": \"<string,null>\",\n        \"host\": \"string\",\n        \"path\": \"string\"\n      },\n      \"isMedicalProvider\": \"<boolean,null>\",\n      \"hireDate\": \"<string,null-date-time>\",\n      \"startDate\": \"<string,null-date-time>\",\n      \"endDate\": \"<string,null-date-time>\",\n      \"licenses\": \"<array,null>\"\n    },\n    \"signature\": \"<string,null>\",\n    \"createdDate\": \"<dateTime>\",\n    \"createdBy\": {\n      \"id\": \"<integer>\",\n      \"href\": null,\n      \"name\": {\n        \"first\": \"<string,null>\",\n        \"last\": \"<string,null>\",\n        \"prefix\": \"<string,null>\",\n        \"suffix\": \"<string,null>\"\n      },\n      \"gender\": \"<string,null>\",\n      \"userName\": \"<string,null>\",\n      \"birthDate\": \"<string,null-date-time>\",\n      \"ssn\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"phone\": \"<string,null>\",\n      \"address\": {\n        \"line1\": \"<string,null>\",\n        \"line2\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"stateAbbr\": \"<string,null>\",\n        \"country\": \"<string,null>\",\n        \"zipCode\": \"<string,null>\"\n      },\n      \"facility\": {\n        \"id\": \"<integer>\",\n        \"href\": \"string\",\n        \"name\": \"<string,null>\",\n        \"rehabName\": \"<string,null>\",\n        \"domainName\": \"<string,null>\",\n        \"email\": \"<string,null>\",\n        \"officePhone\": \"<string,null>\",\n        \"fax\": \"<string,null>\",\n        \"address1\": \"<string,null>\",\n        \"address2\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"postalCode\": \"<string,null>\",\n        \"country\": \"<string,null>\"\n      },\n      \"tenant\": \"<string,null>\",\n      \"role\": \"<string,null>\",\n      \"profileImage\": {\n        \"fileName\": \"<string,null>\",\n        \"host\": null,\n        \"path\": null\n      },\n      \"isMedicalProvider\": \"<boolean,null>\",\n      \"hireDate\": \"<string,null-date-time>\",\n      \"startDate\": \"<string,null-date-time>\",\n      \"endDate\": \"<string,null-date-time>\",\n      \"licenses\": \"<array,null>\"\n    },\n    \"roundName\": \"<string,null>\",\n    \"facilityId\": \"<integer>\",\n    \"clients\": \"<array,null>\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1d0854a4-f1e2-4cf4-893f-fcab520ea3eb",
+          "name": "/rounds/:id",
+          "request": {
+            "name": "/rounds/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "rounds",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_1\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_2\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e7ba6957-9f50-4e79-8b8c-d047ead3ab93",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rounds",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_1\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_2\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_3\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"isSigned\": \"<boolean>\",\n  \"signedBy\": {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"href\": \"string\",\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": null,\n      \"path\": null\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"signature\": \"<string,null>\",\n  \"createdDate\": \"<dateTime>\",\n  \"createdBy\": {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"href\": null,\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": \"string\",\n      \"path\": null\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"roundName\": \"<string,null>\",\n  \"facilityId\": \"<integer>\",\n  \"clients\": \"<array,null>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7cb11df6-c389-45f4-b880-60fc368ae34a",
+          "name": "/rounds/:id",
+          "request": {
+            "name": "/rounds/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "rounds",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c729956f-6ac9-4145-b623-9f8ca58d05b2",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rounds",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"isSigned\": \"<boolean>\",\n  \"signedBy\": {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"href\": \"string\",\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": null,\n      \"path\": null\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"signature\": \"<string,null>\",\n  \"createdDate\": \"<dateTime>\",\n  \"createdBy\": {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"href\": null,\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": \"string\",\n      \"path\": null\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"roundName\": \"<string,null>\",\n  \"facilityId\": \"<integer>\",\n  \"clients\": \"<array,null>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5f76fa69-95ea-4a49-8184-2a0080e2ea2e",
+          "name": "/v{{version}}/rounds/:id",
+          "request": {
+            "name": "/v{{version}}/rounds/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "rounds",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_1\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "26301227-9969-498f-af0a-8a52943a899f",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "rounds",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_1\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_2\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_3\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"isSigned\": \"<boolean>\",\n  \"signedBy\": {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"href\": \"string\",\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": null,\n      \"path\": null\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"signature\": \"<string,null>\",\n  \"createdDate\": \"<dateTime>\",\n  \"createdBy\": {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"href\": null,\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": \"string\",\n      \"path\": null\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"roundName\": \"<string,null>\",\n  \"facilityId\": \"<integer>\",\n  \"clients\": \"<array,null>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3b871ca4-f823-4a21-b33f-d513443d074a",
+          "name": "/v{{version}}/rounds/:id",
+          "request": {
+            "name": "/v{{version}}/rounds/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "rounds",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d60b0168-4411-4e53-8b1d-d2822bb6ee31",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "rounds",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"isSigned\": \"<boolean>\",\n  \"signedBy\": {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"href\": \"string\",\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": null,\n      \"path\": null\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"signature\": \"<string,null>\",\n  \"createdDate\": \"<dateTime>\",\n  \"createdBy\": {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"name\": {\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"suffix\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"userName\": \"<string,null>\",\n    \"birthDate\": \"<string,null-date-time>\",\n    \"ssn\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"facility\": {\n      \"id\": \"<integer>\",\n      \"href\": null,\n      \"name\": \"<string,null>\",\n      \"rehabName\": \"<string,null>\",\n      \"domainName\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"officePhone\": \"<string,null>\",\n      \"fax\": \"<string,null>\",\n      \"address1\": \"<string,null>\",\n      \"address2\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"postalCode\": \"<string,null>\",\n      \"country\": \"<string,null>\"\n    },\n    \"tenant\": \"<string,null>\",\n    \"role\": \"<string,null>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": \"string\",\n      \"path\": null\n    },\n    \"isMedicalProvider\": \"<boolean,null>\",\n    \"hireDate\": \"<string,null-date-time>\",\n    \"startDate\": \"<string,null-date-time>\",\n    \"endDate\": \"<string,null-date-time>\",\n    \"licenses\": \"<array,null>\"\n  },\n  \"roundName\": \"<string,null>\",\n  \"facilityId\": \"<integer>\",\n  \"clients\": \"<array,null>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fe61f064-2a0f-4b68-a2d1-cfe708c9d5dc",
+          "name": "/rounds/locations",
+          "request": {
+            "name": "/rounds/locations",
+            "description": {},
+            "url": {
+              "path": [
+                "rounds",
+                "locations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2717c410-fea5-4745-8cc3-88da3e2a79b4",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "rounds",
+                    "locations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 8348,\n    \"name\": null\n  },\n  {\n    \"id\": 3219,\n    \"name\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ce2d44ee-e162-4a0e-bd23-7b5633740c4e",
+          "name": "/v{{version}}/rounds/locations",
+          "request": {
+            "name": "/v{{version}}/rounds/locations",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "rounds",
+                "locations"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6bd2636c-87bc-43f0-a6ab-eb5239f4a07e",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "rounds",
+                    "locations"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 8348,\n    \"name\": null\n  },\n  {\n    \"id\": 3219,\n    \"name\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.helloalleva.com",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "version"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "0a12f917-23dc-4320-8d93-a82e5c5ccb4e",
+    "name": "Alleva Rest Shift Rounds API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

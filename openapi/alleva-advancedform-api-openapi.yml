@@ -1,0 +1,717 @@
+openapi: 3.2.0
+info:
+  title: Alleva Rest Advanced Form API
+  version: '1.0'
+security:
+- Bearer: []
+tags:
+- name: AdvancedForm
+paths:
+  /advanced-forms/{id}/published:
+    get:
+      tags:
+      - AdvancedForm
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: time
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/AdvancedForm'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/AdvancedForm'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/AdvancedForm'
+  /v{version}/advanced-forms/{id}/published:
+    get:
+      tags:
+      - AdvancedForm
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: time
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/AdvancedForm'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/AdvancedForm'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/AdvancedForm'
+  /advanced-forms/{id}/data/{leadId}:
+    get:
+      tags:
+      - AdvancedForm
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: leadId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DataValueWithKindResponse'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DataValueWithKindResponse'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DataValueWithKindResponse'
+    post:
+      tags:
+      - AdvancedForm
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: leadId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AdvancedFormSaveRequest'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AdvancedFormSaveRequest'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AdvancedFormSaveRequest'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AdvancedFormSaveRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DataValueWithKindResponse'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DataValueWithKindResponse'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DataValueWithKindResponse'
+  /v{version}/advanced-forms/{id}/data/{leadId}:
+    get:
+      tags:
+      - AdvancedForm
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: leadId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DataValueWithKindResponse'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DataValueWithKindResponse'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DataValueWithKindResponse'
+    post:
+      tags:
+      - AdvancedForm
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: leadId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AdvancedFormSaveRequest'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AdvancedFormSaveRequest'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AdvancedFormSaveRequest'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AdvancedFormSaveRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DataValueWithKindResponse'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DataValueWithKindResponse'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DataValueWithKindResponse'
+  /advanced-forms/{id}/copy:
+    post:
+      tags:
+      - AdvancedForm
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/CopyParameters'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/CopyParameters'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/CopyParameters'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/CopyParameters'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AdvancedForm'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AdvancedForm'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AdvancedForm'
+  /v{version}/advanced-forms/{id}/copy:
+    post:
+      tags:
+      - AdvancedForm
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/CopyParameters'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/CopyParameters'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/CopyParameters'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/CopyParameters'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AdvancedForm'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AdvancedForm'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AdvancedForm'
+  /advanced-forms/update-autofill:
+    post:
+      tags:
+      - AdvancedForm
+      parameters:
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AutofillRequest'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AutofillRequest'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AutofillRequest'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AutofillRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: boolean
+            application/json; ver=1.0:
+              schema:
+                type: boolean
+            text/json; ver=1.0:
+              schema:
+                type: boolean
+  /v{version}/advanced-forms/update-autofill:
+    post:
+      tags:
+      - AdvancedForm
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AutofillRequest'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AutofillRequest'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AutofillRequest'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/AutofillRequest'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: boolean
+            application/json; ver=1.0:
+              schema:
+                type: boolean
+            text/json; ver=1.0:
+              schema:
+                type: boolean
+components:
+  schemas:
+    AdvancedFormSaveRequest:
+      type: object
+      properties:
+        dataValues:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/DataValueRequest'
+      additionalProperties: false
+    DataKind:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      type: integer
+      format: int32
+    DataValueRequest:
+      type: object
+      properties:
+        id:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        advancedFormInstanceId:
+          type: integer
+          format: int64
+        booleanValue:
+          type:
+          - boolean
+          - 'null'
+        dataFacetId:
+          type: integer
+          format: int32
+        dateTimeValue:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        decimalValue:
+          type:
+          - number
+          - 'null'
+          format: double
+        fileValue:
+          type:
+          - string
+          - 'null'
+        integerValue:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        imageValue:
+          type:
+          - string
+          - 'null'
+          format: byte
+        jsonValue:
+          type:
+          - string
+          - 'null'
+        leadId:
+          type: integer
+          format: int32
+        signatureValue:
+          type:
+          - string
+          - 'null'
+        stringValue:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    CopyParameters:
+      type: object
+      properties:
+        destinationFacilityIds:
+          type:
+          - array
+          - 'null'
+          items:
+            type: integer
+            format: int32
+      additionalProperties: false
+    AutofillRequest:
+      type: object
+      properties:
+        advancedFormId:
+          type: integer
+          format: int32
+        facilityIds:
+          type:
+          - array
+          - 'null'
+          items:
+            type: integer
+            format: int32
+        isAutofillEnabled:
+          type: boolean
+      additionalProperties: false
+    AdvancedForm:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        advancedFormGroupId:
+          type: string
+          format: uuid
+        body:
+          type:
+          - string
+          - 'null'
+        draftBody:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        facilityId:
+          type: integer
+          format: int32
+        isModified:
+          type: boolean
+        isPublished:
+          type: boolean
+        isDeleted:
+          type: boolean
+        name:
+          type:
+          - string
+          - 'null'
+        isAutoFillEnabled:
+          type: boolean
+      additionalProperties: false
+    DataValueWithKindResponse:
+      type: object
+      properties:
+        id:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        advancedFormInstanceId:
+          type: integer
+          format: int64
+        booleanValue:
+          type:
+          - boolean
+          - 'null'
+        dataFacetId:
+          type: integer
+          format: int32
+        dateTimeValue:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        decimalValue:
+          type:
+          - number
+          - 'null'
+          format: double
+        fileValue:
+          type:
+          - string
+          - 'null'
+        integerValue:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        imageValue:
+          type:
+          - string
+          - 'null'
+          format: byte
+        jsonValue:
+          type:
+          - string
+          - 'null'
+        leadId:
+          type: integer
+          format: int32
+        signatureValue:
+          type:
+          - string
+          - 'null'
+        stringValue:
+          type:
+          - string
+          - 'null'
+        createdDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        dataKind:
+          $ref: '#/components/schemas/DataKind'
+      additionalProperties: false
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
+        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      name: Authorization
+      in: header
+servers:
+- url: https://api.helloalleva.com
+  description: Base URL reconciled from apis.yml

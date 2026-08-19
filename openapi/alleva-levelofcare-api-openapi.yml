@@ -1,0 +1,511 @@
+openapi: 3.2.0
+info:
+  title: Alleva Rest Level Of Care API
+  version: '1.0'
+security:
+- Bearer: []
+tags:
+- name: LevelOfCare
+paths:
+  /levels-of-care:
+    post:
+      tags:
+      - LevelOfCare
+      parameters:
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/LevelOfCare'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/LevelOfCare'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/LevelOfCare'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/LevelOfCare'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+    get:
+      tags:
+      - LevelOfCare
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LevelOfCare'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LevelOfCare'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LevelOfCare'
+  /v{version}/levels-of-care:
+    post:
+      tags:
+      - LevelOfCare
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/LevelOfCare'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/LevelOfCare'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/LevelOfCare'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/LevelOfCare'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+    get:
+      tags:
+      - LevelOfCare
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LevelOfCare'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LevelOfCare'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LevelOfCare'
+  /levels-of-care/{id}:
+    delete:
+      tags:
+      - LevelOfCare
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+    patch:
+      tags:
+      - LevelOfCare
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+    get:
+      tags:
+      - LevelOfCare
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+  /v{version}/levels-of-care/{id}:
+    delete:
+      tags:
+      - LevelOfCare
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+    patch:
+      tags:
+      - LevelOfCare
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+    get:
+      tags:
+      - LevelOfCare
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/LevelOfCare'
+components:
+  schemas:
+    LevelOfCare:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        hoursPerDay:
+          type: integer
+          format: int32
+        isWeekDaysApplied:
+          type: integer
+          format: int32
+        daysPerWeek:
+          type: integer
+          format: int32
+        isActive:
+          type: boolean
+        canModifyOrDelete:
+          type: boolean
+        inUse:
+          type: boolean
+      additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
+        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      name: Authorization
+      in: header
+servers:
+- url: https://api.helloalleva.com
+  description: Base URL reconciled from apis.yml

@@ -1,0 +1,303 @@
+{
+  "item": [
+    {
+      "id": "355053f8-568b-4cde-ad3d-4d73434c5a5b",
+      "name": "DataFacet",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6f6527a5-abd1-453b-b489-7058a555d4ea",
+          "name": "/data-facets/search",
+          "request": {
+            "name": "/data-facets/search",
+            "description": {},
+            "url": {
+              "path": [
+                "data-facets",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  \"<integer>\",\n  \"<integer>\"\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "81fa08b9-ac53-4a0a-8dd8-08c6d2188fd5",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data-facets",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  \"<integer>\",\n  \"<integer>\"\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 453,\n    \"name\": null,\n    \"shortName\": null,\n    \"description\": \"string\",\n    \"isSharable\": true,\n    \"isCalculable\": true,\n    \"isDraft\": false,\n    \"path\": \"string\",\n    \"calculableExpression\": null,\n    \"isEditableByOtherForms\": true,\n    \"modifiedByUserId\": 3189,\n    \"modifiedDateUtc\": \"1984-08-31T01:49:47.974Z\",\n    \"assignedTags\": [\n      4507,\n      4681\n    ],\n    \"dataKind\": 5,\n    \"scopeKind\": 1,\n    \"originatingFormId\": 8197,\n    \"uuid\": \"722fce5e-742a-c818-78b2-f5d9ca5a72af\",\n    \"createdByUserId\": 4835,\n    \"createdDateUtc\": \"2022-09-30T01:09:01.407Z\",\n    \"isReadOnly\": false,\n    \"isBuiltIn\": true\n  },\n  {\n    \"id\": 6096,\n    \"name\": \"string\",\n    \"shortName\": null,\n    \"description\": null,\n    \"isSharable\": true,\n    \"isCalculable\": true,\n    \"isDraft\": true,\n    \"path\": null,\n    \"calculableExpression\": \"string\",\n    \"isEditableByOtherForms\": true,\n    \"modifiedByUserId\": 850,\n    \"modifiedDateUtc\": \"2021-02-27T15:14:17.586Z\",\n    \"assignedTags\": null,\n    \"dataKind\": 2,\n    \"scopeKind\": 4,\n    \"originatingFormId\": 1047,\n    \"uuid\": \"3aab3d36-67ab-aee3-8b8d-ec1f9c3e7b34\",\n    \"createdByUserId\": 1499,\n    \"createdDateUtc\": \"1956-06-25T05:41:15.771Z\",\n    \"isReadOnly\": true,\n    \"isBuiltIn\": true\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "08fc550d-0cf9-46bb-b0b3-a8cea9d4d3b0",
+          "name": "/v{{version}}/data-facets/search",
+          "request": {
+            "name": "/v{{version}}/data-facets/search",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "data-facets",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  \"<integer>\",\n  \"<integer>\"\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ecf91e0e-3888-4645-b582-3d976a5bb4b9",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "data-facets",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  \"<integer>\",\n  \"<integer>\"\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 453,\n    \"name\": null,\n    \"shortName\": null,\n    \"description\": \"string\",\n    \"isSharable\": true,\n    \"isCalculable\": true,\n    \"isDraft\": false,\n    \"path\": \"string\",\n    \"calculableExpression\": null,\n    \"isEditableByOtherForms\": true,\n    \"modifiedByUserId\": 3189,\n    \"modifiedDateUtc\": \"1984-08-31T01:49:47.974Z\",\n    \"assignedTags\": [\n      4507,\n      4681\n    ],\n    \"dataKind\": 5,\n    \"scopeKind\": 1,\n    \"originatingFormId\": 8197,\n    \"uuid\": \"722fce5e-742a-c818-78b2-f5d9ca5a72af\",\n    \"createdByUserId\": 4835,\n    \"createdDateUtc\": \"2022-09-30T01:09:01.407Z\",\n    \"isReadOnly\": false,\n    \"isBuiltIn\": true\n  },\n  {\n    \"id\": 6096,\n    \"name\": \"string\",\n    \"shortName\": null,\n    \"description\": null,\n    \"isSharable\": true,\n    \"isCalculable\": true,\n    \"isDraft\": true,\n    \"path\": null,\n    \"calculableExpression\": \"string\",\n    \"isEditableByOtherForms\": true,\n    \"modifiedByUserId\": 850,\n    \"modifiedDateUtc\": \"2021-02-27T15:14:17.586Z\",\n    \"assignedTags\": null,\n    \"dataKind\": 2,\n    \"scopeKind\": 4,\n    \"originatingFormId\": 1047,\n    \"uuid\": \"3aab3d36-67ab-aee3-8b8d-ec1f9c3e7b34\",\n    \"createdByUserId\": 1499,\n    \"createdDateUtc\": \"1956-06-25T05:41:15.771Z\",\n    \"isReadOnly\": true,\n    \"isBuiltIn\": true\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.helloalleva.com",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "version"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "8a589fb4-0d5e-4e23-90b7-69f16cba4d1c",
+    "name": "Alleva Rest Data Facet API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

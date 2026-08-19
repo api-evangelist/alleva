@@ -1,0 +1,1509 @@
+{
+  "item": [
+    {
+      "id": "94fe496e-275e-43ab-919c-20fc82613fac",
+      "name": "Document",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b1ab0323-f82f-431b-9f3a-82953e6c33ca",
+          "name": "/documents",
+          "request": {
+            "name": "/documents",
+            "description": {},
+            "url": {
+              "path": [
+                "documents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"clientDocumentId\": \"<long>\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"fileName\": \"<string,null>\",\n  \"client\": {\n    \"id\": \"<integer>\",\n    \"route\": \"<string,null>\"\n  },\n  \"status\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"typeId\": \"<integer,null-int64>\",\n  \"uploadDate\": \"<string,null-date-time>\",\n  \"url\": {\n    \"fileName\": \"<string,null>\"\n  },\n  \"tableId\": \"<integer,null-int64>\",\n  \"tableName\": \"<string,null>\",\n  \"path\": \"<string,null>\",\n  \"documentTypeId\": \"<integer>\",\n  \"uploadedDocuments\": \"<array,null>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "380a2b5b-237d-4e2e-932e-1a5a4217e06e",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "documents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"clientDocumentId\": \"<long>\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"fileName\": \"<string,null>\",\n  \"client\": {\n    \"id\": \"<integer>\",\n    \"route\": \"<string,null>\"\n  },\n  \"status\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"typeId\": \"<integer,null-int64>\",\n  \"uploadDate\": \"<string,null-date-time>\",\n  \"url\": {\n    \"fileName\": \"<string,null>\"\n  },\n  \"tableId\": \"<integer,null-int64>\",\n  \"tableName\": \"<string,null>\",\n  \"path\": \"<string,null>\",\n  \"documentTypeId\": \"<integer>\",\n  \"uploadedDocuments\": \"<array,null>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"clientDocumentId\": \"<long>\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"fileName\": \"<string,null>\",\n  \"client\": {\n    \"id\": \"<integer>\",\n    \"route\": \"<string,null>\"\n  },\n  \"status\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"typeId\": \"<integer,null-int64>\",\n  \"uploadDate\": \"<string,null-date-time>\",\n  \"url\": {\n    \"fileName\": \"<string,null>\",\n    \"host\": null,\n    \"path\": null\n  },\n  \"tableId\": \"<integer,null-int64>\",\n  \"tableName\": \"<string,null>\",\n  \"path\": \"<string,null>\",\n  \"documentTypeId\": \"<integer>\",\n  \"uploadedDocuments\": \"<array,null>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7145ea71-3474-4cc6-acc7-39d8a048f96e",
+          "name": "/documents",
+          "request": {
+            "name": "/documents",
+            "description": {},
+            "url": {
+              "path": [
+                "documents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d4a6ed8f-6690-4f1b-a33c-094f964a10a1",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "documents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"clientDocumentId\": \"<long>\",\n    \"name\": \"<string,null>\",\n    \"description\": \"<string,null>\",\n    \"fileName\": \"<string,null>\",\n    \"client\": {\n      \"id\": \"<integer>\",\n      \"route\": \"<string,null>\"\n    },\n    \"status\": \"<string,null>\",\n    \"type\": \"<string,null>\",\n    \"typeId\": \"<integer,null-int64>\",\n    \"uploadDate\": \"<string,null-date-time>\",\n    \"url\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": null,\n      \"path\": \"string\"\n    },\n    \"tableId\": \"<integer,null-int64>\",\n    \"tableName\": \"<string,null>\",\n    \"path\": \"<string,null>\",\n    \"documentTypeId\": \"<integer>\",\n    \"uploadedDocuments\": \"<array,null>\"\n  },\n  {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"clientDocumentId\": \"<long>\",\n    \"name\": \"<string,null>\",\n    \"description\": \"<string,null>\",\n    \"fileName\": \"<string,null>\",\n    \"client\": {\n      \"id\": \"<integer>\",\n      \"route\": \"<string,null>\"\n    },\n    \"status\": \"<string,null>\",\n    \"type\": \"<string,null>\",\n    \"typeId\": \"<integer,null-int64>\",\n    \"uploadDate\": \"<string,null-date-time>\",\n    \"url\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": \"string\",\n      \"path\": null\n    },\n    \"tableId\": \"<integer,null-int64>\",\n    \"tableName\": \"<string,null>\",\n    \"path\": \"<string,null>\",\n    \"documentTypeId\": \"<integer>\",\n    \"uploadedDocuments\": \"<array,null>\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f85b9f75-d949-41fd-a1fb-6d612c59bcbd",
+          "name": "/v{{version}}/documents",
+          "request": {
+            "name": "/v{{version}}/documents",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "documents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"clientDocumentId\": \"<long>\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"fileName\": \"<string,null>\",\n  \"client\": {\n    \"id\": \"<integer>\",\n    \"route\": \"<string,null>\"\n  },\n  \"status\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"typeId\": \"<integer,null-int64>\",\n  \"uploadDate\": \"<string,null-date-time>\",\n  \"url\": {\n    \"fileName\": \"<string,null>\"\n  },\n  \"tableId\": \"<integer,null-int64>\",\n  \"tableName\": \"<string,null>\",\n  \"path\": \"<string,null>\",\n  \"documentTypeId\": \"<integer>\",\n  \"uploadedDocuments\": \"<array,null>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a96ddc1f-945d-42be-871a-2330da9cf529",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "documents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"clientDocumentId\": \"<long>\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"fileName\": \"<string,null>\",\n  \"client\": {\n    \"id\": \"<integer>\",\n    \"route\": \"<string,null>\"\n  },\n  \"status\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"typeId\": \"<integer,null-int64>\",\n  \"uploadDate\": \"<string,null-date-time>\",\n  \"url\": {\n    \"fileName\": \"<string,null>\"\n  },\n  \"tableId\": \"<integer,null-int64>\",\n  \"tableName\": \"<string,null>\",\n  \"path\": \"<string,null>\",\n  \"documentTypeId\": \"<integer>\",\n  \"uploadedDocuments\": \"<array,null>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"clientDocumentId\": \"<long>\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"fileName\": \"<string,null>\",\n  \"client\": {\n    \"id\": \"<integer>\",\n    \"route\": \"<string,null>\"\n  },\n  \"status\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"typeId\": \"<integer,null-int64>\",\n  \"uploadDate\": \"<string,null-date-time>\",\n  \"url\": {\n    \"fileName\": \"<string,null>\",\n    \"host\": null,\n    \"path\": null\n  },\n  \"tableId\": \"<integer,null-int64>\",\n  \"tableName\": \"<string,null>\",\n  \"path\": \"<string,null>\",\n  \"documentTypeId\": \"<integer>\",\n  \"uploadedDocuments\": \"<array,null>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "760a5b75-66fa-436a-bf6f-5261ded958c3",
+          "name": "/v{{version}}/documents",
+          "request": {
+            "name": "/v{{version}}/documents",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "documents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a1e587e1-03ef-4c4d-a1f1-a5daaaaff2de",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "documents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"clientDocumentId\": \"<long>\",\n    \"name\": \"<string,null>\",\n    \"description\": \"<string,null>\",\n    \"fileName\": \"<string,null>\",\n    \"client\": {\n      \"id\": \"<integer>\",\n      \"route\": \"<string,null>\"\n    },\n    \"status\": \"<string,null>\",\n    \"type\": \"<string,null>\",\n    \"typeId\": \"<integer,null-int64>\",\n    \"uploadDate\": \"<string,null-date-time>\",\n    \"url\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": null,\n      \"path\": \"string\"\n    },\n    \"tableId\": \"<integer,null-int64>\",\n    \"tableName\": \"<string,null>\",\n    \"path\": \"<string,null>\",\n    \"documentTypeId\": \"<integer>\",\n    \"uploadedDocuments\": \"<array,null>\"\n  },\n  {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"clientDocumentId\": \"<long>\",\n    \"name\": \"<string,null>\",\n    \"description\": \"<string,null>\",\n    \"fileName\": \"<string,null>\",\n    \"client\": {\n      \"id\": \"<integer>\",\n      \"route\": \"<string,null>\"\n    },\n    \"status\": \"<string,null>\",\n    \"type\": \"<string,null>\",\n    \"typeId\": \"<integer,null-int64>\",\n    \"uploadDate\": \"<string,null-date-time>\",\n    \"url\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": \"string\",\n      \"path\": null\n    },\n    \"tableId\": \"<integer,null-int64>\",\n    \"tableName\": \"<string,null>\",\n    \"path\": \"<string,null>\",\n    \"documentTypeId\": \"<integer>\",\n    \"uploadedDocuments\": \"<array,null>\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c5953be3-5ce6-4ce4-901a-5137b9767431",
+          "name": "/documents/:id",
+          "request": {
+            "name": "/documents/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "documents",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d6903a90-af1e-45c2-9e6c-b3fa4f2e9656",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "documents",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"clientDocumentId\": \"<long>\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"fileName\": \"<string,null>\",\n  \"client\": {\n    \"id\": \"<integer>\",\n    \"route\": \"<string,null>\"\n  },\n  \"status\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"typeId\": \"<integer,null-int64>\",\n  \"uploadDate\": \"<string,null-date-time>\",\n  \"url\": {\n    \"fileName\": \"<string,null>\",\n    \"host\": null,\n    \"path\": null\n  },\n  \"tableId\": \"<integer,null-int64>\",\n  \"tableName\": \"<string,null>\",\n  \"path\": \"<string,null>\",\n  \"documentTypeId\": \"<integer>\",\n  \"uploadedDocuments\": \"<array,null>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "de79e83e-7d21-450f-8e56-13faa981e330",
+          "name": "/documents/:id",
+          "request": {
+            "name": "/documents/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "documents",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "baee69f0-20de-42cf-9c9d-ce24bcd10e65",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "documents",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"clientDocumentId\": \"<long>\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"fileName\": \"<string,null>\",\n  \"client\": {\n    \"id\": \"<integer>\",\n    \"route\": \"<string,null>\"\n  },\n  \"status\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"typeId\": \"<integer,null-int64>\",\n  \"uploadDate\": \"<string,null-date-time>\",\n  \"url\": {\n    \"fileName\": \"<string,null>\",\n    \"host\": null,\n    \"path\": null\n  },\n  \"tableId\": \"<integer,null-int64>\",\n  \"tableName\": \"<string,null>\",\n  \"path\": \"<string,null>\",\n  \"documentTypeId\": \"<integer>\",\n  \"uploadedDocuments\": \"<array,null>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9637fcbb-73d1-4d69-9210-a2d4e8fd171b",
+          "name": "/documents/:id",
+          "request": {
+            "name": "/documents/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "documents",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "15e74226-27fb-431d-95c7-8d54df2c9ca7",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "documents",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"clientDocumentId\": \"<long>\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"fileName\": \"<string,null>\",\n  \"client\": {\n    \"id\": \"<integer>\",\n    \"route\": \"<string,null>\"\n  },\n  \"status\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"typeId\": \"<integer,null-int64>\",\n  \"uploadDate\": \"<string,null-date-time>\",\n  \"url\": {\n    \"fileName\": \"<string,null>\",\n    \"host\": null,\n    \"path\": null\n  },\n  \"tableId\": \"<integer,null-int64>\",\n  \"tableName\": \"<string,null>\",\n  \"path\": \"<string,null>\",\n  \"documentTypeId\": \"<integer>\",\n  \"uploadedDocuments\": \"<array,null>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e95fe25c-e86b-49c5-8e08-cd92366bad80",
+          "name": "/v{{version}}/documents/:id",
+          "request": {
+            "name": "/v{{version}}/documents/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "documents",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e9799f9f-0158-4c30-afff-26904d5f3407",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "documents",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"clientDocumentId\": \"<long>\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"fileName\": \"<string,null>\",\n  \"client\": {\n    \"id\": \"<integer>\",\n    \"route\": \"<string,null>\"\n  },\n  \"status\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"typeId\": \"<integer,null-int64>\",\n  \"uploadDate\": \"<string,null-date-time>\",\n  \"url\": {\n    \"fileName\": \"<string,null>\",\n    \"host\": null,\n    \"path\": null\n  },\n  \"tableId\": \"<integer,null-int64>\",\n  \"tableName\": \"<string,null>\",\n  \"path\": \"<string,null>\",\n  \"documentTypeId\": \"<integer>\",\n  \"uploadedDocuments\": \"<array,null>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b72fd09f-9e26-4c01-88b3-80902ed0b954",
+          "name": "/v{{version}}/documents/:id",
+          "request": {
+            "name": "/v{{version}}/documents/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "documents",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "848b5ecd-b047-42e8-942d-e5480bf70019",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "documents",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"clientDocumentId\": \"<long>\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"fileName\": \"<string,null>\",\n  \"client\": {\n    \"id\": \"<integer>\",\n    \"route\": \"<string,null>\"\n  },\n  \"status\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"typeId\": \"<integer,null-int64>\",\n  \"uploadDate\": \"<string,null-date-time>\",\n  \"url\": {\n    \"fileName\": \"<string,null>\",\n    \"host\": null,\n    \"path\": null\n  },\n  \"tableId\": \"<integer,null-int64>\",\n  \"tableName\": \"<string,null>\",\n  \"path\": \"<string,null>\",\n  \"documentTypeId\": \"<integer>\",\n  \"uploadedDocuments\": \"<array,null>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5d2ed6f3-3500-429e-b0f6-813ed7f7b36a",
+          "name": "/v{{version}}/documents/:id",
+          "request": {
+            "name": "/v{{version}}/documents/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "documents",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "51992b69-4f3d-430b-9f0d-6d647f77c502",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "documents",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"clientDocumentId\": \"<long>\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"fileName\": \"<string,null>\",\n  \"client\": {\n    \"id\": \"<integer>\",\n    \"route\": \"<string,null>\"\n  },\n  \"status\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"typeId\": \"<integer,null-int64>\",\n  \"uploadDate\": \"<string,null-date-time>\",\n  \"url\": {\n    \"fileName\": \"<string,null>\",\n    \"host\": null,\n    \"path\": null\n  },\n  \"tableId\": \"<integer,null-int64>\",\n  \"tableName\": \"<string,null>\",\n  \"path\": \"<string,null>\",\n  \"documentTypeId\": \"<integer>\",\n  \"uploadedDocuments\": \"<array,null>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "55871805-4501-45c9-8b4b-816859cff003",
+          "name": "/documents/type",
+          "request": {
+            "name": "/documents/type",
+            "description": {},
+            "url": {
+              "path": [
+                "documents",
+                "type"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f4a703e6-9a00-4b12-bdc7-36b74e388143",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "documents",
+                    "type"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 3587,\n    \"name\": \"string\"\n  },\n  {\n    \"id\": 5639,\n    \"name\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a14a064d-af9e-468f-ba7d-8409f5fab31d",
+          "name": "/v{{version}}/documents/type",
+          "request": {
+            "name": "/v{{version}}/documents/type",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "documents",
+                "type"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c78c5289-0baa-4467-a7b9-07186f1aa259",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "documents",
+                    "type"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 3587,\n    \"name\": \"string\"\n  },\n  {\n    \"id\": 5639,\n    \"name\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.helloalleva.com",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "version"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a4791cec-299e-4f12-869c-dd3dfae3f441",
+    "name": "Alleva Rest Document API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

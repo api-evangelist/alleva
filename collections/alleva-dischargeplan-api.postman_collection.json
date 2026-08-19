@@ -1,0 +1,599 @@
+{
+  "item": [
+    {
+      "id": "b362f5d6-bd27-4420-a689-ae5e48dedfb9",
+      "name": "DischargePlan",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "7e7bc32d-b714-421c-b8c9-888ace02131d",
+          "name": "/discharge-plan",
+          "request": {
+            "name": "/discharge-plan",
+            "description": {},
+            "url": {
+              "path": [
+                "discharge-plan"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "db5ee5c6-bbd1-422b-b8d1-aff509aa7ff4",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "discharge-plan"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 8699,\n    \"href\": null,\n    \"dischargePlanId\": 606,\n    \"leadId\": 2701,\n    \"reasonForAdmission\": null,\n    \"changesInDiagnosis\": \"string\",\n    \"strengths\": \"string\",\n    \"needs\": \"string\",\n    \"abilities\": \"string\",\n    \"preferences\": \"string\",\n    \"anticipatedDischargeDate\": null,\n    \"reasonForDischarge\": \"string\",\n    \"conditionOnDischarge\": \"string\",\n    \"dischargeTransitionObstacles\": \"string\",\n    \"guardianParticipationInTreatment\": \"string\",\n    \"criticalEventsNInteraction\": null,\n    \"prognosis\": null,\n    \"recommendations\": null,\n    \"createdDate\": null,\n    \"modifiedDate\": \"2024-01-10T10:33:08.840Z\",\n    \"isDeleted\": null,\n    \"deletedDate\": null,\n    \"validFrom\": null,\n    \"validTo\": null,\n    \"summaryOfTreatmentGoals\": \"string\",\n    \"isActive\": \"string\",\n    \"livigArrangements\": null,\n    \"education\": \"string\",\n    \"serviceProvided\": \"string\",\n    \"isCompleted\": \"string\"\n  },\n  {\n    \"id\": 6517,\n    \"href\": null,\n    \"dischargePlanId\": 3405,\n    \"leadId\": 4074,\n    \"reasonForAdmission\": null,\n    \"changesInDiagnosis\": \"string\",\n    \"strengths\": \"string\",\n    \"needs\": \"string\",\n    \"abilities\": null,\n    \"preferences\": \"string\",\n    \"anticipatedDischargeDate\": \"1960-06-29T07:08:01.445Z\",\n    \"reasonForDischarge\": \"string\",\n    \"conditionOnDischarge\": \"string\",\n    \"dischargeTransitionObstacles\": null,\n    \"guardianParticipationInTreatment\": null,\n    \"criticalEventsNInteraction\": \"string\",\n    \"prognosis\": \"string\",\n    \"recommendations\": \"string\",\n    \"createdDate\": null,\n    \"modifiedDate\": \"2010-08-25T14:50:08.516Z\",\n    \"isDeleted\": null,\n    \"deletedDate\": \"2010-12-26T23:50:33.566Z\",\n    \"validFrom\": null,\n    \"validTo\": \"2003-08-02T16:09:13.007Z\",\n    \"summaryOfTreatmentGoals\": \"string\",\n    \"isActive\": \"string\",\n    \"livigArrangements\": null,\n    \"education\": \"string\",\n    \"serviceProvided\": \"string\",\n    \"isCompleted\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9de25535-2869-4931-a94e-97525d908e5e",
+          "name": "/v{{version}}/discharge-plan",
+          "request": {
+            "name": "/v{{version}}/discharge-plan",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "discharge-plan"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2c95a1f7-4c66-4efd-9015-103cdc73c987",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "discharge-plan"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 8699,\n    \"href\": null,\n    \"dischargePlanId\": 606,\n    \"leadId\": 2701,\n    \"reasonForAdmission\": null,\n    \"changesInDiagnosis\": \"string\",\n    \"strengths\": \"string\",\n    \"needs\": \"string\",\n    \"abilities\": \"string\",\n    \"preferences\": \"string\",\n    \"anticipatedDischargeDate\": null,\n    \"reasonForDischarge\": \"string\",\n    \"conditionOnDischarge\": \"string\",\n    \"dischargeTransitionObstacles\": \"string\",\n    \"guardianParticipationInTreatment\": \"string\",\n    \"criticalEventsNInteraction\": null,\n    \"prognosis\": null,\n    \"recommendations\": null,\n    \"createdDate\": null,\n    \"modifiedDate\": \"2024-01-10T10:33:08.840Z\",\n    \"isDeleted\": null,\n    \"deletedDate\": null,\n    \"validFrom\": null,\n    \"validTo\": null,\n    \"summaryOfTreatmentGoals\": \"string\",\n    \"isActive\": \"string\",\n    \"livigArrangements\": null,\n    \"education\": \"string\",\n    \"serviceProvided\": \"string\",\n    \"isCompleted\": \"string\"\n  },\n  {\n    \"id\": 6517,\n    \"href\": null,\n    \"dischargePlanId\": 3405,\n    \"leadId\": 4074,\n    \"reasonForAdmission\": null,\n    \"changesInDiagnosis\": \"string\",\n    \"strengths\": \"string\",\n    \"needs\": \"string\",\n    \"abilities\": null,\n    \"preferences\": \"string\",\n    \"anticipatedDischargeDate\": \"1960-06-29T07:08:01.445Z\",\n    \"reasonForDischarge\": \"string\",\n    \"conditionOnDischarge\": \"string\",\n    \"dischargeTransitionObstacles\": null,\n    \"guardianParticipationInTreatment\": null,\n    \"criticalEventsNInteraction\": \"string\",\n    \"prognosis\": \"string\",\n    \"recommendations\": \"string\",\n    \"createdDate\": null,\n    \"modifiedDate\": \"2010-08-25T14:50:08.516Z\",\n    \"isDeleted\": null,\n    \"deletedDate\": \"2010-12-26T23:50:33.566Z\",\n    \"validFrom\": null,\n    \"validTo\": \"2003-08-02T16:09:13.007Z\",\n    \"summaryOfTreatmentGoals\": \"string\",\n    \"isActive\": \"string\",\n    \"livigArrangements\": null,\n    \"education\": \"string\",\n    \"serviceProvided\": \"string\",\n    \"isCompleted\": \"string\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "310b2c12-c266-48fc-8e87-59b3facca0b0",
+          "name": "/discharge-plan/:id",
+          "request": {
+            "name": "/discharge-plan/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "discharge-plan",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "43e07929-51a8-4000-977b-0106623c03f1",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "discharge-plan",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": 591,\n  \"href\": \"string\",\n  \"dischargePlanId\": 8073,\n  \"leadId\": 1204,\n  \"reasonForAdmission\": null,\n  \"changesInDiagnosis\": \"string\",\n  \"strengths\": null,\n  \"needs\": \"string\",\n  \"abilities\": null,\n  \"preferences\": null,\n  \"anticipatedDischargeDate\": \"1981-08-01T22:43:02.364Z\",\n  \"reasonForDischarge\": \"string\",\n  \"conditionOnDischarge\": null,\n  \"dischargeTransitionObstacles\": \"string\",\n  \"guardianParticipationInTreatment\": null,\n  \"criticalEventsNInteraction\": null,\n  \"prognosis\": null,\n  \"recommendations\": null,\n  \"createdDate\": \"1946-09-19T12:52:08.229Z\",\n  \"modifiedDate\": \"1968-09-02T19:12:16.732Z\",\n  \"isDeleted\": null,\n  \"deletedDate\": \"1962-02-28T11:44:42.714Z\",\n  \"validFrom\": \"1959-03-16T07:41:09.946Z\",\n  \"validTo\": \"1989-05-28T08:09:22.834Z\",\n  \"summaryOfTreatmentGoals\": \"string\",\n  \"isActive\": null,\n  \"livigArrangements\": null,\n  \"education\": null,\n  \"serviceProvided\": null,\n  \"isCompleted\": null\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "20772849-4ac3-46ff-93fb-8f0485ec3fad",
+          "name": "/v{{version}}/discharge-plan/:id",
+          "request": {
+            "name": "/v{{version}}/discharge-plan/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "discharge-plan",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "aa81e6da-fef5-4384-892c-2134c09483d8",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "discharge-plan",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": 591,\n  \"href\": \"string\",\n  \"dischargePlanId\": 8073,\n  \"leadId\": 1204,\n  \"reasonForAdmission\": null,\n  \"changesInDiagnosis\": \"string\",\n  \"strengths\": null,\n  \"needs\": \"string\",\n  \"abilities\": null,\n  \"preferences\": null,\n  \"anticipatedDischargeDate\": \"1981-08-01T22:43:02.364Z\",\n  \"reasonForDischarge\": \"string\",\n  \"conditionOnDischarge\": null,\n  \"dischargeTransitionObstacles\": \"string\",\n  \"guardianParticipationInTreatment\": null,\n  \"criticalEventsNInteraction\": null,\n  \"prognosis\": null,\n  \"recommendations\": null,\n  \"createdDate\": \"1946-09-19T12:52:08.229Z\",\n  \"modifiedDate\": \"1968-09-02T19:12:16.732Z\",\n  \"isDeleted\": null,\n  \"deletedDate\": \"1962-02-28T11:44:42.714Z\",\n  \"validFrom\": \"1959-03-16T07:41:09.946Z\",\n  \"validTo\": \"1989-05-28T08:09:22.834Z\",\n  \"summaryOfTreatmentGoals\": \"string\",\n  \"isActive\": null,\n  \"livigArrangements\": null,\n  \"education\": null,\n  \"serviceProvided\": null,\n  \"isCompleted\": null\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.helloalleva.com",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "version"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "bfccf5a0-a7fa-4cc9-832c-cc6a815c09e1",
+    "name": "Alleva Rest Discharge Plan API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

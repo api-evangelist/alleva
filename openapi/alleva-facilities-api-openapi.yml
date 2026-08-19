@@ -1,0 +1,506 @@
+openapi: 3.2.0
+info:
+  title: Alleva Rest Facilities API
+  version: '1.0'
+security:
+- Bearer: []
+tags:
+- name: Facilities
+paths:
+  /facilities/{id}/logo:
+    post:
+      tags:
+      - Facilities
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/FacilityLogoData'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/FacilityLogoData'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/FacilityLogoData'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/FacilityLogoData'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+  /v{version}/facilities/{id}/logo:
+    post:
+      tags:
+      - Facilities
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/FacilityLogoData'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/FacilityLogoData'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/FacilityLogoData'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/FacilityLogoData'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+  /facilities/{id}/npi:
+    patch:
+      tags:
+      - Facilities
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: string
+          application/json; ver=1.0:
+            schema:
+              type: string
+          text/json; ver=1.0:
+            schema:
+              type: string
+          application/*+json; ver=1.0:
+            schema:
+              type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+  /v{version}/facilities/{id}/npi:
+    patch:
+      tags:
+      - Facilities
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: string
+          application/json; ver=1.0:
+            schema:
+              type: string
+          text/json; ver=1.0:
+            schema:
+              type: string
+          application/*+json; ver=1.0:
+            schema:
+              type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+  /facilities:
+    get:
+      tags:
+      - Facilities
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Facility'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Facility'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Facility'
+  /v{version}/facilities:
+    get:
+      tags:
+      - Facilities
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Facility'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Facility'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Facility'
+  /facilities/{id}:
+    get:
+      tags:
+      - Facilities
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Facility'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Facility'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Facility'
+  /v{version}/facilities/{id}:
+    get:
+      tags:
+      - Facilities
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Facility'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Facility'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Facility'
+components:
+  schemas:
+    UpdateOperationResult:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
+    UpdateResult:
+      type: object
+      properties:
+        operationResult:
+          $ref: '#/components/schemas/UpdateOperationResult'
+        success:
+          type: boolean
+        id:
+          type: integer
+          format: int64
+        messages:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        reason:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Facility:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        rehabName:
+          type:
+          - string
+          - 'null'
+        domainName:
+          type:
+          - string
+          - 'null'
+        email:
+          type:
+          - string
+          - 'null'
+        officePhone:
+          type:
+          - string
+          - 'null'
+        fax:
+          type:
+          - string
+          - 'null'
+        address1:
+          type:
+          - string
+          - 'null'
+        address2:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        city:
+          type:
+          - string
+          - 'null'
+        postalCode:
+          type:
+          - string
+          - 'null'
+        country:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    FacilityLogoData:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        base64String:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
+        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      name: Authorization
+      in: header
+servers:
+- url: https://api.helloalleva.com
+  description: Base URL reconciled from apis.yml

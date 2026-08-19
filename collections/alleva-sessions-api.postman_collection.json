@@ -1,0 +1,311 @@
+{
+  "item": [
+    {
+      "id": "1e364179-7e83-4ded-98eb-12f2efc43bed",
+      "name": "Sessions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8a331948-8415-4390-89eb-3c90596d2c47",
+          "name": "/sessions/:id",
+          "request": {
+            "name": "/sessions/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "sessions",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "expand",
+                  "value": "<boolean>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0f01fd36-5ecd-41dd-80e8-38508d56c796",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "sessions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "expand",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": 6580,\n  \"href\": \"string\",\n  \"appointmentId\": 4687,\n  \"appointmentWith\": 7742,\n  \"clientNLeadId\": null,\n  \"startDate\": null,\n  \"endDate\": null,\n  \"startTime\": {\n    \"ticks\": 4666,\n    \"days\": 1798,\n    \"hours\": 9483,\n    \"milliseconds\": 9337,\n    \"minutes\": 1130,\n    \"seconds\": 6928,\n    \"totalDays\": 4445.638561221626,\n    \"totalHours\": 3441.1352148463748,\n    \"totalMilliseconds\": 4762.418047878063,\n    \"totalMinutes\": 7343.046383786671,\n    \"totalSeconds\": 1187.511877068792\n  },\n  \"endTime\": {\n    \"ticks\": 3696,\n    \"days\": 5988,\n    \"hours\": 1625,\n    \"milliseconds\": 1550,\n    \"minutes\": 2596,\n    \"seconds\": 6045,\n    \"totalDays\": 107.21078648291527,\n    \"totalHours\": 3347.9107581789845,\n    \"totalMilliseconds\": 9174.142825194387,\n    \"totalMinutes\": 3253.563050220697,\n    \"totalSeconds\": 3899.260193202371\n  },\n  \"userId\": null,\n  \"facilityId\": null,\n  \"appointmentType\": null,\n  \"appointmentStatus\": 1751,\n  \"description\": \"string\",\n  \"reason\": null,\n  \"isAllDayEvent\": true,\n  \"createdBy\": 6107,\n  \"createdDate\": \"1982-08-17T20:37:58.158Z\",\n  \"modifiedBy\": 7723,\n  \"modifiedDate\": \"1964-02-06T14:26:45.305Z\",\n  \"isDeleted\": false,\n  \"deletedBy\": null,\n  \"deletedDate\": null,\n  \"clientId\": 276,\n  \"recurringType\": null,\n  \"repeatEvery\": 7972,\n  \"repeatEveryType\": null,\n  \"repeatOn\": \"string\",\n  \"repeatOnIndex\": 328,\n  \"endsAfterDate\": null,\n  \"isReccuringEvent\": false,\n  \"parentAppointmentId\": 1389,\n  \"isGroupSession\": true,\n  \"groupTopic\": \"string\",\n  \"rehabFacilityLocationId\": null,\n  \"groupNote\": null,\n  \"groupHomework\": \"string\",\n  \"pickUpTime\": \"1998-12-03T04:24:01.788Z\",\n  \"pickUpAddress\": \"string\",\n  \"dropOffAddress\": null,\n  \"viewType\": 2477,\n  \"familyTherapyNote\": null,\n  \"referralContactId\": null,\n  \"addressTypeId\": 6906,\n  \"address1\": null,\n  \"meetingTypeId\": null,\n  \"groupHomeworkStatus\": 2999,\n  \"validFrom\": \"1966-09-26T20:00:55.800Z\",\n  \"validTo\": \"2019-07-31T23:12:29.302Z\",\n  \"isVideoSession\": false,\n  \"isRecTherapyType\": false,\n  \"isMultilocation\": false,\n  \"multiLocationId\": \"string\",\n  \"detailDescription\": \"string\",\n  \"details\": {\n    \"sessionNote\": {\n      \"id\": 2194,\n      \"href\": \"string\",\n      \"noteId\": 2339,\n      \"appointmentId\": 6959,\n      \"leadId\": 6095,\n      \"assesmentNote\": null,\n      \"sessionStatus\": 1704,\n      \"createdBy\": 2955,\n      \"createdDate\": \"2020-01-06T17:02:15.610Z\",\n      \"modifiedBy\": 3229,\n      \"modifiedDate\": \"1976-02-08T05:45:23.359Z\",\n      \"isDeleted\": true,\n      \"deletedBy\": null,\n      \"deletedDate\": \"2024-02-15T07:31:31.991Z\",\n      \"startSession\": {\n        \"ticks\": 9560,\n        \"days\": 4149,\n        \"hours\": 9310,\n        \"milliseconds\": 6178,\n        \"minutes\": 5448,\n        \"seconds\": 7880,\n        \"totalDays\": 3941.6538748899798,\n        \"totalHours\": 2363.7402018655152,\n        \"totalMilliseconds\": 6272.988694633011,\n        \"totalMinutes\": 2411.6311682858427,\n        \"totalSeconds\": 4413.756383408813\n      },\n      \"endSession\": {\n        \"ticks\": 3918,\n        \"days\": 4569,\n        \"hours\": 5197,\n        \"milliseconds\": 8697,\n        \"minutes\": 520,\n        \"seconds\": 9110,\n        \"totalDays\": 5199.58252951387,\n        \"totalHours\": 2028.8951562856882,\n        \"totalMilliseconds\": 8827.908280578464,\n        \"totalMinutes\": 7166.651956774721,\n        \"totalSeconds\": 7445.228225521695\n      },\n      \"duration\": 1798\n    },\n    \"groupLeader\": {\n      \"id\": 1559,\n      \"href\": null,\n      \"name\": {\n        \"first\": \"string\",\n        \"last\": null,\n        \"prefix\": \"string\",\n        \"suffix\": null\n      },\n      \"gender\": null,\n      \"userName\": \"string\",\n      \"birthDate\": null,\n      \"ssn\": null,\n      \"email\": \"string\",\n      \"phone\": \"string\",\n      \"address\": {\n        \"line1\": null,\n        \"line2\": \"string\",\n        \"city\": null,\n        \"state\": null,\n        \"stateAbbr\": \"string\",\n        \"country\": null,\n        \"zipCode\": \"string\"\n      },\n      \"facility\": {\n        \"id\": 3578,\n        \"href\": \"string\",\n        \"name\": null,\n        \"rehabName\": null,\n        \"domainName\": \"string\",\n        \"email\": null,\n        \"officePhone\": \"string\",\n        \"fax\": \"string\",\n        \"address1\": \"string\",\n        \"address2\": \"string\",\n        \"state\": \"string\",\n        \"city\": null,\n        \"postalCode\": \"string\",\n        \"country\": \"string\"\n      },\n      \"tenant\": null,\n      \"role\": \"string\",\n      \"profileImage\": {\n        \"fileName\": null,\n        \"host\": null,\n        \"path\": \"string\"\n      },\n      \"isMedicalProvider\": null,\n      \"hireDate\": \"1952-09-14T08:45:13.915Z\",\n      \"startDate\": \"1950-08-19T16:43:31.514Z\",\n      \"endDate\": null,\n      \"licenses\": [\n        \"\",\n        \"\"\n      ]\n    },\n    \"mentalStatusModel\": {\n      \"id\": 3484,\n      \"href\": \"string\",\n      \"mentalStatusExamId\": 6153,\n      \"tableId\": 9556,\n      \"hy_Clean\": false,\n      \"hy_Unshaven\": true,\n      \"hy_Odorous\": true,\n      \"hy_Disheveled\": true,\n      \"hy_Other\": false,\n      \"af_Appropriate\": true,\n      \"af_Inappropriate\": true,\n      \"af_Labile\": true,\n      \"af_Blunted\": true,\n      \"af_Flat\": true,\n      \"mov_Normal\": false,\n      \"mov_Tense\": false,\n      \"mov_Fidgety\": true,\n      \"mov_Hyperactive\": true,\n      \"mov_PsychomotorRetardation\": false,\n      \"mov_PsychomotorAgitation\": true,\n      \"mov_Pacing\": false,\n      \"mov_HandWringing\": false,\n      \"mov_Tics\": true,\n      \"mov_Other\": false,\n      \"mood_Anxious\": false,\n      \"mood_Confused\": true,\n      \"mood_Depressed\": false,\n      \"mood_Labile\": false,\n      \"mood_Fearful\": false,\n      \"mood_Euphoric\": false,\n      \"mood_Angry\": false,\n      \"mood_Dysthymic\": true,\n      \"hall_Visual\": true,\n      \"hall_Auditory\": false,\n      \"hall_Tactile\": false,\n      \"hall_Olfactory\": false,\n      \"hall_Command\": false,\n      \"hall_Denied\": false,\n      \"imp_Good\": true,\n      \"imp_Limited\": true,\n      \"imp_Poor\": true,\n      \"ori_Person\": false,\n      \"ori_Place\": false,\n      \"ori_Time\": false,\n      \"ori_Situation\": true,\n      \"ins_Good\": true,\n      \"ins_Limited\": true,\n      \"ins_Poor\": false,\n      \"intell_AboveAverage\": false,\n      \"intell_Average\": true,\n      \"intell_BelowAverage\": true,\n      \"other_Obsessions\": true,\n      \"other_Compulsions\": true,\n      \"other_Depersonalization\": false,\n      \"other_DeRealism\": true,\n      \"mem_Intact\": false,\n      \"mem_ImmediateImpaired\": false,\n      \"mem_ShortTermImpaired\": true,\n      \"mem_LongTermImpaired\": true,\n      \"speech_Normal\": true,\n      \"speech_Soft\": false,\n      \"speech_Loud\": false,\n      \"speech_Pressured\": false,\n      \"speech_Rapid\": false,\n      \"speech_Slowed\": false,\n      \"speech_Slurred\": true,\n      \"speech_Incoherent\": false,\n      \"fa_Amiable\": true,\n      \"fa_Happy\": true,\n      \"fa_Angry\": true,\n      \"fa_Worried\": false,\n      \"fa_Suspicious\": true,\n      \"fa_Sad\": true,\n      \"eye_Good\": true,\n      \"eye_Avoident\": false,\n      \"eye_Fleeting\": true,\n      \"eye_Stare\": false,\n      \"tho_Intact\": true,\n      \"tho_Blocked\": true,\n      \"tho_Loose\": false,\n      \"tho_Incoherent\": false,\n      \"tho_Tangential\": false,\n      \"tho_Flight\": false,\n      \"tho_Circumstantial\": true,\n      \"dem_Cooperative\": true,\n      \"dem_Uncooperative\": false,\n      \"dem_Guareded\": false,\n      \"dem_Resistive\": true,\n      \"dem_Defensive\": false,\n      \"dem_Friendly\": true,\n      \"dem_Worried\": true,\n      \"dem_Boastful\": false,\n      \"dem_Demanding\": false,\n      \"dem_Hostile\": false,\n      \"dem_Irritable\": true,\n      \"dem_Agitated\": false,\n      \"dem_Evasive\": false,\n      \"dem_Dramatic\": true,\n      \"dem_Sductive\": true,\n      \"dem_Arrogant\": true,\n      \"dem_Apathetic\": true,\n      \"sui_Yes\": false,\n      \"sui_Plan\": false,\n      \"sui_Intent\": false,\n      \"sui_Means\": true,\n      \"sui_Denied\": true,\n      \"homi_Yes\": true,\n      \"homi_Plan\": true,\n      \"homi_Intent\": false,\n      \"homi_Means\": false,\n      \"homi_Denied\": false,\n      \"att_Satisfactory\": false,\n      \"att_Poor\": true,\n      \"att_EasilyDistracted\": true,\n      \"del_Grandiose\": false,\n      \"del_Persecutory\": true,\n      \"del_Somatic\": true,\n      \"del_Paranoia\": true,\n      \"del_Ideas\": false,\n      \"del_Denied\": false,\n      \"jud_Good\": true,\n      \"jud_Limited\": true,\n      \"jud_Poor\": true,\n      \"mentalStatusNote\": null,\n      \"isDeleted\": false,\n      \"hy_Detail\": \"string\",\n      \"af_Detail\": null,\n      \"mov_Detail\": \"string\",\n      \"mood_Detail\": \"string\",\n      \"imp_Detail\": null,\n      \"ori_Detail\": \"string\",\n      \"ins_Detail\": null,\n      \"intell_Detail\": \"string\",\n      \"other_Detail\": null,\n      \"mem_Detail\": null,\n      \"speech_Detail\": \"string\",\n      \"fa__Detail\": \"string\",\n      \"eye_Detail\": null,\n      \"tho_Detail\": null,\n      \"dem_Detail\": \"string\",\n      \"homi_Detail\": null,\n      \"att_Detail\": \"string\",\n      \"del_Detail\": null,\n      \"jud_Detail\": \"string\",\n      \"hall_Detail\": null,\n      \"sui_Detail\": \"string\",\n      \"fa_Detail\": null,\n      \"af_Restricted\": true,\n      \"mood_Irritated\": true,\n      \"tableType\": 8999,\n      \"createdDate\": \"2009-08-19T15:09:15.098Z\",\n      \"createdBy\": null,\n      \"modifiedBy\": null,\n      \"modifiedDate\": null,\n      \"deletedBy\": null,\n      \"deletedDate\": \"2000-03-05T08:56:04.096Z\",\n      \"validFrom\": \"1970-03-02T06:19:19.880Z\",\n      \"validTo\": \"2019-01-21T00:47:31.975Z\",\n      \"af_Expansive\": true,\n      \"af_Euphoric\": true,\n      \"af_Anxious\": true,\n      \"af_Angry\": true,\n      \"af_Other\": true,\n      \"hall_Other\": false,\n      \"mood_Euthymic\": true,\n      \"mood_Normal\": true,\n      \"mood_Other\": true,\n      \"other_Denied\": false,\n      \"tho_Other\": false,\n      \"del_Other\": false,\n      \"dem_Other\": true,\n      \"att_Other\": true,\n      \"hy_WNL\": true,\n      \"af_WNL\": true,\n      \"hall_WNL\": true,\n      \"mov_WNL\": true,\n      \"mood_WNL\": false,\n      \"speech_WNL\": true,\n      \"imp_WNL\": false,\n      \"ins_WNL\": true,\n      \"intell_WNL\": false,\n      \"ori_WNL\": true,\n      \"other_WNL\": true,\n      \"mem_WNL\": false,\n      \"sui_WNL\": false,\n      \"homi_WNL\": true,\n      \"eye_WNL\": true,\n      \"fa_WNL\": false,\n      \"tho_WNL\": true,\n      \"del_WNL\": false,\n      \"dem_WNL\": false,\n      \"att_WNL\": true,\n      \"jud_WNL\": false\n    },\n    \"asamModel\": {\n      \"id\": 3352,\n      \"href\": null,\n      \"asamid\": 9447,\n      \"sourceID\": 1452,\n      \"riskLevel\": 6402,\n      \"riskWithdrawal\": 438,\n      \"priorWithdrawal\": 9103,\n      \"physicalIllness\": null,\n      \"cronogicPain\": 9750,\n      \"chronicCondition\": null,\n      \"cognitiveProblem\": null,\n      \"problemConnection\": null,\n      \"manageActivity\": 8899,\n      \"selfMotivated\": 4645,\n      \"addictiveDisorder\": null,\n      \"memberLeverged\": 3616,\n      \"memberImminent\": null,\n      \"severeProblem\": 1763,\n      \"memberAware\": 660,\n      \"poseThreat\": 7215,\n      \"memberResource\": null,\n      \"transportationIssue\": 8250,\n      \"totalScore\": 4204,\n      \"isDeleted\": true,\n      \"deletedDate\": \"1992-03-12T22:23:53.238Z\",\n      \"deletedBy\": 6712,\n      \"updatedBy\": null,\n      \"updateDate\": \"1948-03-10T08:34:47.149Z\",\n      \"createdBy\": 8021,\n      \"createdDate\": \"2025-11-14T08:26:07.982Z\",\n      \"sourceName\": null,\n      \"clientID\": 5823,\n      \"asamDate\": null,\n      \"dimension1Detail\": null,\n      \"dimension2Detail\": \"string\",\n      \"dimension3Detail\": \"string\",\n      \"dimension4Detail\": \"string\",\n      \"dimension5Detail\": \"string\",\n      \"dimension6Detail\": null,\n      \"validFrom\": \"1991-04-01T16:41:10.941Z\",\n      \"validTo\": \"1989-03-22T20:09:37.350Z\"\n    },\n    \"signatures\": {\n      \"client\": \"string\",\n      \"parentOrGuardian\": null,\n      \"staff\": \"string\",\n      \"createdBy\": 5390\n    },\n    \"phq9Model\": {\n      \"id\": 2068,\n      \"href\": \"string\",\n      \"phq9Id\": 5324,\n      \"clientId\": 8227,\n      \"sourceId\": 9776,\n      \"sourceName\": null,\n      \"phq9Date\": \"1974-04-16T10:10:42.550Z\",\n      \"question1\": null,\n      \"question2\": 6379,\n      \"question3\": 5254,\n      \"question4\": 7966,\n      \"question5\": null,\n      \"question6\": 2225,\n      \"question7\": 6566,\n      \"question8\": 3819,\n      \"question9\": 8605,\n      \"question10\": null,\n      \"totalScore\": 395,\n      \"createdBy\": 122,\n      \"createdDate\": \"1994-10-09T10:30:27.160Z\",\n      \"updatedBy\": null,\n      \"modifiedDate\": \"1966-03-13T09:28:35.633Z\",\n      \"isDeleted\": false,\n      \"deletedBy\": 9535,\n      \"deletedDate\": \"1988-04-14T12:49:28.737Z\",\n      \"leadId\": 5796\n    },\n    \"gad7Model\": {\n      \"id\": 9404,\n      \"href\": \"string\",\n      \"gad7Id\": 3978,\n      \"clientId\": 1964,\n      \"sourceId\": 8505,\n      \"sourceName\": null,\n      \"gad7Date\": \"1965-12-26T11:57:49.510Z\",\n      \"question1\": null,\n      \"question2\": null,\n      \"question3\": 4415,\n      \"question4\": null,\n      \"question5\": 2260,\n      \"question6\": null,\n      \"question7\": 9540,\n      \"question8\": null,\n      \"leadId\": 2129,\n      \"totalScore\": 4151,\n      \"createdBy\": 8060,\n      \"createdDate\": null,\n      \"updatedBy\": 8385,\n      \"modifiedDate\": \"2005-05-28T13:39:46.379Z\",\n      \"isDeleted\": true,\n      \"deletedBy\": null,\n      \"deletedDate\": null\n    },\n    \"billingCode\": {\n      \"id\": 3073,\n      \"href\": null,\n      \"billingCodeDataId\": 9411,\n      \"tableType\": 4856,\n      \"notesId\": 4692,\n      \"codeId\": 4150,\n      \"createdBy\": 9544,\n      \"createdDate\": \"1986-07-04T12:52:29.530Z\",\n      \"modifiedBy\": null,\n      \"modifiedDate\": null,\n      \"deletedBy\": 8178,\n      \"deletedDate\": null,\n      \"isActive\": true,\n      \"isDeleted\": false\n    },\n    \"staffSignature\": null\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5719838b-383e-4090-81be-cd32ef45ddce",
+          "name": "/sessions/:id",
+          "request": {
+            "name": "/sessions/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "sessions",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"appointmentId\": \"<long>\",\n  \"appointmentWith\": \"<integer,null-int32>\",\n  \"clientNLeadId\": \"<integer,null-int64>\",\n  \"startDate\": \"<string,null-date-time>\",\n  \"endDate\": \"<string,null-date-time>\",\n  \"startTime\": {},\n  \"endTime\": {},\n  \"userId\": \"<integer,null-int32>\",\n  \"facilityId\": \"<integer,null-int32>\",\n  \"appointmentType\": \"<integer,null-int32>\",\n  \"appointmentStatus\": \"<integer,null-int32>\",\n  \"description\": \"<string,null>\",\n  \"reason\": \"<string,null>\",\n  \"isAllDayEvent\": \"<boolean,null>\",\n  \"createdBy\": \"<integer>\",\n  \"createdDate\": \"<dateTime>\",\n  \"modifiedBy\": \"<integer,null-int32>\",\n  \"modifiedDate\": \"<string,null-date-time>\",\n  \"isDeleted\": \"<boolean>\",\n  \"deletedBy\": \"<integer,null-int32>\",\n  \"deletedDate\": \"<string,null-date-time>\",\n  \"clientId\": \"<integer,null-int64>\",\n  \"recurringType\": \"<integer,null-int32>\",\n  \"repeatEvery\": \"<integer,null-int32>\",\n  \"repeatEveryType\": \"<integer,null-int32>\",\n  \"repeatOn\": \"<string,null>\",\n  \"repeatOnIndex\": \"<integer,null-int32>\",\n  \"endsAfterDate\": \"<string,null-date-time>\",\n  \"isReccuringEvent\": \"<boolean>\",\n  \"parentAppointmentId\": \"<integer,null-int64>\",\n  \"isGroupSession\": \"<boolean>\",\n  \"groupTopic\": \"<string,null>\",\n  \"rehabFacilityLocationId\": \"<integer,null-int32>\",\n  \"groupNote\": \"<string,null>\",\n  \"groupHomework\": \"<string,null>\",\n  \"pickUpTime\": \"<string,null-date-time>\",\n  \"pickUpAddress\": \"<string,null>\",\n  \"dropOffAddress\": \"<string,null>\",\n  \"viewType\": \"<integer>\",\n  \"familyTherapyNote\": \"<string,null>\",\n  \"referralContactId\": \"<integer,null-int32>\",\n  \"addressTypeId\": \"<integer,null-int32>\",\n  \"address1\": \"<string,null>\",\n  \"meetingTypeId\": \"<integer,null-int32>\",\n  \"groupHomeworkStatus\": \"<integer>\",\n  \"validFrom\": \"<dateTime>\",\n  \"validTo\": \"<dateTime>\",\n  \"isVideoSession\": \"<boolean>\",\n  \"isRecTherapyType\": \"<boolean>\",\n  \"isMultilocation\": \"<boolean>\",\n  \"multiLocationId\": \"<string,null>\",\n  \"detailDescription\": \"<string,null>\",\n  \"details\": {\n    \"sessionNote\": {\n      \"id\": \"<integer>\",\n      \"noteId\": \"<long>\",\n      \"appointmentId\": \"<long>\",\n      \"leadId\": \"<long>\",\n      \"assesmentNote\": \"<string,null>\",\n      \"sessionStatus\": \"<integer>\",\n      \"createdBy\": \"<integer>\",\n      \"createdDate\": \"<dateTime>\",\n      \"modifiedBy\": \"<integer,null-int32>\",\n      \"modifiedDate\": \"<string,null-date-time>\",\n      \"isDeleted\": \"<boolean>\",\n      \"deletedBy\": \"<integer,null-int32>\",\n      \"deletedDate\": \"<string,null-date-time>\",\n      \"startSession\": {},\n      \"endSession\": {},\n      \"duration\": \"<integer>\"\n    },\n    \"groupLeader\": {\n      \"id\": \"<integer>\",\n      \"name\": {\n        \"first\": \"<string,null>\",\n        \"last\": \"<string,null>\",\n        \"prefix\": \"<string,null>\",\n        \"suffix\": \"<string,null>\"\n      },\n      \"gender\": \"<string,null>\",\n      \"userName\": \"<string,null>\",\n      \"birthDate\": \"<string,null-date-time>\",\n      \"ssn\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"phone\": \"<string,null>\",\n      \"address\": {\n        \"line1\": \"<string,null>\",\n        \"line2\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"stateAbbr\": \"<string,null>\",\n        \"country\": \"<string,null>\",\n        \"zipCode\": \"<string,null>\"\n      },\n      \"facility\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string,null>\",\n        \"rehabName\": \"<string,null>\",\n        \"domainName\": \"<string,null>\",\n        \"email\": \"<string,null>\",\n        \"officePhone\": \"<string,null>\",\n        \"fax\": \"<string,null>\",\n        \"address1\": \"<string,null>\",\n        \"address2\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"postalCode\": \"<string,null>\",\n        \"country\": \"<string,null>\"\n      },\n      \"tenant\": \"<string,null>\",\n      \"role\": \"<string,null>\",\n      \"profileImage\": {\n        \"fileName\": \"<string,null>\"\n      },\n      \"isMedicalProvider\": \"<boolean,null>\",\n      \"hireDate\": \"<string,null-date-time>\",\n      \"startDate\": \"<string,null-date-time>\",\n      \"endDate\": \"<string,null-date-time>\",\n      \"licenses\": \"<array,null>\"\n    },\n    \"mentalStatusModel\": {\n      \"id\": \"<integer>\",\n      \"mentalStatusExamId\": \"<long>\",\n      \"tableId\": \"<long>\",\n      \"hy_Clean\": \"<boolean>\",\n      \"hy_Unshaven\": \"<boolean>\",\n      \"hy_Odorous\": \"<boolean>\",\n      \"hy_Disheveled\": \"<boolean>\",\n      \"hy_Other\": \"<boolean>\",\n      \"af_Appropriate\": \"<boolean>\",\n      \"af_Inappropriate\": \"<boolean>\",\n      \"af_Labile\": \"<boolean>\",\n      \"af_Blunted\": \"<boolean>\",\n      \"af_Flat\": \"<boolean>\",\n      \"mov_Normal\": \"<boolean>\",\n      \"mov_Tense\": \"<boolean>\",\n      \"mov_Fidgety\": \"<boolean>\",\n      \"mov_Hyperactive\": \"<boolean>\",\n      \"mov_PsychomotorRetardation\": \"<boolean>\",\n      \"mov_PsychomotorAgitation\": \"<boolean>\",\n      \"mov_Pacing\": \"<boolean>\",\n      \"mov_HandWringing\": \"<boolean>\",\n      \"mov_Tics\": \"<boolean>\",\n      \"mov_Other\": \"<boolean>\",\n      \"mood_Anxious\": \"<boolean>\",\n      \"mood_Confused\": \"<boolean>\",\n      \"mood_Depressed\": \"<boolean>\",\n      \"mood_Labile\": \"<boolean>\",\n      \"mood_Fearful\": \"<boolean>\",\n      \"mood_Euphoric\": \"<boolean>\",\n      \"mood_Angry\": \"<boolean>\",\n      \"mood_Dysthymic\": \"<boolean>\",\n      \"hall_Visual\": \"<boolean>\",\n      \"hall_Auditory\": \"<boolean>\",\n      \"hall_Tactile\": \"<boolean>\",\n      \"hall_Olfactory\": \"<boolean>\",\n      \"hall_Command\": \"<boolean>\",\n      \"hall_Denied\": \"<boolean>\",\n      \"imp_Good\": \"<boolean>\",\n      \"imp_Limited\": \"<boolean>\",\n      \"imp_Poor\": \"<boolean>\",\n      \"ori_Person\": \"<boolean>\",\n      \"ori_Place\": \"<boolean>\",\n      \"ori_Time\": \"<boolean>\",\n      \"ori_Situation\": \"<boolean>\",\n      \"ins_Good\": \"<boolean>\",\n      \"ins_Limited\": \"<boolean>\",\n      \"ins_Poor\": \"<boolean>\",\n      \"intell_AboveAverage\": \"<boolean>\",\n      \"intell_Average\": \"<boolean>\",\n      \"intell_BelowAverage\": \"<boolean>\",\n      \"other_Obsessions\": \"<boolean>\",\n      \"other_Compulsions\": \"<boolean>\",\n      \"other_Depersonalization\": \"<boolean>\",\n      \"other_DeRealism\": \"<boolean>\",\n      \"mem_Intact\": \"<boolean>\",\n      \"mem_ImmediateImpaired\": \"<boolean>\",\n      \"mem_ShortTermImpaired\": \"<boolean>\",\n      \"mem_LongTermImpaired\": \"<boolean>\",\n      \"speech_Normal\": \"<boolean>\",\n      \"speech_Soft\": \"<boolean>\",\n      \"speech_Loud\": \"<boolean>\",\n      \"speech_Pressured\": \"<boolean>\",\n      \"speech_Rapid\": \"<boolean>\",\n      \"speech_Slowed\": \"<boolean>\",\n      \"speech_Slurred\": \"<boolean>\",\n      \"speech_Incoherent\": \"<boolean>\",\n      \"fa_Amiable\": \"<boolean>\",\n      \"fa_Happy\": \"<boolean>\",\n      \"fa_Angry\": \"<boolean>\",\n      \"fa_Worried\": \"<boolean>\",\n      \"fa_Suspicious\": \"<boolean>\",\n      \"fa_Sad\": \"<boolean>\",\n      \"eye_Good\": \"<boolean>\",\n      \"eye_Avoident\": \"<boolean>\",\n      \"eye_Fleeting\": \"<boolean>\",\n      \"eye_Stare\": \"<boolean>\",\n      \"tho_Intact\": \"<boolean>\",\n      \"tho_Blocked\": \"<boolean>\",\n      \"tho_Loose\": \"<boolean>\",\n      \"tho_Incoherent\": \"<boolean>\",\n      \"tho_Tangential\": \"<boolean>\",\n      \"tho_Flight\": \"<boolean>\",\n      \"tho_Circumstantial\": \"<boolean>\",\n      \"dem_Cooperative\": \"<boolean>\",\n      \"dem_Uncooperative\": \"<boolean>\",\n      \"dem_Guareded\": \"<boolean>\",\n      \"dem_Resistive\": \"<boolean>\",\n      \"dem_Defensive\": \"<boolean>\",\n      \"dem_Friendly\": \"<boolean>\",\n      \"dem_Worried\": \"<boolean>\",\n      \"dem_Boastful\": \"<boolean>\",\n      \"dem_Demanding\": \"<boolean>\",\n      \"dem_Hostile\": \"<boolean>\",\n      \"dem_Irritable\": \"<boolean>\",\n      \"dem_Agitated\": \"<boolean>\",\n      \"dem_Evasive\": \"<boolean>\",\n      \"dem_Dramatic\": \"<boolean>\",\n      \"dem_Sductive\": \"<boolean>\",\n      \"dem_Arrogant\": \"<boolean>\",\n      \"dem_Apathetic\": \"<boolean>\",\n      \"sui_Yes\": \"<boolean>\",\n      \"sui_Plan\": \"<boolean>\",\n      \"sui_Intent\": \"<boolean>\",\n      \"sui_Means\": \"<boolean>\",\n      \"sui_Denied\": \"<boolean>\",\n      \"homi_Yes\": \"<boolean>\",\n      \"homi_Plan\": \"<boolean>\",\n      \"homi_Intent\": \"<boolean>\",\n      \"homi_Means\": \"<boolean>\",\n      \"homi_Denied\": \"<boolean>\",\n      \"att_Satisfactory\": \"<boolean>\",\n      \"att_Poor\": \"<boolean>\",\n      \"att_EasilyDistracted\": \"<boolean>\",\n      \"del_Grandiose\": \"<boolean>\",\n      \"del_Persecutory\": \"<boolean>\",\n      \"del_Somatic\": \"<boolean>\",\n      \"del_Paranoia\": \"<boolean>\",\n      \"del_Ideas\": \"<boolean>\",\n      \"del_Denied\": \"<boolean>\",\n      \"jud_Good\": \"<boolean>\",\n      \"jud_Limited\": \"<boolean>\",\n      \"jud_Poor\": \"<boolean>\",\n      \"mentalStatusNote\": \"<string,null>\",\n      \"isDeleted\": \"<boolean>\",\n      \"hy_Detail\": \"<string,null>\",\n      \"af_Detail\": \"<string,null>\",\n      \"mov_Detail\": \"<string,null>\",\n      \"mood_Detail\": \"<string,null>\",\n      \"imp_Detail\": \"<string,null>\",\n      \"ori_Detail\": \"<string,null>\",\n      \"ins_Detail\": \"<string,null>\",\n      \"intell_Detail\": \"<string,null>\",\n      \"other_Detail\": \"<string,null>\",\n      \"mem_Detail\": \"<string,null>\",\n      \"speech_Detail\": \"<string,null>\",\n      \"fa__Detail\": \"<string,null>\",\n      \"eye_Detail\": \"<string,null>\",\n      \"tho_Detail\": \"<string,null>\",\n      \"dem_Detail\": \"<string,null>\",\n      \"homi_Detail\": \"<string,null>\",\n      \"att_Detail\": \"<string,null>\",\n      \"del_Detail\": \"<string,null>\",\n      \"jud_Detail\": \"<string,null>\",\n      \"hall_Detail\": \"<string,null>\",\n      \"sui_Detail\": \"<string,null>\",\n      \"fa_Detail\": \"<string,null>\",\n      \"af_Restricted\": \"<boolean>\",\n      \"mood_Irritated\": \"<boolean>\",\n      \"tableType\": \"<integer>\",\n      \"createdDate\": \"<string,null-date-time>\",\n      \"createdBy\": \"<integer,null-int32>\",\n      \"modifiedBy\": \"<integer,null-int32>\",\n      \"modifiedDate\": \"<string,null-date-time>\",\n      \"deletedBy\": \"<integer,null-int32>\",\n      \"deletedDate\": \"<string,null-date-time>\",\n      \"validFrom\": \"<dateTime>\",\n      \"validTo\": \"<dateTime>\",\n      \"af_Expansive\": \"<boolean>\",\n      \"af_Euphoric\": \"<boolean>\",\n      \"af_Anxious\": \"<boolean>\",\n      \"af_Angry\": \"<boolean>\",\n      \"af_Other\": \"<boolean>\",\n      \"hall_Other\": \"<boolean>\",\n      \"mood_Euthymic\": \"<boolean>\",\n      \"mood_Normal\": \"<boolean>\",\n      \"mood_Other\": \"<boolean>\",\n      \"other_Denied\": \"<boolean>\",\n      \"tho_Other\": \"<boolean>\",\n      \"del_Other\": \"<boolean>\",\n      \"dem_Other\": \"<boolean>\",\n      \"att_Other\": \"<boolean>\",\n      \"hy_WNL\": \"<boolean>\",\n      \"af_WNL\": \"<boolean>\",\n      \"hall_WNL\": \"<boolean>\",\n      \"mov_WNL\": \"<boolean>\",\n      \"mood_WNL\": \"<boolean>\",\n      \"speech_WNL\": \"<boolean>\",\n      \"imp_WNL\": \"<boolean>\",\n      \"ins_WNL\": \"<boolean>\",\n      \"intell_WNL\": \"<boolean>\",\n      \"ori_WNL\": \"<boolean>\",\n      \"other_WNL\": \"<boolean>\",\n      \"mem_WNL\": \"<boolean>\",\n      \"sui_WNL\": \"<boolean>\",\n      \"homi_WNL\": \"<boolean>\",\n      \"eye_WNL\": \"<boolean>\",\n      \"fa_WNL\": \"<boolean>\",\n      \"tho_WNL\": \"<boolean>\",\n      \"del_WNL\": \"<boolean>\",\n      \"dem_WNL\": \"<boolean>\",\n      \"att_WNL\": \"<boolean>\",\n      \"jud_WNL\": \"<boolean>\"\n    },\n    \"asamModel\": {\n      \"id\": \"<integer>\",\n      \"asamid\": \"<long>\",\n      \"sourceID\": \"<long>\",\n      \"riskLevel\": \"<integer,null-int32>\",\n      \"riskWithdrawal\": \"<integer,null-int32>\",\n      \"priorWithdrawal\": \"<integer,null-int32>\",\n      \"physicalIllness\": \"<integer,null-int32>\",\n      \"cronogicPain\": \"<integer,null-int32>\",\n      \"chronicCondition\": \"<integer,null-int32>\",\n      \"cognitiveProblem\": \"<integer,null-int32>\",\n      \"problemConnection\": \"<integer,null-int32>\",\n      \"manageActivity\": \"<integer,null-int32>\",\n      \"selfMotivated\": \"<integer,null-int32>\",\n      \"addictiveDisorder\": \"<integer,null-int32>\",\n      \"memberLeverged\": \"<integer,null-int32>\",\n      \"memberImminent\": \"<integer,null-int32>\",\n      \"severeProblem\": \"<integer,null-int32>\",\n      \"memberAware\": \"<integer,null-int32>\",\n      \"poseThreat\": \"<integer,null-int32>\",\n      \"memberResource\": \"<integer,null-int32>\",\n      \"transportationIssue\": \"<integer,null-int32>\",\n      \"totalScore\": \"<integer,null-int32>\",\n      \"isDeleted\": \"<boolean>\",\n      \"deletedDate\": \"<string,null-date-time>\",\n      \"deletedBy\": \"<integer,null-int32>\",\n      \"updatedBy\": \"<integer,null-int32>\",\n      \"updateDate\": \"<string,null-date-time>\",\n      \"createdBy\": \"<integer>\",\n      \"createdDate\": \"<dateTime>\",\n      \"sourceName\": \"<string,null>\",\n      \"clientID\": \"<long>\",\n      \"asamDate\": \"<string,null-date-time>\",\n      \"dimension1Detail\": \"<string,null>\",\n      \"dimension2Detail\": \"<string,null>\",\n      \"dimension3Detail\": \"<string,null>\",\n      \"dimension4Detail\": \"<string,null>\",\n      \"dimension5Detail\": \"<string,null>\",\n      \"dimension6Detail\": \"<string,null>\",\n      \"validFrom\": \"<dateTime>\",\n      \"validTo\": \"<dateTime>\"\n    },\n    \"signatures\": {\n      \"client\": \"<string,null>\",\n      \"parentOrGuardian\": \"<string,null>\",\n      \"staff\": \"<string,null>\",\n      \"createdBy\": \"<integer>\"\n    },\n    \"phq9Model\": {\n      \"id\": \"<integer>\",\n      \"phq9Id\": \"<long>\",\n      \"clientId\": \"<long>\",\n      \"sourceId\": \"<long>\",\n      \"sourceName\": \"<string,null>\",\n      \"phq9Date\": \"<dateTime>\",\n      \"question1\": \"<integer,null-int32>\",\n      \"question2\": \"<integer,null-int32>\",\n      \"question3\": \"<integer,null-int32>\",\n      \"question4\": \"<integer,null-int32>\",\n      \"question5\": \"<integer,null-int32>\",\n      \"question6\": \"<integer,null-int32>\",\n      \"question7\": \"<integer,null-int32>\",\n      \"question8\": \"<integer,null-int32>\",\n      \"question9\": \"<integer,null-int32>\",\n      \"question10\": \"<integer,null-int32>\",\n      \"totalScore\": \"<integer,null-int32>\",\n      \"createdBy\": \"<integer>\",\n      \"updatedBy\": \"<integer,null-int32>\",\n      \"isDeleted\": \"<boolean>\",\n      \"deletedBy\": \"<integer,null-int32>\",\n      \"leadId\": \"<long>\"\n    },\n    \"gad7Model\": {\n      \"id\": \"<integer>\",\n      \"gad7Id\": \"<long>\",\n      \"clientId\": \"<long>\",\n      \"sourceId\": \"<long>\",\n      \"sourceName\": \"<string,null>\",\n      \"gad7Date\": \"<dateTime>\",\n      \"question1\": \"<integer,null-int32>\",\n      \"question2\": \"<integer,null-int32>\",\n      \"question3\": \"<integer,null-int32>\",\n      \"question4\": \"<integer,null-int32>\",\n      \"question5\": \"<integer,null-int32>\",\n      \"question6\": \"<integer,null-int32>\",\n      \"question7\": \"<integer,null-int32>\",\n      \"question8\": \"<integer,null-int32>\",\n      \"leadId\": \"<long>\",\n      \"totalScore\": \"<integer,null-int32>\",\n      \"createdBy\": \"<integer>\",\n      \"updatedBy\": \"<integer,null-int32>\",\n      \"isDeleted\": \"<boolean>\",\n      \"deletedBy\": \"<integer,null-int32>\"\n    },\n    \"billingCode\": {\n      \"id\": \"<integer>\",\n      \"billingCodeDataId\": \"<integer>\",\n      \"tableType\": \"<integer>\",\n      \"notesId\": \"<integer>\",\n      \"codeId\": \"<integer>\",\n      \"createdBy\": \"<integer>\",\n      \"createdDate\": \"<dateTime>\",\n      \"modifiedBy\": \"<integer,null-int32>\",\n      \"modifiedDate\": \"<string,null-date-time>\",\n      \"deletedBy\": \"<integer,null-int32>\",\n      \"deletedDate\": \"<string,null-date-time>\",\n      \"isActive\": \"<boolean>\",\n      \"isDeleted\": \"<boolean>\"\n    },\n    \"staffSignature\": \"<array,null>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "4f8adbb2-2509-4dda-a949-0ee3f4136eba",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "sessions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"appointmentId\": \"<long>\",\n  \"appointmentWith\": \"<integer,null-int32>\",\n  \"clientNLeadId\": \"<integer,null-int64>\",\n  \"startDate\": \"<string,null-date-time>\",\n  \"endDate\": \"<string,null-date-time>\",\n  \"startTime\": {},\n  \"endTime\": {},\n  \"userId\": \"<integer,null-int32>\",\n  \"facilityId\": \"<integer,null-int32>\",\n  \"appointmentType\": \"<integer,null-int32>\",\n  \"appointmentStatus\": \"<integer,null-int32>\",\n  \"description\": \"<string,null>\",\n  \"reason\": \"<string,null>\",\n  \"isAllDayEvent\": \"<boolean,null>\",\n  \"createdBy\": \"<integer>\",\n  \"createdDate\": \"<dateTime>\",\n  \"modifiedBy\": \"<integer,null-int32>\",\n  \"modifiedDate\": \"<string,null-date-time>\",\n  \"isDeleted\": \"<boolean>\",\n  \"deletedBy\": \"<integer,null-int32>\",\n  \"deletedDate\": \"<string,null-date-time>\",\n  \"clientId\": \"<integer,null-int64>\",\n  \"recurringType\": \"<integer,null-int32>\",\n  \"repeatEvery\": \"<integer,null-int32>\",\n  \"repeatEveryType\": \"<integer,null-int32>\",\n  \"repeatOn\": \"<string,null>\",\n  \"repeatOnIndex\": \"<integer,null-int32>\",\n  \"endsAfterDate\": \"<string,null-date-time>\",\n  \"isReccuringEvent\": \"<boolean>\",\n  \"parentAppointmentId\": \"<integer,null-int64>\",\n  \"isGroupSession\": \"<boolean>\",\n  \"groupTopic\": \"<string,null>\",\n  \"rehabFacilityLocationId\": \"<integer,null-int32>\",\n  \"groupNote\": \"<string,null>\",\n  \"groupHomework\": \"<string,null>\",\n  \"pickUpTime\": \"<string,null-date-time>\",\n  \"pickUpAddress\": \"<string,null>\",\n  \"dropOffAddress\": \"<string,null>\",\n  \"viewType\": \"<integer>\",\n  \"familyTherapyNote\": \"<string,null>\",\n  \"referralContactId\": \"<integer,null-int32>\",\n  \"addressTypeId\": \"<integer,null-int32>\",\n  \"address1\": \"<string,null>\",\n  \"meetingTypeId\": \"<integer,null-int32>\",\n  \"groupHomeworkStatus\": \"<integer>\",\n  \"validFrom\": \"<dateTime>\",\n  \"validTo\": \"<dateTime>\",\n  \"isVideoSession\": \"<boolean>\",\n  \"isRecTherapyType\": \"<boolean>\",\n  \"isMultilocation\": \"<boolean>\",\n  \"multiLocationId\": \"<string,null>\",\n  \"detailDescription\": \"<string,null>\",\n  \"details\": {\n    \"sessionNote\": {\n      \"id\": \"<integer>\",\n      \"noteId\": \"<long>\",\n      \"appointmentId\": \"<long>\",\n      \"leadId\": \"<long>\",\n      \"assesmentNote\": \"<string,null>\",\n      \"sessionStatus\": \"<integer>\",\n      \"createdBy\": \"<integer>\",\n      \"createdDate\": \"<dateTime>\",\n      \"modifiedBy\": \"<integer,null-int32>\",\n      \"modifiedDate\": \"<string,null-date-time>\",\n      \"isDeleted\": \"<boolean>\",\n      \"deletedBy\": \"<integer,null-int32>\",\n      \"deletedDate\": \"<string,null-date-time>\",\n      \"startSession\": {},\n      \"endSession\": {},\n      \"duration\": \"<integer>\"\n    },\n    \"groupLeader\": {\n      \"id\": \"<integer>\",\n      \"name\": {\n        \"first\": \"<string,null>\",\n        \"last\": \"<string,null>\",\n        \"prefix\": \"<string,null>\",\n        \"suffix\": \"<string,null>\"\n      },\n      \"gender\": \"<string,null>\",\n      \"userName\": \"<string,null>\",\n      \"birthDate\": \"<string,null-date-time>\",\n      \"ssn\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"phone\": \"<string,null>\",\n      \"address\": {\n        \"line1\": \"<string,null>\",\n        \"line2\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"stateAbbr\": \"<string,null>\",\n        \"country\": \"<string,null>\",\n        \"zipCode\": \"<string,null>\"\n      },\n      \"facility\": {\n        \"id\": \"<integer>\",\n        \"name\": \"<string,null>\",\n        \"rehabName\": \"<string,null>\",\n        \"domainName\": \"<string,null>\",\n        \"email\": \"<string,null>\",\n        \"officePhone\": \"<string,null>\",\n        \"fax\": \"<string,null>\",\n        \"address1\": \"<string,null>\",\n        \"address2\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"postalCode\": \"<string,null>\",\n        \"country\": \"<string,null>\"\n      },\n      \"tenant\": \"<string,null>\",\n      \"role\": \"<string,null>\",\n      \"profileImage\": {\n        \"fileName\": \"<string,null>\"\n      },\n      \"isMedicalProvider\": \"<boolean,null>\",\n      \"hireDate\": \"<string,null-date-time>\",\n      \"startDate\": \"<string,null-date-time>\",\n      \"endDate\": \"<string,null-date-time>\",\n      \"licenses\": \"<array,null>\"\n    },\n    \"mentalStatusModel\": {\n      \"id\": \"<integer>\",\n      \"mentalStatusExamId\": \"<long>\",\n      \"tableId\": \"<long>\",\n      \"hy_Clean\": \"<boolean>\",\n      \"hy_Unshaven\": \"<boolean>\",\n      \"hy_Odorous\": \"<boolean>\",\n      \"hy_Disheveled\": \"<boolean>\",\n      \"hy_Other\": \"<boolean>\",\n      \"af_Appropriate\": \"<boolean>\",\n      \"af_Inappropriate\": \"<boolean>\",\n      \"af_Labile\": \"<boolean>\",\n      \"af_Blunted\": \"<boolean>\",\n      \"af_Flat\": \"<boolean>\",\n      \"mov_Normal\": \"<boolean>\",\n      \"mov_Tense\": \"<boolean>\",\n      \"mov_Fidgety\": \"<boolean>\",\n      \"mov_Hyperactive\": \"<boolean>\",\n      \"mov_PsychomotorRetardation\": \"<boolean>\",\n      \"mov_PsychomotorAgitation\": \"<boolean>\",\n      \"mov_Pacing\": \"<boolean>\",\n      \"mov_HandWringing\": \"<boolean>\",\n      \"mov_Tics\": \"<boolean>\",\n      \"mov_Other\": \"<boolean>\",\n      \"mood_Anxious\": \"<boolean>\",\n      \"mood_Confused\": \"<boolean>\",\n      \"mood_Depressed\": \"<boolean>\",\n      \"mood_Labile\": \"<boolean>\",\n      \"mood_Fearful\": \"<boolean>\",\n      \"mood_Euphoric\": \"<boolean>\",\n      \"mood_Angry\": \"<boolean>\",\n      \"mood_Dysthymic\": \"<boolean>\",\n      \"hall_Visual\": \"<boolean>\",\n      \"hall_Auditory\": \"<boolean>\",\n      \"hall_Tactile\": \"<boolean>\",\n      \"hall_Olfactory\": \"<boolean>\",\n      \"hall_Command\": \"<boolean>\",\n      \"hall_Denied\": \"<boolean>\",\n      \"imp_Good\": \"<boolean>\",\n      \"imp_Limited\": \"<boolean>\",\n      \"imp_Poor\": \"<boolean>\",\n      \"ori_Person\": \"<boolean>\",\n      \"ori_Place\": \"<boolean>\",\n      \"ori_Time\": \"<boolean>\",\n      \"ori_Situation\": \"<boolean>\",\n      \"ins_Good\": \"<boolean>\",\n      \"ins_Limited\": \"<boolean>\",\n      \"ins_Poor\": \"<boolean>\",\n      \"intell_AboveAverage\": \"<boolean>\",\n      \"intell_Average\": \"<boolean>\",\n      \"intell_BelowAverage\": \"<boolean>\",\n      \"other_Obsessions\": \"<boolean>\",\n      \"other_Compulsions\": \"<boolean>\",\n      \"other_Depersonalization\": \"<boolean>\",\n      \"other_DeRealism\": \"<boolean>\",\n      \"mem_Intact\": \"<boolean>\",\n      \"mem_ImmediateImpaired\": \"<boolean>\",\n      \"mem_ShortTermImpaired\": \"<boolean>\",\n      \"mem_LongTermImpaired\": \"<boolean>\",\n      \"speech_Normal\": \"<boolean>\",\n      \"speech_Soft\": \"<boolean>\",\n      \"speech_Loud\": \"<boolean>\",\n      \"speech_Pressured\": \"<boolean>\",\n      \"speech_Rapid\": \"<boolean>\",\n      \"speech_Slowed\": \"<boolean>\",\n      \"speech_Slurred\": \"<boolean>\",\n      \"speech_Incoherent\": \"<boolean>\",\n      \"fa_Amiable\": \"<boolean>\",\n      \"fa_Happy\": \"<boolean>\",\n      \"fa_Angry\": \"<boolean>\",\n      \"fa_Worried\": \"<boolean>\",\n      \"fa_Suspicious\": \"<boolean>\",\n      \"fa_Sad\": \"<boolean>\",\n      \"eye_Good\": \"<boolean>\",\n      \"eye_Avoident\": \"<boolean>\",\n      \"eye_Fleeting\": \"<boolean>\",\n      \"eye_Stare\": \"<boolean>\",\n      \"tho_Intact\": \"<boolean>\",\n      \"tho_Blocked\": \"<boolean>\",\n      \"tho_Loose\": \"<boolean>\",\n      \"tho_Incoherent\": \"<boolean>\",\n      \"tho_Tangential\": \"<boolean>\",\n      \"tho_Flight\": \"<boolean>\",\n      \"tho_Circumstantial\": \"<boolean>\",\n      \"dem_Cooperative\": \"<boolean>\",\n      \"dem_Uncooperative\": \"<boolean>\",\n      \"dem_Guareded\": \"<boolean>\",\n      \"dem_Resistive\": \"<boolean>\",\n      \"dem_Defensive\": \"<boolean>\",\n      \"dem_Friendly\": \"<boolean>\",\n      \"dem_Worried\": \"<boolean>\",\n      \"dem_Boastful\": \"<boolean>\",\n      \"dem_Demanding\": \"<boolean>\",\n      \"dem_Hostile\": \"<boolean>\",\n      \"dem_Irritable\": \"<boolean>\",\n      \"dem_Agitated\": \"<boolean>\",\n      \"dem_Evasive\": \"<boolean>\",\n      \"dem_Dramatic\": \"<boolean>\",\n      \"dem_Sductive\": \"<boolean>\",\n      \"dem_Arrogant\": \"<boolean>\",\n      \"dem_Apathetic\": \"<boolean>\",\n      \"sui_Yes\": \"<boolean>\",\n      \"sui_Plan\": \"<boolean>\",\n      \"sui_Intent\": \"<boolean>\",\n      \"sui_Means\": \"<boolean>\",\n      \"sui_Denied\": \"<boolean>\",\n      \"homi_Yes\": \"<boolean>\",\n      \"homi_Plan\": \"<boolean>\",\n      \"homi_Intent\": \"<boolean>\",\n      \"homi_Means\": \"<boolean>\",\n      \"homi_Denied\": \"<boolean>\",\n      \"att_Satisfactory\": \"<boolean>\",\n      \"att_Poor\": \"<boolean>\",\n      \"att_EasilyDistracted\": \"<boolean>\",\n      \"del_Grandiose\": \"<boolean>\",\n      \"del_Persecutory\": \"<boolean>\",\n      \"del_Somatic\": \"<boolean>\",\n      \"del_Paranoia\": \"<boolean>\",\n      \"del_Ideas\": \"<boolean>\",\n      \"del_Denied\": \"<boolean>\",\n      \"jud_Good\": \"<boolean>\",\n      \"jud_Limited\": \"<boolean>\",\n      \"jud_Poor\": \"<boolean>\",\n      \"mentalStatusNote\": \"<string,null>\",\n      \"isDeleted\": \"<boolean>\",\n      \"hy_Detail\": \"<string,null>\",\n      \"af_Detail\": \"<string,null>\",\n      \"mov_Detail\": \"<string,null>\",\n      \"mood_Detail\": \"<string,null>\",\n      \"imp_Detail\": \"<string,null>\",\n      \"ori_Detail\": \"<string,null>\",\n      \"ins_Detail\": \"<string,null>\",\n      \"intell_Detail\": \"<string,null>\",\n      \"other_Detail\": \"<string,null>\",\n      \"mem_Detail\": \"<string,null>\",\n      \"speech_Detail\": \"<string,null>\",\n      \"fa__Detail\": \"<string,null>\",\n      \"eye_Detail\": \"<string,null>\",\n      \"tho_Detail\": \"<string,null>\",\n      \"dem_Detail\": \"<string,null>\",\n      \"homi_Detail\": \"<string,null>\",\n      \"att_Detail\": \"<string,null>\",\n      \"del_Detail\": \"<string,null>\",\n      \"jud_Detail\": \"<string,null>\",\n      \"hall_Detail\": \"<string,null>\",\n      \"sui_Detail\": \"<string,null>\",\n      \"fa_Detail\": \"<string,null>\",\n      \"af_Restricted\": \"<boolean>\",\n      \"mood_Irritated\": \"<boolean>\",\n      \"tableType\": \"<integer>\",\n      \"createdDate\": \"<string,null-date-time>\",\n      \"createdBy\": \"<integer,null-int32>\",\n      \"modifiedBy\": \"<integer,null-int32>\",\n      \"modifiedDate\": \"<string,null-date-time>\",\n      \"deletedBy\": \"<integer,null-int32>\",\n      \"deletedDate\": \"<string,null-date-time>\",\n      \"validFrom\": \"<dateTime>\",\n      \"validTo\": \"<dateTime>\",\n      \"af_Expansive\": \"<boolean>\",\n      \"af_Euphoric\": \"<boolean>\",\n      \"af_Anxious\": \"<boolean>\",\n      \"af_Angry\": \"<boolean>\",\n      \"af_Other\": \"<boolean>\",\n      \"hall_Other\": \"<boolean>\",\n      \"mood_Euthymic\": \"<boolean>\",\n      \"mood_Normal\": \"<boolean>\",\n      \"mood_Other\": \"<boolean>\",\n      \"other_Denied\": \"<boolean>\",\n      \"tho_Other\": \"<boolean>\",\n      \"del_Other\": \"<boolean>\",\n      \"dem_Other\": \"<boolean>\",\n      \"att_Other\": \"<boolean>\",\n      \"hy_WNL\": \"<boolean>\",\n      \"af_WNL\": \"<boolean>\",\n      \"hall_WNL\": \"<boolean>\",\n      \"mov_WNL\": \"<boolean>\",\n      \"mood_WNL\": \"<boolean>\",\n      \"speech_WNL\": \"<boolean>\",\n      \"imp_WNL\": \"<boolean>\",\n      \"ins_WNL\": \"<boolean>\",\n      \"intell_WNL\": \"<boolean>\",\n      \"ori_WNL\": \"<boolean>\",\n      \"other_WNL\": \"<boolean>\",\n      \"mem_WNL\": \"<boolean>\",\n      \"sui_WNL\": \"<boolean>\",\n      \"homi_WNL\": \"<boolean>\",\n      \"eye_WNL\": \"<boolean>\",\n      \"fa_WNL\": \"<boolean>\",\n      \"tho_WNL\": \"<boolean>\",\n      \"del_WNL\": \"<boolean>\",\n      \"dem_WNL\": \"<boolean>\",\n      \"att_WNL\": \"<boolean>\",\n      \"jud_WNL\": \"<boolean>\"\n    },\n    \"asamModel\": {\n      \"id\": \"<integer>\",\n      \"asamid\": \"<long>\",\n      \"sourceID\": \"<long>\",\n      \"riskLevel\": \"<integer,null-int32>\",\n      \"riskWithdrawal\": \"<integer,null-int32>\",\n      \"priorWithdrawal\": \"<integer,null-int32>\",\n      \"physicalIllness\": \"<integer,null-int32>\",\n      \"cronogicPain\": \"<integer,null-int32>\",\n      \"chronicCondition\": \"<integer,null-int32>\",\n      \"cognitiveProblem\": \"<integer,null-int32>\",\n      \"problemConnection\": \"<integer,null-int32>\",\n      \"manageActivity\": \"<integer,null-int32>\",\n      \"selfMotivated\": \"<integer,null-int32>\",\n      \"addictiveDisorder\": \"<integer,null-int32>\",\n      \"memberLeverged\": \"<integer,null-int32>\",\n      \"memberImminent\": \"<integer,null-int32>\",\n      \"severeProblem\": \"<integer,null-int32>\",\n      \"memberAware\": \"<integer,null-int32>\",\n      \"poseThreat\": \"<integer,null-int32>\",\n      \"memberResource\": \"<integer,null-int32>\",\n      \"transportationIssue\": \"<integer,null-int32>\",\n      \"totalScore\": \"<integer,null-int32>\",\n      \"isDeleted\": \"<boolean>\",\n      \"deletedDate\": \"<string,null-date-time>\",\n      \"deletedBy\": \"<integer,null-int32>\",\n      \"updatedBy\": \"<integer,null-int32>\",\n      \"updateDate\": \"<string,null-date-time>\",\n      \"createdBy\": \"<integer>\",\n      \"createdDate\": \"<dateTime>\",\n      \"sourceName\": \"<string,null>\",\n      \"clientID\": \"<long>\",\n      \"asamDate\": \"<string,null-date-time>\",\n      \"dimension1Detail\": \"<string,null>\",\n      \"dimension2Detail\": \"<string,null>\",\n      \"dimension3Detail\": \"<string,null>\",\n      \"dimension4Detail\": \"<string,null>\",\n      \"dimension5Detail\": \"<string,null>\",\n      \"dimension6Detail\": \"<string,null>\",\n      \"validFrom\": \"<dateTime>\",\n      \"validTo\": \"<dateTime>\"\n    },\n    \"signatures\": {\n      \"client\": \"<string,null>\",\n      \"parentOrGuardian\": \"<string,null>\",\n      \"staff\": \"<string,null>\",\n      \"createdBy\": \"<integer>\"\n    },\n    \"phq9Model\": {\n      \"id\": \"<integer>\",\n      \"phq9Id\": \"<long>\",\n      \"clientId\": \"<long>\",\n      \"sourceId\": \"<long>\",\n      \"sourceName\": \"<string,null>\",\n      \"phq9Date\": \"<dateTime>\",\n      \"question1\": \"<integer,null-int32>\",\n      \"question2\": \"<integer,null-int32>\",\n      \"question3\": \"<integer,null-int32>\",\n      \"question4\": \"<integer,null-int32>\",\n      \"question5\": \"<integer,null-int32>\",\n      \"question6\": \"<integer,null-int32>\",\n      \"question7\": \"<integer,null-int32>\",\n      \"question8\": \"<integer,null-int32>\",\n      \"question9\": \"<integer,null-int32>\",\n      \"question10\": \"<integer,null-int32>\",\n      \"totalScore\": \"<integer,null-int32>\",\n      \"createdBy\": \"<integer>\",\n      \"updatedBy\": \"<integer,null-int32>\",\n      \"isDeleted\": \"<boolean>\",\n      \"deletedBy\": \"<integer,null-int32>\",\n      \"leadId\": \"<long>\"\n    },\n    \"gad7Model\": {\n      \"id\": \"<integer>\",\n      \"gad7Id\": \"<long>\",\n      \"clientId\": \"<long>\",\n      \"sourceId\": \"<long>\",\n      \"sourceName\": \"<string,null>\",\n      \"gad7Date\": \"<dateTime>\",\n      \"question1\": \"<integer,null-int32>\",\n      \"question2\": \"<integer,null-int32>\",\n      \"question3\": \"<integer,null-int32>\",\n      \"question4\": \"<integer,null-int32>\",\n      \"question5\": \"<integer,null-int32>\",\n      \"question6\": \"<integer,null-int32>\",\n      \"question7\": \"<integer,null-int32>\",\n      \"question8\": \"<integer,null-int32>\",\n      \"leadId\": \"<long>\",\n      \"totalScore\": \"<integer,null-int32>\",\n      \"createdBy\": \"<integer>\",\n      \"updatedBy\": \"<integer,null-int32>\",\n      \"isDeleted\": \"<boolean>\",\n      \"deletedBy\": \"<integer,null-int32>\"\n    },\n    \"billingCode\": {\n      \"id\": \"<integer>\",\n      \"billingCodeDataId\": \"<integer>\",\n      \"tableType\": \"<integer>\",\n      \"notesId\": \"<integer>\",\n      \"codeId\": \"<integer>\",\n      \"createdBy\": \"<integer>\",\n      \"createdDate\": \"<dateTime>\",\n      \"modifiedBy\": \"<integer,null-int32>\",\n      \"modifiedDate\": \"<string,null-date-time>\",\n      \"deletedBy\": \"<integer,null-int32>\",\n      \"deletedDate\": \"<string,null-date-time>\",\n      \"isActive\": \"<boolean>\",\n      \"isDeleted\": \"<boolean>\"\n    },\n    \"staffSignature\": \"<array,null>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "true",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.helloalleva.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "2b8e3bc0-9440-4e35-b698-357d9c33325f",
+    "name": "Alleva Rest Sessions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

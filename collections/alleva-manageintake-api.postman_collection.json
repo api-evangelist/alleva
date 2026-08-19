@@ -1,0 +1,2341 @@
+{
+  "item": [
+    {
+      "id": "6dbb651a-1ad1-4d8b-8eb0-1475273e6f2a",
+      "name": "ManageIntake",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "833de538-8d64-4402-8148-113f2cbbee8f",
+          "name": "/manage-intake",
+          "request": {
+            "name": "/manage-intake",
+            "description": {},
+            "url": {
+              "path": [
+                "manage-intake"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"createdBy\": \"<integer>\",\n  \"facilityId\": \"<integer>\",\n  \"intakeType\": \"<integer>\",\n  \"isActiveRequire\": \"<boolean>\",\n  \"isCopyAvailable\": \"<boolean>\",\n  \"isDefaultSection\": \"<boolean>\",\n  \"isDeleted\": \"<boolean>\",\n  \"sectionCode\": \"<string,null>\",\n  \"sectionName\": \"<string,null>\",\n  \"details\": {\n    \"id\": \"<integer>\",\n    \"advancedFormId\": \"<integer,null-int32>\",\n    \"isActive\": \"<boolean>\",\n    \"isCopyIntakeSection\": \"<boolean>\",\n    \"sortOrder\": \"<integer>\",\n    \"formId\": \"<integer,null-int32>\",\n    \"formInfoId\": \"<integer,null-int32>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f0bb7725-3a01-495c-aa6d-20ec7ae5b4ed",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "manage-intake"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"createdBy\": \"<integer>\",\n  \"facilityId\": \"<integer>\",\n  \"intakeType\": \"<integer>\",\n  \"isActiveRequire\": \"<boolean>\",\n  \"isCopyAvailable\": \"<boolean>\",\n  \"isDefaultSection\": \"<boolean>\",\n  \"isDeleted\": \"<boolean>\",\n  \"sectionCode\": \"<string,null>\",\n  \"sectionName\": \"<string,null>\",\n  \"details\": {\n    \"id\": \"<integer>\",\n    \"advancedFormId\": \"<integer,null-int32>\",\n    \"isActive\": \"<boolean>\",\n    \"isCopyIntakeSection\": \"<boolean>\",\n    \"sortOrder\": \"<integer>\",\n    \"formId\": \"<integer,null-int32>\",\n    \"formInfoId\": \"<integer,null-int32>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": null,\n  \"createdBy\": \"<integer>\",\n  \"facilityId\": \"<integer>\",\n  \"intakeType\": \"<integer>\",\n  \"isActiveRequire\": \"<boolean>\",\n  \"isCopyAvailable\": \"<boolean>\",\n  \"isDefaultSection\": \"<boolean>\",\n  \"isDeleted\": \"<boolean>\",\n  \"sectionCode\": \"<string,null>\",\n  \"sectionName\": \"<string,null>\",\n  \"details\": {\n    \"id\": \"<integer>\",\n    \"advancedFormId\": \"<integer,null-int32>\",\n    \"isActive\": \"<boolean>\",\n    \"isCopyIntakeSection\": \"<boolean>\",\n    \"sortOrder\": \"<integer>\",\n    \"formId\": \"<integer,null-int32>\",\n    \"formInfoId\": \"<integer,null-int32>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "44404c09-f990-4fc2-a319-5a8d493c1922",
+          "name": "/manage-intake",
+          "request": {
+            "name": "/manage-intake",
+            "description": {},
+            "url": {
+              "path": [
+                "manage-intake"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "653fb3e7-22a1-43a6-a756-73381eb5315f",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "manage-intake"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"createdBy\": \"<integer>\",\n    \"facilityId\": \"<integer>\",\n    \"intakeType\": \"<integer>\",\n    \"isActiveRequire\": \"<boolean>\",\n    \"isCopyAvailable\": \"<boolean>\",\n    \"isDefaultSection\": \"<boolean>\",\n    \"isDeleted\": \"<boolean>\",\n    \"sectionCode\": \"<string,null>\",\n    \"sectionName\": \"<string,null>\",\n    \"details\": {\n      \"id\": \"<integer>\",\n      \"advancedFormId\": \"<integer,null-int32>\",\n      \"isActive\": \"<boolean>\",\n      \"isCopyIntakeSection\": \"<boolean>\",\n      \"sortOrder\": \"<integer>\",\n      \"formId\": \"<integer,null-int32>\",\n      \"formInfoId\": \"<integer,null-int32>\"\n    }\n  },\n  {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"createdBy\": \"<integer>\",\n    \"facilityId\": \"<integer>\",\n    \"intakeType\": \"<integer>\",\n    \"isActiveRequire\": \"<boolean>\",\n    \"isCopyAvailable\": \"<boolean>\",\n    \"isDefaultSection\": \"<boolean>\",\n    \"isDeleted\": \"<boolean>\",\n    \"sectionCode\": \"<string,null>\",\n    \"sectionName\": \"<string,null>\",\n    \"details\": {\n      \"id\": \"<integer>\",\n      \"advancedFormId\": \"<integer,null-int32>\",\n      \"isActive\": \"<boolean>\",\n      \"isCopyIntakeSection\": \"<boolean>\",\n      \"sortOrder\": \"<integer>\",\n      \"formId\": \"<integer,null-int32>\",\n      \"formInfoId\": \"<integer,null-int32>\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d09b42ea-da95-4b6f-8d23-3ebfe5c64b14",
+          "name": "/v{{version}}/manage-intake",
+          "request": {
+            "name": "/v{{version}}/manage-intake",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "manage-intake"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"createdBy\": \"<integer>\",\n  \"facilityId\": \"<integer>\",\n  \"intakeType\": \"<integer>\",\n  \"isActiveRequire\": \"<boolean>\",\n  \"isCopyAvailable\": \"<boolean>\",\n  \"isDefaultSection\": \"<boolean>\",\n  \"isDeleted\": \"<boolean>\",\n  \"sectionCode\": \"<string,null>\",\n  \"sectionName\": \"<string,null>\",\n  \"details\": {\n    \"id\": \"<integer>\",\n    \"advancedFormId\": \"<integer,null-int32>\",\n    \"isActive\": \"<boolean>\",\n    \"isCopyIntakeSection\": \"<boolean>\",\n    \"sortOrder\": \"<integer>\",\n    \"formId\": \"<integer,null-int32>\",\n    \"formInfoId\": \"<integer,null-int32>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "631bb58e-a411-4315-83c8-08a98843c26e",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "manage-intake"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"createdBy\": \"<integer>\",\n  \"facilityId\": \"<integer>\",\n  \"intakeType\": \"<integer>\",\n  \"isActiveRequire\": \"<boolean>\",\n  \"isCopyAvailable\": \"<boolean>\",\n  \"isDefaultSection\": \"<boolean>\",\n  \"isDeleted\": \"<boolean>\",\n  \"sectionCode\": \"<string,null>\",\n  \"sectionName\": \"<string,null>\",\n  \"details\": {\n    \"id\": \"<integer>\",\n    \"advancedFormId\": \"<integer,null-int32>\",\n    \"isActive\": \"<boolean>\",\n    \"isCopyIntakeSection\": \"<boolean>\",\n    \"sortOrder\": \"<integer>\",\n    \"formId\": \"<integer,null-int32>\",\n    \"formInfoId\": \"<integer,null-int32>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": null,\n  \"createdBy\": \"<integer>\",\n  \"facilityId\": \"<integer>\",\n  \"intakeType\": \"<integer>\",\n  \"isActiveRequire\": \"<boolean>\",\n  \"isCopyAvailable\": \"<boolean>\",\n  \"isDefaultSection\": \"<boolean>\",\n  \"isDeleted\": \"<boolean>\",\n  \"sectionCode\": \"<string,null>\",\n  \"sectionName\": \"<string,null>\",\n  \"details\": {\n    \"id\": \"<integer>\",\n    \"advancedFormId\": \"<integer,null-int32>\",\n    \"isActive\": \"<boolean>\",\n    \"isCopyIntakeSection\": \"<boolean>\",\n    \"sortOrder\": \"<integer>\",\n    \"formId\": \"<integer,null-int32>\",\n    \"formInfoId\": \"<integer,null-int32>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d06d2340-71a1-4b7c-a282-6f592ba4d9a2",
+          "name": "/v{{version}}/manage-intake",
+          "request": {
+            "name": "/v{{version}}/manage-intake",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "manage-intake"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e8f59aac-98ea-445e-812c-75dfab11674c",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "manage-intake"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"createdBy\": \"<integer>\",\n    \"facilityId\": \"<integer>\",\n    \"intakeType\": \"<integer>\",\n    \"isActiveRequire\": \"<boolean>\",\n    \"isCopyAvailable\": \"<boolean>\",\n    \"isDefaultSection\": \"<boolean>\",\n    \"isDeleted\": \"<boolean>\",\n    \"sectionCode\": \"<string,null>\",\n    \"sectionName\": \"<string,null>\",\n    \"details\": {\n      \"id\": \"<integer>\",\n      \"advancedFormId\": \"<integer,null-int32>\",\n      \"isActive\": \"<boolean>\",\n      \"isCopyIntakeSection\": \"<boolean>\",\n      \"sortOrder\": \"<integer>\",\n      \"formId\": \"<integer,null-int32>\",\n      \"formInfoId\": \"<integer,null-int32>\"\n    }\n  },\n  {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"createdBy\": \"<integer>\",\n    \"facilityId\": \"<integer>\",\n    \"intakeType\": \"<integer>\",\n    \"isActiveRequire\": \"<boolean>\",\n    \"isCopyAvailable\": \"<boolean>\",\n    \"isDefaultSection\": \"<boolean>\",\n    \"isDeleted\": \"<boolean>\",\n    \"sectionCode\": \"<string,null>\",\n    \"sectionName\": \"<string,null>\",\n    \"details\": {\n      \"id\": \"<integer>\",\n      \"advancedFormId\": \"<integer,null-int32>\",\n      \"isActive\": \"<boolean>\",\n      \"isCopyIntakeSection\": \"<boolean>\",\n      \"sortOrder\": \"<integer>\",\n      \"formId\": \"<integer,null-int32>\",\n      \"formInfoId\": \"<integer,null-int32>\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "66d5569f-6519-4cfe-a439-7fb4a5cc75ff",
+          "name": "/manage-intake/get-list-at-time",
+          "request": {
+            "name": "/manage-intake/get-list-at-time",
+            "description": {},
+            "url": {
+              "path": [
+                "manage-intake",
+                "get-list-at-time"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "facilityId",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "intakeType",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "time",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8f93f2db-1898-4189-a9a2-962b6097bd91",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "manage-intake",
+                    "get-list-at-time"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "facilityId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "intakeType",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "time",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"createdBy\": \"<integer>\",\n    \"facilityId\": \"<integer>\",\n    \"intakeType\": \"<integer>\",\n    \"isActiveRequire\": \"<boolean>\",\n    \"isCopyAvailable\": \"<boolean>\",\n    \"isDefaultSection\": \"<boolean>\",\n    \"isDeleted\": \"<boolean>\",\n    \"sectionCode\": \"<string,null>\",\n    \"sectionName\": \"<string,null>\",\n    \"details\": {\n      \"id\": \"<integer>\",\n      \"advancedFormId\": \"<integer,null-int32>\",\n      \"isActive\": \"<boolean>\",\n      \"isCopyIntakeSection\": \"<boolean>\",\n      \"sortOrder\": \"<integer>\",\n      \"formId\": \"<integer,null-int32>\",\n      \"formInfoId\": \"<integer,null-int32>\"\n    }\n  },\n  {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"createdBy\": \"<integer>\",\n    \"facilityId\": \"<integer>\",\n    \"intakeType\": \"<integer>\",\n    \"isActiveRequire\": \"<boolean>\",\n    \"isCopyAvailable\": \"<boolean>\",\n    \"isDefaultSection\": \"<boolean>\",\n    \"isDeleted\": \"<boolean>\",\n    \"sectionCode\": \"<string,null>\",\n    \"sectionName\": \"<string,null>\",\n    \"details\": {\n      \"id\": \"<integer>\",\n      \"advancedFormId\": \"<integer,null-int32>\",\n      \"isActive\": \"<boolean>\",\n      \"isCopyIntakeSection\": \"<boolean>\",\n      \"sortOrder\": \"<integer>\",\n      \"formId\": \"<integer,null-int32>\",\n      \"formInfoId\": \"<integer,null-int32>\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3d5f426d-7618-4c1e-904a-9ab27f72adc3",
+          "name": "/v{{version}}/manage-intake/get-list-at-time",
+          "request": {
+            "name": "/v{{version}}/manage-intake/get-list-at-time",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "manage-intake",
+                "get-list-at-time"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "facilityId",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "intakeType",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "time",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f80a0fd1-e4de-4ef8-b9fd-f3cdb22be49d",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "manage-intake",
+                    "get-list-at-time"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "facilityId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "intakeType",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "time",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"createdBy\": \"<integer>\",\n    \"facilityId\": \"<integer>\",\n    \"intakeType\": \"<integer>\",\n    \"isActiveRequire\": \"<boolean>\",\n    \"isCopyAvailable\": \"<boolean>\",\n    \"isDefaultSection\": \"<boolean>\",\n    \"isDeleted\": \"<boolean>\",\n    \"sectionCode\": \"<string,null>\",\n    \"sectionName\": \"<string,null>\",\n    \"details\": {\n      \"id\": \"<integer>\",\n      \"advancedFormId\": \"<integer,null-int32>\",\n      \"isActive\": \"<boolean>\",\n      \"isCopyIntakeSection\": \"<boolean>\",\n      \"sortOrder\": \"<integer>\",\n      \"formId\": \"<integer,null-int32>\",\n      \"formInfoId\": \"<integer,null-int32>\"\n    }\n  },\n  {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"createdBy\": \"<integer>\",\n    \"facilityId\": \"<integer>\",\n    \"intakeType\": \"<integer>\",\n    \"isActiveRequire\": \"<boolean>\",\n    \"isCopyAvailable\": \"<boolean>\",\n    \"isDefaultSection\": \"<boolean>\",\n    \"isDeleted\": \"<boolean>\",\n    \"sectionCode\": \"<string,null>\",\n    \"sectionName\": \"<string,null>\",\n    \"details\": {\n      \"id\": \"<integer>\",\n      \"advancedFormId\": \"<integer,null-int32>\",\n      \"isActive\": \"<boolean>\",\n      \"isCopyIntakeSection\": \"<boolean>\",\n      \"sortOrder\": \"<integer>\",\n      \"formId\": \"<integer,null-int32>\",\n      \"formInfoId\": \"<integer,null-int32>\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "434feec8-2d8c-4655-bbb7-14b0942ac425",
+          "name": "/manage-intake/:id",
+          "request": {
+            "name": "/manage-intake/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "manage-intake",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_1\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "29017591-e279-4f52-a9db-2a0fd4a72501",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "manage-intake",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_1\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": null,\n  \"createdBy\": \"<integer>\",\n  \"facilityId\": \"<integer>\",\n  \"intakeType\": \"<integer>\",\n  \"isActiveRequire\": \"<boolean>\",\n  \"isCopyAvailable\": \"<boolean>\",\n  \"isDefaultSection\": \"<boolean>\",\n  \"isDeleted\": \"<boolean>\",\n  \"sectionCode\": \"<string,null>\",\n  \"sectionName\": \"<string,null>\",\n  \"details\": {\n    \"id\": \"<integer>\",\n    \"advancedFormId\": \"<integer,null-int32>\",\n    \"isActive\": \"<boolean>\",\n    \"isCopyIntakeSection\": \"<boolean>\",\n    \"sortOrder\": \"<integer>\",\n    \"formId\": \"<integer,null-int32>\",\n    \"formInfoId\": \"<integer,null-int32>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2b46c1f4-faf0-485a-9829-f6e90bd99872",
+          "name": "/manage-intake/:id",
+          "request": {
+            "name": "/manage-intake/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "manage-intake",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "af2832f3-9eeb-4b47-911f-3a8a18928c34",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "manage-intake",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": null,\n  \"createdBy\": \"<integer>\",\n  \"facilityId\": \"<integer>\",\n  \"intakeType\": \"<integer>\",\n  \"isActiveRequire\": \"<boolean>\",\n  \"isCopyAvailable\": \"<boolean>\",\n  \"isDefaultSection\": \"<boolean>\",\n  \"isDeleted\": \"<boolean>\",\n  \"sectionCode\": \"<string,null>\",\n  \"sectionName\": \"<string,null>\",\n  \"details\": {\n    \"id\": \"<integer>\",\n    \"advancedFormId\": \"<integer,null-int32>\",\n    \"isActive\": \"<boolean>\",\n    \"isCopyIntakeSection\": \"<boolean>\",\n    \"sortOrder\": \"<integer>\",\n    \"formId\": \"<integer,null-int32>\",\n    \"formInfoId\": \"<integer,null-int32>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "bfa448e0-0bfa-4f66-a278-affee408f16e",
+          "name": "/v{{version}}/manage-intake/:id",
+          "request": {
+            "name": "/v{{version}}/manage-intake/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "manage-intake",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_1\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_2\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_3\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_4\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "896f5145-7529-49e7-8fcd-d69b4431d4c3",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "manage-intake",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_1\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": null,\n  \"createdBy\": \"<integer>\",\n  \"facilityId\": \"<integer>\",\n  \"intakeType\": \"<integer>\",\n  \"isActiveRequire\": \"<boolean>\",\n  \"isCopyAvailable\": \"<boolean>\",\n  \"isDefaultSection\": \"<boolean>\",\n  \"isDeleted\": \"<boolean>\",\n  \"sectionCode\": \"<string,null>\",\n  \"sectionName\": \"<string,null>\",\n  \"details\": {\n    \"id\": \"<integer>\",\n    \"advancedFormId\": \"<integer,null-int32>\",\n    \"isActive\": \"<boolean>\",\n    \"isCopyIntakeSection\": \"<boolean>\",\n    \"sortOrder\": \"<integer>\",\n    \"formId\": \"<integer,null-int32>\",\n    \"formInfoId\": \"<integer,null-int32>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "10886266-5b84-4378-8c53-044b6722cae8",
+          "name": "/v{{version}}/manage-intake/:id",
+          "request": {
+            "name": "/v{{version}}/manage-intake/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "manage-intake",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f837aa44-137a-4928-b7e8-9c334bac2720",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "manage-intake",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": null,\n  \"createdBy\": \"<integer>\",\n  \"facilityId\": \"<integer>\",\n  \"intakeType\": \"<integer>\",\n  \"isActiveRequire\": \"<boolean>\",\n  \"isCopyAvailable\": \"<boolean>\",\n  \"isDefaultSection\": \"<boolean>\",\n  \"isDeleted\": \"<boolean>\",\n  \"sectionCode\": \"<string,null>\",\n  \"sectionName\": \"<string,null>\",\n  \"details\": {\n    \"id\": \"<integer>\",\n    \"advancedFormId\": \"<integer,null-int32>\",\n    \"isActive\": \"<boolean>\",\n    \"isCopyIntakeSection\": \"<boolean>\",\n    \"sortOrder\": \"<integer>\",\n    \"formId\": \"<integer,null-int32>\",\n    \"formInfoId\": \"<integer,null-int32>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6d95c0e8-809e-4f48-8025-f22c57eaf08c",
+          "name": "/manage-intake/order",
+          "request": {
+            "name": "/manage-intake/order",
+            "description": {},
+            "url": {
+              "path": [
+                "manage-intake",
+                "order"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"facilityId\": \"<integer>\",\n  \"intakeId\": \"<integer>\",\n  \"sections\": \"<array,null>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "86e8a69e-e10f-419d-8feb-374a722d57ad",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "manage-intake",
+                    "order"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"facilityId\": \"<integer>\",\n  \"intakeId\": \"<integer>\",\n  \"sections\": \"<array,null>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"operationResult\": 2,\n  \"id\": 2805,\n  \"messages\": [\n    \"string\",\n    \"string\"\n  ],\n  \"reason\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b934f1e8-106b-4336-98a3-39d93b70f1d8",
+          "name": "/v{{version}}/manage-intake/order",
+          "request": {
+            "name": "/v{{version}}/manage-intake/order",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "manage-intake",
+                "order"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"facilityId\": \"<integer>\",\n  \"intakeId\": \"<integer>\",\n  \"sections\": \"<array,null>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "00b0f940-e0b3-4710-8132-82c12ff73ffd",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "manage-intake",
+                    "order"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"facilityId\": \"<integer>\",\n  \"intakeId\": \"<integer>\",\n  \"sections\": \"<array,null>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"operationResult\": 2,\n  \"id\": 2805,\n  \"messages\": [\n    \"string\",\n    \"string\"\n  ],\n  \"reason\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4a315cd9-57e4-4f56-8c6d-3244e690d2d9",
+          "name": "/manage-intake/custom-forms",
+          "request": {
+            "name": "/manage-intake/custom-forms",
+            "description": {},
+            "url": {
+              "path": [
+                "manage-intake",
+                "custom-forms"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "facilityId",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "intakeType",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "36873471-74f9-4dd2-89fa-9a7bc2a7194a",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "manage-intake",
+                    "custom-forms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "facilityId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "intakeType",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"advancedFormId\": 9837,\n    \"createdDate\": \"1987-04-30T21:07:37.903Z\",\n    \"formId\": null,\n    \"formInfoId\": 5918,\n    \"title\": null,\n    \"version\": 672\n  },\n  {\n    \"advancedFormId\": 2922,\n    \"createdDate\": \"1990-07-20T23:22:15.119Z\",\n    \"formId\": 9557,\n    \"formInfoId\": null,\n    \"title\": \"string\",\n    \"version\": 8733\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c54fc2bf-9025-43cd-9aa4-30ecc6d8d99d",
+          "name": "/manage-intake/custom-forms",
+          "request": {
+            "name": "/manage-intake/custom-forms",
+            "description": {},
+            "url": {
+              "path": [
+                "manage-intake",
+                "custom-forms"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"facilityId\": \"<integer>\",\n  \"intakeId\": \"<integer>\",\n  \"forms\": \"<array,null>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "53c5af3e-2edc-4d05-ac9d-0df9d785e10c",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "manage-intake",
+                    "custom-forms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"facilityId\": \"<integer>\",\n  \"intakeId\": \"<integer>\",\n  \"forms\": \"<array,null>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"operationResult\": 2,\n  \"id\": 2805,\n  \"messages\": [\n    \"string\",\n    \"string\"\n  ],\n  \"reason\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "58faa246-3f02-4260-817f-984df6062649",
+          "name": "/v{{version}}/manage-intake/custom-forms",
+          "request": {
+            "name": "/v{{version}}/manage-intake/custom-forms",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "manage-intake",
+                "custom-forms"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "facilityId",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "intakeType",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6b3e1aef-d67f-48ef-891a-57bbd7bc5efe",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "manage-intake",
+                    "custom-forms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "facilityId",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "intakeType",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"advancedFormId\": 9837,\n    \"createdDate\": \"1987-04-30T21:07:37.903Z\",\n    \"formId\": null,\n    \"formInfoId\": 5918,\n    \"title\": null,\n    \"version\": 672\n  },\n  {\n    \"advancedFormId\": 2922,\n    \"createdDate\": \"1990-07-20T23:22:15.119Z\",\n    \"formId\": 9557,\n    \"formInfoId\": null,\n    \"title\": \"string\",\n    \"version\": 8733\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "39f4c585-4517-47e1-bd86-4cb97bbb8995",
+          "name": "/v{{version}}/manage-intake/custom-forms",
+          "request": {
+            "name": "/v{{version}}/manage-intake/custom-forms",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "manage-intake",
+                "custom-forms"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"facilityId\": \"<integer>\",\n  \"intakeId\": \"<integer>\",\n  \"forms\": \"<array,null>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b34e831a-f304-44ca-b45e-f4a04725df8a",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "manage-intake",
+                    "custom-forms"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"facilityId\": \"<integer>\",\n  \"intakeId\": \"<integer>\",\n  \"forms\": \"<array,null>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"operationResult\": 2,\n  \"id\": 2805,\n  \"messages\": [\n    \"string\",\n    \"string\"\n  ],\n  \"reason\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fdaabbc4-1592-42f5-b1d8-2bd8ba04129b",
+          "name": "/manage-intake/custom-sections",
+          "request": {
+            "name": "/manage-intake/custom-sections",
+            "description": {},
+            "url": {
+              "path": [
+                "manage-intake",
+                "custom-sections"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"facilityId\": \"<integer>\",\n  \"intakeId\": \"<integer>\",\n  \"sections\": \"<array,null>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "cf7bf826-661a-46c2-a375-b4f1b9878507",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "manage-intake",
+                    "custom-sections"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"facilityId\": \"<integer>\",\n  \"intakeId\": \"<integer>\",\n  \"sections\": \"<array,null>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"operationResult\": 2,\n  \"id\": 2805,\n  \"messages\": [\n    \"string\",\n    \"string\"\n  ],\n  \"reason\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2822004e-216b-4344-b9ce-ff11aba77f36",
+          "name": "/v{{version}}/manage-intake/custom-sections",
+          "request": {
+            "name": "/v{{version}}/manage-intake/custom-sections",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "manage-intake",
+                "custom-sections"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"facilityId\": \"<integer>\",\n  \"intakeId\": \"<integer>\",\n  \"sections\": \"<array,null>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "dcbe54ba-2aeb-4f54-9b03-ef0e5f962e45",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "manage-intake",
+                    "custom-sections"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"facilityId\": \"<integer>\",\n  \"intakeId\": \"<integer>\",\n  \"sections\": \"<array,null>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"operationResult\": 2,\n  \"id\": 2805,\n  \"messages\": [\n    \"string\",\n    \"string\"\n  ],\n  \"reason\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.helloalleva.com",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "version"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "d4533d5a-65a1-45ef-85cd-7f0f6ee38976",
+    "name": "Alleva Rest Manage Intake API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

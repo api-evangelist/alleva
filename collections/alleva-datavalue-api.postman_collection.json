@@ -1,0 +1,563 @@
+{
+  "item": [
+    {
+      "id": "15c7e26e-cdca-4058-a7b7-4918be263036",
+      "name": "DataValue",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "767fe6c9-79b9-4498-8bdd-24134bff26d6",
+          "name": "/data-values/search",
+          "request": {
+            "name": "/data-values/search",
+            "description": {},
+            "url": {
+              "path": [
+                "data-values",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"datafacetIds\": \"<array,null>\",\n  \"leadId\": \"<integer>\",\n  \"advancedFormInstanceId\": \"<long>\",\n  \"advancedFormId\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e1016ce0-4b6d-4ebb-a100-1ebb2c880f95",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data-values",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"datafacetIds\": \"<array,null>\",\n  \"leadId\": \"<integer>\",\n  \"advancedFormInstanceId\": \"<long>\",\n  \"advancedFormId\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": null,\n    \"advancedFormInstanceId\": 5047,\n    \"booleanValue\": null,\n    \"dataFacetId\": 4114,\n    \"dateTimeValue\": null,\n    \"decimalValue\": 8710.522996819598,\n    \"fileValue\": null,\n    \"integerValue\": 5010,\n    \"imageValue\": null,\n    \"jsonValue\": \"string\",\n    \"leadId\": 2784,\n    \"signatureValue\": null,\n    \"stringValue\": \"string\",\n    \"createdDate\": null,\n    \"dataKind\": 2\n  },\n  {\n    \"id\": 7234,\n    \"advancedFormInstanceId\": 8244,\n    \"booleanValue\": true,\n    \"dataFacetId\": 2599,\n    \"dateTimeValue\": null,\n    \"decimalValue\": null,\n    \"fileValue\": null,\n    \"integerValue\": 3359,\n    \"imageValue\": \"string\",\n    \"jsonValue\": null,\n    \"leadId\": 2321,\n    \"signatureValue\": null,\n    \"stringValue\": null,\n    \"createdDate\": \"2002-04-30T00:49:17.822Z\",\n    \"dataKind\": 0\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cfe87082-04f6-467a-bdde-b33790826764",
+          "name": "/v{{version}}/data-values/search",
+          "request": {
+            "name": "/v{{version}}/data-values/search",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "data-values",
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"datafacetIds\": \"<array,null>\",\n  \"leadId\": \"<integer>\",\n  \"advancedFormInstanceId\": \"<long>\",\n  \"advancedFormId\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d8746e5e-098a-4937-af27-f3f6056ed91a",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "data-values",
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"datafacetIds\": \"<array,null>\",\n  \"leadId\": \"<integer>\",\n  \"advancedFormInstanceId\": \"<long>\",\n  \"advancedFormId\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": null,\n    \"advancedFormInstanceId\": 5047,\n    \"booleanValue\": null,\n    \"dataFacetId\": 4114,\n    \"dateTimeValue\": null,\n    \"decimalValue\": 8710.522996819598,\n    \"fileValue\": null,\n    \"integerValue\": 5010,\n    \"imageValue\": null,\n    \"jsonValue\": \"string\",\n    \"leadId\": 2784,\n    \"signatureValue\": null,\n    \"stringValue\": \"string\",\n    \"createdDate\": null,\n    \"dataKind\": 2\n  },\n  {\n    \"id\": 7234,\n    \"advancedFormInstanceId\": 8244,\n    \"booleanValue\": true,\n    \"dataFacetId\": 2599,\n    \"dateTimeValue\": null,\n    \"decimalValue\": null,\n    \"fileValue\": null,\n    \"integerValue\": 3359,\n    \"imageValue\": \"string\",\n    \"jsonValue\": null,\n    \"leadId\": 2321,\n    \"signatureValue\": null,\n    \"stringValue\": null,\n    \"createdDate\": \"2002-04-30T00:49:17.822Z\",\n    \"dataKind\": 0\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6e5e0ebb-1c5c-458b-b54e-2b99135a3113",
+          "name": "/data-values/:dataFacetId",
+          "request": {
+            "name": "/data-values/:dataFacetId",
+            "description": {},
+            "url": {
+              "path": [
+                "data-values",
+                ":dataFacetId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "dataFacetId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer,null-int32>\",\n  \"advancedFormInstanceId\": \"<long>\",\n  \"booleanValue\": \"<boolean,null>\",\n  \"createdBy\": \"<integer,null-int32>\",\n  \"createdByUserType\": \"<integer>\",\n  \"createdDate\": \"<string,null-date-time>\",\n  \"dataFacetId\": \"<integer>\",\n  \"dateTimeValue\": \"<string,null-date-time>\",\n  \"decimalValue\": \"<number,null-double>\",\n  \"integerValue\": \"<integer,null-int32>\",\n  \"imageValue\": \"<string,null-byte>\",\n  \"jsonValue\": \"<string,null>\",\n  \"fileValue\": \"<string,null>\",\n  \"leadId\": \"<integer>\",\n  \"modifiedBy\": \"<integer,null-int32>\",\n  \"modifiedByUserType\": \"<integer>\",\n  \"modifiedDate\": \"<string,null-date-time>\",\n  \"originalFormId\": \"<integer>\",\n  \"signatureValue\": \"<string,null-byte>\",\n  \"stringValue\": \"<string,null>\",\n  \"dataKind\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "1544d2b8-deba-41df-8fbb-a6a0ae25d2d2",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "data-values",
+                    ":dataFacetId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "dataFacetId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer,null-int32>\",\n  \"advancedFormInstanceId\": \"<long>\",\n  \"booleanValue\": \"<boolean,null>\",\n  \"createdBy\": \"<integer,null-int32>\",\n  \"createdByUserType\": \"<integer>\",\n  \"createdDate\": \"<string,null-date-time>\",\n  \"dataFacetId\": \"<integer>\",\n  \"dateTimeValue\": \"<string,null-date-time>\",\n  \"decimalValue\": \"<number,null-double>\",\n  \"integerValue\": \"<integer,null-int32>\",\n  \"imageValue\": \"<string,null-byte>\",\n  \"jsonValue\": \"<string,null>\",\n  \"fileValue\": \"<string,null>\",\n  \"leadId\": \"<integer>\",\n  \"modifiedBy\": \"<integer,null-int32>\",\n  \"modifiedByUserType\": \"<integer>\",\n  \"modifiedDate\": \"<string,null-date-time>\",\n  \"originalFormId\": \"<integer>\",\n  \"signatureValue\": \"<string,null-byte>\",\n  \"stringValue\": \"<string,null>\",\n  \"dataKind\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "653e9a0e-bccd-4cb7-9f5f-c7c47f3f52fd",
+          "name": "/v{{version}}/data-values/:dataFacetId",
+          "request": {
+            "name": "/v{{version}}/data-values/:dataFacetId",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "data-values",
+                ":dataFacetId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "dataFacetId",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer,null-int32>\",\n  \"advancedFormInstanceId\": \"<long>\",\n  \"booleanValue\": \"<boolean,null>\",\n  \"createdBy\": \"<integer,null-int32>\",\n  \"createdByUserType\": \"<integer>\",\n  \"createdDate\": \"<string,null-date-time>\",\n  \"dataFacetId\": \"<integer>\",\n  \"dateTimeValue\": \"<string,null-date-time>\",\n  \"decimalValue\": \"<number,null-double>\",\n  \"integerValue\": \"<integer,null-int32>\",\n  \"imageValue\": \"<string,null-byte>\",\n  \"jsonValue\": \"<string,null>\",\n  \"fileValue\": \"<string,null>\",\n  \"leadId\": \"<integer>\",\n  \"modifiedBy\": \"<integer,null-int32>\",\n  \"modifiedByUserType\": \"<integer>\",\n  \"modifiedDate\": \"<string,null-date-time>\",\n  \"originalFormId\": \"<integer>\",\n  \"signatureValue\": \"<string,null-byte>\",\n  \"stringValue\": \"<string,null>\",\n  \"dataKind\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7e2ffc63-1675-4f5e-ae97-84ab2d43df3d",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "data-values",
+                    ":dataFacetId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "dataFacetId",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer,null-int32>\",\n  \"advancedFormInstanceId\": \"<long>\",\n  \"booleanValue\": \"<boolean,null>\",\n  \"createdBy\": \"<integer,null-int32>\",\n  \"createdByUserType\": \"<integer>\",\n  \"createdDate\": \"<string,null-date-time>\",\n  \"dataFacetId\": \"<integer>\",\n  \"dateTimeValue\": \"<string,null-date-time>\",\n  \"decimalValue\": \"<number,null-double>\",\n  \"integerValue\": \"<integer,null-int32>\",\n  \"imageValue\": \"<string,null-byte>\",\n  \"jsonValue\": \"<string,null>\",\n  \"fileValue\": \"<string,null>\",\n  \"leadId\": \"<integer>\",\n  \"modifiedBy\": \"<integer,null-int32>\",\n  \"modifiedByUserType\": \"<integer>\",\n  \"modifiedDate\": \"<string,null-date-time>\",\n  \"originalFormId\": \"<integer>\",\n  \"signatureValue\": \"<string,null-byte>\",\n  \"stringValue\": \"<string,null>\",\n  \"dataKind\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.helloalleva.com",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "version"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "74391cfe-d2e4-4418-aae3-026a5268aa58",
+    "name": "Alleva Rest Data Value API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

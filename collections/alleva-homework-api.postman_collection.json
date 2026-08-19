@@ -1,0 +1,1361 @@
+{
+  "item": [
+    {
+      "id": "8675cb69-3e70-4909-ac2a-1ab4d98516df",
+      "name": "Homework",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "cafd3f8a-a278-49dd-9719-5618c191c066",
+          "name": "/homework/:id/assignment",
+          "request": {
+            "name": "/homework/:id/assignment",
+            "description": {},
+            "url": {
+              "path": [
+                "homework",
+                ":id",
+                "assignment"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "2ced4503-4c04-4545-adad-c801048d454b",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "homework",
+                    ":id",
+                    "assignment"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "adebe0fe-2220-435b-987e-893556175c6c",
+          "name": "/v{{version}}/homework/:id/assignment",
+          "request": {
+            "name": "/v{{version}}/homework/:id/assignment",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "homework",
+                ":id",
+                "assignment"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "90a62249-8cc5-4b7b-ac63-8d90f7f958e6",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "homework",
+                    ":id",
+                    "assignment"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d0173325-5e76-42a3-8c85-f91b6db2c709",
+          "name": "/homework/:id",
+          "request": {
+            "name": "/homework/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "homework",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_1\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "af6ae426-3eb6-4bef-9779-0f5acffe990d",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "homework",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_1\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_2\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": 6043,\n  \"href\": null,\n  \"client\": {\n    \"id\": 9996,\n    \"route\": \"string\"\n  },\n  \"treatmentPlan\": {\n    \"id\": 8401,\n    \"route\": \"string\"\n  },\n  \"title\": null,\n  \"goals\": \"string\",\n  \"suggestions\": null,\n  \"isWiley\": true,\n  \"fileName\": null,\n  \"startDate\": \"1954-12-01T08:23:27.768Z\",\n  \"endDate\": \"1968-07-14T14:04:22.496Z\",\n  \"status\": null,\n  \"problem\": null,\n  \"assignment\": null,\n  \"notes\": [\n    \"\",\n    \"\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "98a05743-ce8d-4ebe-a7bb-4dda7d77d76e",
+          "name": "/homework/:id",
+          "request": {
+            "name": "/homework/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "homework",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "eaf3b06f-4532-465d-aeb1-05f6f5ece4f1",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "homework",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": 6043,\n  \"href\": null,\n  \"client\": {\n    \"id\": 9996,\n    \"route\": \"string\"\n  },\n  \"treatmentPlan\": {\n    \"id\": 8401,\n    \"route\": \"string\"\n  },\n  \"title\": null,\n  \"goals\": \"string\",\n  \"suggestions\": null,\n  \"isWiley\": true,\n  \"fileName\": null,\n  \"startDate\": \"1954-12-01T08:23:27.768Z\",\n  \"endDate\": \"1968-07-14T14:04:22.496Z\",\n  \"status\": null,\n  \"problem\": null,\n  \"assignment\": null,\n  \"notes\": [\n    \"\",\n    \"\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "44afafce-90be-431f-bbda-093746ffb792",
+          "name": "/v{{version}}/homework/:id",
+          "request": {
+            "name": "/v{{version}}/homework/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "homework",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_1\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e7d55df6-a991-4a79-a670-de69751871cd",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "homework",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_1\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_2\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": 6043,\n  \"href\": null,\n  \"client\": {\n    \"id\": 9996,\n    \"route\": \"string\"\n  },\n  \"treatmentPlan\": {\n    \"id\": 8401,\n    \"route\": \"string\"\n  },\n  \"title\": null,\n  \"goals\": \"string\",\n  \"suggestions\": null,\n  \"isWiley\": true,\n  \"fileName\": null,\n  \"startDate\": \"1954-12-01T08:23:27.768Z\",\n  \"endDate\": \"1968-07-14T14:04:22.496Z\",\n  \"status\": null,\n  \"problem\": null,\n  \"assignment\": null,\n  \"notes\": [\n    \"\",\n    \"\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c81eca4e-afa2-48e9-bdb7-f8c20ad64c21",
+          "name": "/v{{version}}/homework/:id",
+          "request": {
+            "name": "/v{{version}}/homework/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "homework",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e1b9bb8f-af5d-4922-9932-3fef057dd1bc",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "homework",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": 6043,\n  \"href\": null,\n  \"client\": {\n    \"id\": 9996,\n    \"route\": \"string\"\n  },\n  \"treatmentPlan\": {\n    \"id\": 8401,\n    \"route\": \"string\"\n  },\n  \"title\": null,\n  \"goals\": \"string\",\n  \"suggestions\": null,\n  \"isWiley\": true,\n  \"fileName\": null,\n  \"startDate\": \"1954-12-01T08:23:27.768Z\",\n  \"endDate\": \"1968-07-14T14:04:22.496Z\",\n  \"status\": null,\n  \"problem\": null,\n  \"assignment\": null,\n  \"notes\": [\n    \"\",\n    \"\"\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0f2d776f-f0ea-479a-a90c-aff072d8d2a9",
+          "name": "/homework/:id/notes",
+          "request": {
+            "name": "/homework/:id/notes",
+            "description": {},
+            "url": {
+              "path": [
+                "homework",
+                ":id",
+                "notes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"startDate\": \"<dateTime>\",\n  \"endDate\": \"<dateTime>\",\n  \"note\": \"<string,null>\",\n  \"status\": \"<string,null>\",\n  \"createdById\": \"<integer>\",\n  \"createdDate\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "63c2d3ce-d341-4ba5-ae33-a0a4b9eef444",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "homework",
+                    ":id",
+                    "notes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"startDate\": \"<dateTime>\",\n  \"endDate\": \"<dateTime>\",\n  \"note\": \"<string,null>\",\n  \"status\": \"<string,null>\",\n  \"createdById\": \"<integer>\",\n  \"createdDate\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "70f964b7-af8b-4236-874c-00d09bf2a76f",
+          "name": "/v{{version}}/homework/:id/notes",
+          "request": {
+            "name": "/v{{version}}/homework/:id/notes",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "homework",
+                ":id",
+                "notes"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"startDate\": \"<dateTime>\",\n  \"endDate\": \"<dateTime>\",\n  \"note\": \"<string,null>\",\n  \"status\": \"<string,null>\",\n  \"createdById\": \"<integer>\",\n  \"createdDate\": \"<dateTime>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "3894137d-2869-46c0-93b7-1a51be1df3d4",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "homework",
+                    ":id",
+                    "notes"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"startDate\": \"<dateTime>\",\n  \"endDate\": \"<dateTime>\",\n  \"note\": \"<string,null>\",\n  \"status\": \"<string,null>\",\n  \"createdById\": \"<integer>\",\n  \"createdDate\": \"<dateTime>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a90d7e2f-3447-48fa-aec2-0a3b45af5e71",
+          "name": "/homework",
+          "request": {
+            "name": "/homework",
+            "description": {},
+            "url": {
+              "path": [
+                "homework"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d9cf3d61-0d05-4861-b307-312ceb3e96fb",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "homework"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 3297,\n    \"href\": \"string\",\n    \"client\": {\n      \"id\": 2495,\n      \"route\": \"string\"\n    },\n    \"treatmentPlan\": {\n      \"id\": 4513,\n      \"route\": null\n    },\n    \"title\": \"string\",\n    \"goals\": \"string\",\n    \"suggestions\": \"string\",\n    \"isWiley\": true,\n    \"fileName\": null,\n    \"startDate\": \"1976-02-23T05:00:07.472Z\",\n    \"endDate\": \"1964-12-14T02:46:15.507Z\",\n    \"status\": null,\n    \"problem\": null,\n    \"assignment\": null,\n    \"notes\": null\n  },\n  {\n    \"id\": 6330,\n    \"href\": null,\n    \"client\": {\n      \"id\": 5534,\n      \"route\": \"string\"\n    },\n    \"treatmentPlan\": {\n      \"id\": 224,\n      \"route\": null\n    },\n    \"title\": null,\n    \"goals\": null,\n    \"suggestions\": null,\n    \"isWiley\": false,\n    \"fileName\": \"string\",\n    \"startDate\": \"2020-08-30T05:00:09.261Z\",\n    \"endDate\": \"2022-07-28T19:54:14.390Z\",\n    \"status\": null,\n    \"problem\": null,\n    \"assignment\": null,\n    \"notes\": null\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "90795d27-d98a-4c37-893e-a7bb72fa6ea5",
+          "name": "/v{{version}}/homework",
+          "request": {
+            "name": "/v{{version}}/homework",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "homework"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d5f4bc05-9ab0-4bf7-89f7-f1e896aefa83",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "homework"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 3297,\n    \"href\": \"string\",\n    \"client\": {\n      \"id\": 2495,\n      \"route\": \"string\"\n    },\n    \"treatmentPlan\": {\n      \"id\": 4513,\n      \"route\": null\n    },\n    \"title\": \"string\",\n    \"goals\": \"string\",\n    \"suggestions\": \"string\",\n    \"isWiley\": true,\n    \"fileName\": null,\n    \"startDate\": \"1976-02-23T05:00:07.472Z\",\n    \"endDate\": \"1964-12-14T02:46:15.507Z\",\n    \"status\": null,\n    \"problem\": null,\n    \"assignment\": null,\n    \"notes\": null\n  },\n  {\n    \"id\": 6330,\n    \"href\": null,\n    \"client\": {\n      \"id\": 5534,\n      \"route\": \"string\"\n    },\n    \"treatmentPlan\": {\n      \"id\": 224,\n      \"route\": null\n    },\n    \"title\": null,\n    \"goals\": null,\n    \"suggestions\": null,\n    \"isWiley\": false,\n    \"fileName\": \"string\",\n    \"startDate\": \"2020-08-30T05:00:09.261Z\",\n    \"endDate\": \"2022-07-28T19:54:14.390Z\",\n    \"status\": null,\n    \"problem\": null,\n    \"assignment\": null,\n    \"notes\": null\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.helloalleva.com",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "version"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "0cfcd206-cf6e-4941-a783-58f0aa164ea9",
+    "name": "Alleva Rest Homework API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

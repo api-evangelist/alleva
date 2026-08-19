@@ -1,0 +1,1365 @@
+{
+  "item": [
+    {
+      "id": "6f777757-1bca-45ab-b97c-2be8127a4e33",
+      "name": "TreatmentPlans",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f2373c16-0751-4d91-a56e-eadcf1276767",
+          "name": "/treatment-plans/:id/signature",
+          "request": {
+            "name": "/treatment-plans/:id/signature",
+            "description": {},
+            "url": {
+              "path": [
+                "treatment-plans",
+                ":id",
+                "signature"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entityId\": \"<integer>\",\n  \"signerName\": \"<string,null>\",\n  \"data\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"signatureDateTime\": \"<string,null-date-time>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0dcab5cb-0c82-4737-ad30-decd49014560",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "treatment-plans",
+                    ":id",
+                    "signature"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"entityId\": \"<integer>\",\n  \"signerName\": \"<string,null>\",\n  \"data\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"signatureDateTime\": \"<string,null-date-time>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e6495534-bd77-4539-8f25-b7faeecdf54e",
+          "name": "/v{{version}}/treatment-plans/:id/signature",
+          "request": {
+            "name": "/v{{version}}/treatment-plans/:id/signature",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "treatment-plans",
+                ":id",
+                "signature"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entityId\": \"<integer>\",\n  \"signerName\": \"<string,null>\",\n  \"data\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"signatureDateTime\": \"<string,null-date-time>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "85870a1d-c748-4c24-9e36-b74be4e5c472",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "treatment-plans",
+                    ":id",
+                    "signature"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"entityId\": \"<integer>\",\n  \"signerName\": \"<string,null>\",\n  \"data\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"signatureDateTime\": \"<string,null-date-time>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "89c10238-fe29-4eb3-916c-251522e2501a",
+          "name": "/treatment-plans/:id/review-signature",
+          "request": {
+            "name": "/treatment-plans/:id/review-signature",
+            "description": {},
+            "url": {
+              "path": [
+                "treatment-plans",
+                ":id",
+                "review-signature"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entityId\": \"<integer>\",\n  \"signerName\": \"<string,null>\",\n  \"data\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"signatureDateTime\": \"<string,null-date-time>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "13beddf4-f038-4da3-aa39-cd2effe6c2e0",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "treatment-plans",
+                    ":id",
+                    "review-signature"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"entityId\": \"<integer>\",\n  \"signerName\": \"<string,null>\",\n  \"data\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"signatureDateTime\": \"<string,null-date-time>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "40e429b3-bd46-4c6e-a646-48a5ecaf3e33",
+          "name": "/v{{version}}/treatment-plans/:id/review-signature",
+          "request": {
+            "name": "/v{{version}}/treatment-plans/:id/review-signature",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "treatment-plans",
+                ":id",
+                "review-signature"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"entityId\": \"<integer>\",\n  \"signerName\": \"<string,null>\",\n  \"data\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"signatureDateTime\": \"<string,null-date-time>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "df23e5a9-6b35-432b-8fce-6dc7db686dc5",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "treatment-plans",
+                    ":id",
+                    "review-signature"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"entityId\": \"<integer>\",\n  \"signerName\": \"<string,null>\",\n  \"data\": \"<string,null>\",\n  \"type\": \"<string,null>\",\n  \"signatureDateTime\": \"<string,null-date-time>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "67be82c9-6b39-4777-b29e-9ac63948271c",
+          "name": "/treatment-plans/:id/diagnosis",
+          "request": {
+            "name": "/treatment-plans/:id/diagnosis",
+            "description": {},
+            "url": {
+              "path": [
+                "treatment-plans",
+                ":id",
+                "diagnosis"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b666ce0c-6705-470c-9b3f-21650932d129",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "treatment-plans",
+                    ":id",
+                    "diagnosis"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 7135,\n    \"href\": null,\n    \"clientId\": 6957,\n    \"leadId\": 7652,\n    \"groupId\": 7192,\n    \"group\": \"string\",\n    \"diagnosisNumber\": 1209,\n    \"problemId\": 3829,\n    \"problem\": \"string\",\n    \"problemNumber\": 1293,\n    \"diagnosisId\": 6624,\n    \"description\": null,\n    \"icD10Code\": null,\n    \"code\": \"string\",\n    \"createdBy\": {\n      \"id\": 4155,\n      \"href\": null,\n      \"name\": {\n        \"first\": \"string\",\n        \"last\": \"string\",\n        \"prefix\": null,\n        \"suffix\": \"string\"\n      },\n      \"gender\": null,\n      \"userName\": null,\n      \"birthDate\": \"1954-03-22T23:29:33.654Z\",\n      \"ssn\": \"string\",\n      \"email\": null,\n      \"phone\": null,\n      \"address\": {\n        \"line1\": null,\n        \"line2\": null,\n        \"city\": \"string\",\n        \"state\": \"string\",\n        \"stateAbbr\": \"string\",\n        \"country\": null,\n        \"zipCode\": \"string\"\n      },\n      \"facility\": {\n        \"id\": 7180,\n        \"href\": \"string\",\n        \"name\": \"string\",\n        \"rehabName\": null,\n        \"domainName\": null,\n        \"email\": \"string\",\n        \"officePhone\": \"string\",\n        \"fax\": null,\n        \"address1\": \"string\",\n        \"address2\": null,\n        \"state\": \"string\",\n        \"city\": null,\n        \"postalCode\": \"string\",\n        \"country\": \"string\"\n      },\n      \"tenant\": null,\n      \"role\": null,\n      \"profileImage\": {\n        \"fileName\": null,\n        \"host\": \"string\",\n        \"path\": \"string\"\n      },\n      \"isMedicalProvider\": null,\n      \"hireDate\": \"1989-06-05T08:51:03.472Z\",\n      \"startDate\": null,\n      \"endDate\": null,\n      \"licenses\": null\n    },\n    \"priority\": {\n      \"id\": 1242,\n      \"name\": null\n    },\n    \"resolvedDate\": null,\n    \"createdDate\": \"1952-04-02T17:04:16.708Z\",\n    \"isRuleOut\": true,\n    \"isPrimary\": true,\n    \"isActive\": true\n  },\n  {\n    \"id\": 8965,\n    \"href\": null,\n    \"clientId\": 8727,\n    \"leadId\": 6626,\n    \"groupId\": 9473,\n    \"group\": \"string\",\n    \"diagnosisNumber\": 4001,\n    \"problemId\": 5527,\n    \"problem\": null,\n    \"problemNumber\": 1260,\n    \"diagnosisId\": 6206,\n    \"description\": \"string\",\n    \"icD10Code\": null,\n    \"code\": null,\n    \"createdBy\": {\n      \"id\": 1433,\n      \"href\": \"string\",\n      \"name\": {\n        \"first\": null,\n        \"last\": null,\n        \"prefix\": \"string\",\n        \"suffix\": null\n      },\n      \"gender\": \"string\",\n      \"userName\": null,\n      \"birthDate\": \"1965-07-16T10:15:11.331Z\",\n      \"ssn\": \"string\",\n      \"email\": \"string\",\n      \"phone\": \"string\",\n      \"address\": {\n        \"line1\": \"string\",\n        \"line2\": null,\n        \"city\": \"string\",\n        \"state\": null,\n        \"stateAbbr\": null,\n        \"country\": null,\n        \"zipCode\": \"string\"\n      },\n      \"facility\": {\n        \"id\": 5146,\n        \"href\": null,\n        \"name\": \"string\",\n        \"rehabName\": null,\n        \"domainName\": \"string\",\n        \"email\": null,\n        \"officePhone\": null,\n        \"fax\": null,\n        \"address1\": null,\n        \"address2\": null,\n        \"state\": null,\n        \"city\": \"string\",\n        \"postalCode\": \"string\",\n        \"country\": \"string\"\n      },\n      \"tenant\": \"string\",\n      \"role\": null,\n      \"profileImage\": {\n        \"fileName\": null,\n        \"host\": null,\n        \"path\": \"string\"\n      },\n      \"isMedicalProvider\": null,\n      \"hireDate\": \"1951-05-23T09:42:46.025Z\",\n      \"startDate\": \"1965-03-02T07:27:36.457Z\",\n      \"endDate\": \"1978-12-13T11:12:38.091Z\",\n      \"licenses\": [\n        \"\",\n        \"\"\n      ]\n    },\n    \"priority\": {\n      \"id\": 3686,\n      \"name\": \"string\"\n    },\n    \"resolvedDate\": null,\n    \"createdDate\": \"2008-11-06T16:44:17.016Z\",\n    \"isRuleOut\": true,\n    \"isPrimary\": true,\n    \"isActive\": true\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e73557e4-af44-419e-8405-5c6a31778de9",
+          "name": "/v{{version}}/treatment-plans/:id/diagnosis",
+          "request": {
+            "name": "/v{{version}}/treatment-plans/:id/diagnosis",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "treatment-plans",
+                ":id",
+                "diagnosis"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "32258285-2d3f-46e5-afc9-92ee438c0c7d",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "treatment-plans",
+                    ":id",
+                    "diagnosis"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 7135,\n    \"href\": null,\n    \"clientId\": 6957,\n    \"leadId\": 7652,\n    \"groupId\": 7192,\n    \"group\": \"string\",\n    \"diagnosisNumber\": 1209,\n    \"problemId\": 3829,\n    \"problem\": \"string\",\n    \"problemNumber\": 1293,\n    \"diagnosisId\": 6624,\n    \"description\": null,\n    \"icD10Code\": null,\n    \"code\": \"string\",\n    \"createdBy\": {\n      \"id\": 4155,\n      \"href\": null,\n      \"name\": {\n        \"first\": \"string\",\n        \"last\": \"string\",\n        \"prefix\": null,\n        \"suffix\": \"string\"\n      },\n      \"gender\": null,\n      \"userName\": null,\n      \"birthDate\": \"1954-03-22T23:29:33.654Z\",\n      \"ssn\": \"string\",\n      \"email\": null,\n      \"phone\": null,\n      \"address\": {\n        \"line1\": null,\n        \"line2\": null,\n        \"city\": \"string\",\n        \"state\": \"string\",\n        \"stateAbbr\": \"string\",\n        \"country\": null,\n        \"zipCode\": \"string\"\n      },\n      \"facility\": {\n        \"id\": 7180,\n        \"href\": \"string\",\n        \"name\": \"string\",\n        \"rehabName\": null,\n        \"domainName\": null,\n        \"email\": \"string\",\n        \"officePhone\": \"string\",\n        \"fax\": null,\n        \"address1\": \"string\",\n        \"address2\": null,\n        \"state\": \"string\",\n        \"city\": null,\n        \"postalCode\": \"string\",\n        \"country\": \"string\"\n      },\n      \"tenant\": null,\n      \"role\": null,\n      \"profileImage\": {\n        \"fileName\": null,\n        \"host\": \"string\",\n        \"path\": \"string\"\n      },\n      \"isMedicalProvider\": null,\n      \"hireDate\": \"1989-06-05T08:51:03.472Z\",\n      \"startDate\": null,\n      \"endDate\": null,\n      \"licenses\": null\n    },\n    \"priority\": {\n      \"id\": 1242,\n      \"name\": null\n    },\n    \"resolvedDate\": null,\n    \"createdDate\": \"1952-04-02T17:04:16.708Z\",\n    \"isRuleOut\": true,\n    \"isPrimary\": true,\n    \"isActive\": true\n  },\n  {\n    \"id\": 8965,\n    \"href\": null,\n    \"clientId\": 8727,\n    \"leadId\": 6626,\n    \"groupId\": 9473,\n    \"group\": \"string\",\n    \"diagnosisNumber\": 4001,\n    \"problemId\": 5527,\n    \"problem\": null,\n    \"problemNumber\": 1260,\n    \"diagnosisId\": 6206,\n    \"description\": \"string\",\n    \"icD10Code\": null,\n    \"code\": null,\n    \"createdBy\": {\n      \"id\": 1433,\n      \"href\": \"string\",\n      \"name\": {\n        \"first\": null,\n        \"last\": null,\n        \"prefix\": \"string\",\n        \"suffix\": null\n      },\n      \"gender\": \"string\",\n      \"userName\": null,\n      \"birthDate\": \"1965-07-16T10:15:11.331Z\",\n      \"ssn\": \"string\",\n      \"email\": \"string\",\n      \"phone\": \"string\",\n      \"address\": {\n        \"line1\": \"string\",\n        \"line2\": null,\n        \"city\": \"string\",\n        \"state\": null,\n        \"stateAbbr\": null,\n        \"country\": null,\n        \"zipCode\": \"string\"\n      },\n      \"facility\": {\n        \"id\": 5146,\n        \"href\": null,\n        \"name\": \"string\",\n        \"rehabName\": null,\n        \"domainName\": \"string\",\n        \"email\": null,\n        \"officePhone\": null,\n        \"fax\": null,\n        \"address1\": null,\n        \"address2\": null,\n        \"state\": null,\n        \"city\": \"string\",\n        \"postalCode\": \"string\",\n        \"country\": \"string\"\n      },\n      \"tenant\": \"string\",\n      \"role\": null,\n      \"profileImage\": {\n        \"fileName\": null,\n        \"host\": null,\n        \"path\": \"string\"\n      },\n      \"isMedicalProvider\": null,\n      \"hireDate\": \"1951-05-23T09:42:46.025Z\",\n      \"startDate\": \"1965-03-02T07:27:36.457Z\",\n      \"endDate\": \"1978-12-13T11:12:38.091Z\",\n      \"licenses\": [\n        \"\",\n        \"\"\n      ]\n    },\n    \"priority\": {\n      \"id\": 3686,\n      \"name\": \"string\"\n    },\n    \"resolvedDate\": null,\n    \"createdDate\": \"2008-11-06T16:44:17.016Z\",\n    \"isRuleOut\": true,\n    \"isPrimary\": true,\n    \"isActive\": true\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0132fb26-86cf-49e8-ac16-2013444a4bb4",
+          "name": "/treatment-plans",
+          "request": {
+            "name": "/treatment-plans",
+            "description": {},
+            "url": {
+              "path": [
+                "treatment-plans"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7beb6901-8d05-4461-9fcd-ce9528e70f89",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "treatment-plans"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 6904,\n    \"href\": \"string\",\n    \"client\": {\n      \"id\": 7572,\n      \"route\": \"string\"\n    },\n    \"description\": null,\n    \"startDate\": \"1961-06-13T07:23:50.126Z\",\n    \"endDate\": \"1979-05-11T03:00:21.631Z\",\n    \"reasonForAdmission\": null,\n    \"initialClientNeeds\": null,\n    \"familyEducationNeeds\": \"string\",\n    \"isInitialTP\": true,\n    \"isWiley\": false,\n    \"isActive\": false,\n    \"problems\": [\n      \"\",\n      \"\"\n    ],\n    \"createdDate\": \"1950-01-27T00:38:55.625Z\",\n    \"isComplete\": true,\n    \"lastModified\": \"1959-09-28T16:57:54.089Z\",\n    \"clientSignature\": {\n      \"entityId\": \"<integer>\",\n      \"signerName\": \"<string,null>\",\n      \"data\": \"<string,null>\",\n      \"type\": \"<string,null>\",\n      \"signatureDateTime\": \"<string,null-date-time>\"\n    },\n    \"guardianSignature\": {\n      \"entityId\": \"<integer>\",\n      \"signerName\": \"<string,null>\",\n      \"data\": \"<string,null>\",\n      \"type\": \"<string,null>\",\n      \"signatureDateTime\": \"<string,null-date-time>\"\n    }\n  },\n  {\n    \"id\": 9068,\n    \"href\": \"string\",\n    \"client\": {\n      \"id\": 2425,\n      \"route\": \"string\"\n    },\n    \"description\": \"string\",\n    \"startDate\": \"1982-11-08T00:02:33.526Z\",\n    \"endDate\": \"1957-01-05T08:21:31.164Z\",\n    \"reasonForAdmission\": null,\n    \"initialClientNeeds\": \"string\",\n    \"familyEducationNeeds\": \"string\",\n    \"isInitialTP\": true,\n    \"isWiley\": true,\n    \"isActive\": false,\n    \"problems\": [\n      \"\",\n      \"\"\n    ],\n    \"createdDate\": \"2003-06-05T03:53:47.453Z\",\n    \"isComplete\": false,\n    \"lastModified\": \"2010-08-22T07:53:41.536Z\",\n    \"clientSignature\": {\n      \"entityId\": \"<integer>\",\n      \"signerName\": \"<string,null>\",\n      \"data\": \"<string,null>\",\n      \"type\": \"<string,null>\",\n      \"signatureDateTime\": \"<string,null-date-time>\"\n    },\n    \"guardianSignature\": {\n      \"entityId\": \"<integer>\",\n      \"signerName\": \"<string,null>\",\n      \"data\": \"<string,null>\",\n      \"type\": \"<string,null>\",\n      \"signatureDateTime\": \"<string,null-date-time>\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a1c87638-fcda-4630-8796-9ef1c4c02b97",
+          "name": "/v{{version}}/treatment-plans",
+          "request": {
+            "name": "/v{{version}}/treatment-plans",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "treatment-plans"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1dac3e21-bdba-410c-bf8f-3c32038453c3",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "treatment-plans"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": 6904,\n    \"href\": \"string\",\n    \"client\": {\n      \"id\": 7572,\n      \"route\": \"string\"\n    },\n    \"description\": null,\n    \"startDate\": \"1961-06-13T07:23:50.126Z\",\n    \"endDate\": \"1979-05-11T03:00:21.631Z\",\n    \"reasonForAdmission\": null,\n    \"initialClientNeeds\": null,\n    \"familyEducationNeeds\": \"string\",\n    \"isInitialTP\": true,\n    \"isWiley\": false,\n    \"isActive\": false,\n    \"problems\": [\n      \"\",\n      \"\"\n    ],\n    \"createdDate\": \"1950-01-27T00:38:55.625Z\",\n    \"isComplete\": true,\n    \"lastModified\": \"1959-09-28T16:57:54.089Z\",\n    \"clientSignature\": {\n      \"entityId\": \"<integer>\",\n      \"signerName\": \"<string,null>\",\n      \"data\": \"<string,null>\",\n      \"type\": \"<string,null>\",\n      \"signatureDateTime\": \"<string,null-date-time>\"\n    },\n    \"guardianSignature\": {\n      \"entityId\": \"<integer>\",\n      \"signerName\": \"<string,null>\",\n      \"data\": \"<string,null>\",\n      \"type\": \"<string,null>\",\n      \"signatureDateTime\": \"<string,null-date-time>\"\n    }\n  },\n  {\n    \"id\": 9068,\n    \"href\": \"string\",\n    \"client\": {\n      \"id\": 2425,\n      \"route\": \"string\"\n    },\n    \"description\": \"string\",\n    \"startDate\": \"1982-11-08T00:02:33.526Z\",\n    \"endDate\": \"1957-01-05T08:21:31.164Z\",\n    \"reasonForAdmission\": null,\n    \"initialClientNeeds\": \"string\",\n    \"familyEducationNeeds\": \"string\",\n    \"isInitialTP\": true,\n    \"isWiley\": true,\n    \"isActive\": false,\n    \"problems\": [\n      \"\",\n      \"\"\n    ],\n    \"createdDate\": \"2003-06-05T03:53:47.453Z\",\n    \"isComplete\": false,\n    \"lastModified\": \"2010-08-22T07:53:41.536Z\",\n    \"clientSignature\": {\n      \"entityId\": \"<integer>\",\n      \"signerName\": \"<string,null>\",\n      \"data\": \"<string,null>\",\n      \"type\": \"<string,null>\",\n      \"signatureDateTime\": \"<string,null-date-time>\"\n    },\n    \"guardianSignature\": {\n      \"entityId\": \"<integer>\",\n      \"signerName\": \"<string,null>\",\n      \"data\": \"<string,null>\",\n      \"type\": \"<string,null>\",\n      \"signatureDateTime\": \"<string,null-date-time>\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b4b74b5f-822c-4b13-bed0-6f69790fd755",
+          "name": "/treatment-plans/:id",
+          "request": {
+            "name": "/treatment-plans/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "treatment-plans",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "9ddc4665-725f-46df-8b3d-dec893bddce0",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "treatment-plans",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": 5561,\n  \"href\": null,\n  \"client\": {\n    \"id\": 2968,\n    \"route\": null\n  },\n  \"description\": null,\n  \"startDate\": \"1998-05-12T14:49:08.940Z\",\n  \"endDate\": \"2003-12-18T00:33:51.874Z\",\n  \"reasonForAdmission\": \"string\",\n  \"initialClientNeeds\": \"string\",\n  \"familyEducationNeeds\": \"string\",\n  \"isInitialTP\": true,\n  \"isWiley\": false,\n  \"isActive\": false,\n  \"problems\": null,\n  \"createdDate\": \"2008-02-16T13:48:23.774Z\",\n  \"isComplete\": false,\n  \"lastModified\": \"1976-05-16T04:30:17.175Z\",\n  \"clientSignature\": {\n    \"entityId\": \"<integer>\",\n    \"signerName\": \"<string,null>\",\n    \"data\": \"<string,null>\",\n    \"type\": \"<string,null>\",\n    \"signatureDateTime\": \"<string,null-date-time>\"\n  },\n  \"guardianSignature\": {\n    \"entityId\": \"<integer>\",\n    \"signerName\": \"<string,null>\",\n    \"data\": \"<string,null>\",\n    \"type\": \"<string,null>\",\n    \"signatureDateTime\": \"<string,null-date-time>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "41e0ecf9-f79f-4b12-96d0-96591240114e",
+          "name": "/v{{version}}/treatment-plans/:id",
+          "request": {
+            "name": "/v{{version}}/treatment-plans/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "treatment-plans",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "29f4ee5d-16cd-4c42-8cf4-a36ed31019d9",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "treatment-plans",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": 5561,\n  \"href\": null,\n  \"client\": {\n    \"id\": 2968,\n    \"route\": null\n  },\n  \"description\": null,\n  \"startDate\": \"1998-05-12T14:49:08.940Z\",\n  \"endDate\": \"2003-12-18T00:33:51.874Z\",\n  \"reasonForAdmission\": \"string\",\n  \"initialClientNeeds\": \"string\",\n  \"familyEducationNeeds\": \"string\",\n  \"isInitialTP\": true,\n  \"isWiley\": false,\n  \"isActive\": false,\n  \"problems\": null,\n  \"createdDate\": \"2008-02-16T13:48:23.774Z\",\n  \"isComplete\": false,\n  \"lastModified\": \"1976-05-16T04:30:17.175Z\",\n  \"clientSignature\": {\n    \"entityId\": \"<integer>\",\n    \"signerName\": \"<string,null>\",\n    \"data\": \"<string,null>\",\n    \"type\": \"<string,null>\",\n    \"signatureDateTime\": \"<string,null-date-time>\"\n  },\n  \"guardianSignature\": {\n    \"entityId\": \"<integer>\",\n    \"signerName\": \"<string,null>\",\n    \"data\": \"<string,null>\",\n    \"type\": \"<string,null>\",\n    \"signatureDateTime\": \"<string,null-date-time>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.helloalleva.com",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "version"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "481111ce-b09d-4231-8db6-10052f20a531",
+    "name": "Alleva Rest Treatment Plans API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

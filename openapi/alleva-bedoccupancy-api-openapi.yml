@@ -1,0 +1,1661 @@
+openapi: 3.2.0
+info:
+  title: Alleva Rest Bed Occupancy API
+  version: '1.0'
+security:
+- Bearer: []
+tags:
+- name: BedOccupancy
+paths:
+  /bed/-/occupancies:
+    post:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedOccupancy'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedOccupancy'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedOccupancy'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedOccupancy'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+    get:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedOccupancy'
+  /bed/{bedId}/occupancies:
+    post:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedOccupancy'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedOccupancy'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedOccupancy'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedOccupancy'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+    get:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedOccupancy'
+  /v{version}/bed/-/occupancies:
+    post:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedOccupancy'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedOccupancy'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedOccupancy'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedOccupancy'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+    get:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedOccupancy'
+  /v{version}/bed/{bedId}/occupancies:
+    post:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedOccupancy'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedOccupancy'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedOccupancy'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/BedOccupancy'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+    get:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/BedOccupancy'
+  /bed/-/occupancies/{id}:
+    delete:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+    get:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+  /bed/{bedId}/occupancies/{id}:
+    delete:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+    get:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+  /v{version}/bed/-/occupancies/{id}:
+    delete:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+    get:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+  /v{version}/bed/{bedId}/occupancies/{id}:
+    delete:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+    get:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+  /bed/-/occupancies/end-lead/{leadId}:
+    delete:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: leadId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+  /bed/{bedId}/occupancies/end-lead/{leadId}:
+    delete:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: leadId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+  /v{version}/bed/-/occupancies/end-lead/{leadId}:
+    delete:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: leadId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+  /v{version}/bed/{bedId}/occupancies/end-lead/{leadId}:
+    delete:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: leadId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+  /bed/-/occupancies/end/{id}:
+    delete:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+  /bed/{bedId}/occupancies/end/{id}:
+    delete:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+  /v{version}/bed/-/occupancies/end/{id}:
+    delete:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+  /v{version}/bed/{bedId}/occupancies/end/{id}:
+    delete:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+  /bed/-/occupancies/transfer:
+    post:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/OccupancyTransfer'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/OccupancyTransfer'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/OccupancyTransfer'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/OccupancyTransfer'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+  /bed/{bedId}/occupancies/transfer:
+    post:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/OccupancyTransfer'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/OccupancyTransfer'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/OccupancyTransfer'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/OccupancyTransfer'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+  /v{version}/bed/-/occupancies/transfer:
+    post:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/OccupancyTransfer'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/OccupancyTransfer'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/OccupancyTransfer'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/OccupancyTransfer'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+  /v{version}/bed/{bedId}/occupancies/transfer:
+    post:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/OccupancyTransfer'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/OccupancyTransfer'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/OccupancyTransfer'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/OccupancyTransfer'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/BedOccupancy'
+  /bed/-/occupancies/occupants:
+    get:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: facilityId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: clientName
+        in: query
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+  /bed/{bedId}/occupancies/occupants:
+    get:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: facilityId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: clientName
+        in: query
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+  /v{version}/bed/-/occupancies/occupants:
+    get:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: facilityId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: clientName
+        in: query
+        schema:
+          type: string
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+  /v{version}/bed/{bedId}/occupancies/occupants:
+    get:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: facilityId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: clientName
+        in: query
+        schema:
+          type: string
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Occupant'
+  /bed/-/occupancies/occupants/{leadId}:
+    get:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: leadId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Occupant'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Occupant'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Occupant'
+  /bed/{bedId}/occupancies/occupants/{leadId}:
+    get:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: leadId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Occupant'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Occupant'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Occupant'
+  /v{version}/bed/-/occupancies/occupants/{leadId}:
+    get:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: leadId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Occupant'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Occupant'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Occupant'
+  /v{version}/bed/{bedId}/occupancies/occupants/{leadId}:
+    get:
+      tags:
+      - BedOccupancy
+      parameters:
+      - name: leadId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: bedId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Occupant'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Occupant'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Occupant'
+components:
+  schemas:
+    BedOccupancy:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        client:
+          $ref: '#/components/schemas/Occupant'
+        createdBy:
+          type: integer
+          format: int32
+        comments:
+          type:
+          - string
+          - 'null'
+        startDate:
+          type: string
+          format: date-time
+        endDate:
+          type: string
+          format: date-time
+        bed:
+          $ref: '#/components/schemas/Bed'
+        fromTransfer:
+          type: boolean
+          writeOnly: true
+      additionalProperties: false
+    ClientName:
+      type: object
+      properties:
+        clientFullName:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        first:
+          type:
+          - string
+          - 'null'
+        last:
+          type:
+          - string
+          - 'null'
+        middle:
+          type:
+          - string
+          - 'null'
+        isLegalName:
+          type:
+          - boolean
+          - 'null'
+        former:
+          type:
+          - string
+          - 'null'
+        prefix:
+          type:
+          - string
+          - 'null'
+        preferred:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Occupant:
+      type: object
+      properties:
+        leadId:
+          type: integer
+          format: int32
+        name:
+          $ref: '#/components/schemas/ClientName'
+        gender:
+          type:
+          - string
+          - 'null'
+        admissionDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        dischargeDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        dateOfBirth:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        imageUrl:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    OccupancyTransfer:
+      type: object
+      properties:
+        toBedId:
+          type: integer
+          format: int32
+        bedOccupancyId:
+          type: integer
+          format: int32
+        comments:
+          type:
+          - string
+          - 'null'
+        endDate:
+          type: string
+          format: date-time
+      additionalProperties: false
+    Room:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        facilityId:
+          type: integer
+          format: int32
+        roomName:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        totalBeds:
+          type: integer
+          format: int32
+      additionalProperties: false
+    Bed:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        forFemale:
+          type: boolean
+        isActive:
+          type: boolean
+        isMaintenance:
+          type: boolean
+        isOccupied:
+          type:
+          - boolean
+          - 'null'
+        isReserved:
+          type:
+          - boolean
+          - 'null'
+        room:
+          $ref: '#/components/schemas/Room'
+      additionalProperties: false
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
+        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      name: Authorization
+      in: header
+servers:
+- url: https://api.helloalleva.com
+  description: Base URL reconciled from apis.yml

@@ -1,0 +1,1788 @@
+openapi: 3.2.0
+info:
+  title: Alleva Rest Users API
+  version: '1.0'
+security:
+- Bearer: []
+tags:
+- name: Users
+paths:
+  /users/me:
+    get:
+      tags:
+      - Users
+      parameters:
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/User'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/User'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/User'
+  /v{version}/users/me:
+    get:
+      tags:
+      - Users
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/User'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/User'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/User'
+  /users/licenses:
+    get:
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: licenseId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+    post:
+      tags:
+      - Users
+      parameters:
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLicense'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLicense'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLicense'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLicense'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+  /v{version}/users/licenses:
+    get:
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: licenseId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+    post:
+      tags:
+      - Users
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLicense'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLicense'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLicense'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLicense'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+  /users/licenses/{licenseId}:
+    get:
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: licenseId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+    delete:
+      tags:
+      - Users
+      parameters:
+      - name: licenseId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+    patch:
+      tags:
+      - Users
+      parameters:
+      - name: licenseId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+  /v{version}/users/licenses/{licenseId}:
+    get:
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: licenseId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+    delete:
+      tags:
+      - Users
+      parameters:
+      - name: licenseId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+    patch:
+      tags:
+      - Users
+      parameters:
+      - name: licenseId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+  /users/{id}/licenses:
+    get:
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: licenseId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+    post:
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLicense'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLicense'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLicense'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLicense'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+    patch:
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+  /v{version}/users/{id}/licenses:
+    get:
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: licenseId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+    post:
+      tags:
+      - Users
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLicense'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLicense'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLicense'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLicense'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+    patch:
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+  /users/{id}/licenses/{licenseId}:
+    delete:
+      tags:
+      - Users
+      parameters:
+      - name: licenseId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+    patch:
+      tags:
+      - Users
+      parameters:
+      - name: licenseId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+  /v{version}/users/{id}/licenses/{licenseId}:
+    delete:
+      tags:
+      - Users
+      parameters:
+      - name: licenseId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+    patch:
+      tags:
+      - Users
+      parameters:
+      - name: licenseId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UserLicense'
+  /users/{id}/image:
+    post:
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLogoData'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLogoData'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLogoData'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLogoData'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+  /v{version}/users/{id}/image:
+    post:
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLogoData'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLogoData'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLogoData'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLogoData'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+  /users/{id}/provider-image:
+    post:
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ExternalProviderLogoData'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ExternalProviderLogoData'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ExternalProviderLogoData'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ExternalProviderLogoData'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+  /v{version}/users/{id}/provider-image:
+    post:
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ExternalProviderLogoData'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ExternalProviderLogoData'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ExternalProviderLogoData'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/ExternalProviderLogoData'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+  /users/{id}/admin-image:
+    post:
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLogoData'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLogoData'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLogoData'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLogoData'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+  /v{version}/users/{id}/admin-image:
+    post:
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLogoData'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLogoData'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLogoData'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/UserLogoData'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/UpdateResult'
+  /users:
+    get:
+      tags:
+      - Users
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+  /v{version}/users:
+    get:
+      tags:
+      - Users
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+  /users/{id}:
+    get:
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/User'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/User'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/User'
+  /v{version}/users/{id}:
+    get:
+      tags:
+      - Users
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/User'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/User'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/User'
+components:
+  schemas:
+    UserLicense:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        acronym:
+          type:
+          - string
+          - 'null'
+        order:
+          type: integer
+          format: int32
+        number:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        effectiveDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        expiryDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        type:
+          $ref: '#/components/schemas/UserLicenseType'
+        user:
+          $ref: '#/components/schemas/User'
+        state:
+          $ref: '#/components/schemas/State'
+      additionalProperties: false
+    UserImageUrl:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        host:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        path:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+      additionalProperties: false
+    UserLicenseType:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        canModifyOrDelete:
+          type: boolean
+        inUse:
+          type: boolean
+      additionalProperties: false
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          $ref: '#/components/schemas/UserName'
+        gender:
+          type:
+          - string
+          - 'null'
+        userName:
+          type:
+          - string
+          - 'null'
+        birthDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        ssn:
+          type:
+          - string
+          - 'null'
+        email:
+          type:
+          - string
+          - 'null'
+        phone:
+          type:
+          - string
+          - 'null'
+        address:
+          $ref: '#/components/schemas/Address'
+        facility:
+          $ref: '#/components/schemas/Facility'
+        tenant:
+          type:
+          - string
+          - 'null'
+        role:
+          type:
+          - string
+          - 'null'
+        profileImage:
+          $ref: '#/components/schemas/UserImageUrl'
+        isMedicalProvider:
+          type:
+          - boolean
+          - 'null'
+        hireDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        startDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        endDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        licenses:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/UserLicense'
+      additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
+    UpdateOperationResult:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
+    Address:
+      type: object
+      properties:
+        line1:
+          type:
+          - string
+          - 'null'
+        line2:
+          type:
+          - string
+          - 'null'
+        city:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        stateAbbr:
+          type:
+          - string
+          - 'null'
+        country:
+          type:
+          - string
+          - 'null'
+        zipCode:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    State:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        stateId:
+          type: integer
+          format: int32
+        countryId:
+          type: integer
+          format: int32
+        stateName:
+          type:
+          - string
+          - 'null'
+        stateCode:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    UserName:
+      type: object
+      properties:
+        first:
+          type:
+          - string
+          - 'null'
+        last:
+          type:
+          - string
+          - 'null'
+        prefix:
+          type:
+          - string
+          - 'null'
+        suffix:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ExternalProviderLogoData:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        base64String:
+          type:
+          - string
+          - 'null'
+        rehabUserId:
+          type: integer
+          format: int64
+      additionalProperties: false
+    UserLogoData:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        base64String:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    UpdateResult:
+      type: object
+      properties:
+        operationResult:
+          $ref: '#/components/schemas/UpdateOperationResult'
+        success:
+          type: boolean
+        id:
+          type: integer
+          format: int64
+        messages:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        reason:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Facility:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        rehabName:
+          type:
+          - string
+          - 'null'
+        domainName:
+          type:
+          - string
+          - 'null'
+        email:
+          type:
+          - string
+          - 'null'
+        officePhone:
+          type:
+          - string
+          - 'null'
+        fax:
+          type:
+          - string
+          - 'null'
+        address1:
+          type:
+          - string
+          - 'null'
+        address2:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        city:
+          type:
+          - string
+          - 'null'
+        postalCode:
+          type:
+          - string
+          - 'null'
+        country:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
+        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      name: Authorization
+      in: header
+servers:
+- url: https://api.helloalleva.com
+  description: Base URL reconciled from apis.yml

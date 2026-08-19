@@ -1,0 +1,1349 @@
+{
+  "item": [
+    {
+      "id": "c2c3bef1-f62f-4d99-a094-559eda6ebdeb",
+      "name": "Bed",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "569e903a-ca7e-4adb-ba0b-9c71a5aca00c",
+          "name": "/beds",
+          "request": {
+            "name": "/beds",
+            "description": {},
+            "url": {
+              "path": [
+                "beds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"forFemale\": \"<boolean>\",\n  \"isActive\": \"<boolean>\",\n  \"isMaintenance\": \"<boolean>\",\n  \"isOccupied\": \"<boolean,null>\",\n  \"isReserved\": \"<boolean,null>\",\n  \"room\": {\n    \"id\": \"<integer>\",\n    \"facilityId\": \"<integer>\",\n    \"roomName\": \"<string,null>\",\n    \"isActive\": \"<boolean>\",\n    \"totalBeds\": \"<integer>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "107bafc9-29ca-4429-b985-19d8b02e4c01",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "beds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"forFemale\": \"<boolean>\",\n  \"isActive\": \"<boolean>\",\n  \"isMaintenance\": \"<boolean>\",\n  \"isOccupied\": \"<boolean,null>\",\n  \"isReserved\": \"<boolean,null>\",\n  \"room\": {\n    \"id\": \"<integer>\",\n    \"facilityId\": \"<integer>\",\n    \"roomName\": \"<string,null>\",\n    \"isActive\": \"<boolean>\",\n    \"totalBeds\": \"<integer>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"forFemale\": \"<boolean>\",\n  \"isActive\": \"<boolean>\",\n  \"isMaintenance\": \"<boolean>\",\n  \"isOccupied\": \"<boolean,null>\",\n  \"isReserved\": \"<boolean,null>\",\n  \"room\": {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"facilityId\": \"<integer>\",\n    \"roomName\": \"<string,null>\",\n    \"isActive\": \"<boolean>\",\n    \"totalBeds\": \"<integer>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fe0b8c32-5907-4157-8696-c594c2012be2",
+          "name": "/beds",
+          "request": {
+            "name": "/beds",
+            "description": {},
+            "url": {
+              "path": [
+                "beds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "09f24af9-d4fc-47e3-8f2f-a203ef7b593b",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "beds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"name\": \"<string,null>\",\n    \"description\": \"<string,null>\",\n    \"forFemale\": \"<boolean>\",\n    \"isActive\": \"<boolean>\",\n    \"isMaintenance\": \"<boolean>\",\n    \"isOccupied\": \"<boolean,null>\",\n    \"isReserved\": \"<boolean,null>\",\n    \"room\": {\n      \"id\": \"<integer>\",\n      \"href\": \"string\",\n      \"facilityId\": \"<integer>\",\n      \"roomName\": \"<string,null>\",\n      \"isActive\": \"<boolean>\",\n      \"totalBeds\": \"<integer>\"\n    }\n  },\n  {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"name\": \"<string,null>\",\n    \"description\": \"<string,null>\",\n    \"forFemale\": \"<boolean>\",\n    \"isActive\": \"<boolean>\",\n    \"isMaintenance\": \"<boolean>\",\n    \"isOccupied\": \"<boolean,null>\",\n    \"isReserved\": \"<boolean,null>\",\n    \"room\": {\n      \"id\": \"<integer>\",\n      \"href\": \"string\",\n      \"facilityId\": \"<integer>\",\n      \"roomName\": \"<string,null>\",\n      \"isActive\": \"<boolean>\",\n      \"totalBeds\": \"<integer>\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "54ea1fbe-1f97-4bb4-915f-bb508dfde51d",
+          "name": "/v{{version}}/beds",
+          "request": {
+            "name": "/v{{version}}/beds",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "beds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"forFemale\": \"<boolean>\",\n  \"isActive\": \"<boolean>\",\n  \"isMaintenance\": \"<boolean>\",\n  \"isOccupied\": \"<boolean,null>\",\n  \"isReserved\": \"<boolean,null>\",\n  \"room\": {\n    \"id\": \"<integer>\",\n    \"facilityId\": \"<integer>\",\n    \"roomName\": \"<string,null>\",\n    \"isActive\": \"<boolean>\",\n    \"totalBeds\": \"<integer>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "c6d4c052-dee4-46b6-bb6d-614f9eefc4a0",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "beds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"forFemale\": \"<boolean>\",\n  \"isActive\": \"<boolean>\",\n  \"isMaintenance\": \"<boolean>\",\n  \"isOccupied\": \"<boolean,null>\",\n  \"isReserved\": \"<boolean,null>\",\n  \"room\": {\n    \"id\": \"<integer>\",\n    \"facilityId\": \"<integer>\",\n    \"roomName\": \"<string,null>\",\n    \"isActive\": \"<boolean>\",\n    \"totalBeds\": \"<integer>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"forFemale\": \"<boolean>\",\n  \"isActive\": \"<boolean>\",\n  \"isMaintenance\": \"<boolean>\",\n  \"isOccupied\": \"<boolean,null>\",\n  \"isReserved\": \"<boolean,null>\",\n  \"room\": {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"facilityId\": \"<integer>\",\n    \"roomName\": \"<string,null>\",\n    \"isActive\": \"<boolean>\",\n    \"totalBeds\": \"<integer>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "03b2eff4-2e6b-488e-9a6e-f41e237a761a",
+          "name": "/v{{version}}/beds",
+          "request": {
+            "name": "/v{{version}}/beds",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "beds"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "01b0407f-c2de-42a9-95a5-c1da6e4333e8",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "beds"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"name\": \"<string,null>\",\n    \"description\": \"<string,null>\",\n    \"forFemale\": \"<boolean>\",\n    \"isActive\": \"<boolean>\",\n    \"isMaintenance\": \"<boolean>\",\n    \"isOccupied\": \"<boolean,null>\",\n    \"isReserved\": \"<boolean,null>\",\n    \"room\": {\n      \"id\": \"<integer>\",\n      \"href\": \"string\",\n      \"facilityId\": \"<integer>\",\n      \"roomName\": \"<string,null>\",\n      \"isActive\": \"<boolean>\",\n      \"totalBeds\": \"<integer>\"\n    }\n  },\n  {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"name\": \"<string,null>\",\n    \"description\": \"<string,null>\",\n    \"forFemale\": \"<boolean>\",\n    \"isActive\": \"<boolean>\",\n    \"isMaintenance\": \"<boolean>\",\n    \"isOccupied\": \"<boolean,null>\",\n    \"isReserved\": \"<boolean,null>\",\n    \"room\": {\n      \"id\": \"<integer>\",\n      \"href\": \"string\",\n      \"facilityId\": \"<integer>\",\n      \"roomName\": \"<string,null>\",\n      \"isActive\": \"<boolean>\",\n      \"totalBeds\": \"<integer>\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d9109f59-d7bd-4b64-b1b1-f82d16100c7e",
+          "name": "/beds/:id",
+          "request": {
+            "name": "/beds/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "beds",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6d7b3fe0-5180-48b1-af5e-4f79be0f75d5",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "beds",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"forFemale\": \"<boolean>\",\n  \"isActive\": \"<boolean>\",\n  \"isMaintenance\": \"<boolean>\",\n  \"isOccupied\": \"<boolean,null>\",\n  \"isReserved\": \"<boolean,null>\",\n  \"room\": {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"facilityId\": \"<integer>\",\n    \"roomName\": \"<string,null>\",\n    \"isActive\": \"<boolean>\",\n    \"totalBeds\": \"<integer>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7a12f34b-5d0b-45f3-967b-4bcec0fba2c3",
+          "name": "/beds/:id",
+          "request": {
+            "name": "/beds/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "beds",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d94c7535-b42a-422a-9f2b-08cc52d893c8",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "beds",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_1\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_2\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_3\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"forFemale\": \"<boolean>\",\n  \"isActive\": \"<boolean>\",\n  \"isMaintenance\": \"<boolean>\",\n  \"isOccupied\": \"<boolean,null>\",\n  \"isReserved\": \"<boolean,null>\",\n  \"room\": {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"facilityId\": \"<integer>\",\n    \"roomName\": \"<string,null>\",\n    \"isActive\": \"<boolean>\",\n    \"totalBeds\": \"<integer>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "97d30aa8-a8c7-47ec-ba12-32f2a46e591b",
+          "name": "/beds/:id",
+          "request": {
+            "name": "/beds/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "beds",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "70d5f935-7604-466b-a328-baefd829c5d0",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "beds",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"forFemale\": \"<boolean>\",\n  \"isActive\": \"<boolean>\",\n  \"isMaintenance\": \"<boolean>\",\n  \"isOccupied\": \"<boolean,null>\",\n  \"isReserved\": \"<boolean,null>\",\n  \"room\": {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"facilityId\": \"<integer>\",\n    \"roomName\": \"<string,null>\",\n    \"isActive\": \"<boolean>\",\n    \"totalBeds\": \"<integer>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e42c4d96-36ad-4cbd-ab37-0d2f47a909a1",
+          "name": "/v{{version}}/beds/:id",
+          "request": {
+            "name": "/v{{version}}/beds/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "beds",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "cd3cc91c-bdd5-4eb7-81ff-52d3195b5663",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "beds",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"forFemale\": \"<boolean>\",\n  \"isActive\": \"<boolean>\",\n  \"isMaintenance\": \"<boolean>\",\n  \"isOccupied\": \"<boolean,null>\",\n  \"isReserved\": \"<boolean,null>\",\n  \"room\": {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"facilityId\": \"<integer>\",\n    \"roomName\": \"<string,null>\",\n    \"isActive\": \"<boolean>\",\n    \"totalBeds\": \"<integer>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "60df112d-b512-46fe-8c15-aec6e40b236c",
+          "name": "/v{{version}}/beds/:id",
+          "request": {
+            "name": "/v{{version}}/beds/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "beds",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "8cc5faca-e15a-4926-b90d-319e8f417e24",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "beds",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_1\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_2\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_3\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"forFemale\": \"<boolean>\",\n  \"isActive\": \"<boolean>\",\n  \"isMaintenance\": \"<boolean>\",\n  \"isOccupied\": \"<boolean,null>\",\n  \"isReserved\": \"<boolean,null>\",\n  \"room\": {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"facilityId\": \"<integer>\",\n    \"roomName\": \"<string,null>\",\n    \"isActive\": \"<boolean>\",\n    \"totalBeds\": \"<integer>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b5665f1d-c730-489b-831c-4d30ee2f15fd",
+          "name": "/v{{version}}/beds/:id",
+          "request": {
+            "name": "/v{{version}}/beds/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "beds",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7b754f94-1a84-44dd-bbf3-141812f5d7bb",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "beds",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"name\": \"<string,null>\",\n  \"description\": \"<string,null>\",\n  \"forFemale\": \"<boolean>\",\n  \"isActive\": \"<boolean>\",\n  \"isMaintenance\": \"<boolean>\",\n  \"isOccupied\": \"<boolean,null>\",\n  \"isReserved\": \"<boolean,null>\",\n  \"room\": {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"facilityId\": \"<integer>\",\n    \"roomName\": \"<string,null>\",\n    \"isActive\": \"<boolean>\",\n    \"totalBeds\": \"<integer>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.helloalleva.com",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "version"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "32c87097-3ed8-4743-910b-40b9dbc9bf7e",
+    "name": "Alleva Rest Bed API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,509 @@
+openapi: 3.2.0
+info:
+  title: Alleva Rest Snapshot API
+  version: '1.0'
+security:
+- Bearer: []
+tags:
+- name: Snapshot
+paths:
+  /snapshots/{snapshotType}/{snapshotId}:
+    get:
+      tags:
+      - Snapshot
+      parameters:
+      - name: snapshotType
+        in: path
+        required: true
+        schema:
+          $ref: '#/components/schemas/SnapshotType'
+      - name: snapshotId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Snapshot'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Snapshot'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Snapshot'
+  /v{version}/snapshots/{snapshotType}/{snapshotId}:
+    get:
+      tags:
+      - Snapshot
+      parameters:
+      - name: snapshotType
+        in: path
+        required: true
+        schema:
+          $ref: '#/components/schemas/SnapshotType'
+      - name: snapshotId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Snapshot'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Snapshot'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Snapshot'
+  /snapshots/{snapshotType}:
+    post:
+      tags:
+      - Snapshot
+      parameters:
+      - name: snapshotType
+        in: path
+        required: true
+        schema:
+          $ref: '#/components/schemas/SnapshotType'
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                ContentType:
+                  type: string
+                ContentDisposition:
+                  type: string
+                Headers:
+                  type: object
+                  additionalProperties:
+                    type: array
+                    items:
+                      type: string
+                Length:
+                  type: integer
+                  format: int64
+                Name:
+                  type: string
+                FileName:
+                  type: string
+                leadId:
+                  type: integer
+                  format: int64
+            encoding:
+              ContentType:
+                style: form
+              ContentDisposition:
+                style: form
+              Headers:
+                style: form
+              Length:
+                style: form
+              Name:
+                style: form
+              FileName:
+                style: form
+              leadId:
+                style: form
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+  /v{version}/snapshots/{snapshotType}:
+    post:
+      tags:
+      - Snapshot
+      parameters:
+      - name: snapshotType
+        in: path
+        required: true
+        schema:
+          $ref: '#/components/schemas/SnapshotType'
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                ContentType:
+                  type: string
+                ContentDisposition:
+                  type: string
+                Headers:
+                  type: object
+                  additionalProperties:
+                    type: array
+                    items:
+                      type: string
+                Length:
+                  type: integer
+                  format: int64
+                Name:
+                  type: string
+                FileName:
+                  type: string
+                leadId:
+                  type: integer
+                  format: int64
+            encoding:
+              ContentType:
+                style: form
+              ContentDisposition:
+                style: form
+              Headers:
+                style: form
+              Length:
+                style: form
+              Name:
+                style: form
+              FileName:
+                style: form
+              leadId:
+                style: form
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/CreateResult'
+  /snapshots:
+    get:
+      tags:
+      - Snapshot
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Snapshot'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Snapshot'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Snapshot'
+  /v{version}/snapshots:
+    get:
+      tags:
+      - Snapshot
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Snapshot'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Snapshot'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Snapshot'
+  /snapshots/{id}:
+    get:
+      tags:
+      - Snapshot
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Snapshot'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Snapshot'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Snapshot'
+  /v{version}/snapshots/{id}:
+    get:
+      tags:
+      - Snapshot
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Snapshot'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Snapshot'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Snapshot'
+components:
+  schemas:
+    Snapshot:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        createdBy:
+          type: integer
+          format: int32
+        createdDate:
+          type: string
+          format: date-time
+        generatedFileName:
+          type:
+          - string
+          - 'null'
+        intakeType:
+          type: integer
+          format: int32
+        isDeleted:
+          type: boolean
+        leadId:
+          type: integer
+          format: int64
+      additionalProperties: false
+    CreateResult:
+      type: object
+      properties:
+        operationResult:
+          $ref: '#/components/schemas/CreateOperationResult'
+        id:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        messages:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        reason:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    SnapshotType:
+      enum:
+      - 1346
+      - 1347
+      - 1348
+      - 1349
+      - 1389
+      - 1431
+      - 1521
+      type: integer
+      format: int32
+    CreateOperationResult:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
+        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      name: Authorization
+      in: header
+servers:
+- url: https://api.helloalleva.com
+  description: Base URL reconciled from apis.yml

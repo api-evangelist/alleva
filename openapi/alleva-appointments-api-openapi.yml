@@ -1,0 +1,384 @@
+openapi: 3.2.0
+info:
+  title: Alleva Rest Appointments API
+  version: '1.0'
+security:
+- Bearer: []
+tags:
+- name: Appointments
+paths:
+  /appointments:
+    get:
+      tags:
+      - Appointments
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Appointment'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Appointment'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Appointment'
+  /v{version}/appointments:
+    get:
+      tags:
+      - Appointments
+      parameters:
+      - name: Limit
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Cursor
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: StartDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: EndDate
+        in: query
+        schema:
+          type: string
+          format: date-time
+      - name: fields
+        in: query
+        schema:
+          type: array
+          items:
+            type: string
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Appointment'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Appointment'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Appointment'
+  /appointments/{id}:
+    get:
+      tags:
+      - Appointments
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Appointment'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Appointment'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Appointment'
+  /v{version}/appointments/{id}:
+    get:
+      tags:
+      - Appointments
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Appointment'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Appointment'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Appointment'
+components:
+  schemas:
+    ResourceLink:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        route:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Transport:
+      type: object
+      properties:
+        pickupAddress:
+          type:
+          - string
+          - 'null'
+        dropoffAddress:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ZoomMeetingDetails:
+      type: object
+      properties:
+        id:
+          type:
+          - string
+          - 'null'
+        password:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Facility:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        rehabName:
+          type:
+          - string
+          - 'null'
+        domainName:
+          type:
+          - string
+          - 'null'
+        email:
+          type:
+          - string
+          - 'null'
+        officePhone:
+          type:
+          - string
+          - 'null'
+        fax:
+          type:
+          - string
+          - 'null'
+        address1:
+          type:
+          - string
+          - 'null'
+        address2:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        city:
+          type:
+          - string
+          - 'null'
+        postalCode:
+          type:
+          - string
+          - 'null'
+        country:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Appointment:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        clients:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/ResourceLink'
+        startDateTime:
+          type: string
+          format: date-time
+        endDateTime:
+          type: string
+          format: date-time
+        staff:
+          $ref: '#/components/schemas/ResourceLink'
+        facilities:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/Facility'
+        appointmentType:
+          type:
+          - string
+          - 'null'
+        topic:
+          type:
+          - string
+          - 'null'
+        status:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        isAllDay:
+          type: boolean
+        isRecurring:
+          type: boolean
+        isVideoSession:
+          type: boolean
+        isGroupSession:
+          type: boolean
+        isRecTherapy:
+          type: boolean
+        location:
+          type:
+          - string
+          - 'null'
+        transport:
+          $ref: '#/components/schemas/Transport'
+        notes:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        meeting:
+          $ref: '#/components/schemas/ZoomMeetingDetails'
+        appointmentStartDateTime:
+          type: string
+          format: date-time
+        appointmentEndDateTime:
+          type: string
+          format: date-time
+      additionalProperties: false
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
+        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      name: Authorization
+      in: header
+servers:
+- url: https://api.helloalleva.com
+  description: Base URL reconciled from apis.yml

@@ -1,0 +1,2183 @@
+{
+  "item": [
+    {
+      "id": "2057efb1-5918-40f0-8423-046bd644d172",
+      "name": "Prospects",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8c6b45dd-2d96-43e7-bc51-d677cfb0f2c2",
+          "name": "/prospects",
+          "request": {
+            "name": "/prospects",
+            "description": {},
+            "url": {
+              "path": [
+                "prospects"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"name\": {\n    \"first\": \"<string,null>\",\n    \"last\": \"<string,null>\",\n    \"middle\": \"<string,null>\",\n    \"isLegalName\": \"<boolean,null>\",\n    \"former\": \"<string,null>\",\n    \"prefix\": \"<string,null>\",\n    \"preferred\": \"<string,null>\"\n  },\n  \"gender\": \"<string,null>\",\n  \"primaryLanguage\": \"<string,null>\",\n  \"ssn\": \"<string,null>\",\n  \"dateOfBirth\": \"<string,null-date-time>\",\n  \"address\": {\n    \"line1\": \"<string,null>\",\n    \"line2\": \"<string,null>\",\n    \"city\": \"<string,null>\",\n    \"state\": \"<string,null>\",\n    \"stateAbbr\": \"<string,null>\",\n    \"country\": \"<string,null>\",\n    \"zipCode\": \"<string,null>\"\n  },\n  \"phone\": {\n    \"home\": \"<string,null>\",\n    \"office\": \"<string,null>\",\n    \"other\": \"<string,null>\",\n    \"number\": \"<string,null>\",\n    \"fax\": \"<string,null>\"\n  },\n  \"email\": \"<string,null>\",\n  \"contact\": {\n    \"firstName\": \"<string,null>\",\n    \"lastName\": \"<string,null>\",\n    \"name\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"relationship\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"isPrimary\": \"<boolean>\",\n    \"isEmergencyContact\": \"<boolean>\"\n  },\n  \"facilityName\": \"<string,null>\",\n  \"status\": \"<string,null>\",\n  \"selfStatus\": \"<string,null>\",\n  \"mrn\": \"<string,null>\",\n  \"admissionDate\": \"<string,null>\",\n  \"firstContactDate\": \"<string,null-date-time>\",\n  \"profileImage\": {\n    \"fileName\": \"<string,null>\"\n  },\n  \"referralCompanyId\": \"<integer,null-int32>\",\n  \"referralContactId\": \"<integer,null-int32>\",\n  \"referralCompanyName\": \"<string,null>\",\n  \"referralContactName\": \"<string,null>\",\n  \"luin\": \"<string,null-uuid>\",\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "1b526504-97d7-4a1d-9223-048988241ccf",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "prospects"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"name\": {\n    \"first\": \"<string,null>\",\n    \"last\": \"<string,null>\",\n    \"middle\": \"<string,null>\",\n    \"isLegalName\": \"<boolean,null>\",\n    \"former\": \"<string,null>\",\n    \"prefix\": \"<string,null>\",\n    \"preferred\": \"<string,null>\"\n  },\n  \"gender\": \"<string,null>\",\n  \"primaryLanguage\": \"<string,null>\",\n  \"ssn\": \"<string,null>\",\n  \"dateOfBirth\": \"<string,null-date-time>\",\n  \"address\": {\n    \"line1\": \"<string,null>\",\n    \"line2\": \"<string,null>\",\n    \"city\": \"<string,null>\",\n    \"state\": \"<string,null>\",\n    \"stateAbbr\": \"<string,null>\",\n    \"country\": \"<string,null>\",\n    \"zipCode\": \"<string,null>\"\n  },\n  \"phone\": {\n    \"home\": \"<string,null>\",\n    \"office\": \"<string,null>\",\n    \"other\": \"<string,null>\",\n    \"number\": \"<string,null>\",\n    \"fax\": \"<string,null>\"\n  },\n  \"email\": \"<string,null>\",\n  \"contact\": {\n    \"firstName\": \"<string,null>\",\n    \"lastName\": \"<string,null>\",\n    \"name\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"relationship\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"isPrimary\": \"<boolean>\",\n    \"isEmergencyContact\": \"<boolean>\"\n  },\n  \"facilityName\": \"<string,null>\",\n  \"status\": \"<string,null>\",\n  \"selfStatus\": \"<string,null>\",\n  \"mrn\": \"<string,null>\",\n  \"admissionDate\": \"<string,null>\",\n  \"firstContactDate\": \"<string,null-date-time>\",\n  \"profileImage\": {\n    \"fileName\": \"<string,null>\"\n  },\n  \"referralCompanyId\": \"<integer,null-int32>\",\n  \"referralContactId\": \"<integer,null-int32>\",\n  \"referralCompanyName\": \"<string,null>\",\n  \"referralContactName\": \"<string,null>\",\n  \"luin\": \"<string,null-uuid>\",\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"name\": {\n    \"clientFullName\": \"string\",\n    \"first\": \"<string,null>\",\n    \"last\": \"<string,null>\",\n    \"middle\": \"<string,null>\",\n    \"isLegalName\": \"<boolean,null>\",\n    \"former\": \"<string,null>\",\n    \"prefix\": \"<string,null>\",\n    \"preferred\": \"<string,null>\"\n  },\n  \"gender\": \"<string,null>\",\n  \"primaryLanguage\": \"<string,null>\",\n  \"ssn\": \"<string,null>\",\n  \"dateOfBirth\": \"<string,null-date-time>\",\n  \"address\": {\n    \"line1\": \"<string,null>\",\n    \"line2\": \"<string,null>\",\n    \"city\": \"<string,null>\",\n    \"state\": \"<string,null>\",\n    \"stateAbbr\": \"<string,null>\",\n    \"country\": \"<string,null>\",\n    \"zipCode\": \"<string,null>\"\n  },\n  \"phone\": {\n    \"home\": \"<string,null>\",\n    \"office\": \"<string,null>\",\n    \"other\": \"<string,null>\",\n    \"number\": \"<string,null>\",\n    \"fax\": \"<string,null>\"\n  },\n  \"email\": \"<string,null>\",\n  \"contact\": {\n    \"firstName\": \"<string,null>\",\n    \"lastName\": \"<string,null>\",\n    \"name\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"relationship\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"isEmergencyContact\": \"<boolean>\"\n  },\n  \"facilityName\": \"<string,null>\",\n  \"status\": \"<string,null>\",\n  \"selfStatus\": \"<string,null>\",\n  \"mrn\": \"<string,null>\",\n  \"firstContactDate\": \"<string,null-date-time>\",\n  \"profileImage\": {\n    \"fileName\": \"<string,null>\",\n    \"host\": null,\n    \"path\": null\n  },\n  \"referralCompanyId\": \"<integer,null-int32>\",\n  \"referralContactId\": \"<integer,null-int32>\",\n  \"referralCompanyName\": \"<string,null>\",\n  \"referralContactName\": \"<string,null>\",\n  \"luin\": \"<string,null-uuid>\",\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "80ca77b6-9525-414f-b2a2-1d04617d9a4d",
+          "name": "/prospects",
+          "request": {
+            "name": "/prospects",
+            "description": {},
+            "url": {
+              "path": [
+                "prospects"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ecda539c-1a4d-475a-9da0-0b6012d1ec38",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "prospects"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"name\": {\n      \"clientFullName\": \"string\",\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"middle\": \"<string,null>\",\n      \"isLegalName\": \"<boolean,null>\",\n      \"former\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"preferred\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"primaryLanguage\": \"<string,null>\",\n    \"ssn\": \"<string,null>\",\n    \"dateOfBirth\": \"<string,null-date-time>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"phone\": {\n      \"home\": \"<string,null>\",\n      \"office\": \"<string,null>\",\n      \"other\": \"<string,null>\",\n      \"number\": \"<string,null>\",\n      \"fax\": \"<string,null>\"\n    },\n    \"email\": \"<string,null>\",\n    \"contact\": {\n      \"firstName\": \"<string,null>\",\n      \"lastName\": \"<string,null>\",\n      \"name\": \"<string,null>\",\n      \"phone\": \"<string,null>\",\n      \"relationship\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"isEmergencyContact\": \"<boolean>\"\n    },\n    \"facilityName\": \"<string,null>\",\n    \"status\": \"<string,null>\",\n    \"selfStatus\": \"<string,null>\",\n    \"mrn\": \"<string,null>\",\n    \"firstContactDate\": \"<string,null-date-time>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": null,\n      \"path\": null\n    },\n    \"referralCompanyId\": \"<integer,null-int32>\",\n    \"referralContactId\": \"<integer,null-int32>\",\n    \"referralCompanyName\": \"<string,null>\",\n    \"referralContactName\": \"<string,null>\",\n    \"luin\": \"<string,null-uuid>\",\n    \"externalId\": {\n      \"externalId\": \"<string,null>\",\n      \"externalIdType\": \"<string,null>\",\n      \"serviceIdentifier\": \"<string,null>\",\n      \"serviceId\": \"<integer,null-int32>\"\n    }\n  },\n  {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"name\": {\n      \"clientFullName\": \"string\",\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"middle\": \"<string,null>\",\n      \"isLegalName\": \"<boolean,null>\",\n      \"former\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"preferred\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"primaryLanguage\": \"<string,null>\",\n    \"ssn\": \"<string,null>\",\n    \"dateOfBirth\": \"<string,null-date-time>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"phone\": {\n      \"home\": \"<string,null>\",\n      \"office\": \"<string,null>\",\n      \"other\": \"<string,null>\",\n      \"number\": \"<string,null>\",\n      \"fax\": \"<string,null>\"\n    },\n    \"email\": \"<string,null>\",\n    \"contact\": {\n      \"firstName\": \"<string,null>\",\n      \"lastName\": \"<string,null>\",\n      \"name\": \"<string,null>\",\n      \"phone\": \"<string,null>\",\n      \"relationship\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"isEmergencyContact\": \"<boolean>\"\n    },\n    \"facilityName\": \"<string,null>\",\n    \"status\": \"<string,null>\",\n    \"selfStatus\": \"<string,null>\",\n    \"mrn\": \"<string,null>\",\n    \"firstContactDate\": \"<string,null-date-time>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": \"string\",\n      \"path\": null\n    },\n    \"referralCompanyId\": \"<integer,null-int32>\",\n    \"referralContactId\": \"<integer,null-int32>\",\n    \"referralCompanyName\": \"<string,null>\",\n    \"referralContactName\": \"<string,null>\",\n    \"luin\": \"<string,null-uuid>\",\n    \"externalId\": {\n      \"externalId\": \"<string,null>\",\n      \"externalIdType\": \"<string,null>\",\n      \"serviceIdentifier\": \"<string,null>\",\n      \"serviceId\": \"<integer,null-int32>\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e009a040-dd59-420c-8d56-99fd55f066ee",
+          "name": "/v{{version}}/prospects",
+          "request": {
+            "name": "/v{{version}}/prospects",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "prospects"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"name\": {\n    \"first\": \"<string,null>\",\n    \"last\": \"<string,null>\",\n    \"middle\": \"<string,null>\",\n    \"isLegalName\": \"<boolean,null>\",\n    \"former\": \"<string,null>\",\n    \"prefix\": \"<string,null>\",\n    \"preferred\": \"<string,null>\"\n  },\n  \"gender\": \"<string,null>\",\n  \"primaryLanguage\": \"<string,null>\",\n  \"ssn\": \"<string,null>\",\n  \"dateOfBirth\": \"<string,null-date-time>\",\n  \"address\": {\n    \"line1\": \"<string,null>\",\n    \"line2\": \"<string,null>\",\n    \"city\": \"<string,null>\",\n    \"state\": \"<string,null>\",\n    \"stateAbbr\": \"<string,null>\",\n    \"country\": \"<string,null>\",\n    \"zipCode\": \"<string,null>\"\n  },\n  \"phone\": {\n    \"home\": \"<string,null>\",\n    \"office\": \"<string,null>\",\n    \"other\": \"<string,null>\",\n    \"number\": \"<string,null>\",\n    \"fax\": \"<string,null>\"\n  },\n  \"email\": \"<string,null>\",\n  \"contact\": {\n    \"firstName\": \"<string,null>\",\n    \"lastName\": \"<string,null>\",\n    \"name\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"relationship\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"isPrimary\": \"<boolean>\",\n    \"isEmergencyContact\": \"<boolean>\"\n  },\n  \"facilityName\": \"<string,null>\",\n  \"status\": \"<string,null>\",\n  \"selfStatus\": \"<string,null>\",\n  \"mrn\": \"<string,null>\",\n  \"admissionDate\": \"<string,null>\",\n  \"firstContactDate\": \"<string,null-date-time>\",\n  \"profileImage\": {\n    \"fileName\": \"<string,null>\"\n  },\n  \"referralCompanyId\": \"<integer,null-int32>\",\n  \"referralContactId\": \"<integer,null-int32>\",\n  \"referralCompanyName\": \"<string,null>\",\n  \"referralContactName\": \"<string,null>\",\n  \"luin\": \"<string,null-uuid>\",\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "24c1b80c-0b43-4d30-a843-c739d05ca23b",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "prospects"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"name\": {\n    \"first\": \"<string,null>\",\n    \"last\": \"<string,null>\",\n    \"middle\": \"<string,null>\",\n    \"isLegalName\": \"<boolean,null>\",\n    \"former\": \"<string,null>\",\n    \"prefix\": \"<string,null>\",\n    \"preferred\": \"<string,null>\"\n  },\n  \"gender\": \"<string,null>\",\n  \"primaryLanguage\": \"<string,null>\",\n  \"ssn\": \"<string,null>\",\n  \"dateOfBirth\": \"<string,null-date-time>\",\n  \"address\": {\n    \"line1\": \"<string,null>\",\n    \"line2\": \"<string,null>\",\n    \"city\": \"<string,null>\",\n    \"state\": \"<string,null>\",\n    \"stateAbbr\": \"<string,null>\",\n    \"country\": \"<string,null>\",\n    \"zipCode\": \"<string,null>\"\n  },\n  \"phone\": {\n    \"home\": \"<string,null>\",\n    \"office\": \"<string,null>\",\n    \"other\": \"<string,null>\",\n    \"number\": \"<string,null>\",\n    \"fax\": \"<string,null>\"\n  },\n  \"email\": \"<string,null>\",\n  \"contact\": {\n    \"firstName\": \"<string,null>\",\n    \"lastName\": \"<string,null>\",\n    \"name\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"relationship\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"isPrimary\": \"<boolean>\",\n    \"isEmergencyContact\": \"<boolean>\"\n  },\n  \"facilityName\": \"<string,null>\",\n  \"status\": \"<string,null>\",\n  \"selfStatus\": \"<string,null>\",\n  \"mrn\": \"<string,null>\",\n  \"admissionDate\": \"<string,null>\",\n  \"firstContactDate\": \"<string,null-date-time>\",\n  \"profileImage\": {\n    \"fileName\": \"<string,null>\"\n  },\n  \"referralCompanyId\": \"<integer,null-int32>\",\n  \"referralContactId\": \"<integer,null-int32>\",\n  \"referralCompanyName\": \"<string,null>\",\n  \"referralContactName\": \"<string,null>\",\n  \"luin\": \"<string,null-uuid>\",\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"name\": {\n    \"clientFullName\": \"string\",\n    \"first\": \"<string,null>\",\n    \"last\": \"<string,null>\",\n    \"middle\": \"<string,null>\",\n    \"isLegalName\": \"<boolean,null>\",\n    \"former\": \"<string,null>\",\n    \"prefix\": \"<string,null>\",\n    \"preferred\": \"<string,null>\"\n  },\n  \"gender\": \"<string,null>\",\n  \"primaryLanguage\": \"<string,null>\",\n  \"ssn\": \"<string,null>\",\n  \"dateOfBirth\": \"<string,null-date-time>\",\n  \"address\": {\n    \"line1\": \"<string,null>\",\n    \"line2\": \"<string,null>\",\n    \"city\": \"<string,null>\",\n    \"state\": \"<string,null>\",\n    \"stateAbbr\": \"<string,null>\",\n    \"country\": \"<string,null>\",\n    \"zipCode\": \"<string,null>\"\n  },\n  \"phone\": {\n    \"home\": \"<string,null>\",\n    \"office\": \"<string,null>\",\n    \"other\": \"<string,null>\",\n    \"number\": \"<string,null>\",\n    \"fax\": \"<string,null>\"\n  },\n  \"email\": \"<string,null>\",\n  \"contact\": {\n    \"firstName\": \"<string,null>\",\n    \"lastName\": \"<string,null>\",\n    \"name\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"relationship\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"isEmergencyContact\": \"<boolean>\"\n  },\n  \"facilityName\": \"<string,null>\",\n  \"status\": \"<string,null>\",\n  \"selfStatus\": \"<string,null>\",\n  \"mrn\": \"<string,null>\",\n  \"firstContactDate\": \"<string,null-date-time>\",\n  \"profileImage\": {\n    \"fileName\": \"<string,null>\",\n    \"host\": null,\n    \"path\": null\n  },\n  \"referralCompanyId\": \"<integer,null-int32>\",\n  \"referralContactId\": \"<integer,null-int32>\",\n  \"referralCompanyName\": \"<string,null>\",\n  \"referralContactName\": \"<string,null>\",\n  \"luin\": \"<string,null-uuid>\",\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "73ca971f-5935-4a7a-b22d-8fc08fe03b9f",
+          "name": "/v{{version}}/prospects",
+          "request": {
+            "name": "/v{{version}}/prospects",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "prospects"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Limit",
+                  "value": "<long>"
+                },
+                {
+                  "disabled": false,
+                  "key": "Cursor",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "StartDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "EndDate",
+                  "value": "<dateTime>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "fields",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d9394d64-c782-4fa1-b611-27b3650e628d",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "prospects"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Limit",
+                      "value": "<long>"
+                    },
+                    {
+                      "key": "Cursor",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "StartDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "EndDate",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fields",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"name\": {\n      \"clientFullName\": \"string\",\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"middle\": \"<string,null>\",\n      \"isLegalName\": \"<boolean,null>\",\n      \"former\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"preferred\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"primaryLanguage\": \"<string,null>\",\n    \"ssn\": \"<string,null>\",\n    \"dateOfBirth\": \"<string,null-date-time>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"phone\": {\n      \"home\": \"<string,null>\",\n      \"office\": \"<string,null>\",\n      \"other\": \"<string,null>\",\n      \"number\": \"<string,null>\",\n      \"fax\": \"<string,null>\"\n    },\n    \"email\": \"<string,null>\",\n    \"contact\": {\n      \"firstName\": \"<string,null>\",\n      \"lastName\": \"<string,null>\",\n      \"name\": \"<string,null>\",\n      \"phone\": \"<string,null>\",\n      \"relationship\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"isEmergencyContact\": \"<boolean>\"\n    },\n    \"facilityName\": \"<string,null>\",\n    \"status\": \"<string,null>\",\n    \"selfStatus\": \"<string,null>\",\n    \"mrn\": \"<string,null>\",\n    \"firstContactDate\": \"<string,null-date-time>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": null,\n      \"path\": null\n    },\n    \"referralCompanyId\": \"<integer,null-int32>\",\n    \"referralContactId\": \"<integer,null-int32>\",\n    \"referralCompanyName\": \"<string,null>\",\n    \"referralContactName\": \"<string,null>\",\n    \"luin\": \"<string,null-uuid>\",\n    \"externalId\": {\n      \"externalId\": \"<string,null>\",\n      \"externalIdType\": \"<string,null>\",\n      \"serviceIdentifier\": \"<string,null>\",\n      \"serviceId\": \"<integer,null-int32>\"\n    }\n  },\n  {\n    \"id\": \"<integer>\",\n    \"href\": null,\n    \"name\": {\n      \"clientFullName\": \"string\",\n      \"first\": \"<string,null>\",\n      \"last\": \"<string,null>\",\n      \"middle\": \"<string,null>\",\n      \"isLegalName\": \"<boolean,null>\",\n      \"former\": \"<string,null>\",\n      \"prefix\": \"<string,null>\",\n      \"preferred\": \"<string,null>\"\n    },\n    \"gender\": \"<string,null>\",\n    \"primaryLanguage\": \"<string,null>\",\n    \"ssn\": \"<string,null>\",\n    \"dateOfBirth\": \"<string,null-date-time>\",\n    \"address\": {\n      \"line1\": \"<string,null>\",\n      \"line2\": \"<string,null>\",\n      \"city\": \"<string,null>\",\n      \"state\": \"<string,null>\",\n      \"stateAbbr\": \"<string,null>\",\n      \"country\": \"<string,null>\",\n      \"zipCode\": \"<string,null>\"\n    },\n    \"phone\": {\n      \"home\": \"<string,null>\",\n      \"office\": \"<string,null>\",\n      \"other\": \"<string,null>\",\n      \"number\": \"<string,null>\",\n      \"fax\": \"<string,null>\"\n    },\n    \"email\": \"<string,null>\",\n    \"contact\": {\n      \"firstName\": \"<string,null>\",\n      \"lastName\": \"<string,null>\",\n      \"name\": \"<string,null>\",\n      \"phone\": \"<string,null>\",\n      \"relationship\": \"<string,null>\",\n      \"email\": \"<string,null>\",\n      \"isEmergencyContact\": \"<boolean>\"\n    },\n    \"facilityName\": \"<string,null>\",\n    \"status\": \"<string,null>\",\n    \"selfStatus\": \"<string,null>\",\n    \"mrn\": \"<string,null>\",\n    \"firstContactDate\": \"<string,null-date-time>\",\n    \"profileImage\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": \"string\",\n      \"path\": null\n    },\n    \"referralCompanyId\": \"<integer,null-int32>\",\n    \"referralContactId\": \"<integer,null-int32>\",\n    \"referralCompanyName\": \"<string,null>\",\n    \"referralContactName\": \"<string,null>\",\n    \"luin\": \"<string,null-uuid>\",\n    \"externalId\": {\n      \"externalId\": \"<string,null>\",\n      \"externalIdType\": \"<string,null>\",\n      \"serviceIdentifier\": \"<string,null>\",\n      \"serviceId\": \"<integer,null-int32>\"\n    }\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "08915253-73f9-41b6-a61a-122f2cf80851",
+          "name": "/prospects/:id",
+          "request": {
+            "name": "/prospects/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "prospects",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_1\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_2\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "acdc61f4-332f-4050-b2ef-00451fe0b13a",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "prospects",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_1\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_2\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"name\": {\n    \"clientFullName\": \"string\",\n    \"first\": \"<string,null>\",\n    \"last\": \"<string,null>\",\n    \"middle\": \"<string,null>\",\n    \"isLegalName\": \"<boolean,null>\",\n    \"former\": \"<string,null>\",\n    \"prefix\": \"<string,null>\",\n    \"preferred\": \"<string,null>\"\n  },\n  \"gender\": \"<string,null>\",\n  \"primaryLanguage\": \"<string,null>\",\n  \"ssn\": \"<string,null>\",\n  \"dateOfBirth\": \"<string,null-date-time>\",\n  \"address\": {\n    \"line1\": \"<string,null>\",\n    \"line2\": \"<string,null>\",\n    \"city\": \"<string,null>\",\n    \"state\": \"<string,null>\",\n    \"stateAbbr\": \"<string,null>\",\n    \"country\": \"<string,null>\",\n    \"zipCode\": \"<string,null>\"\n  },\n  \"phone\": {\n    \"home\": \"<string,null>\",\n    \"office\": \"<string,null>\",\n    \"other\": \"<string,null>\",\n    \"number\": \"<string,null>\",\n    \"fax\": \"<string,null>\"\n  },\n  \"email\": \"<string,null>\",\n  \"contact\": {\n    \"firstName\": \"<string,null>\",\n    \"lastName\": \"<string,null>\",\n    \"name\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"relationship\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"isEmergencyContact\": \"<boolean>\"\n  },\n  \"facilityName\": \"<string,null>\",\n  \"status\": \"<string,null>\",\n  \"selfStatus\": \"<string,null>\",\n  \"mrn\": \"<string,null>\",\n  \"firstContactDate\": \"<string,null-date-time>\",\n  \"profileImage\": {\n    \"fileName\": \"<string,null>\",\n    \"host\": null,\n    \"path\": null\n  },\n  \"referralCompanyId\": \"<integer,null-int32>\",\n  \"referralContactId\": \"<integer,null-int32>\",\n  \"referralCompanyName\": \"<string,null>\",\n  \"referralContactName\": \"<string,null>\",\n  \"luin\": \"<string,null-uuid>\",\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e28aa1dd-49a8-475d-b353-99b9c41a5ebe",
+          "name": "/prospects/:id",
+          "request": {
+            "name": "/prospects/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "prospects",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "171e2333-d5f9-4d58-b977-06bd9f350ff5",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "prospects",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"name\": {\n    \"clientFullName\": \"string\",\n    \"first\": \"<string,null>\",\n    \"last\": \"<string,null>\",\n    \"middle\": \"<string,null>\",\n    \"isLegalName\": \"<boolean,null>\",\n    \"former\": \"<string,null>\",\n    \"prefix\": \"<string,null>\",\n    \"preferred\": \"<string,null>\"\n  },\n  \"gender\": \"<string,null>\",\n  \"primaryLanguage\": \"<string,null>\",\n  \"ssn\": \"<string,null>\",\n  \"dateOfBirth\": \"<string,null-date-time>\",\n  \"address\": {\n    \"line1\": \"<string,null>\",\n    \"line2\": \"<string,null>\",\n    \"city\": \"<string,null>\",\n    \"state\": \"<string,null>\",\n    \"stateAbbr\": \"<string,null>\",\n    \"country\": \"<string,null>\",\n    \"zipCode\": \"<string,null>\"\n  },\n  \"phone\": {\n    \"home\": \"<string,null>\",\n    \"office\": \"<string,null>\",\n    \"other\": \"<string,null>\",\n    \"number\": \"<string,null>\",\n    \"fax\": \"<string,null>\"\n  },\n  \"email\": \"<string,null>\",\n  \"contact\": {\n    \"firstName\": \"<string,null>\",\n    \"lastName\": \"<string,null>\",\n    \"name\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"relationship\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"isEmergencyContact\": \"<boolean>\"\n  },\n  \"facilityName\": \"<string,null>\",\n  \"status\": \"<string,null>\",\n  \"selfStatus\": \"<string,null>\",\n  \"mrn\": \"<string,null>\",\n  \"firstContactDate\": \"<string,null-date-time>\",\n  \"profileImage\": {\n    \"fileName\": \"<string,null>\",\n    \"host\": null,\n    \"path\": null\n  },\n  \"referralCompanyId\": \"<integer,null-int32>\",\n  \"referralContactId\": \"<integer,null-int32>\",\n  \"referralCompanyName\": \"<string,null>\",\n  \"referralContactName\": \"<string,null>\",\n  \"luin\": \"<string,null-uuid>\",\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f8d3e8c0-cd63-41ab-b85d-4ba06763df52",
+          "name": "/v{{version}}/prospects/:id",
+          "request": {
+            "name": "/v{{version}}/prospects/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "prospects",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_1\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_2\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "cd885107-cb75-4251-a790-a897ed3bc4ac",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "prospects",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"key_0\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_1\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ],\n  \"key_2\": [\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    },\n    {\n      \"value\": \"<Circular reference to #/components/schemas/JToken detected>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"name\": {\n    \"clientFullName\": \"string\",\n    \"first\": \"<string,null>\",\n    \"last\": \"<string,null>\",\n    \"middle\": \"<string,null>\",\n    \"isLegalName\": \"<boolean,null>\",\n    \"former\": \"<string,null>\",\n    \"prefix\": \"<string,null>\",\n    \"preferred\": \"<string,null>\"\n  },\n  \"gender\": \"<string,null>\",\n  \"primaryLanguage\": \"<string,null>\",\n  \"ssn\": \"<string,null>\",\n  \"dateOfBirth\": \"<string,null-date-time>\",\n  \"address\": {\n    \"line1\": \"<string,null>\",\n    \"line2\": \"<string,null>\",\n    \"city\": \"<string,null>\",\n    \"state\": \"<string,null>\",\n    \"stateAbbr\": \"<string,null>\",\n    \"country\": \"<string,null>\",\n    \"zipCode\": \"<string,null>\"\n  },\n  \"phone\": {\n    \"home\": \"<string,null>\",\n    \"office\": \"<string,null>\",\n    \"other\": \"<string,null>\",\n    \"number\": \"<string,null>\",\n    \"fax\": \"<string,null>\"\n  },\n  \"email\": \"<string,null>\",\n  \"contact\": {\n    \"firstName\": \"<string,null>\",\n    \"lastName\": \"<string,null>\",\n    \"name\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"relationship\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"isEmergencyContact\": \"<boolean>\"\n  },\n  \"facilityName\": \"<string,null>\",\n  \"status\": \"<string,null>\",\n  \"selfStatus\": \"<string,null>\",\n  \"mrn\": \"<string,null>\",\n  \"firstContactDate\": \"<string,null-date-time>\",\n  \"profileImage\": {\n    \"fileName\": \"<string,null>\",\n    \"host\": null,\n    \"path\": null\n  },\n  \"referralCompanyId\": \"<integer,null-int32>\",\n  \"referralContactId\": \"<integer,null-int32>\",\n  \"referralCompanyName\": \"<string,null>\",\n  \"referralContactName\": \"<string,null>\",\n  \"luin\": \"<string,null-uuid>\",\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "991b4e40-3640-4aaf-b9ee-57a6470c3e6c",
+          "name": "/v{{version}}/prospects/:id",
+          "request": {
+            "name": "/v{{version}}/prospects/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "prospects",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e81ac165-989e-48b6-809a-1df07b070157",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "prospects",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"id\": \"<integer>\",\n  \"href\": \"string\",\n  \"name\": {\n    \"clientFullName\": \"string\",\n    \"first\": \"<string,null>\",\n    \"last\": \"<string,null>\",\n    \"middle\": \"<string,null>\",\n    \"isLegalName\": \"<boolean,null>\",\n    \"former\": \"<string,null>\",\n    \"prefix\": \"<string,null>\",\n    \"preferred\": \"<string,null>\"\n  },\n  \"gender\": \"<string,null>\",\n  \"primaryLanguage\": \"<string,null>\",\n  \"ssn\": \"<string,null>\",\n  \"dateOfBirth\": \"<string,null-date-time>\",\n  \"address\": {\n    \"line1\": \"<string,null>\",\n    \"line2\": \"<string,null>\",\n    \"city\": \"<string,null>\",\n    \"state\": \"<string,null>\",\n    \"stateAbbr\": \"<string,null>\",\n    \"country\": \"<string,null>\",\n    \"zipCode\": \"<string,null>\"\n  },\n  \"phone\": {\n    \"home\": \"<string,null>\",\n    \"office\": \"<string,null>\",\n    \"other\": \"<string,null>\",\n    \"number\": \"<string,null>\",\n    \"fax\": \"<string,null>\"\n  },\n  \"email\": \"<string,null>\",\n  \"contact\": {\n    \"firstName\": \"<string,null>\",\n    \"lastName\": \"<string,null>\",\n    \"name\": \"<string,null>\",\n    \"phone\": \"<string,null>\",\n    \"relationship\": \"<string,null>\",\n    \"email\": \"<string,null>\",\n    \"isEmergencyContact\": \"<boolean>\"\n  },\n  \"facilityName\": \"<string,null>\",\n  \"status\": \"<string,null>\",\n  \"selfStatus\": \"<string,null>\",\n  \"mrn\": \"<string,null>\",\n  \"firstContactDate\": \"<string,null-date-time>\",\n  \"profileImage\": {\n    \"fileName\": \"<string,null>\",\n    \"host\": null,\n    \"path\": null\n  },\n  \"referralCompanyId\": \"<integer,null-int32>\",\n  \"referralContactId\": \"<integer,null-int32>\",\n  \"referralCompanyName\": \"<string,null>\",\n  \"referralContactName\": \"<string,null>\",\n  \"luin\": \"<string,null-uuid>\",\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "52883524-8a38-4ecf-8990-d92b0f07aeb3",
+          "name": "/prospects/:id/contacts",
+          "request": {
+            "name": "/prospects/:id/contacts",
+            "description": {},
+            "url": {
+              "path": [
+                "prospects",
+                ":id",
+                "contacts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"<string,null>\",\n  \"lastName\": \"<string,null>\",\n  \"name\": \"<string,null>\",\n  \"phone\": \"<string,null>\",\n  \"relationship\": \"<string,null>\",\n  \"email\": \"<string,null>\",\n  \"isPrimary\": \"<boolean>\",\n  \"isEmergencyContact\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6f7405a1-0716-444e-869f-f64065432d64",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "prospects",
+                    ":id",
+                    "contacts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"firstName\": \"<string,null>\",\n  \"lastName\": \"<string,null>\",\n  \"name\": \"<string,null>\",\n  \"phone\": \"<string,null>\",\n  \"relationship\": \"<string,null>\",\n  \"email\": \"<string,null>\",\n  \"isPrimary\": \"<boolean>\",\n  \"isEmergencyContact\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "43ff2023-307b-4ddb-bd03-1eebb6b02b45",
+          "name": "/v{{version}}/prospects/:id/contacts",
+          "request": {
+            "name": "/v{{version}}/prospects/:id/contacts",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "prospects",
+                ":id",
+                "contacts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"<string,null>\",\n  \"lastName\": \"<string,null>\",\n  \"name\": \"<string,null>\",\n  \"phone\": \"<string,null>\",\n  \"relationship\": \"<string,null>\",\n  \"email\": \"<string,null>\",\n  \"isPrimary\": \"<boolean>\",\n  \"isEmergencyContact\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "8d0ca7ee-2dd5-4e7a-b00e-73746b8ee3e4",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "prospects",
+                    ":id",
+                    "contacts"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"firstName\": \"<string,null>\",\n  \"lastName\": \"<string,null>\",\n  \"name\": \"<string,null>\",\n  \"phone\": \"<string,null>\",\n  \"relationship\": \"<string,null>\",\n  \"email\": \"<string,null>\",\n  \"isPrimary\": \"<boolean>\",\n  \"isEmergencyContact\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9736678a-bb4a-4901-aa82-3543058188ae",
+          "name": "/prospects/:id/insurances",
+          "request": {
+            "name": "/prospects/:id/insurances",
+            "description": {},
+            "url": {
+              "path": [
+                "prospects",
+                ":id",
+                "insurances"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"insuranceName\": \"<string,null>\",\n  \"relationship\": \"<string,null>\",\n  \"priority\": \"<string,null>\",\n  \"plan\": \"<string,null>\",\n  \"policyId\": \"<string,null>\",\n  \"groupNumber\": \"<string,null>\",\n  \"coPay\": \"<string,null>\",\n  \"subscriberName\": \"<string,null>\",\n  \"subscriberFirstName\": \"<string,null>\",\n  \"subscriberLastName\": \"<string,null>\",\n  \"subscriberBirthDate\": \"<string,null>\",\n  \"subscriberAddress\": \"<string,null>\",\n  \"subscriberCity\": \"<string,null>\",\n  \"subscriberState\": \"<string,null>\",\n  \"subscriberZip\": \"<string,null>\",\n  \"subscriberCountry\": \"<string,null>\",\n  \"subscriberPhone\": \"<string,null>\",\n  \"isVerified\": \"<boolean>\",\n  \"isPrimary\": \"<boolean>\",\n  \"verificationDate\": \"<string,null>\",\n  \"verifiedBy\": \"<string,null>\",\n  \"verificationNo\": \"<string,null>\",\n  \"notes\": \"<string,null>\",\n  \"insurancePhone\": \"<string,null>\",\n  \"policyEffectiveDate\": \"<string,null>\",\n  \"documents\": {\n    \"id\": \"<integer>\",\n    \"clientDocumentId\": \"<long>\",\n    \"name\": \"<string,null>\",\n    \"description\": \"<string,null>\",\n    \"fileName\": \"<string,null>\",\n    \"client\": {\n      \"id\": \"<integer>\",\n      \"route\": \"<string,null>\"\n    },\n    \"status\": \"<string,null>\",\n    \"type\": \"<string,null>\",\n    \"typeId\": \"<integer,null-int64>\",\n    \"uploadDate\": \"<string,null-date-time>\",\n    \"url\": {\n      \"fileName\": \"<string,null>\"\n    },\n    \"tableId\": \"<integer,null-int64>\",\n    \"tableName\": \"<string,null>\",\n    \"path\": \"<string,null>\",\n    \"documentTypeId\": \"<integer>\",\n    \"uploadedDocuments\": \"<array,null>\"\n  },\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  },\n  \"documentBytes\": \"<string,null-byte>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b453b7b7-82a6-4ec8-a629-afca6befaf92",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "prospects",
+                    ":id",
+                    "insurances"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"insuranceName\": \"<string,null>\",\n  \"relationship\": \"<string,null>\",\n  \"priority\": \"<string,null>\",\n  \"plan\": \"<string,null>\",\n  \"policyId\": \"<string,null>\",\n  \"groupNumber\": \"<string,null>\",\n  \"coPay\": \"<string,null>\",\n  \"subscriberName\": \"<string,null>\",\n  \"subscriberFirstName\": \"<string,null>\",\n  \"subscriberLastName\": \"<string,null>\",\n  \"subscriberBirthDate\": \"<string,null>\",\n  \"subscriberAddress\": \"<string,null>\",\n  \"subscriberCity\": \"<string,null>\",\n  \"subscriberState\": \"<string,null>\",\n  \"subscriberZip\": \"<string,null>\",\n  \"subscriberCountry\": \"<string,null>\",\n  \"subscriberPhone\": \"<string,null>\",\n  \"isVerified\": \"<boolean>\",\n  \"isPrimary\": \"<boolean>\",\n  \"verificationDate\": \"<string,null>\",\n  \"verifiedBy\": \"<string,null>\",\n  \"verificationNo\": \"<string,null>\",\n  \"notes\": \"<string,null>\",\n  \"insurancePhone\": \"<string,null>\",\n  \"policyEffectiveDate\": \"<string,null>\",\n  \"documents\": {\n    \"id\": \"<integer>\",\n    \"clientDocumentId\": \"<long>\",\n    \"name\": \"<string,null>\",\n    \"description\": \"<string,null>\",\n    \"fileName\": \"<string,null>\",\n    \"client\": {\n      \"id\": \"<integer>\",\n      \"route\": \"<string,null>\"\n    },\n    \"status\": \"<string,null>\",\n    \"type\": \"<string,null>\",\n    \"typeId\": \"<integer,null-int64>\",\n    \"uploadDate\": \"<string,null-date-time>\",\n    \"url\": {\n      \"fileName\": \"<string,null>\"\n    },\n    \"tableId\": \"<integer,null-int64>\",\n    \"tableName\": \"<string,null>\",\n    \"path\": \"<string,null>\",\n    \"documentTypeId\": \"<integer>\",\n    \"uploadedDocuments\": \"<array,null>\"\n  },\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  },\n  \"documentBytes\": \"<string,null-byte>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"insuranceId\": null,\n  \"documentIds\": null\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "495033c4-16ad-442c-8edd-77a6dcd00094",
+          "name": "/v{{version}}/prospects/:id/insurances",
+          "request": {
+            "name": "/v{{version}}/prospects/:id/insurances",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "prospects",
+                ":id",
+                "insurances"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"insuranceName\": \"<string,null>\",\n  \"relationship\": \"<string,null>\",\n  \"priority\": \"<string,null>\",\n  \"plan\": \"<string,null>\",\n  \"policyId\": \"<string,null>\",\n  \"groupNumber\": \"<string,null>\",\n  \"coPay\": \"<string,null>\",\n  \"subscriberName\": \"<string,null>\",\n  \"subscriberFirstName\": \"<string,null>\",\n  \"subscriberLastName\": \"<string,null>\",\n  \"subscriberBirthDate\": \"<string,null>\",\n  \"subscriberAddress\": \"<string,null>\",\n  \"subscriberCity\": \"<string,null>\",\n  \"subscriberState\": \"<string,null>\",\n  \"subscriberZip\": \"<string,null>\",\n  \"subscriberCountry\": \"<string,null>\",\n  \"subscriberPhone\": \"<string,null>\",\n  \"isVerified\": \"<boolean>\",\n  \"isPrimary\": \"<boolean>\",\n  \"verificationDate\": \"<string,null>\",\n  \"verifiedBy\": \"<string,null>\",\n  \"verificationNo\": \"<string,null>\",\n  \"notes\": \"<string,null>\",\n  \"insurancePhone\": \"<string,null>\",\n  \"policyEffectiveDate\": \"<string,null>\",\n  \"documents\": {\n    \"id\": \"<integer>\",\n    \"clientDocumentId\": \"<long>\",\n    \"name\": \"<string,null>\",\n    \"description\": \"<string,null>\",\n    \"fileName\": \"<string,null>\",\n    \"client\": {\n      \"id\": \"<integer>\",\n      \"route\": \"<string,null>\"\n    },\n    \"status\": \"<string,null>\",\n    \"type\": \"<string,null>\",\n    \"typeId\": \"<integer,null-int64>\",\n    \"uploadDate\": \"<string,null-date-time>\",\n    \"url\": {\n      \"fileName\": \"<string,null>\"\n    },\n    \"tableId\": \"<integer,null-int64>\",\n    \"tableName\": \"<string,null>\",\n    \"path\": \"<string,null>\",\n    \"documentTypeId\": \"<integer>\",\n    \"uploadedDocuments\": \"<array,null>\"\n  },\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  },\n  \"documentBytes\": \"<string,null-byte>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "19165685-83d9-43e7-9714-63330b2f45a9",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "prospects",
+                    ":id",
+                    "insurances"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"insuranceName\": \"<string,null>\",\n  \"relationship\": \"<string,null>\",\n  \"priority\": \"<string,null>\",\n  \"plan\": \"<string,null>\",\n  \"policyId\": \"<string,null>\",\n  \"groupNumber\": \"<string,null>\",\n  \"coPay\": \"<string,null>\",\n  \"subscriberName\": \"<string,null>\",\n  \"subscriberFirstName\": \"<string,null>\",\n  \"subscriberLastName\": \"<string,null>\",\n  \"subscriberBirthDate\": \"<string,null>\",\n  \"subscriberAddress\": \"<string,null>\",\n  \"subscriberCity\": \"<string,null>\",\n  \"subscriberState\": \"<string,null>\",\n  \"subscriberZip\": \"<string,null>\",\n  \"subscriberCountry\": \"<string,null>\",\n  \"subscriberPhone\": \"<string,null>\",\n  \"isVerified\": \"<boolean>\",\n  \"isPrimary\": \"<boolean>\",\n  \"verificationDate\": \"<string,null>\",\n  \"verifiedBy\": \"<string,null>\",\n  \"verificationNo\": \"<string,null>\",\n  \"notes\": \"<string,null>\",\n  \"insurancePhone\": \"<string,null>\",\n  \"policyEffectiveDate\": \"<string,null>\",\n  \"documents\": {\n    \"id\": \"<integer>\",\n    \"clientDocumentId\": \"<long>\",\n    \"name\": \"<string,null>\",\n    \"description\": \"<string,null>\",\n    \"fileName\": \"<string,null>\",\n    \"client\": {\n      \"id\": \"<integer>\",\n      \"route\": \"<string,null>\"\n    },\n    \"status\": \"<string,null>\",\n    \"type\": \"<string,null>\",\n    \"typeId\": \"<integer,null-int64>\",\n    \"uploadDate\": \"<string,null-date-time>\",\n    \"url\": {\n      \"fileName\": \"<string,null>\"\n    },\n    \"tableId\": \"<integer,null-int64>\",\n    \"tableName\": \"<string,null>\",\n    \"path\": \"<string,null>\",\n    \"documentTypeId\": \"<integer>\",\n    \"uploadedDocuments\": \"<array,null>\"\n  },\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  },\n  \"documentBytes\": \"<string,null-byte>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"insuranceId\": null,\n  \"documentIds\": null\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c305d732-7c8a-4b66-9858-955302bce82a",
+          "name": "/prospects/insurances/:id",
+          "request": {
+            "name": "/prospects/insurances/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "prospects",
+                "insurances",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"insuranceName\": \"<string,null>\",\n  \"relationship\": \"<string,null>\",\n  \"priority\": \"<string,null>\",\n  \"plan\": \"<string,null>\",\n  \"policyId\": \"<string,null>\",\n  \"groupNumber\": \"<string,null>\",\n  \"coPay\": \"<string,null>\",\n  \"subscriberName\": \"<string,null>\",\n  \"subscriberFirstName\": \"<string,null>\",\n  \"subscriberLastName\": \"<string,null>\",\n  \"subscriberBirthDate\": \"<string,null>\",\n  \"subscriberAddress\": \"<string,null>\",\n  \"subscriberCity\": \"<string,null>\",\n  \"subscriberState\": \"<string,null>\",\n  \"subscriberZip\": \"<string,null>\",\n  \"subscriberCountry\": \"<string,null>\",\n  \"subscriberPhone\": \"<string,null>\",\n  \"isVerified\": \"<boolean>\",\n  \"isPrimary\": \"<boolean>\",\n  \"verificationDate\": \"<string,null>\",\n  \"verifiedBy\": \"<string,null>\",\n  \"verificationNo\": \"<string,null>\",\n  \"notes\": \"<string,null>\",\n  \"insurancePhone\": \"<string,null>\",\n  \"policyEffectiveDate\": \"<string,null>\",\n  \"documents\": {\n    \"id\": \"<integer>\",\n    \"clientDocumentId\": \"<long>\",\n    \"name\": \"<string,null>\",\n    \"description\": \"<string,null>\",\n    \"fileName\": \"<string,null>\",\n    \"client\": {\n      \"id\": \"<integer>\",\n      \"route\": \"<string,null>\"\n    },\n    \"status\": \"<string,null>\",\n    \"type\": \"<string,null>\",\n    \"typeId\": \"<integer,null-int64>\",\n    \"uploadDate\": \"<string,null-date-time>\",\n    \"url\": {\n      \"fileName\": \"<string,null>\"\n    },\n    \"tableId\": \"<integer,null-int64>\",\n    \"tableName\": \"<string,null>\",\n    \"path\": \"<string,null>\",\n    \"documentTypeId\": \"<integer>\",\n    \"uploadedDocuments\": \"<array,null>\"\n  },\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  },\n  \"documentBytes\": \"<string,null-byte>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5534de9a-d5ed-4465-9ea3-6c614d12b3ad",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "prospects",
+                    "insurances",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"insuranceName\": \"<string,null>\",\n  \"relationship\": \"<string,null>\",\n  \"priority\": \"<string,null>\",\n  \"plan\": \"<string,null>\",\n  \"policyId\": \"<string,null>\",\n  \"groupNumber\": \"<string,null>\",\n  \"coPay\": \"<string,null>\",\n  \"subscriberName\": \"<string,null>\",\n  \"subscriberFirstName\": \"<string,null>\",\n  \"subscriberLastName\": \"<string,null>\",\n  \"subscriberBirthDate\": \"<string,null>\",\n  \"subscriberAddress\": \"<string,null>\",\n  \"subscriberCity\": \"<string,null>\",\n  \"subscriberState\": \"<string,null>\",\n  \"subscriberZip\": \"<string,null>\",\n  \"subscriberCountry\": \"<string,null>\",\n  \"subscriberPhone\": \"<string,null>\",\n  \"isVerified\": \"<boolean>\",\n  \"isPrimary\": \"<boolean>\",\n  \"verificationDate\": \"<string,null>\",\n  \"verifiedBy\": \"<string,null>\",\n  \"verificationNo\": \"<string,null>\",\n  \"notes\": \"<string,null>\",\n  \"insurancePhone\": \"<string,null>\",\n  \"policyEffectiveDate\": \"<string,null>\",\n  \"documents\": {\n    \"id\": \"<integer>\",\n    \"clientDocumentId\": \"<long>\",\n    \"name\": \"<string,null>\",\n    \"description\": \"<string,null>\",\n    \"fileName\": \"<string,null>\",\n    \"client\": {\n      \"id\": \"<integer>\",\n      \"route\": \"<string,null>\"\n    },\n    \"status\": \"<string,null>\",\n    \"type\": \"<string,null>\",\n    \"typeId\": \"<integer,null-int64>\",\n    \"uploadDate\": \"<string,null-date-time>\",\n    \"url\": {\n      \"fileName\": \"<string,null>\"\n    },\n    \"tableId\": \"<integer,null-int64>\",\n    \"tableName\": \"<string,null>\",\n    \"path\": \"<string,null>\",\n    \"documentTypeId\": \"<integer>\",\n    \"uploadedDocuments\": \"<array,null>\"\n  },\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  },\n  \"documentBytes\": \"<string,null-byte>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"insuranceName\": \"<string,null>\",\n  \"relationship\": \"<string,null>\",\n  \"priority\": \"<string,null>\",\n  \"plan\": \"<string,null>\",\n  \"policyId\": \"<string,null>\",\n  \"groupNumber\": \"<string,null>\",\n  \"coPay\": \"<string,null>\",\n  \"subscriberName\": \"<string,null>\",\n  \"subscriberFirstName\": \"<string,null>\",\n  \"subscriberLastName\": \"<string,null>\",\n  \"subscriberBirthDate\": \"<string,null>\",\n  \"subscriberAddress\": \"<string,null>\",\n  \"subscriberCity\": \"<string,null>\",\n  \"subscriberState\": \"<string,null>\",\n  \"subscriberZip\": \"<string,null>\",\n  \"subscriberCountry\": \"<string,null>\",\n  \"subscriberPhone\": \"<string,null>\",\n  \"isVerified\": \"<boolean>\",\n  \"isPrimary\": \"<boolean>\",\n  \"verificationDate\": \"<string,null>\",\n  \"verifiedBy\": \"<string,null>\",\n  \"verificationNo\": \"<string,null>\",\n  \"notes\": \"<string,null>\",\n  \"insurancePhone\": \"<string,null>\",\n  \"policyEffectiveDate\": \"<string,null>\",\n  \"documents\": {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"clientDocumentId\": \"<long>\",\n    \"name\": \"<string,null>\",\n    \"description\": \"<string,null>\",\n    \"fileName\": \"<string,null>\",\n    \"client\": {\n      \"id\": \"<integer>\",\n      \"route\": \"<string,null>\"\n    },\n    \"status\": \"<string,null>\",\n    \"type\": \"<string,null>\",\n    \"typeId\": \"<integer,null-int64>\",\n    \"uploadDate\": \"<string,null-date-time>\",\n    \"url\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": null,\n      \"path\": null\n    },\n    \"tableId\": \"<integer,null-int64>\",\n    \"tableName\": \"<string,null>\",\n    \"path\": \"<string,null>\",\n    \"documentTypeId\": \"<integer>\",\n    \"uploadedDocuments\": \"<array,null>\"\n  },\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  },\n  \"documentBytes\": \"<string,null-byte>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "320027db-33f9-431b-8f59-31444d7aea0a",
+          "name": "/v{{version}}/prospects/insurances/:id",
+          "request": {
+            "name": "/v{{version}}/prospects/insurances/:id",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "prospects",
+                "insurances",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<long>",
+                  "key": "id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"insuranceName\": \"<string,null>\",\n  \"relationship\": \"<string,null>\",\n  \"priority\": \"<string,null>\",\n  \"plan\": \"<string,null>\",\n  \"policyId\": \"<string,null>\",\n  \"groupNumber\": \"<string,null>\",\n  \"coPay\": \"<string,null>\",\n  \"subscriberName\": \"<string,null>\",\n  \"subscriberFirstName\": \"<string,null>\",\n  \"subscriberLastName\": \"<string,null>\",\n  \"subscriberBirthDate\": \"<string,null>\",\n  \"subscriberAddress\": \"<string,null>\",\n  \"subscriberCity\": \"<string,null>\",\n  \"subscriberState\": \"<string,null>\",\n  \"subscriberZip\": \"<string,null>\",\n  \"subscriberCountry\": \"<string,null>\",\n  \"subscriberPhone\": \"<string,null>\",\n  \"isVerified\": \"<boolean>\",\n  \"isPrimary\": \"<boolean>\",\n  \"verificationDate\": \"<string,null>\",\n  \"verifiedBy\": \"<string,null>\",\n  \"verificationNo\": \"<string,null>\",\n  \"notes\": \"<string,null>\",\n  \"insurancePhone\": \"<string,null>\",\n  \"policyEffectiveDate\": \"<string,null>\",\n  \"documents\": {\n    \"id\": \"<integer>\",\n    \"clientDocumentId\": \"<long>\",\n    \"name\": \"<string,null>\",\n    \"description\": \"<string,null>\",\n    \"fileName\": \"<string,null>\",\n    \"client\": {\n      \"id\": \"<integer>\",\n      \"route\": \"<string,null>\"\n    },\n    \"status\": \"<string,null>\",\n    \"type\": \"<string,null>\",\n    \"typeId\": \"<integer,null-int64>\",\n    \"uploadDate\": \"<string,null-date-time>\",\n    \"url\": {\n      \"fileName\": \"<string,null>\"\n    },\n    \"tableId\": \"<integer,null-int64>\",\n    \"tableName\": \"<string,null>\",\n    \"path\": \"<string,null>\",\n    \"documentTypeId\": \"<integer>\",\n    \"uploadedDocuments\": \"<array,null>\"\n  },\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  },\n  \"documentBytes\": \"<string,null-byte>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "bddb18b2-cc27-4f78-80a7-b31df0482401",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "prospects",
+                    "insurances",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<long>",
+                      "key": "id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"insuranceName\": \"<string,null>\",\n  \"relationship\": \"<string,null>\",\n  \"priority\": \"<string,null>\",\n  \"plan\": \"<string,null>\",\n  \"policyId\": \"<string,null>\",\n  \"groupNumber\": \"<string,null>\",\n  \"coPay\": \"<string,null>\",\n  \"subscriberName\": \"<string,null>\",\n  \"subscriberFirstName\": \"<string,null>\",\n  \"subscriberLastName\": \"<string,null>\",\n  \"subscriberBirthDate\": \"<string,null>\",\n  \"subscriberAddress\": \"<string,null>\",\n  \"subscriberCity\": \"<string,null>\",\n  \"subscriberState\": \"<string,null>\",\n  \"subscriberZip\": \"<string,null>\",\n  \"subscriberCountry\": \"<string,null>\",\n  \"subscriberPhone\": \"<string,null>\",\n  \"isVerified\": \"<boolean>\",\n  \"isPrimary\": \"<boolean>\",\n  \"verificationDate\": \"<string,null>\",\n  \"verifiedBy\": \"<string,null>\",\n  \"verificationNo\": \"<string,null>\",\n  \"notes\": \"<string,null>\",\n  \"insurancePhone\": \"<string,null>\",\n  \"policyEffectiveDate\": \"<string,null>\",\n  \"documents\": {\n    \"id\": \"<integer>\",\n    \"clientDocumentId\": \"<long>\",\n    \"name\": \"<string,null>\",\n    \"description\": \"<string,null>\",\n    \"fileName\": \"<string,null>\",\n    \"client\": {\n      \"id\": \"<integer>\",\n      \"route\": \"<string,null>\"\n    },\n    \"status\": \"<string,null>\",\n    \"type\": \"<string,null>\",\n    \"typeId\": \"<integer,null-int64>\",\n    \"uploadDate\": \"<string,null-date-time>\",\n    \"url\": {\n      \"fileName\": \"<string,null>\"\n    },\n    \"tableId\": \"<integer,null-int64>\",\n    \"tableName\": \"<string,null>\",\n    \"path\": \"<string,null>\",\n    \"documentTypeId\": \"<integer>\",\n    \"uploadedDocuments\": \"<array,null>\"\n  },\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  },\n  \"documentBytes\": \"<string,null-byte>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "{\n  \"insuranceName\": \"<string,null>\",\n  \"relationship\": \"<string,null>\",\n  \"priority\": \"<string,null>\",\n  \"plan\": \"<string,null>\",\n  \"policyId\": \"<string,null>\",\n  \"groupNumber\": \"<string,null>\",\n  \"coPay\": \"<string,null>\",\n  \"subscriberName\": \"<string,null>\",\n  \"subscriberFirstName\": \"<string,null>\",\n  \"subscriberLastName\": \"<string,null>\",\n  \"subscriberBirthDate\": \"<string,null>\",\n  \"subscriberAddress\": \"<string,null>\",\n  \"subscriberCity\": \"<string,null>\",\n  \"subscriberState\": \"<string,null>\",\n  \"subscriberZip\": \"<string,null>\",\n  \"subscriberCountry\": \"<string,null>\",\n  \"subscriberPhone\": \"<string,null>\",\n  \"isVerified\": \"<boolean>\",\n  \"isPrimary\": \"<boolean>\",\n  \"verificationDate\": \"<string,null>\",\n  \"verifiedBy\": \"<string,null>\",\n  \"verificationNo\": \"<string,null>\",\n  \"notes\": \"<string,null>\",\n  \"insurancePhone\": \"<string,null>\",\n  \"policyEffectiveDate\": \"<string,null>\",\n  \"documents\": {\n    \"id\": \"<integer>\",\n    \"href\": \"string\",\n    \"clientDocumentId\": \"<long>\",\n    \"name\": \"<string,null>\",\n    \"description\": \"<string,null>\",\n    \"fileName\": \"<string,null>\",\n    \"client\": {\n      \"id\": \"<integer>\",\n      \"route\": \"<string,null>\"\n    },\n    \"status\": \"<string,null>\",\n    \"type\": \"<string,null>\",\n    \"typeId\": \"<integer,null-int64>\",\n    \"uploadDate\": \"<string,null-date-time>\",\n    \"url\": {\n      \"fileName\": \"<string,null>\",\n      \"host\": null,\n      \"path\": null\n    },\n    \"tableId\": \"<integer,null-int64>\",\n    \"tableName\": \"<string,null>\",\n    \"path\": \"<string,null>\",\n    \"documentTypeId\": \"<integer>\",\n    \"uploadedDocuments\": \"<array,null>\"\n  },\n  \"externalId\": {\n    \"externalId\": \"<string,null>\",\n    \"externalIdType\": \"<string,null>\",\n    \"serviceIdentifier\": \"<string,null>\",\n    \"serviceId\": \"<integer,null-int32>\"\n  },\n  \"documentBytes\": \"<string,null-byte>\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "682fe750-66ec-4f29-b765-53e2a8afbe22",
+          "name": "/prospects/import",
+          "request": {
+            "name": "/prospects/import",
+            "description": {},
+            "url": {
+              "path": [
+                "prospects",
+                "import"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"prospect\": {\n      \"id\": \"<integer>\",\n      \"name\": {\n        \"first\": \"<string,null>\",\n        \"last\": \"<string,null>\",\n        \"middle\": \"<string,null>\",\n        \"isLegalName\": \"<boolean,null>\",\n        \"former\": \"<string,null>\",\n        \"prefix\": \"<string,null>\",\n        \"preferred\": \"<string,null>\"\n      },\n      \"gender\": \"<string,null>\",\n      \"primaryLanguage\": \"<string,null>\",\n      \"ssn\": \"<string,null>\",\n      \"dateOfBirth\": \"<string,null-date-time>\",\n      \"address\": {\n        \"line1\": \"<string,null>\",\n        \"line2\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"stateAbbr\": \"<string,null>\",\n        \"country\": \"<string,null>\",\n        \"zipCode\": \"<string,null>\"\n      },\n      \"phone\": {\n        \"home\": \"<string,null>\",\n        \"office\": \"<string,null>\",\n        \"other\": \"<string,null>\",\n        \"number\": \"<string,null>\",\n        \"fax\": \"<string,null>\"\n      },\n      \"email\": \"<string,null>\",\n      \"contact\": {\n        \"firstName\": \"<string,null>\",\n        \"lastName\": \"<string,null>\",\n        \"name\": \"<string,null>\",\n        \"phone\": \"<string,null>\",\n        \"relationship\": \"<string,null>\",\n        \"email\": \"<string,null>\",\n        \"isPrimary\": \"<boolean>\",\n        \"isEmergencyContact\": \"<boolean>\"\n      },\n      \"facilityName\": \"<string,null>\",\n      \"status\": \"<string,null>\",\n      \"selfStatus\": \"<string,null>\",\n      \"mrn\": \"<string,null>\",\n      \"admissionDate\": \"<string,null>\",\n      \"firstContactDate\": \"<string,null-date-time>\",\n      \"profileImage\": {\n        \"fileName\": \"<string,null>\"\n      },\n      \"referralCompanyId\": \"<integer,null-int32>\",\n      \"referralContactId\": \"<integer,null-int32>\",\n      \"referralCompanyName\": \"<string,null>\",\n      \"referralContactName\": \"<string,null>\",\n      \"luin\": \"<string,null-uuid>\",\n      \"externalId\": {\n        \"externalId\": \"<string,null>\",\n        \"externalIdType\": \"<string,null>\",\n        \"serviceIdentifier\": \"<string,null>\",\n        \"serviceId\": \"<integer,null-int32>\"\n      }\n    },\n    \"insurance\": \"<array,null>\",\n    \"documents\": {\n      \"id\": \"<integer>\",\n      \"clientDocumentId\": \"<long>\",\n      \"name\": \"<string,null>\",\n      \"description\": \"<string,null>\",\n      \"fileName\": \"<string,null>\",\n      \"client\": {\n        \"id\": \"<integer>\",\n        \"route\": \"<string,null>\"\n      },\n      \"status\": \"<string,null>\",\n      \"type\": \"<string,null>\",\n      \"typeId\": \"<integer,null-int64>\",\n      \"uploadDate\": \"<string,null-date-time>\",\n      \"url\": {\n        \"fileName\": \"<string,null>\"\n      },\n      \"tableId\": \"<integer,null-int64>\",\n      \"tableName\": \"<string,null>\",\n      \"path\": \"<string,null>\",\n      \"documentTypeId\": \"<integer>\",\n      \"uploadedDocuments\": \"<array,null>\"\n    },\n    \"admissionScreening\": {\n      \"isCurrentlyEmployed\": \"<boolean,null>\",\n      \"isJobAtRisk\": \"<boolean,null>\",\n      \"seekingTreatmentReason\": \"<string,null>\",\n      \"willingTreatment\": \"<string,null>\",\n      \"isPreviouslyDiagnosed\": \"<boolean,null>\",\n      \"hasHistoryOfChronicPain\": \"<boolean,null>\",\n      \"painLevel\": \"<integer>\",\n      \"assesmentByNursingStaff\": \"<string,null>\",\n      \"isHistoryofAddictions\": \"<boolean,null>\",\n      \"medicalHistory\": \"<string,null>\",\n      \"outstandingIssues\": \"<string,null>\",\n      \"isPregnant\": \"<boolean,null>\",\n      \"hasPossibilityOfPregnancy\": \"<boolean,null>\",\n      \"allergies\": \"<string,null>\",\n      \"hasWorkSchoolProblem\": \"<boolean,null>\",\n      \"hasFamilyFunctioning\": \"<boolean,null>\",\n      \"hasPersonalityChanges\": \"<boolean,null>\",\n      \"doStaysAllNight\": \"<boolean,null>\",\n      \"impulseControl\": \"<boolean,null>\",\n      \"personalityChanges\": \"<boolean,null>\",\n      \"isolating\": \"<boolean,null>\",\n      \"previousTreatment\": \"<boolean,null>\",\n      \"sadOrAngryOften\": \"<boolean,null>\",\n      \"lackOfHygiene\": \"<boolean,null>\",\n      \"violentOutbursts\": \"<boolean,null>\",\n      \"explosiveOutbursts\": \"<boolean,null>\",\n      \"inabilityToThinkClearly\": \"<boolean,null>\",\n      \"severeMoodSwings\": \"<boolean,null>\",\n      \"moneyManaging\": \"<boolean,null>\",\n      \"sexualOffense\": \"<boolean,null>\",\n      \"historyOfViolence\": \"<boolean,null>\",\n      \"voilenceHistory\": \"<string,null>\",\n      \"historyOfSeizures\": \"<boolean,null>\",\n      \"historyOfChronicPain\": \"<boolean,null>\",\n      \"isCurrentSuicidalIdeations\": \"<boolean,null>\",\n      \"currentSuicidalIdeations\": \"<string,null>\",\n      \"isCurrentHomicidalIdeations\": \"<boolean,null>\",\n      \"currentHomicidalIdeations\": \"<string,null>\",\n      \"patientHaveMeans\": \"<boolean,null>\",\n      \"suicidalAttempts\": \"<boolean,null>\",\n      \"noOfSuicidalAttempts\": \"<string,null>\",\n      \"historyOfSuicidal\": \"<string,null>\",\n      \"historyOfTrauma\": \"<string,null>\",\n      \"haveLegalHistory\": \"<boolean,null>\",\n      \"beenArrested\": \"<boolean,null>\",\n      \"currentlyCharged\": \"<boolean,null>\",\n      \"pendingCourtDecision\": \"<boolean,null>\",\n      \"notes\": \"<string,null>\",\n      \"dateOfHearing\": \"<string,null-date-time>\",\n      \"canLeaveState\": \"<boolean,null>\",\n      \"afterDischargePlan\": \"<string,null>\",\n      \"additionalNotes\": \"<string,null>\",\n      \"means\": \"<string,null>\",\n      \"differentAboutTreatment\": \"<string,null>\",\n      \"manageSelf\": \"<boolean,null>\",\n      \"eatingDisorderHistory\": \"<boolean,null>\",\n      \"isPhysicalOffense\": \"<boolean>\",\n      \"historyofAddictionDesc\": \"<string,null>\",\n      \"needAssistanceWithFMLA\": \"<boolean>\",\n      \"painNote\": \"<string,null>\"\n    },\n    \"faceToFace\": {\n      \"levelOfCare\": \"<string,null>\",\n      \"treatments\": \"<string,null>\",\n      \"referralCompanyName\": \"<string,null>\",\n      \"referralContactName\": \"<string,null>\",\n      \"facility\": \"<string,null>\",\n      \"admissionDate\": \"<string,null-date-time>\",\n      \"dischargeOrTransfer\": \"<string,null>\",\n      \"leadIntakeBy\": \"<string,null>\",\n      \"firstContactDate\": \"<dateTime>\",\n      \"leadSelfStatusName\": \"<string,null>\",\n      \"status\": \"<string,null>\",\n      \"primaryClinicianName\": \"<string,null>\"\n    },\n    \"billingIntake\": {}\n  },\n  {\n    \"prospect\": {\n      \"id\": \"<integer>\",\n      \"name\": {\n        \"first\": \"<string,null>\",\n        \"last\": \"<string,null>\",\n        \"middle\": \"<string,null>\",\n        \"isLegalName\": \"<boolean,null>\",\n        \"former\": \"<string,null>\",\n        \"prefix\": \"<string,null>\",\n        \"preferred\": \"<string,null>\"\n      },\n      \"gender\": \"<string,null>\",\n      \"primaryLanguage\": \"<string,null>\",\n      \"ssn\": \"<string,null>\",\n      \"dateOfBirth\": \"<string,null-date-time>\",\n      \"address\": {\n        \"line1\": \"<string,null>\",\n        \"line2\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"stateAbbr\": \"<string,null>\",\n        \"country\": \"<string,null>\",\n        \"zipCode\": \"<string,null>\"\n      },\n      \"phone\": {\n        \"home\": \"<string,null>\",\n        \"office\": \"<string,null>\",\n        \"other\": \"<string,null>\",\n        \"number\": \"<string,null>\",\n        \"fax\": \"<string,null>\"\n      },\n      \"email\": \"<string,null>\",\n      \"contact\": {\n        \"firstName\": \"<string,null>\",\n        \"lastName\": \"<string,null>\",\n        \"name\": \"<string,null>\",\n        \"phone\": \"<string,null>\",\n        \"relationship\": \"<string,null>\",\n        \"email\": \"<string,null>\",\n        \"isPrimary\": \"<boolean>\",\n        \"isEmergencyContact\": \"<boolean>\"\n      },\n      \"facilityName\": \"<string,null>\",\n      \"status\": \"<string,null>\",\n      \"selfStatus\": \"<string,null>\",\n      \"mrn\": \"<string,null>\",\n      \"admissionDate\": \"<string,null>\",\n      \"firstContactDate\": \"<string,null-date-time>\",\n      \"profileImage\": {\n        \"fileName\": \"<string,null>\"\n      },\n      \"referralCompanyId\": \"<integer,null-int32>\",\n      \"referralContactId\": \"<integer,null-int32>\",\n      \"referralCompanyName\": \"<string,null>\",\n      \"referralContactName\": \"<string,null>\",\n      \"luin\": \"<string,null-uuid>\",\n      \"externalId\": {\n        \"externalId\": \"<string,null>\",\n        \"externalIdType\": \"<string,null>\",\n        \"serviceIdentifier\": \"<string,null>\",\n        \"serviceId\": \"<integer,null-int32>\"\n      }\n    },\n    \"insurance\": \"<array,null>\",\n    \"documents\": {\n      \"id\": \"<integer>\",\n      \"clientDocumentId\": \"<long>\",\n      \"name\": \"<string,null>\",\n      \"description\": \"<string,null>\",\n      \"fileName\": \"<string,null>\",\n      \"client\": {\n        \"id\": \"<integer>\",\n        \"route\": \"<string,null>\"\n      },\n      \"status\": \"<string,null>\",\n      \"type\": \"<string,null>\",\n      \"typeId\": \"<integer,null-int64>\",\n      \"uploadDate\": \"<string,null-date-time>\",\n      \"url\": {\n        \"fileName\": \"<string,null>\"\n      },\n      \"tableId\": \"<integer,null-int64>\",\n      \"tableName\": \"<string,null>\",\n      \"path\": \"<string,null>\",\n      \"documentTypeId\": \"<integer>\",\n      \"uploadedDocuments\": \"<array,null>\"\n    },\n    \"admissionScreening\": {\n      \"isCurrentlyEmployed\": \"<boolean,null>\",\n      \"isJobAtRisk\": \"<boolean,null>\",\n      \"seekingTreatmentReason\": \"<string,null>\",\n      \"willingTreatment\": \"<string,null>\",\n      \"isPreviouslyDiagnosed\": \"<boolean,null>\",\n      \"hasHistoryOfChronicPain\": \"<boolean,null>\",\n      \"painLevel\": \"<integer>\",\n      \"assesmentByNursingStaff\": \"<string,null>\",\n      \"isHistoryofAddictions\": \"<boolean,null>\",\n      \"medicalHistory\": \"<string,null>\",\n      \"outstandingIssues\": \"<string,null>\",\n      \"isPregnant\": \"<boolean,null>\",\n      \"hasPossibilityOfPregnancy\": \"<boolean,null>\",\n      \"allergies\": \"<string,null>\",\n      \"hasWorkSchoolProblem\": \"<boolean,null>\",\n      \"hasFamilyFunctioning\": \"<boolean,null>\",\n      \"hasPersonalityChanges\": \"<boolean,null>\",\n      \"doStaysAllNight\": \"<boolean,null>\",\n      \"impulseControl\": \"<boolean,null>\",\n      \"personalityChanges\": \"<boolean,null>\",\n      \"isolating\": \"<boolean,null>\",\n      \"previousTreatment\": \"<boolean,null>\",\n      \"sadOrAngryOften\": \"<boolean,null>\",\n      \"lackOfHygiene\": \"<boolean,null>\",\n      \"violentOutbursts\": \"<boolean,null>\",\n      \"explosiveOutbursts\": \"<boolean,null>\",\n      \"inabilityToThinkClearly\": \"<boolean,null>\",\n      \"severeMoodSwings\": \"<boolean,null>\",\n      \"moneyManaging\": \"<boolean,null>\",\n      \"sexualOffense\": \"<boolean,null>\",\n      \"historyOfViolence\": \"<boolean,null>\",\n      \"voilenceHistory\": \"<string,null>\",\n      \"historyOfSeizures\": \"<boolean,null>\",\n      \"historyOfChronicPain\": \"<boolean,null>\",\n      \"isCurrentSuicidalIdeations\": \"<boolean,null>\",\n      \"currentSuicidalIdeations\": \"<string,null>\",\n      \"isCurrentHomicidalIdeations\": \"<boolean,null>\",\n      \"currentHomicidalIdeations\": \"<string,null>\",\n      \"patientHaveMeans\": \"<boolean,null>\",\n      \"suicidalAttempts\": \"<boolean,null>\",\n      \"noOfSuicidalAttempts\": \"<string,null>\",\n      \"historyOfSuicidal\": \"<string,null>\",\n      \"historyOfTrauma\": \"<string,null>\",\n      \"haveLegalHistory\": \"<boolean,null>\",\n      \"beenArrested\": \"<boolean,null>\",\n      \"currentlyCharged\": \"<boolean,null>\",\n      \"pendingCourtDecision\": \"<boolean,null>\",\n      \"notes\": \"<string,null>\",\n      \"dateOfHearing\": \"<string,null-date-time>\",\n      \"canLeaveState\": \"<boolean,null>\",\n      \"afterDischargePlan\": \"<string,null>\",\n      \"additionalNotes\": \"<string,null>\",\n      \"means\": \"<string,null>\",\n      \"differentAboutTreatment\": \"<string,null>\",\n      \"manageSelf\": \"<boolean,null>\",\n      \"eatingDisorderHistory\": \"<boolean,null>\",\n      \"isPhysicalOffense\": \"<boolean>\",\n      \"historyofAddictionDesc\": \"<string,null>\",\n      \"needAssistanceWithFMLA\": \"<boolean>\",\n      \"painNote\": \"<string,null>\"\n    },\n    \"faceToFace\": {\n      \"levelOfCare\": \"<string,null>\",\n      \"treatments\": \"<string,null>\",\n      \"referralCompanyName\": \"<string,null>\",\n      \"referralContactName\": \"<string,null>\",\n      \"facility\": \"<string,null>\",\n      \"admissionDate\": \"<string,null-date-time>\",\n      \"dischargeOrTransfer\": \"<string,null>\",\n      \"leadIntakeBy\": \"<string,null>\",\n      \"firstContactDate\": \"<dateTime>\",\n      \"leadSelfStatusName\": \"<string,null>\",\n      \"status\": \"<string,null>\",\n      \"primaryClinicianName\": \"<string,null>\"\n    },\n    \"billingIntake\": {}\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b3c217b5-c7b3-4403-af9c-2b936ec75a88",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "prospects",
+                    "import"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"prospect\": {\n      \"id\": \"<integer>\",\n      \"name\": {\n        \"first\": \"<string,null>\",\n        \"last\": \"<string,null>\",\n        \"middle\": \"<string,null>\",\n        \"isLegalName\": \"<boolean,null>\",\n        \"former\": \"<string,null>\",\n        \"prefix\": \"<string,null>\",\n        \"preferred\": \"<string,null>\"\n      },\n      \"gender\": \"<string,null>\",\n      \"primaryLanguage\": \"<string,null>\",\n      \"ssn\": \"<string,null>\",\n      \"dateOfBirth\": \"<string,null-date-time>\",\n      \"address\": {\n        \"line1\": \"<string,null>\",\n        \"line2\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"stateAbbr\": \"<string,null>\",\n        \"country\": \"<string,null>\",\n        \"zipCode\": \"<string,null>\"\n      },\n      \"phone\": {\n        \"home\": \"<string,null>\",\n        \"office\": \"<string,null>\",\n        \"other\": \"<string,null>\",\n        \"number\": \"<string,null>\",\n        \"fax\": \"<string,null>\"\n      },\n      \"email\": \"<string,null>\",\n      \"contact\": {\n        \"firstName\": \"<string,null>\",\n        \"lastName\": \"<string,null>\",\n        \"name\": \"<string,null>\",\n        \"phone\": \"<string,null>\",\n        \"relationship\": \"<string,null>\",\n        \"email\": \"<string,null>\",\n        \"isPrimary\": \"<boolean>\",\n        \"isEmergencyContact\": \"<boolean>\"\n      },\n      \"facilityName\": \"<string,null>\",\n      \"status\": \"<string,null>\",\n      \"selfStatus\": \"<string,null>\",\n      \"mrn\": \"<string,null>\",\n      \"admissionDate\": \"<string,null>\",\n      \"firstContactDate\": \"<string,null-date-time>\",\n      \"profileImage\": {\n        \"fileName\": \"<string,null>\"\n      },\n      \"referralCompanyId\": \"<integer,null-int32>\",\n      \"referralContactId\": \"<integer,null-int32>\",\n      \"referralCompanyName\": \"<string,null>\",\n      \"referralContactName\": \"<string,null>\",\n      \"luin\": \"<string,null-uuid>\",\n      \"externalId\": {\n        \"externalId\": \"<string,null>\",\n        \"externalIdType\": \"<string,null>\",\n        \"serviceIdentifier\": \"<string,null>\",\n        \"serviceId\": \"<integer,null-int32>\"\n      }\n    },\n    \"insurance\": \"<array,null>\",\n    \"documents\": {\n      \"id\": \"<integer>\",\n      \"clientDocumentId\": \"<long>\",\n      \"name\": \"<string,null>\",\n      \"description\": \"<string,null>\",\n      \"fileName\": \"<string,null>\",\n      \"client\": {\n        \"id\": \"<integer>\",\n        \"route\": \"<string,null>\"\n      },\n      \"status\": \"<string,null>\",\n      \"type\": \"<string,null>\",\n      \"typeId\": \"<integer,null-int64>\",\n      \"uploadDate\": \"<string,null-date-time>\",\n      \"url\": {\n        \"fileName\": \"<string,null>\"\n      },\n      \"tableId\": \"<integer,null-int64>\",\n      \"tableName\": \"<string,null>\",\n      \"path\": \"<string,null>\",\n      \"documentTypeId\": \"<integer>\",\n      \"uploadedDocuments\": \"<array,null>\"\n    },\n    \"admissionScreening\": {\n      \"isCurrentlyEmployed\": \"<boolean,null>\",\n      \"isJobAtRisk\": \"<boolean,null>\",\n      \"seekingTreatmentReason\": \"<string,null>\",\n      \"willingTreatment\": \"<string,null>\",\n      \"isPreviouslyDiagnosed\": \"<boolean,null>\",\n      \"hasHistoryOfChronicPain\": \"<boolean,null>\",\n      \"painLevel\": \"<integer>\",\n      \"assesmentByNursingStaff\": \"<string,null>\",\n      \"isHistoryofAddictions\": \"<boolean,null>\",\n      \"medicalHistory\": \"<string,null>\",\n      \"outstandingIssues\": \"<string,null>\",\n      \"isPregnant\": \"<boolean,null>\",\n      \"hasPossibilityOfPregnancy\": \"<boolean,null>\",\n      \"allergies\": \"<string,null>\",\n      \"hasWorkSchoolProblem\": \"<boolean,null>\",\n      \"hasFamilyFunctioning\": \"<boolean,null>\",\n      \"hasPersonalityChanges\": \"<boolean,null>\",\n      \"doStaysAllNight\": \"<boolean,null>\",\n      \"impulseControl\": \"<boolean,null>\",\n      \"personalityChanges\": \"<boolean,null>\",\n      \"isolating\": \"<boolean,null>\",\n      \"previousTreatment\": \"<boolean,null>\",\n      \"sadOrAngryOften\": \"<boolean,null>\",\n      \"lackOfHygiene\": \"<boolean,null>\",\n      \"violentOutbursts\": \"<boolean,null>\",\n      \"explosiveOutbursts\": \"<boolean,null>\",\n      \"inabilityToThinkClearly\": \"<boolean,null>\",\n      \"severeMoodSwings\": \"<boolean,null>\",\n      \"moneyManaging\": \"<boolean,null>\",\n      \"sexualOffense\": \"<boolean,null>\",\n      \"historyOfViolence\": \"<boolean,null>\",\n      \"voilenceHistory\": \"<string,null>\",\n      \"historyOfSeizures\": \"<boolean,null>\",\n      \"historyOfChronicPain\": \"<boolean,null>\",\n      \"isCurrentSuicidalIdeations\": \"<boolean,null>\",\n      \"currentSuicidalIdeations\": \"<string,null>\",\n      \"isCurrentHomicidalIdeations\": \"<boolean,null>\",\n      \"currentHomicidalIdeations\": \"<string,null>\",\n      \"patientHaveMeans\": \"<boolean,null>\",\n      \"suicidalAttempts\": \"<boolean,null>\",\n      \"noOfSuicidalAttempts\": \"<string,null>\",\n      \"historyOfSuicidal\": \"<string,null>\",\n      \"historyOfTrauma\": \"<string,null>\",\n      \"haveLegalHistory\": \"<boolean,null>\",\n      \"beenArrested\": \"<boolean,null>\",\n      \"currentlyCharged\": \"<boolean,null>\",\n      \"pendingCourtDecision\": \"<boolean,null>\",\n      \"notes\": \"<string,null>\",\n      \"dateOfHearing\": \"<string,null-date-time>\",\n      \"canLeaveState\": \"<boolean,null>\",\n      \"afterDischargePlan\": \"<string,null>\",\n      \"additionalNotes\": \"<string,null>\",\n      \"means\": \"<string,null>\",\n      \"differentAboutTreatment\": \"<string,null>\",\n      \"manageSelf\": \"<boolean,null>\",\n      \"eatingDisorderHistory\": \"<boolean,null>\",\n      \"isPhysicalOffense\": \"<boolean>\",\n      \"historyofAddictionDesc\": \"<string,null>\",\n      \"needAssistanceWithFMLA\": \"<boolean>\",\n      \"painNote\": \"<string,null>\"\n    },\n    \"faceToFace\": {\n      \"levelOfCare\": \"<string,null>\",\n      \"treatments\": \"<string,null>\",\n      \"referralCompanyName\": \"<string,null>\",\n      \"referralContactName\": \"<string,null>\",\n      \"facility\": \"<string,null>\",\n      \"admissionDate\": \"<string,null-date-time>\",\n      \"dischargeOrTransfer\": \"<string,null>\",\n      \"leadIntakeBy\": \"<string,null>\",\n      \"firstContactDate\": \"<dateTime>\",\n      \"leadSelfStatusName\": \"<string,null>\",\n      \"status\": \"<string,null>\",\n      \"primaryClinicianName\": \"<string,null>\"\n    },\n    \"billingIntake\": {}\n  },\n  {\n    \"prospect\": {\n      \"id\": \"<integer>\",\n      \"name\": {\n        \"first\": \"<string,null>\",\n        \"last\": \"<string,null>\",\n        \"middle\": \"<string,null>\",\n        \"isLegalName\": \"<boolean,null>\",\n        \"former\": \"<string,null>\",\n        \"prefix\": \"<string,null>\",\n        \"preferred\": \"<string,null>\"\n      },\n      \"gender\": \"<string,null>\",\n      \"primaryLanguage\": \"<string,null>\",\n      \"ssn\": \"<string,null>\",\n      \"dateOfBirth\": \"<string,null-date-time>\",\n      \"address\": {\n        \"line1\": \"<string,null>\",\n        \"line2\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"stateAbbr\": \"<string,null>\",\n        \"country\": \"<string,null>\",\n        \"zipCode\": \"<string,null>\"\n      },\n      \"phone\": {\n        \"home\": \"<string,null>\",\n        \"office\": \"<string,null>\",\n        \"other\": \"<string,null>\",\n        \"number\": \"<string,null>\",\n        \"fax\": \"<string,null>\"\n      },\n      \"email\": \"<string,null>\",\n      \"contact\": {\n        \"firstName\": \"<string,null>\",\n        \"lastName\": \"<string,null>\",\n        \"name\": \"<string,null>\",\n        \"phone\": \"<string,null>\",\n        \"relationship\": \"<string,null>\",\n        \"email\": \"<string,null>\",\n        \"isPrimary\": \"<boolean>\",\n        \"isEmergencyContact\": \"<boolean>\"\n      },\n      \"facilityName\": \"<string,null>\",\n      \"status\": \"<string,null>\",\n      \"selfStatus\": \"<string,null>\",\n      \"mrn\": \"<string,null>\",\n      \"admissionDate\": \"<string,null>\",\n      \"firstContactDate\": \"<string,null-date-time>\",\n      \"profileImage\": {\n        \"fileName\": \"<string,null>\"\n      },\n      \"referralCompanyId\": \"<integer,null-int32>\",\n      \"referralContactId\": \"<integer,null-int32>\",\n      \"referralCompanyName\": \"<string,null>\",\n      \"referralContactName\": \"<string,null>\",\n      \"luin\": \"<string,null-uuid>\",\n      \"externalId\": {\n        \"externalId\": \"<string,null>\",\n        \"externalIdType\": \"<string,null>\",\n        \"serviceIdentifier\": \"<string,null>\",\n        \"serviceId\": \"<integer,null-int32>\"\n      }\n    },\n    \"insurance\": \"<array,null>\",\n    \"documents\": {\n      \"id\": \"<integer>\",\n      \"clientDocumentId\": \"<long>\",\n      \"name\": \"<string,null>\",\n      \"description\": \"<string,null>\",\n      \"fileName\": \"<string,null>\",\n      \"client\": {\n        \"id\": \"<integer>\",\n        \"route\": \"<string,null>\"\n      },\n      \"status\": \"<string,null>\",\n      \"type\": \"<string,null>\",\n      \"typeId\": \"<integer,null-int64>\",\n      \"uploadDate\": \"<string,null-date-time>\",\n      \"url\": {\n        \"fileName\": \"<string,null>\"\n      },\n      \"tableId\": \"<integer,null-int64>\",\n      \"tableName\": \"<string,null>\",\n      \"path\": \"<string,null>\",\n      \"documentTypeId\": \"<integer>\",\n      \"uploadedDocuments\": \"<array,null>\"\n    },\n    \"admissionScreening\": {\n      \"isCurrentlyEmployed\": \"<boolean,null>\",\n      \"isJobAtRisk\": \"<boolean,null>\",\n      \"seekingTreatmentReason\": \"<string,null>\",\n      \"willingTreatment\": \"<string,null>\",\n      \"isPreviouslyDiagnosed\": \"<boolean,null>\",\n      \"hasHistoryOfChronicPain\": \"<boolean,null>\",\n      \"painLevel\": \"<integer>\",\n      \"assesmentByNursingStaff\": \"<string,null>\",\n      \"isHistoryofAddictions\": \"<boolean,null>\",\n      \"medicalHistory\": \"<string,null>\",\n      \"outstandingIssues\": \"<string,null>\",\n      \"isPregnant\": \"<boolean,null>\",\n      \"hasPossibilityOfPregnancy\": \"<boolean,null>\",\n      \"allergies\": \"<string,null>\",\n      \"hasWorkSchoolProblem\": \"<boolean,null>\",\n      \"hasFamilyFunctioning\": \"<boolean,null>\",\n      \"hasPersonalityChanges\": \"<boolean,null>\",\n      \"doStaysAllNight\": \"<boolean,null>\",\n      \"impulseControl\": \"<boolean,null>\",\n      \"personalityChanges\": \"<boolean,null>\",\n      \"isolating\": \"<boolean,null>\",\n      \"previousTreatment\": \"<boolean,null>\",\n      \"sadOrAngryOften\": \"<boolean,null>\",\n      \"lackOfHygiene\": \"<boolean,null>\",\n      \"violentOutbursts\": \"<boolean,null>\",\n      \"explosiveOutbursts\": \"<boolean,null>\",\n      \"inabilityToThinkClearly\": \"<boolean,null>\",\n      \"severeMoodSwings\": \"<boolean,null>\",\n      \"moneyManaging\": \"<boolean,null>\",\n      \"sexualOffense\": \"<boolean,null>\",\n      \"historyOfViolence\": \"<boolean,null>\",\n      \"voilenceHistory\": \"<string,null>\",\n      \"historyOfSeizures\": \"<boolean,null>\",\n      \"historyOfChronicPain\": \"<boolean,null>\",\n      \"isCurrentSuicidalIdeations\": \"<boolean,null>\",\n      \"currentSuicidalIdeations\": \"<string,null>\",\n      \"isCurrentHomicidalIdeations\": \"<boolean,null>\",\n      \"currentHomicidalIdeations\": \"<string,null>\",\n      \"patientHaveMeans\": \"<boolean,null>\",\n      \"suicidalAttempts\": \"<boolean,null>\",\n      \"noOfSuicidalAttempts\": \"<string,null>\",\n      \"historyOfSuicidal\": \"<string,null>\",\n      \"historyOfTrauma\": \"<string,null>\",\n      \"haveLegalHistory\": \"<boolean,null>\",\n      \"beenArrested\": \"<boolean,null>\",\n      \"currentlyCharged\": \"<boolean,null>\",\n      \"pendingCourtDecision\": \"<boolean,null>\",\n      \"notes\": \"<string,null>\",\n      \"dateOfHearing\": \"<string,null-date-time>\",\n      \"canLeaveState\": \"<boolean,null>\",\n      \"afterDischargePlan\": \"<string,null>\",\n      \"additionalNotes\": \"<string,null>\",\n      \"means\": \"<string,null>\",\n      \"differentAboutTreatment\": \"<string,null>\",\n      \"manageSelf\": \"<boolean,null>\",\n      \"eatingDisorderHistory\": \"<boolean,null>\",\n      \"isPhysicalOffense\": \"<boolean>\",\n      \"historyofAddictionDesc\": \"<string,null>\",\n      \"needAssistanceWithFMLA\": \"<boolean>\",\n      \"painNote\": \"<string,null>\"\n    },\n    \"faceToFace\": {\n      \"levelOfCare\": \"<string,null>\",\n      \"treatments\": \"<string,null>\",\n      \"referralCompanyName\": \"<string,null>\",\n      \"referralContactName\": \"<string,null>\",\n      \"facility\": \"<string,null>\",\n      \"admissionDate\": \"<string,null-date-time>\",\n      \"dischargeOrTransfer\": \"<string,null>\",\n      \"leadIntakeBy\": \"<string,null>\",\n      \"firstContactDate\": \"<dateTime>\",\n      \"leadSelfStatusName\": \"<string,null>\",\n      \"status\": \"<string,null>\",\n      \"primaryClinicianName\": \"<string,null>\"\n    },\n    \"billingIntake\": {}\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"prospectId\": 2350,\n    \"bulkProspect\": {\n      \"insurance\": [\n        \"\",\n        \"\"\n      ],\n      \"documents\": [\n        3652,\n        8886\n      ],\n      \"admissionScreening\": false,\n      \"faceToFace\": false,\n      \"billingIntake\": false\n    },\n    \"errors\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  {\n    \"prospectId\": 6977,\n    \"bulkProspect\": {\n      \"insurance\": null,\n      \"documents\": [\n        3002,\n        5575\n      ],\n      \"admissionScreening\": false,\n      \"faceToFace\": false,\n      \"billingIntake\": false\n    },\n    \"errors\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "18f1f7e5-f673-41e0-b88f-005ac9fc6d08",
+          "name": "/v{{version}}/prospects/import",
+          "request": {
+            "name": "/v{{version}}/prospects/import",
+            "description": {},
+            "url": {
+              "path": [
+                "v{{version}}",
+                "prospects",
+                "import"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "api-version",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Version",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json-patch+json; ver=1.0"
+              },
+              {
+                "key": "Accept",
+                "value": "text/plain; ver=1.0"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "[\n  {\n    \"prospect\": {\n      \"id\": \"<integer>\",\n      \"name\": {\n        \"first\": \"<string,null>\",\n        \"last\": \"<string,null>\",\n        \"middle\": \"<string,null>\",\n        \"isLegalName\": \"<boolean,null>\",\n        \"former\": \"<string,null>\",\n        \"prefix\": \"<string,null>\",\n        \"preferred\": \"<string,null>\"\n      },\n      \"gender\": \"<string,null>\",\n      \"primaryLanguage\": \"<string,null>\",\n      \"ssn\": \"<string,null>\",\n      \"dateOfBirth\": \"<string,null-date-time>\",\n      \"address\": {\n        \"line1\": \"<string,null>\",\n        \"line2\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"stateAbbr\": \"<string,null>\",\n        \"country\": \"<string,null>\",\n        \"zipCode\": \"<string,null>\"\n      },\n      \"phone\": {\n        \"home\": \"<string,null>\",\n        \"office\": \"<string,null>\",\n        \"other\": \"<string,null>\",\n        \"number\": \"<string,null>\",\n        \"fax\": \"<string,null>\"\n      },\n      \"email\": \"<string,null>\",\n      \"contact\": {\n        \"firstName\": \"<string,null>\",\n        \"lastName\": \"<string,null>\",\n        \"name\": \"<string,null>\",\n        \"phone\": \"<string,null>\",\n        \"relationship\": \"<string,null>\",\n        \"email\": \"<string,null>\",\n        \"isPrimary\": \"<boolean>\",\n        \"isEmergencyContact\": \"<boolean>\"\n      },\n      \"facilityName\": \"<string,null>\",\n      \"status\": \"<string,null>\",\n      \"selfStatus\": \"<string,null>\",\n      \"mrn\": \"<string,null>\",\n      \"admissionDate\": \"<string,null>\",\n      \"firstContactDate\": \"<string,null-date-time>\",\n      \"profileImage\": {\n        \"fileName\": \"<string,null>\"\n      },\n      \"referralCompanyId\": \"<integer,null-int32>\",\n      \"referralContactId\": \"<integer,null-int32>\",\n      \"referralCompanyName\": \"<string,null>\",\n      \"referralContactName\": \"<string,null>\",\n      \"luin\": \"<string,null-uuid>\",\n      \"externalId\": {\n        \"externalId\": \"<string,null>\",\n        \"externalIdType\": \"<string,null>\",\n        \"serviceIdentifier\": \"<string,null>\",\n        \"serviceId\": \"<integer,null-int32>\"\n      }\n    },\n    \"insurance\": \"<array,null>\",\n    \"documents\": {\n      \"id\": \"<integer>\",\n      \"clientDocumentId\": \"<long>\",\n      \"name\": \"<string,null>\",\n      \"description\": \"<string,null>\",\n      \"fileName\": \"<string,null>\",\n      \"client\": {\n        \"id\": \"<integer>\",\n        \"route\": \"<string,null>\"\n      },\n      \"status\": \"<string,null>\",\n      \"type\": \"<string,null>\",\n      \"typeId\": \"<integer,null-int64>\",\n      \"uploadDate\": \"<string,null-date-time>\",\n      \"url\": {\n        \"fileName\": \"<string,null>\"\n      },\n      \"tableId\": \"<integer,null-int64>\",\n      \"tableName\": \"<string,null>\",\n      \"path\": \"<string,null>\",\n      \"documentTypeId\": \"<integer>\",\n      \"uploadedDocuments\": \"<array,null>\"\n    },\n    \"admissionScreening\": {\n      \"isCurrentlyEmployed\": \"<boolean,null>\",\n      \"isJobAtRisk\": \"<boolean,null>\",\n      \"seekingTreatmentReason\": \"<string,null>\",\n      \"willingTreatment\": \"<string,null>\",\n      \"isPreviouslyDiagnosed\": \"<boolean,null>\",\n      \"hasHistoryOfChronicPain\": \"<boolean,null>\",\n      \"painLevel\": \"<integer>\",\n      \"assesmentByNursingStaff\": \"<string,null>\",\n      \"isHistoryofAddictions\": \"<boolean,null>\",\n      \"medicalHistory\": \"<string,null>\",\n      \"outstandingIssues\": \"<string,null>\",\n      \"isPregnant\": \"<boolean,null>\",\n      \"hasPossibilityOfPregnancy\": \"<boolean,null>\",\n      \"allergies\": \"<string,null>\",\n      \"hasWorkSchoolProblem\": \"<boolean,null>\",\n      \"hasFamilyFunctioning\": \"<boolean,null>\",\n      \"hasPersonalityChanges\": \"<boolean,null>\",\n      \"doStaysAllNight\": \"<boolean,null>\",\n      \"impulseControl\": \"<boolean,null>\",\n      \"personalityChanges\": \"<boolean,null>\",\n      \"isolating\": \"<boolean,null>\",\n      \"previousTreatment\": \"<boolean,null>\",\n      \"sadOrAngryOften\": \"<boolean,null>\",\n      \"lackOfHygiene\": \"<boolean,null>\",\n      \"violentOutbursts\": \"<boolean,null>\",\n      \"explosiveOutbursts\": \"<boolean,null>\",\n      \"inabilityToThinkClearly\": \"<boolean,null>\",\n      \"severeMoodSwings\": \"<boolean,null>\",\n      \"moneyManaging\": \"<boolean,null>\",\n      \"sexualOffense\": \"<boolean,null>\",\n      \"historyOfViolence\": \"<boolean,null>\",\n      \"voilenceHistory\": \"<string,null>\",\n      \"historyOfSeizures\": \"<boolean,null>\",\n      \"historyOfChronicPain\": \"<boolean,null>\",\n      \"isCurrentSuicidalIdeations\": \"<boolean,null>\",\n      \"currentSuicidalIdeations\": \"<string,null>\",\n      \"isCurrentHomicidalIdeations\": \"<boolean,null>\",\n      \"currentHomicidalIdeations\": \"<string,null>\",\n      \"patientHaveMeans\": \"<boolean,null>\",\n      \"suicidalAttempts\": \"<boolean,null>\",\n      \"noOfSuicidalAttempts\": \"<string,null>\",\n      \"historyOfSuicidal\": \"<string,null>\",\n      \"historyOfTrauma\": \"<string,null>\",\n      \"haveLegalHistory\": \"<boolean,null>\",\n      \"beenArrested\": \"<boolean,null>\",\n      \"currentlyCharged\": \"<boolean,null>\",\n      \"pendingCourtDecision\": \"<boolean,null>\",\n      \"notes\": \"<string,null>\",\n      \"dateOfHearing\": \"<string,null-date-time>\",\n      \"canLeaveState\": \"<boolean,null>\",\n      \"afterDischargePlan\": \"<string,null>\",\n      \"additionalNotes\": \"<string,null>\",\n      \"means\": \"<string,null>\",\n      \"differentAboutTreatment\": \"<string,null>\",\n      \"manageSelf\": \"<boolean,null>\",\n      \"eatingDisorderHistory\": \"<boolean,null>\",\n      \"isPhysicalOffense\": \"<boolean>\",\n      \"historyofAddictionDesc\": \"<string,null>\",\n      \"needAssistanceWithFMLA\": \"<boolean>\",\n      \"painNote\": \"<string,null>\"\n    },\n    \"faceToFace\": {\n      \"levelOfCare\": \"<string,null>\",\n      \"treatments\": \"<string,null>\",\n      \"referralCompanyName\": \"<string,null>\",\n      \"referralContactName\": \"<string,null>\",\n      \"facility\": \"<string,null>\",\n      \"admissionDate\": \"<string,null-date-time>\",\n      \"dischargeOrTransfer\": \"<string,null>\",\n      \"leadIntakeBy\": \"<string,null>\",\n      \"firstContactDate\": \"<dateTime>\",\n      \"leadSelfStatusName\": \"<string,null>\",\n      \"status\": \"<string,null>\",\n      \"primaryClinicianName\": \"<string,null>\"\n    },\n    \"billingIntake\": {}\n  },\n  {\n    \"prospect\": {\n      \"id\": \"<integer>\",\n      \"name\": {\n        \"first\": \"<string,null>\",\n        \"last\": \"<string,null>\",\n        \"middle\": \"<string,null>\",\n        \"isLegalName\": \"<boolean,null>\",\n        \"former\": \"<string,null>\",\n        \"prefix\": \"<string,null>\",\n        \"preferred\": \"<string,null>\"\n      },\n      \"gender\": \"<string,null>\",\n      \"primaryLanguage\": \"<string,null>\",\n      \"ssn\": \"<string,null>\",\n      \"dateOfBirth\": \"<string,null-date-time>\",\n      \"address\": {\n        \"line1\": \"<string,null>\",\n        \"line2\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"stateAbbr\": \"<string,null>\",\n        \"country\": \"<string,null>\",\n        \"zipCode\": \"<string,null>\"\n      },\n      \"phone\": {\n        \"home\": \"<string,null>\",\n        \"office\": \"<string,null>\",\n        \"other\": \"<string,null>\",\n        \"number\": \"<string,null>\",\n        \"fax\": \"<string,null>\"\n      },\n      \"email\": \"<string,null>\",\n      \"contact\": {\n        \"firstName\": \"<string,null>\",\n        \"lastName\": \"<string,null>\",\n        \"name\": \"<string,null>\",\n        \"phone\": \"<string,null>\",\n        \"relationship\": \"<string,null>\",\n        \"email\": \"<string,null>\",\n        \"isPrimary\": \"<boolean>\",\n        \"isEmergencyContact\": \"<boolean>\"\n      },\n      \"facilityName\": \"<string,null>\",\n      \"status\": \"<string,null>\",\n      \"selfStatus\": \"<string,null>\",\n      \"mrn\": \"<string,null>\",\n      \"admissionDate\": \"<string,null>\",\n      \"firstContactDate\": \"<string,null-date-time>\",\n      \"profileImage\": {\n        \"fileName\": \"<string,null>\"\n      },\n      \"referralCompanyId\": \"<integer,null-int32>\",\n      \"referralContactId\": \"<integer,null-int32>\",\n      \"referralCompanyName\": \"<string,null>\",\n      \"referralContactName\": \"<string,null>\",\n      \"luin\": \"<string,null-uuid>\",\n      \"externalId\": {\n        \"externalId\": \"<string,null>\",\n        \"externalIdType\": \"<string,null>\",\n        \"serviceIdentifier\": \"<string,null>\",\n        \"serviceId\": \"<integer,null-int32>\"\n      }\n    },\n    \"insurance\": \"<array,null>\",\n    \"documents\": {\n      \"id\": \"<integer>\",\n      \"clientDocumentId\": \"<long>\",\n      \"name\": \"<string,null>\",\n      \"description\": \"<string,null>\",\n      \"fileName\": \"<string,null>\",\n      \"client\": {\n        \"id\": \"<integer>\",\n        \"route\": \"<string,null>\"\n      },\n      \"status\": \"<string,null>\",\n      \"type\": \"<string,null>\",\n      \"typeId\": \"<integer,null-int64>\",\n      \"uploadDate\": \"<string,null-date-time>\",\n      \"url\": {\n        \"fileName\": \"<string,null>\"\n      },\n      \"tableId\": \"<integer,null-int64>\",\n      \"tableName\": \"<string,null>\",\n      \"path\": \"<string,null>\",\n      \"documentTypeId\": \"<integer>\",\n      \"uploadedDocuments\": \"<array,null>\"\n    },\n    \"admissionScreening\": {\n      \"isCurrentlyEmployed\": \"<boolean,null>\",\n      \"isJobAtRisk\": \"<boolean,null>\",\n      \"seekingTreatmentReason\": \"<string,null>\",\n      \"willingTreatment\": \"<string,null>\",\n      \"isPreviouslyDiagnosed\": \"<boolean,null>\",\n      \"hasHistoryOfChronicPain\": \"<boolean,null>\",\n      \"painLevel\": \"<integer>\",\n      \"assesmentByNursingStaff\": \"<string,null>\",\n      \"isHistoryofAddictions\": \"<boolean,null>\",\n      \"medicalHistory\": \"<string,null>\",\n      \"outstandingIssues\": \"<string,null>\",\n      \"isPregnant\": \"<boolean,null>\",\n      \"hasPossibilityOfPregnancy\": \"<boolean,null>\",\n      \"allergies\": \"<string,null>\",\n      \"hasWorkSchoolProblem\": \"<boolean,null>\",\n      \"hasFamilyFunctioning\": \"<boolean,null>\",\n      \"hasPersonalityChanges\": \"<boolean,null>\",\n      \"doStaysAllNight\": \"<boolean,null>\",\n      \"impulseControl\": \"<boolean,null>\",\n      \"personalityChanges\": \"<boolean,null>\",\n      \"isolating\": \"<boolean,null>\",\n      \"previousTreatment\": \"<boolean,null>\",\n      \"sadOrAngryOften\": \"<boolean,null>\",\n      \"lackOfHygiene\": \"<boolean,null>\",\n      \"violentOutbursts\": \"<boolean,null>\",\n      \"explosiveOutbursts\": \"<boolean,null>\",\n      \"inabilityToThinkClearly\": \"<boolean,null>\",\n      \"severeMoodSwings\": \"<boolean,null>\",\n      \"moneyManaging\": \"<boolean,null>\",\n      \"sexualOffense\": \"<boolean,null>\",\n      \"historyOfViolence\": \"<boolean,null>\",\n      \"voilenceHistory\": \"<string,null>\",\n      \"historyOfSeizures\": \"<boolean,null>\",\n      \"historyOfChronicPain\": \"<boolean,null>\",\n      \"isCurrentSuicidalIdeations\": \"<boolean,null>\",\n      \"currentSuicidalIdeations\": \"<string,null>\",\n      \"isCurrentHomicidalIdeations\": \"<boolean,null>\",\n      \"currentHomicidalIdeations\": \"<string,null>\",\n      \"patientHaveMeans\": \"<boolean,null>\",\n      \"suicidalAttempts\": \"<boolean,null>\",\n      \"noOfSuicidalAttempts\": \"<string,null>\",\n      \"historyOfSuicidal\": \"<string,null>\",\n      \"historyOfTrauma\": \"<string,null>\",\n      \"haveLegalHistory\": \"<boolean,null>\",\n      \"beenArrested\": \"<boolean,null>\",\n      \"currentlyCharged\": \"<boolean,null>\",\n      \"pendingCourtDecision\": \"<boolean,null>\",\n      \"notes\": \"<string,null>\",\n      \"dateOfHearing\": \"<string,null-date-time>\",\n      \"canLeaveState\": \"<boolean,null>\",\n      \"afterDischargePlan\": \"<string,null>\",\n      \"additionalNotes\": \"<string,null>\",\n      \"means\": \"<string,null>\",\n      \"differentAboutTreatment\": \"<string,null>\",\n      \"manageSelf\": \"<boolean,null>\",\n      \"eatingDisorderHistory\": \"<boolean,null>\",\n      \"isPhysicalOffense\": \"<boolean>\",\n      \"historyofAddictionDesc\": \"<string,null>\",\n      \"needAssistanceWithFMLA\": \"<boolean>\",\n      \"painNote\": \"<string,null>\"\n    },\n    \"faceToFace\": {\n      \"levelOfCare\": \"<string,null>\",\n      \"treatments\": \"<string,null>\",\n      \"referralCompanyName\": \"<string,null>\",\n      \"referralContactName\": \"<string,null>\",\n      \"facility\": \"<string,null>\",\n      \"admissionDate\": \"<string,null-date-time>\",\n      \"dischargeOrTransfer\": \"<string,null>\",\n      \"leadIntakeBy\": \"<string,null>\",\n      \"firstContactDate\": \"<dateTime>\",\n      \"leadSelfStatusName\": \"<string,null>\",\n      \"status\": \"<string,null>\",\n      \"primaryClinicianName\": \"<string,null>\"\n    },\n    \"billingIntake\": {}\n  }\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "1ab50d96-f198-4224-9c0c-23ccdbe58268",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v{{version}}",
+                    "prospects",
+                    "import"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "api-version",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Version",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/plain; ver=1.0"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\n  {\n    \"prospect\": {\n      \"id\": \"<integer>\",\n      \"name\": {\n        \"first\": \"<string,null>\",\n        \"last\": \"<string,null>\",\n        \"middle\": \"<string,null>\",\n        \"isLegalName\": \"<boolean,null>\",\n        \"former\": \"<string,null>\",\n        \"prefix\": \"<string,null>\",\n        \"preferred\": \"<string,null>\"\n      },\n      \"gender\": \"<string,null>\",\n      \"primaryLanguage\": \"<string,null>\",\n      \"ssn\": \"<string,null>\",\n      \"dateOfBirth\": \"<string,null-date-time>\",\n      \"address\": {\n        \"line1\": \"<string,null>\",\n        \"line2\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"stateAbbr\": \"<string,null>\",\n        \"country\": \"<string,null>\",\n        \"zipCode\": \"<string,null>\"\n      },\n      \"phone\": {\n        \"home\": \"<string,null>\",\n        \"office\": \"<string,null>\",\n        \"other\": \"<string,null>\",\n        \"number\": \"<string,null>\",\n        \"fax\": \"<string,null>\"\n      },\n      \"email\": \"<string,null>\",\n      \"contact\": {\n        \"firstName\": \"<string,null>\",\n        \"lastName\": \"<string,null>\",\n        \"name\": \"<string,null>\",\n        \"phone\": \"<string,null>\",\n        \"relationship\": \"<string,null>\",\n        \"email\": \"<string,null>\",\n        \"isPrimary\": \"<boolean>\",\n        \"isEmergencyContact\": \"<boolean>\"\n      },\n      \"facilityName\": \"<string,null>\",\n      \"status\": \"<string,null>\",\n      \"selfStatus\": \"<string,null>\",\n      \"mrn\": \"<string,null>\",\n      \"admissionDate\": \"<string,null>\",\n      \"firstContactDate\": \"<string,null-date-time>\",\n      \"profileImage\": {\n        \"fileName\": \"<string,null>\"\n      },\n      \"referralCompanyId\": \"<integer,null-int32>\",\n      \"referralContactId\": \"<integer,null-int32>\",\n      \"referralCompanyName\": \"<string,null>\",\n      \"referralContactName\": \"<string,null>\",\n      \"luin\": \"<string,null-uuid>\",\n      \"externalId\": {\n        \"externalId\": \"<string,null>\",\n        \"externalIdType\": \"<string,null>\",\n        \"serviceIdentifier\": \"<string,null>\",\n        \"serviceId\": \"<integer,null-int32>\"\n      }\n    },\n    \"insurance\": \"<array,null>\",\n    \"documents\": {\n      \"id\": \"<integer>\",\n      \"clientDocumentId\": \"<long>\",\n      \"name\": \"<string,null>\",\n      \"description\": \"<string,null>\",\n      \"fileName\": \"<string,null>\",\n      \"client\": {\n        \"id\": \"<integer>\",\n        \"route\": \"<string,null>\"\n      },\n      \"status\": \"<string,null>\",\n      \"type\": \"<string,null>\",\n      \"typeId\": \"<integer,null-int64>\",\n      \"uploadDate\": \"<string,null-date-time>\",\n      \"url\": {\n        \"fileName\": \"<string,null>\"\n      },\n      \"tableId\": \"<integer,null-int64>\",\n      \"tableName\": \"<string,null>\",\n      \"path\": \"<string,null>\",\n      \"documentTypeId\": \"<integer>\",\n      \"uploadedDocuments\": \"<array,null>\"\n    },\n    \"admissionScreening\": {\n      \"isCurrentlyEmployed\": \"<boolean,null>\",\n      \"isJobAtRisk\": \"<boolean,null>\",\n      \"seekingTreatmentReason\": \"<string,null>\",\n      \"willingTreatment\": \"<string,null>\",\n      \"isPreviouslyDiagnosed\": \"<boolean,null>\",\n      \"hasHistoryOfChronicPain\": \"<boolean,null>\",\n      \"painLevel\": \"<integer>\",\n      \"assesmentByNursingStaff\": \"<string,null>\",\n      \"isHistoryofAddictions\": \"<boolean,null>\",\n      \"medicalHistory\": \"<string,null>\",\n      \"outstandingIssues\": \"<string,null>\",\n      \"isPregnant\": \"<boolean,null>\",\n      \"hasPossibilityOfPregnancy\": \"<boolean,null>\",\n      \"allergies\": \"<string,null>\",\n      \"hasWorkSchoolProblem\": \"<boolean,null>\",\n      \"hasFamilyFunctioning\": \"<boolean,null>\",\n      \"hasPersonalityChanges\": \"<boolean,null>\",\n      \"doStaysAllNight\": \"<boolean,null>\",\n      \"impulseControl\": \"<boolean,null>\",\n      \"personalityChanges\": \"<boolean,null>\",\n      \"isolating\": \"<boolean,null>\",\n      \"previousTreatment\": \"<boolean,null>\",\n      \"sadOrAngryOften\": \"<boolean,null>\",\n      \"lackOfHygiene\": \"<boolean,null>\",\n      \"violentOutbursts\": \"<boolean,null>\",\n      \"explosiveOutbursts\": \"<boolean,null>\",\n      \"inabilityToThinkClearly\": \"<boolean,null>\",\n      \"severeMoodSwings\": \"<boolean,null>\",\n      \"moneyManaging\": \"<boolean,null>\",\n      \"sexualOffense\": \"<boolean,null>\",\n      \"historyOfViolence\": \"<boolean,null>\",\n      \"voilenceHistory\": \"<string,null>\",\n      \"historyOfSeizures\": \"<boolean,null>\",\n      \"historyOfChronicPain\": \"<boolean,null>\",\n      \"isCurrentSuicidalIdeations\": \"<boolean,null>\",\n      \"currentSuicidalIdeations\": \"<string,null>\",\n      \"isCurrentHomicidalIdeations\": \"<boolean,null>\",\n      \"currentHomicidalIdeations\": \"<string,null>\",\n      \"patientHaveMeans\": \"<boolean,null>\",\n      \"suicidalAttempts\": \"<boolean,null>\",\n      \"noOfSuicidalAttempts\": \"<string,null>\",\n      \"historyOfSuicidal\": \"<string,null>\",\n      \"historyOfTrauma\": \"<string,null>\",\n      \"haveLegalHistory\": \"<boolean,null>\",\n      \"beenArrested\": \"<boolean,null>\",\n      \"currentlyCharged\": \"<boolean,null>\",\n      \"pendingCourtDecision\": \"<boolean,null>\",\n      \"notes\": \"<string,null>\",\n      \"dateOfHearing\": \"<string,null-date-time>\",\n      \"canLeaveState\": \"<boolean,null>\",\n      \"afterDischargePlan\": \"<string,null>\",\n      \"additionalNotes\": \"<string,null>\",\n      \"means\": \"<string,null>\",\n      \"differentAboutTreatment\": \"<string,null>\",\n      \"manageSelf\": \"<boolean,null>\",\n      \"eatingDisorderHistory\": \"<boolean,null>\",\n      \"isPhysicalOffense\": \"<boolean>\",\n      \"historyofAddictionDesc\": \"<string,null>\",\n      \"needAssistanceWithFMLA\": \"<boolean>\",\n      \"painNote\": \"<string,null>\"\n    },\n    \"faceToFace\": {\n      \"levelOfCare\": \"<string,null>\",\n      \"treatments\": \"<string,null>\",\n      \"referralCompanyName\": \"<string,null>\",\n      \"referralContactName\": \"<string,null>\",\n      \"facility\": \"<string,null>\",\n      \"admissionDate\": \"<string,null-date-time>\",\n      \"dischargeOrTransfer\": \"<string,null>\",\n      \"leadIntakeBy\": \"<string,null>\",\n      \"firstContactDate\": \"<dateTime>\",\n      \"leadSelfStatusName\": \"<string,null>\",\n      \"status\": \"<string,null>\",\n      \"primaryClinicianName\": \"<string,null>\"\n    },\n    \"billingIntake\": {}\n  },\n  {\n    \"prospect\": {\n      \"id\": \"<integer>\",\n      \"name\": {\n        \"first\": \"<string,null>\",\n        \"last\": \"<string,null>\",\n        \"middle\": \"<string,null>\",\n        \"isLegalName\": \"<boolean,null>\",\n        \"former\": \"<string,null>\",\n        \"prefix\": \"<string,null>\",\n        \"preferred\": \"<string,null>\"\n      },\n      \"gender\": \"<string,null>\",\n      \"primaryLanguage\": \"<string,null>\",\n      \"ssn\": \"<string,null>\",\n      \"dateOfBirth\": \"<string,null-date-time>\",\n      \"address\": {\n        \"line1\": \"<string,null>\",\n        \"line2\": \"<string,null>\",\n        \"city\": \"<string,null>\",\n        \"state\": \"<string,null>\",\n        \"stateAbbr\": \"<string,null>\",\n        \"country\": \"<string,null>\",\n        \"zipCode\": \"<string,null>\"\n      },\n      \"phone\": {\n        \"home\": \"<string,null>\",\n        \"office\": \"<string,null>\",\n        \"other\": \"<string,null>\",\n        \"number\": \"<string,null>\",\n        \"fax\": \"<string,null>\"\n      },\n      \"email\": \"<string,null>\",\n      \"contact\": {\n        \"firstName\": \"<string,null>\",\n        \"lastName\": \"<string,null>\",\n        \"name\": \"<string,null>\",\n        \"phone\": \"<string,null>\",\n        \"relationship\": \"<string,null>\",\n        \"email\": \"<string,null>\",\n        \"isPrimary\": \"<boolean>\",\n        \"isEmergencyContact\": \"<boolean>\"\n      },\n      \"facilityName\": \"<string,null>\",\n      \"status\": \"<string,null>\",\n      \"selfStatus\": \"<string,null>\",\n      \"mrn\": \"<string,null>\",\n      \"admissionDate\": \"<string,null>\",\n      \"firstContactDate\": \"<string,null-date-time>\",\n      \"profileImage\": {\n        \"fileName\": \"<string,null>\"\n      },\n      \"referralCompanyId\": \"<integer,null-int32>\",\n      \"referralContactId\": \"<integer,null-int32>\",\n      \"referralCompanyName\": \"<string,null>\",\n      \"referralContactName\": \"<string,null>\",\n      \"luin\": \"<string,null-uuid>\",\n      \"externalId\": {\n        \"externalId\": \"<string,null>\",\n        \"externalIdType\": \"<string,null>\",\n        \"serviceIdentifier\": \"<string,null>\",\n        \"serviceId\": \"<integer,null-int32>\"\n      }\n    },\n    \"insurance\": \"<array,null>\",\n    \"documents\": {\n      \"id\": \"<integer>\",\n      \"clientDocumentId\": \"<long>\",\n      \"name\": \"<string,null>\",\n      \"description\": \"<string,null>\",\n      \"fileName\": \"<string,null>\",\n      \"client\": {\n        \"id\": \"<integer>\",\n        \"route\": \"<string,null>\"\n      },\n      \"status\": \"<string,null>\",\n      \"type\": \"<string,null>\",\n      \"typeId\": \"<integer,null-int64>\",\n      \"uploadDate\": \"<string,null-date-time>\",\n      \"url\": {\n        \"fileName\": \"<string,null>\"\n      },\n      \"tableId\": \"<integer,null-int64>\",\n      \"tableName\": \"<string,null>\",\n      \"path\": \"<string,null>\",\n      \"documentTypeId\": \"<integer>\",\n      \"uploadedDocuments\": \"<array,null>\"\n    },\n    \"admissionScreening\": {\n      \"isCurrentlyEmployed\": \"<boolean,null>\",\n      \"isJobAtRisk\": \"<boolean,null>\",\n      \"seekingTreatmentReason\": \"<string,null>\",\n      \"willingTreatment\": \"<string,null>\",\n      \"isPreviouslyDiagnosed\": \"<boolean,null>\",\n      \"hasHistoryOfChronicPain\": \"<boolean,null>\",\n      \"painLevel\": \"<integer>\",\n      \"assesmentByNursingStaff\": \"<string,null>\",\n      \"isHistoryofAddictions\": \"<boolean,null>\",\n      \"medicalHistory\": \"<string,null>\",\n      \"outstandingIssues\": \"<string,null>\",\n      \"isPregnant\": \"<boolean,null>\",\n      \"hasPossibilityOfPregnancy\": \"<boolean,null>\",\n      \"allergies\": \"<string,null>\",\n      \"hasWorkSchoolProblem\": \"<boolean,null>\",\n      \"hasFamilyFunctioning\": \"<boolean,null>\",\n      \"hasPersonalityChanges\": \"<boolean,null>\",\n      \"doStaysAllNight\": \"<boolean,null>\",\n      \"impulseControl\": \"<boolean,null>\",\n      \"personalityChanges\": \"<boolean,null>\",\n      \"isolating\": \"<boolean,null>\",\n      \"previousTreatment\": \"<boolean,null>\",\n      \"sadOrAngryOften\": \"<boolean,null>\",\n      \"lackOfHygiene\": \"<boolean,null>\",\n      \"violentOutbursts\": \"<boolean,null>\",\n      \"explosiveOutbursts\": \"<boolean,null>\",\n      \"inabilityToThinkClearly\": \"<boolean,null>\",\n      \"severeMoodSwings\": \"<boolean,null>\",\n      \"moneyManaging\": \"<boolean,null>\",\n      \"sexualOffense\": \"<boolean,null>\",\n      \"historyOfViolence\": \"<boolean,null>\",\n      \"voilenceHistory\": \"<string,null>\",\n      \"historyOfSeizures\": \"<boolean,null>\",\n      \"historyOfChronicPain\": \"<boolean,null>\",\n      \"isCurrentSuicidalIdeations\": \"<boolean,null>\",\n      \"currentSuicidalIdeations\": \"<string,null>\",\n      \"isCurrentHomicidalIdeations\": \"<boolean,null>\",\n      \"currentHomicidalIdeations\": \"<string,null>\",\n      \"patientHaveMeans\": \"<boolean,null>\",\n      \"suicidalAttempts\": \"<boolean,null>\",\n      \"noOfSuicidalAttempts\": \"<string,null>\",\n      \"historyOfSuicidal\": \"<string,null>\",\n      \"historyOfTrauma\": \"<string,null>\",\n      \"haveLegalHistory\": \"<boolean,null>\",\n      \"beenArrested\": \"<boolean,null>\",\n      \"currentlyCharged\": \"<boolean,null>\",\n      \"pendingCourtDecision\": \"<boolean,null>\",\n      \"notes\": \"<string,null>\",\n      \"dateOfHearing\": \"<string,null-date-time>\",\n      \"canLeaveState\": \"<boolean,null>\",\n      \"afterDischargePlan\": \"<string,null>\",\n      \"additionalNotes\": \"<string,null>\",\n      \"means\": \"<string,null>\",\n      \"differentAboutTreatment\": \"<string,null>\",\n      \"manageSelf\": \"<boolean,null>\",\n      \"eatingDisorderHistory\": \"<boolean,null>\",\n      \"isPhysicalOffense\": \"<boolean>\",\n      \"historyofAddictionDesc\": \"<string,null>\",\n      \"needAssistanceWithFMLA\": \"<boolean>\",\n      \"painNote\": \"<string,null>\"\n    },\n    \"faceToFace\": {\n      \"levelOfCare\": \"<string,null>\",\n      \"treatments\": \"<string,null>\",\n      \"referralCompanyName\": \"<string,null>\",\n      \"referralContactName\": \"<string,null>\",\n      \"facility\": \"<string,null>\",\n      \"admissionDate\": \"<string,null-date-time>\",\n      \"dischargeOrTransfer\": \"<string,null>\",\n      \"leadIntakeBy\": \"<string,null>\",\n      \"firstContactDate\": \"<dateTime>\",\n      \"leadSelfStatusName\": \"<string,null>\",\n      \"status\": \"<string,null>\",\n      \"primaryClinicianName\": \"<string,null>\"\n    },\n    \"billingIntake\": {}\n  }\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; ver=1.0"
+                }
+              ],
+              "body": "[\n  {\n    \"prospectId\": 2350,\n    \"bulkProspect\": {\n      \"insurance\": [\n        \"\",\n        \"\"\n      ],\n      \"documents\": [\n        3652,\n        8886\n      ],\n      \"admissionScreening\": false,\n      \"faceToFace\": false,\n      \"billingIntake\": false\n    },\n    \"errors\": [\n      \"string\",\n      \"string\"\n    ]\n  },\n  {\n    \"prospectId\": 6977,\n    \"bulkProspect\": {\n      \"insurance\": null,\n      \"documents\": [\n        3002,\n        5575\n      ],\n      \"admissionScreening\": false,\n      \"faceToFace\": false,\n      \"billingIntake\": false\n    },\n    \"errors\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.helloalleva.com",
+      "key": "baseUrl"
+    },
+    {
+      "disabled": false,
+      "description": {
+        "content": "(Required) ",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "<string>",
+      "key": "version"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "e0d4b6cc-b7c4-4bac-b5d4-012ba06d31ea",
+    "name": "Alleva Rest Prospects API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "",
+      "type": "text/plain"
+    }
+  }
+}

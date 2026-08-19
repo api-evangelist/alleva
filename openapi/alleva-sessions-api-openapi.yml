@@ -1,0 +1,1737 @@
+openapi: 3.2.0
+info:
+  title: Alleva Rest Sessions API
+  version: '1.0'
+security:
+- Bearer: []
+tags:
+- name: Sessions
+paths:
+  /sessions/{id}:
+    get:
+      tags:
+      - Sessions
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: expand
+        in: query
+        schema:
+          type: boolean
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Session'
+            application/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Session'
+            text/json; ver=1.0:
+              schema:
+                $ref: '#/components/schemas/Session'
+    put:
+      tags:
+      - Sessions
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/Session'
+          application/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/Session'
+          text/json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/Session'
+          application/*+json; ver=1.0:
+            schema:
+              $ref: '#/components/schemas/Session'
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: boolean
+            application/json; ver=1.0:
+              schema:
+                type: boolean
+            text/json; ver=1.0:
+              schema:
+                type: boolean
+components:
+  schemas:
+    TimeSpan:
+      type: object
+      properties:
+        ticks:
+          type: integer
+          format: int64
+          readOnly: true
+        days:
+          type: integer
+          format: int32
+          readOnly: true
+        hours:
+          type: integer
+          format: int32
+          readOnly: true
+        milliseconds:
+          type: integer
+          format: int32
+          readOnly: true
+        minutes:
+          type: integer
+          format: int32
+          readOnly: true
+        seconds:
+          type: integer
+          format: int32
+          readOnly: true
+        totalDays:
+          type: number
+          format: double
+          readOnly: true
+        totalHours:
+          type: number
+          format: double
+          readOnly: true
+        totalMilliseconds:
+          type: number
+          format: double
+          readOnly: true
+        totalMinutes:
+          type: number
+          format: double
+          readOnly: true
+        totalSeconds:
+          type: number
+          format: double
+          readOnly: true
+      additionalProperties: false
+    BillingCodesDataModel:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        billingCodeDataId:
+          type: integer
+          format: int32
+        tableType:
+          type: integer
+          format: int32
+        notesId:
+          type: integer
+          format: int32
+        codeId:
+          type: integer
+          format: int32
+        createdBy:
+          type: integer
+          format: int32
+        createdDate:
+          type: string
+          format: date-time
+        modifiedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        modifiedDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        deletedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        deletedDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        isActive:
+          type: boolean
+        isDeleted:
+          type: boolean
+      additionalProperties: false
+    SectionSignaturesWithUser:
+      type: object
+      properties:
+        rowNumber:
+          type: integer
+          format: int32
+        signatureTypeId:
+          $ref: '#/components/schemas/SignatureType'
+        fullName:
+          type:
+          - string
+          - 'null'
+        signature:
+          type:
+          - string
+          - 'null'
+        createdDate:
+          type: string
+          format: date-time
+      additionalProperties: false
+    State:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        stateId:
+          type: integer
+          format: int32
+        countryId:
+          type: integer
+          format: int32
+        stateName:
+          type:
+          - string
+          - 'null'
+        stateCode:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    UserName:
+      type: object
+      properties:
+        first:
+          type:
+          - string
+          - 'null'
+        last:
+          type:
+          - string
+          - 'null'
+        prefix:
+          type:
+          - string
+          - 'null'
+        suffix:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Gad7Model:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        gad7Id:
+          type: integer
+          format: int64
+        clientId:
+          type: integer
+          format: int64
+        sourceId:
+          type: integer
+          format: int64
+        sourceName:
+          type:
+          - string
+          - 'null'
+        gad7Date:
+          type: string
+          format: date-time
+        question1:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question2:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question3:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question4:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question5:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question6:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question7:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question8:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        leadId:
+          type: integer
+          format: int64
+        totalScore:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        createdBy:
+          type: integer
+          format: int32
+        createdDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+          readOnly: true
+        updatedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        modifiedDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+          readOnly: true
+        isDeleted:
+          type: boolean
+        deletedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        deletedDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+          readOnly: true
+      additionalProperties: false
+    SessionDetail:
+      type: object
+      properties:
+        sessionNote:
+          $ref: '#/components/schemas/OutreachSessionNote'
+        groupLeader:
+          $ref: '#/components/schemas/User'
+        mentalStatusModel:
+          $ref: '#/components/schemas/MentalStatusExamModel'
+        asamModel:
+          $ref: '#/components/schemas/ASAMModel'
+        signatures:
+          $ref: '#/components/schemas/SectionSignatures'
+        phq9Model:
+          $ref: '#/components/schemas/Phq9Model'
+        gad7Model:
+          $ref: '#/components/schemas/Gad7Model'
+        billingCode:
+          $ref: '#/components/schemas/BillingCodesDataModel'
+        staffSignature:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/SectionSignaturesWithUser'
+      additionalProperties: false
+    Phq9Model:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        phq9Id:
+          type: integer
+          format: int64
+        clientId:
+          type: integer
+          format: int64
+        sourceId:
+          type: integer
+          format: int64
+        sourceName:
+          type:
+          - string
+          - 'null'
+        phq9Date:
+          type: string
+          format: date-time
+        question1:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question2:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question3:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question4:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question5:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question6:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question7:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question8:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question9:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question10:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        totalScore:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        createdBy:
+          type: integer
+          format: int32
+        createdDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+          readOnly: true
+        updatedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        modifiedDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+          readOnly: true
+        isDeleted:
+          type: boolean
+        deletedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        deletedDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+          readOnly: true
+        leadId:
+          type: integer
+          format: int64
+      additionalProperties: false
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          $ref: '#/components/schemas/UserName'
+        gender:
+          type:
+          - string
+          - 'null'
+        userName:
+          type:
+          - string
+          - 'null'
+        birthDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        ssn:
+          type:
+          - string
+          - 'null'
+        email:
+          type:
+          - string
+          - 'null'
+        phone:
+          type:
+          - string
+          - 'null'
+        address:
+          $ref: '#/components/schemas/Address'
+        facility:
+          $ref: '#/components/schemas/Facility'
+        tenant:
+          type:
+          - string
+          - 'null'
+        role:
+          type:
+          - string
+          - 'null'
+        profileImage:
+          $ref: '#/components/schemas/UserImageUrl'
+        isMedicalProvider:
+          type:
+          - boolean
+          - 'null'
+        hireDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        startDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        endDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        licenses:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/UserLicense'
+      additionalProperties: false
+    Session:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        appointmentId:
+          type: integer
+          format: int64
+        appointmentWith:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        clientNLeadId:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        startDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        endDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        startTime:
+          $ref: '#/components/schemas/TimeSpan'
+        endTime:
+          $ref: '#/components/schemas/TimeSpan'
+        userId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        facilityId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        appointmentType:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        appointmentStatus:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        description:
+          type:
+          - string
+          - 'null'
+        reason:
+          type:
+          - string
+          - 'null'
+        isAllDayEvent:
+          type:
+          - boolean
+          - 'null'
+        createdBy:
+          type: integer
+          format: int32
+        createdDate:
+          type: string
+          format: date-time
+        modifiedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        modifiedDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        isDeleted:
+          type: boolean
+        deletedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        deletedDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        clientId:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        recurringType:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        repeatEvery:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        repeatEveryType:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        repeatOn:
+          type:
+          - string
+          - 'null'
+        repeatOnIndex:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        endsAfterDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        isReccuringEvent:
+          type: boolean
+        parentAppointmentId:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        isGroupSession:
+          type: boolean
+        groupTopic:
+          type:
+          - string
+          - 'null'
+        rehabFacilityLocationId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        groupNote:
+          type:
+          - string
+          - 'null'
+        groupHomework:
+          type:
+          - string
+          - 'null'
+        pickUpTime:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        pickUpAddress:
+          type:
+          - string
+          - 'null'
+        dropOffAddress:
+          type:
+          - string
+          - 'null'
+        viewType:
+          type: integer
+          format: int32
+        familyTherapyNote:
+          type:
+          - string
+          - 'null'
+        referralContactId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        addressTypeId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        address1:
+          type:
+          - string
+          - 'null'
+        meetingTypeId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        groupHomeworkStatus:
+          type: integer
+          format: int32
+        validFrom:
+          type: string
+          format: date-time
+        validTo:
+          type: string
+          format: date-time
+        isVideoSession:
+          type: boolean
+        isRecTherapyType:
+          type: boolean
+        isMultilocation:
+          type: boolean
+        multiLocationId:
+          type:
+          - string
+          - 'null'
+        detailDescription:
+          type:
+          - string
+          - 'null'
+        details:
+          $ref: '#/components/schemas/SessionDetail'
+      additionalProperties: false
+    ASAMModel:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        asamid:
+          type: integer
+          format: int64
+        sourceID:
+          type: integer
+          format: int64
+        riskLevel:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        riskWithdrawal:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        priorWithdrawal:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        physicalIllness:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        cronogicPain:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        chronicCondition:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        cognitiveProblem:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        problemConnection:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        manageActivity:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        selfMotivated:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        addictiveDisorder:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        memberLeverged:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        memberImminent:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        severeProblem:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        memberAware:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        poseThreat:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        memberResource:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        transportationIssue:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        totalScore:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        isDeleted:
+          type: boolean
+        deletedDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        deletedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        updatedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        updateDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        createdBy:
+          type: integer
+          format: int32
+        createdDate:
+          type: string
+          format: date-time
+        sourceName:
+          type:
+          - string
+          - 'null'
+        clientID:
+          type: integer
+          format: int64
+        asamDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        dimension1Detail:
+          type:
+          - string
+          - 'null'
+        dimension2Detail:
+          type:
+          - string
+          - 'null'
+        dimension3Detail:
+          type:
+          - string
+          - 'null'
+        dimension4Detail:
+          type:
+          - string
+          - 'null'
+        dimension5Detail:
+          type:
+          - string
+          - 'null'
+        dimension6Detail:
+          type:
+          - string
+          - 'null'
+        validFrom:
+          type: string
+          format: date-time
+        validTo:
+          type: string
+          format: date-time
+      additionalProperties: false
+    UserImageUrl:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        host:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        path:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+      additionalProperties: false
+    Address:
+      type: object
+      properties:
+        line1:
+          type:
+          - string
+          - 'null'
+        line2:
+          type:
+          - string
+          - 'null'
+        city:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        stateAbbr:
+          type:
+          - string
+          - 'null'
+        country:
+          type:
+          - string
+          - 'null'
+        zipCode:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    UserLicense:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        acronym:
+          type:
+          - string
+          - 'null'
+        order:
+          type: integer
+          format: int32
+        number:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        effectiveDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        expiryDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        type:
+          $ref: '#/components/schemas/UserLicenseType'
+        user:
+          $ref: '#/components/schemas/User'
+        state:
+          $ref: '#/components/schemas/State'
+      additionalProperties: false
+    Facility:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        rehabName:
+          type:
+          - string
+          - 'null'
+        domainName:
+          type:
+          - string
+          - 'null'
+        email:
+          type:
+          - string
+          - 'null'
+        officePhone:
+          type:
+          - string
+          - 'null'
+        fax:
+          type:
+          - string
+          - 'null'
+        address1:
+          type:
+          - string
+          - 'null'
+        address2:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        city:
+          type:
+          - string
+          - 'null'
+        postalCode:
+          type:
+          - string
+          - 'null'
+        country:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    SignatureType:
+      enum:
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
+    UserLicenseType:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        canModifyOrDelete:
+          type: boolean
+        inUse:
+          type: boolean
+      additionalProperties: false
+    MentalStatusExamModel:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        mentalStatusExamId:
+          type: integer
+          format: int64
+        tableId:
+          type: integer
+          format: int64
+        hy_Clean:
+          type: boolean
+        hy_Unshaven:
+          type: boolean
+        hy_Odorous:
+          type: boolean
+        hy_Disheveled:
+          type: boolean
+        hy_Other:
+          type: boolean
+        af_Appropriate:
+          type: boolean
+        af_Inappropriate:
+          type: boolean
+        af_Labile:
+          type: boolean
+        af_Blunted:
+          type: boolean
+        af_Flat:
+          type: boolean
+        mov_Normal:
+          type: boolean
+        mov_Tense:
+          type: boolean
+        mov_Fidgety:
+          type: boolean
+        mov_Hyperactive:
+          type: boolean
+        mov_PsychomotorRetardation:
+          type: boolean
+        mov_PsychomotorAgitation:
+          type: boolean
+        mov_Pacing:
+          type: boolean
+        mov_HandWringing:
+          type: boolean
+        mov_Tics:
+          type: boolean
+        mov_Other:
+          type: boolean
+        mood_Anxious:
+          type: boolean
+        mood_Confused:
+          type: boolean
+        mood_Depressed:
+          type: boolean
+        mood_Labile:
+          type: boolean
+        mood_Fearful:
+          type: boolean
+        mood_Euphoric:
+          type: boolean
+        mood_Angry:
+          type: boolean
+        mood_Dysthymic:
+          type: boolean
+        hall_Visual:
+          type: boolean
+        hall_Auditory:
+          type: boolean
+        hall_Tactile:
+          type: boolean
+        hall_Olfactory:
+          type: boolean
+        hall_Command:
+          type: boolean
+        hall_Denied:
+          type: boolean
+        imp_Good:
+          type: boolean
+        imp_Limited:
+          type: boolean
+        imp_Poor:
+          type: boolean
+        ori_Person:
+          type: boolean
+        ori_Place:
+          type: boolean
+        ori_Time:
+          type: boolean
+        ori_Situation:
+          type: boolean
+        ins_Good:
+          type: boolean
+        ins_Limited:
+          type: boolean
+        ins_Poor:
+          type: boolean
+        intell_AboveAverage:
+          type: boolean
+        intell_Average:
+          type: boolean
+        intell_BelowAverage:
+          type: boolean
+        other_Obsessions:
+          type: boolean
+        other_Compulsions:
+          type: boolean
+        other_Depersonalization:
+          type: boolean
+        other_DeRealism:
+          type: boolean
+        mem_Intact:
+          type: boolean
+        mem_ImmediateImpaired:
+          type: boolean
+        mem_ShortTermImpaired:
+          type: boolean
+        mem_LongTermImpaired:
+          type: boolean
+        speech_Normal:
+          type: boolean
+        speech_Soft:
+          type: boolean
+        speech_Loud:
+          type: boolean
+        speech_Pressured:
+          type: boolean
+        speech_Rapid:
+          type: boolean
+        speech_Slowed:
+          type: boolean
+        speech_Slurred:
+          type: boolean
+        speech_Incoherent:
+          type: boolean
+        fa_Amiable:
+          type: boolean
+        fa_Happy:
+          type: boolean
+        fa_Angry:
+          type: boolean
+        fa_Worried:
+          type: boolean
+        fa_Suspicious:
+          type: boolean
+        fa_Sad:
+          type: boolean
+        eye_Good:
+          type: boolean
+        eye_Avoident:
+          type: boolean
+        eye_Fleeting:
+          type: boolean
+        eye_Stare:
+          type: boolean
+        tho_Intact:
+          type: boolean
+        tho_Blocked:
+          type: boolean
+        tho_Loose:
+          type: boolean
+        tho_Incoherent:
+          type: boolean
+        tho_Tangential:
+          type: boolean
+        tho_Flight:
+          type: boolean
+        tho_Circumstantial:
+          type: boolean
+        dem_Cooperative:
+          type: boolean
+        dem_Uncooperative:
+          type: boolean
+        dem_Guareded:
+          type: boolean
+        dem_Resistive:
+          type: boolean
+        dem_Defensive:
+          type: boolean
+        dem_Friendly:
+          type: boolean
+        dem_Worried:
+          type: boolean
+        dem_Boastful:
+          type: boolean
+        dem_Demanding:
+          type: boolean
+        dem_Hostile:
+          type: boolean
+        dem_Irritable:
+          type: boolean
+        dem_Agitated:
+          type: boolean
+        dem_Evasive:
+          type: boolean
+        dem_Dramatic:
+          type: boolean
+        dem_Sductive:
+          type: boolean
+        dem_Arrogant:
+          type: boolean
+        dem_Apathetic:
+          type: boolean
+        sui_Yes:
+          type: boolean
+        sui_Plan:
+          type: boolean
+        sui_Intent:
+          type: boolean
+        sui_Means:
+          type: boolean
+        sui_Denied:
+          type: boolean
+        homi_Yes:
+          type: boolean
+        homi_Plan:
+          type: boolean
+        homi_Intent:
+          type: boolean
+        homi_Means:
+          type: boolean
+        homi_Denied:
+          type: boolean
+        att_Satisfactory:
+          type: boolean
+        att_Poor:
+          type: boolean
+        att_EasilyDistracted:
+          type: boolean
+        del_Grandiose:
+          type: boolean
+        del_Persecutory:
+          type: boolean
+        del_Somatic:
+          type: boolean
+        del_Paranoia:
+          type: boolean
+        del_Ideas:
+          type: boolean
+        del_Denied:
+          type: boolean
+        jud_Good:
+          type: boolean
+        jud_Limited:
+          type: boolean
+        jud_Poor:
+          type: boolean
+        mentalStatusNote:
+          type:
+          - string
+          - 'null'
+        isDeleted:
+          type: boolean
+        hy_Detail:
+          type:
+          - string
+          - 'null'
+        af_Detail:
+          type:
+          - string
+          - 'null'
+        mov_Detail:
+          type:
+          - string
+          - 'null'
+        mood_Detail:
+          type:
+          - string
+          - 'null'
+        imp_Detail:
+          type:
+          - string
+          - 'null'
+        ori_Detail:
+          type:
+          - string
+          - 'null'
+        ins_Detail:
+          type:
+          - string
+          - 'null'
+        intell_Detail:
+          type:
+          - string
+          - 'null'
+        other_Detail:
+          type:
+          - string
+          - 'null'
+        mem_Detail:
+          type:
+          - string
+          - 'null'
+        speech_Detail:
+          type:
+          - string
+          - 'null'
+        fa__Detail:
+          type:
+          - string
+          - 'null'
+        eye_Detail:
+          type:
+          - string
+          - 'null'
+        tho_Detail:
+          type:
+          - string
+          - 'null'
+        dem_Detail:
+          type:
+          - string
+          - 'null'
+        homi_Detail:
+          type:
+          - string
+          - 'null'
+        att_Detail:
+          type:
+          - string
+          - 'null'
+        del_Detail:
+          type:
+          - string
+          - 'null'
+        jud_Detail:
+          type:
+          - string
+          - 'null'
+        hall_Detail:
+          type:
+          - string
+          - 'null'
+        sui_Detail:
+          type:
+          - string
+          - 'null'
+        fa_Detail:
+          type:
+          - string
+          - 'null'
+        af_Restricted:
+          type: boolean
+        mood_Irritated:
+          type: boolean
+        tableType:
+          type: integer
+          format: int32
+        createdDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        createdBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        modifiedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        modifiedDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        deletedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        deletedDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        validFrom:
+          type: string
+          format: date-time
+        validTo:
+          type: string
+          format: date-time
+        af_Expansive:
+          type: boolean
+        af_Euphoric:
+          type: boolean
+        af_Anxious:
+          type: boolean
+        af_Angry:
+          type: boolean
+        af_Other:
+          type: boolean
+        hall_Other:
+          type: boolean
+        mood_Euthymic:
+          type: boolean
+        mood_Normal:
+          type: boolean
+        mood_Other:
+          type: boolean
+        other_Denied:
+          type: boolean
+        tho_Other:
+          type: boolean
+        del_Other:
+          type: boolean
+        dem_Other:
+          type: boolean
+        att_Other:
+          type: boolean
+        hy_WNL:
+          type: boolean
+        af_WNL:
+          type: boolean
+        hall_WNL:
+          type: boolean
+        mov_WNL:
+          type: boolean
+        mood_WNL:
+          type: boolean
+        speech_WNL:
+          type: boolean
+        imp_WNL:
+          type: boolean
+        ins_WNL:
+          type: boolean
+        intell_WNL:
+          type: boolean
+        ori_WNL:
+          type: boolean
+        other_WNL:
+          type: boolean
+        mem_WNL:
+          type: boolean
+        sui_WNL:
+          type: boolean
+        homi_WNL:
+          type: boolean
+        eye_WNL:
+          type: boolean
+        fa_WNL:
+          type: boolean
+        tho_WNL:
+          type: boolean
+        del_WNL:
+          type: boolean
+        dem_WNL:
+          type: boolean
+        att_WNL:
+          type: boolean
+        jud_WNL:
+          type: boolean
+      additionalProperties: false
+    SectionSignatures:
+      type: object
+      properties:
+        client:
+          type:
+          - string
+          - 'null'
+        parentOrGuardian:
+          type:
+          - string
+          - 'null'
+        staff:
+          type:
+          - string
+          - 'null'
+        createdBy:
+          type: integer
+          format: int32
+      additionalProperties: false
+    OutreachSessionNote:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        noteId:
+          type: integer
+          format: int64
+        appointmentId:
+          type: integer
+          format: int64
+        leadId:
+          type: integer
+          format: int64
+        assesmentNote:
+          type:
+          - string
+          - 'null'
+        sessionStatus:
+          type: integer
+          format: int32
+        createdBy:
+          type: integer
+          format: int32
+        createdDate:
+          type: string
+          format: date-time
+        modifiedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        modifiedDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        isDeleted:
+          type: boolean
+        deletedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        deletedDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        startSession:
+          $ref: '#/components/schemas/TimeSpan'
+        endSession:
+          $ref: '#/components/schemas/TimeSpan'
+        duration:
+          type: integer
+          format: int32
+      additionalProperties: false
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
+        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      name: Authorization
+      in: header
+servers:
+- url: https://api.helloalleva.com
+  description: Base URL reconciled from apis.yml

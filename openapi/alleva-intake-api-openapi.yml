@@ -1,0 +1,443 @@
+openapi: 3.2.0
+info:
+  title: Alleva Rest Intake API
+  version: '1.0'
+security:
+- Bearer: []
+tags:
+- name: Intake
+paths:
+  /intakes/types:
+    get:
+      tags:
+      - Intake
+      parameters:
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IntakeTypes'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IntakeTypes'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IntakeTypes'
+  /v{version}/intakes/types:
+    get:
+      tags:
+      - Intake
+      parameters:
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+          content:
+            text/plain; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IntakeTypes'
+            application/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IntakeTypes'
+            text/json; ver=1.0:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/IntakeTypes'
+  /intakes/{intakeType}:
+    get:
+      tags:
+      - Intake
+      parameters:
+      - name: intakeType
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: leadId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+  /v{version}/intakes/{intakeType}:
+    get:
+      tags:
+      - Intake
+      parameters:
+      - name: intakeType
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: leadId
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+  /intakes/{intakeType}/sections/{sectionType}/{intakeId}:
+    get:
+      tags:
+      - Intake
+      parameters:
+      - name: intakeType
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: sectionType
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: intakeId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+    put:
+      tags:
+      - Intake
+      parameters:
+      - name: intakeType
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: sectionType
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: intakeId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+  /v{version}/intakes/{intakeType}/sections/{sectionType}/{intakeId}:
+    get:
+      tags:
+      - Intake
+      parameters:
+      - name: intakeType
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: sectionType
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: intakeId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success
+    put:
+      tags:
+      - Intake
+      parameters:
+      - name: intakeType
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: sectionType
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: intakeId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+  /intakes/{intakeType}/sections/{sectionType}:
+    post:
+      tags:
+      - Intake
+      parameters:
+      - name: intakeType
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: sectionType
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+  /v{version}/intakes/{intakeType}/sections/{sectionType}:
+    post:
+      tags:
+      - Intake
+      parameters:
+      - name: intakeType
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: sectionType
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: version
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: api-version
+        in: query
+        schema:
+          type: string
+      - name: X-Version
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json-patch+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          text/json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+          application/*+json; ver=1.0:
+            schema:
+              type: object
+              additionalProperties:
+                $ref: '#/components/schemas/JToken'
+      responses:
+        '200':
+          description: Success
+components:
+  schemas:
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
+    IntakeTypes:
+      type: object
+      properties:
+        globalCodeId:
+          type: integer
+          format: int32
+        codeName:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+  securitySchemes:
+    Bearer:
+      type: apiKey
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
+        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      name: Authorization
+      in: header
+servers:
+- url: https://api.helloalleva.com
+  description: Base URL reconciled from apis.yml
