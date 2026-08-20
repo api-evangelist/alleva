@@ -20,6 +20,19 @@ specificationVersion: '0.23'
 created: '2026-08-06'
 modified: '2026-08-06'
 tags:
+- Behavioral Health
+- Electronic Health Records
+- EMR
+- EHR
+- Substance Use Disorder
+- Mental Health
+- Healthcare
+- treatment-centers
+- Clinical Documentation
+- Revenue Cycle Management
+- Patient Intake
+- Healthcare Compliance
+tags_raw:
 - behavioral-health
 - electronic-health-records
 - emr
@@ -396,6 +409,8 @@ apis:
   humanURL: https://api.helloalleva.com/swagger/index.html
   baseURL: https://api.helloalleva.com
   tags:
+  - Organization
+  tags_raw:
   - Organizations
   properties:
   - type: OpenAPI
@@ -572,6 +587,8 @@ apis:
   humanURL: https://api.helloalleva.com/swagger/index.html
   baseURL: https://api.helloalleva.com
   tags:
+  - Treatment Plans
+  tags_raw:
   - TreatmentPlans
   properties:
   - type: OpenAPI
@@ -620,6 +637,8 @@ apis:
   humanURL: https://api.helloalleva.com/swagger/index.html
   baseURL: https://api.helloalleva.com
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
