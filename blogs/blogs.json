@@ -2,10 +2,17 @@
   "repo": "alleva",
   "feeds": [
     {
+      "source": "https://helloalleva.com/feed/",
+      "feed_url": "https://helloalleva.com/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
       "source": "https://helloalleva.com/help-center/",
       "feed_url": "https://helloalleva.com/feed/",
       "title": "",
-      "saved": 1,
+      "saved": 0,
       "method": "discovered"
     },
     {
@@ -16,6 +23,6 @@
       "method": "discovered"
     }
   ],
-  "post_count": 1,
-  "fetched": "2026-08-15T12:22:01Z"
+  "post_count": 30,
+  "fetched": "2026-08-22T20:20:02Z"
 }
