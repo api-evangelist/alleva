@@ -12,6 +12,18 @@ description: >-
   with a publicly reachable Swagger UI and machine-readable OpenAPI 3.0.1 description. Alleva holds ONC
   Certification and SOC 2 Type II attestation and publishes a Vanta trust center and an Atlassian status
   page that tracks the REST API as a first-class component.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://helloalleva.com/wp-content/uploads/2026/02/int_4.png
 url: https://raw.githubusercontent.com/api-evangelist/alleva/refs/heads/main/apis.yml
 x-type: company
