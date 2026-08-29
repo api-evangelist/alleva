@@ -662,6 +662,9 @@ apis:
   - type: ToolCrosswalk
     url: mcp/alleva-tool-crosswalk.yml
 common:
+- type: CapabilityMap
+  url: capabilities/alleva-capability-edges.yml
+  name: Alleva Business Capability Map
 - type: Website
   url: https://helloalleva.com/
 - type: Documentation
