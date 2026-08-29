@@ -11,97 +11,85 @@ capability_model:
   attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
     CC BY 4.0
   notice: NOTICE
-edge_count: 9
+edge_count: 8
 edges:
 - tag: Appointments
   spec_file: alleva-appointments-api-openapi.yml
   capability_id: BC-2800.10
   capability_id_l1: BC-2800
   capability_name: Scheduling & Appointment Management
-  confidence: 0.85
-  evidence: GET /appointments; GET /appointments/{id}; schemas Appointment, Transport, Facility, ZoomMeetingDetails
-  reason: Appointment records with facility, transport and telehealth meeting detail on a behavioral-health
-    EMR are patient appointment scheduling; L2 Scheduling & Appointment Management is the direct fit,
-    though the surface is read-only.
-- tag: BedOccupancy
-  spec_file: alleva-bedoccupancy-api-openapi.yml
-  capability_id: BC-2800.50
-  capability_id_l1: BC-2800
-  capability_name: Admissions, Transfers & Discharges Management
-  confidence: 0.85
-  evidence: POST /bed/{bedId}/occupancies; schemas OccupancyTransfer, Occupant, BedOccupancy, ClientName
-  reason: Occupancy records linking clients to beds plus an OccupancyTransfer schema are census, bed assignment
-    and inter-unit transfer operations — Admissions, Transfers & Discharges Management.
+  confidence: 0.82
+  evidence: GET /appointments, GET /appointments/{id}; schemas Appointment, Transport, Facility, ZoomMeetingDetails
+  reason: Appointment records with facility, transport and telehealth meeting details in a behavioural-health
+    EMR — appointment/scheduling management. Read-only, hence not top confidence.
 - tag: DischargePlan
   spec_file: alleva-dischargeplan-api-openapi.yml
   capability_id: BC-2820.30
   capability_id_l1: BC-2820
   capability_name: Discharge Planning
   confidence: 0.82
-  evidence: 'GET /discharge-plan; GET /discharge-plan/{id}; schemas: DischargePlan'
-  reason: Exposes discharge plan records for a behavioral-health treatment provider, which is exactly
-    discharge planning within care coordination.
-- tag: BedReservation
-  spec_file: alleva-bedreservation-api-openapi.yml
+  evidence: 'GET /discharge-plan ; GET /discharge-plan/{id} ; schemas: DischargePlan'
+  reason: Explicit discharge plan resource for a treatment provider maps directly to discharge planning
+    within care coordination.
+- tag: BedOccupancy
+  spec_file: alleva-bedoccupancy-api-openapi.yml
   capability_id: BC-2800.50
   capability_id_l1: BC-2800
   capability_name: Admissions, Transfers & Discharges Management
   confidence: 0.8
-  evidence: POST /bed/{bedId}/reservations; POST /bed/-/reservations/occupy; schemas BedReservation, Occupant,
-    BedOccupancy
-  reason: Reserving a bed for an incoming client and converting the reservation to occupancy is pre-admission
-    bed assignment; sits in Admissions, Transfers & Discharges rather than appointment scheduling.
+  evidence: POST /bed/{bedId}/occupancies; schemas BedOccupancy, OccupancyTransfer, Occupant, ClientName
+  reason: Creating and transferring bed occupancies for named clients is bed assignment and inter-unit
+    transfer management — the admissions, transfers and discharges (census) capability.
 - tag: Prospects
   spec_file: alleva-prospects-api-openapi.yml
   capability_id: BC-2800
   capability_id_l1: BC-2800
   capability_name: Patient Access Management
   confidence: 0.8
-  evidence: 'POST /prospects/{id}/insurances; schemas: AdmissionScreening, BillingIntake, ClientInsurances,
-    ClientContact'
-  reason: 'Prospects are pre-admission clients in a behavioral health treatment provider: the surface
-    captures contacts, insurances, admission screening and billing intake — i.e. pre-encounter intake
-    for admission. Clearly Patient Access Management; the sub-capability is ambiguous between registration,
-    eligibility verification and pre-service readiness, so L2 left null.'
+  evidence: POST /prospects/{id}/insurances; schemas AdmissionScreening, BillingIntake, ClientInsurances,
+    ClientContact
+  reason: Prospect records carry admission screening, insurance and intake billing data for prospective
+    clients — pre-encounter intake and admissions work. L2 left blank because the surface spans registration,
+    insurance capture and admissions screening.
+- tag: BedReservation
+  spec_file: alleva-bedreservation-api-openapi.yml
+  capability_id: BC-2800.50
+  capability_id_l1: BC-2800
+  capability_name: Admissions, Transfers & Discharges Management
+  confidence: 0.78
+  evidence: 'POST /bed/{bedId}/reservations/occupy ; schemas: Bed, BedReservation, Occupant, Room, BedOccupancy'
+  reason: Operations reserve and occupy beds with occupancy/room objects — this is bed assignment and
+    census control within admissions/transfers/discharges operations for a residential treatment provider,
+    not corporate facilities management.
+- tag: Sessions
+  spec_file: alleva-sessions-api-openapi.yml
+  capability_id: BC-2830.10
+  capability_id_l1: BC-2830
+  capability_name: Clinical Note Documentation
+  confidence: 0.75
+  evidence: 'schemas: OutreachSessionNote, SessionDetail, SectionSignatures, MentalStatusExamModel, Phq9Model,
+    Gad7Model, ASAMModel'
+  reason: The Session resource is a clinical session note with structured assessment instruments and clinician
+    signatures, i.e. authoring of the clinical record for a behavioural-health encounter. Some overlap
+    with behavioural health care delivery keeps it below 0.9.
 - tag: Intake
   spec_file: alleva-intake-api-openapi.yml
   capability_id: BC-2800.20
   capability_id_l1: BC-2800
   capability_name: Patient Registration Management
-  confidence: 0.75
-  evidence: 'GET /intakes/types; POST /intakes/{intakeType}/sections/{sectionType}; vendor: ''client intake
-    and prospect management'''
-  reason: Captures and updates client intake forms by type and section — the registration/intake data
-    capture step of patient access.
-- tag: Clients
-  spec_file: alleva-clients-api-openapi.yml
-  capability_id: BC-2800.20
-  capability_id_l1: BC-2800
-  capability_name: Patient Registration Management
+  confidence: 0.72
+  evidence: 'GET /intakes/types ; POST /intakes/{intakeType}/sections/{sectionType} ; vendor: ''client
+    intake and prospect management'''
+  reason: Sectioned intake forms by intake type are the pre-encounter intake/registration data capture
+    the vendor describes as client intake.
+- tag: TreatmentPlans
+  spec_file: alleva-treatmentplans-api-openapi.yml
+  capability_id: BC-2830
+  capability_id_l1: BC-2830
+  capability_name: Clinical Documentation Management
   confidence: 0.7
-  evidence: GET /clients/{id}/luin; GET /clients/duplicates; schemas Contact, Phone, Address, ClientOccupation,
-    ClientDocument
-  reason: Client demographic, identifier (LUIN), contact and document stewardship for treatment clients
-    maps to Patient Registration Management. The duplicates endpoint also touches master-patient-index
-    stewardship (BC-2900.10), which is why confidence is moderate rather than high.
-- tag: ShiftRounds
-  spec_file: alleva-shiftrounds-api-openapi.yml
-  capability_id: BC-2810
-  capability_id_l1: BC-2810
-  capability_name: Clinical Care Delivery Management
-  confidence: 0.7
-  evidence: 'POST /rounds, GET /rounds/locations, schemas: ClientShiftRounds, ShiftRounds, ShiftRoundLocation,
-    Client, User, Facility'
-  reason: Records staff rounds on clients at facility locations — bedside observation rounding in a residential
-    treatment setting, i.e. direct clinical care delivery. Left L2 null because it could sit under inpatient
-    care delivery or behavioural health care delivery.
-- tag: TreatmentReviews
-  spec_file: alleva-treatmentreviews-api-openapi.yml
-  capability_id: BC-2810.60
-  capability_id_l1: BC-2810
-  capability_name: Behavioural Health Care Delivery
-  confidence: 0.7
-  evidence: GET /treatment-reviews, schema TxReviewDetails; vendor covers "treatment plans and reviews"
-    for substance use disorder and mental health treatment providers
-  reason: Treatment plan review records in a behavioral health EMR — clinical care delivery, behavioural
-    health setting. Could arguably be clinical documentation, hence moderate confidence on the L2.
+  evidence: 'POST /treatment-plans/{id}/signature; GET /treatment-plans/{id}/diagnosis; schemas: TreatmentPlan,
+    Goal, Objective, Problem, Intervention, BehavioralDefinition, ClientDiagnosis'
+  reason: Authoring, diagnosis linkage and clinician signature of behavioural-health treatment plans (problems,
+    goals, objectives, interventions) — the active clinical record of planned care, i.e. clinical documentation.
+    Left at L1 because a treatment plan is neither purely a clinical note nor order entry.
