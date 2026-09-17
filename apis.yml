@@ -607,24 +607,6 @@ apis:
     url: https://api.helloalleva.com/swagger/index.html
   - type: ToolCrosswalk
     url: mcp/alleva-tool-crosswalk.yml
-- aid: alleva:alleva-treatmentplans-api
-  name: Alleva Treatment Plans API
-  description: The TreatmentPlans API from Alleva — 10 operation(s) for treatmentplans.
-  humanURL: https://api.helloalleva.com/swagger/index.html
-  baseURL: https://api.helloalleva.com
-  tags:
-  - Treatment Plans
-  tags_raw:
-  - TreatmentPlans
-  properties:
-  - type: OpenAPI
-    url: openapi/alleva-treatmentplans-api-openapi.yml
-  - type: Documentation
-    url: https://api.helloalleva.com/swagger/index.html
-  - type: APIReference
-    url: https://api.helloalleva.com/swagger/index.html
-  - type: ToolCrosswalk
-    url: mcp/alleva-tool-crosswalk.yml
 - aid: alleva:alleva-treatmentreviews-api
   name: Alleva Treatment Reviews API
   description: The TreatmentReviews API from Alleva — 4 operation(s) for treatmentreviews.
@@ -669,6 +651,22 @@ apis:
   properties:
   - type: OpenAPI
     url: openapi/alleva-users-api-openapi.yml
+  - type: Documentation
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: APIReference
+    url: https://api.helloalleva.com/swagger/index.html
+  - type: ToolCrosswalk
+    url: mcp/alleva-tool-crosswalk.yml
+- aid: alleva:alleva-treatment-plans-api
+  name: Alleva Treatment Plans API
+  description: The Treatment Plans API from Alleva — 10 operation(s) for treatment plans.
+  humanURL: https://api.helloalleva.com/swagger/index.html
+  baseURL: https://api.helloalleva.com
+  tags:
+  - Treatment Plans
+  properties:
+  - type: OpenAPI
+    url: openapi/alleva-treatment-plans-api-openapi.yml
   - type: Documentation
     url: https://api.helloalleva.com/swagger/index.html
   - type: APIReference
