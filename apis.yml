@@ -291,6 +291,8 @@ apis:
   humanURL: https://api.helloalleva.com/swagger/index.html
   baseURL: https://api.helloalleva.com
   tags:
+  - Documents
+  tags_raw:
   - Document
   properties:
   - type: OpenAPI
@@ -419,6 +421,8 @@ apis:
   humanURL: https://api.helloalleva.com/swagger/index.html
   baseURL: https://api.helloalleva.com
   tags:
+  - Medication
+  tags_raw:
   - Medications
   properties:
   - type: OpenAPI
@@ -597,6 +601,8 @@ apis:
   humanURL: https://api.helloalleva.com/swagger/index.html
   baseURL: https://api.helloalleva.com
   tags:
+  - Surveys
+  tags_raw:
   - Survey
   properties:
   - type: OpenAPI
