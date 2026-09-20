@@ -83,7 +83,8 @@ edges:
   reason: Sectioned intake forms by intake type are the pre-encounter intake/registration data capture
     the vendor describes as client intake.
 - tag: TreatmentPlans
-  spec_file: alleva-treatmentplans-api-openapi.yml
+  spec_file: alleva-treatment-plans-api-openapi.yml
+  reanchored_from: alleva-treatmentplans-api-openapi.yml
   capability_id: BC-2830
   capability_id_l1: BC-2830
   capability_name: Clinical Documentation Management
