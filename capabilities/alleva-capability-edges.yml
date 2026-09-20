@@ -11,7 +11,7 @@ capability_model:
   attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
     CC BY 4.0
   notice: NOTICE
-edge_count: 8
+edge_count: 11
 edges:
 - tag: Appointments
   spec_file: alleva-appointments-api-openapi.yml
@@ -82,6 +82,30 @@ edges:
     intake and prospect management'''
   reason: Sectioned intake forms by intake type are the pre-encounter intake/registration data capture
     the vendor describes as client intake.
+- tag: Clients
+  spec_file: alleva-clients-api-openapi.yml
+  capability_id: BC-2800.20
+  capability_id_l1: BC-2800
+  capability_name: Patient Registration Management
+  confidence: 0.7
+  evidence: GET /clients/{id}/luin; GET /clients/duplicates; schemas Contact, Phone, Address, ClientOccupation,
+    ClientDocument
+  reason: Client demographic, identifier (LUIN), contact and document stewardship for treatment clients
+    maps to Patient Registration Management. The duplicates endpoint also touches master-patient-index
+    stewardship (BC-2900.10), which is why confidence is moderate rather than high.
+  recovered_from: healthcare-vertical-edges.json
+- tag: ShiftRounds
+  spec_file: alleva-shiftrounds-api-openapi.yml
+  capability_id: BC-2810
+  capability_id_l1: BC-2810
+  capability_name: Clinical Care Delivery Management
+  confidence: 0.7
+  evidence: 'POST /rounds, GET /rounds/locations, schemas: ClientShiftRounds, ShiftRounds, ShiftRoundLocation,
+    Client, User, Facility'
+  reason: Records staff rounds on clients at facility locations — bedside observation rounding in a residential
+    treatment setting, i.e. direct clinical care delivery. Left L2 null because it could sit under inpatient
+    care delivery or behavioural health care delivery.
+  recovered_from: healthcare-vertical-edges.json
 - tag: TreatmentPlans
   spec_file: alleva-treatment-plans-api-openapi.yml
   reanchored_from: alleva-treatmentplans-api-openapi.yml
@@ -94,3 +118,14 @@ edges:
   reason: Authoring, diagnosis linkage and clinician signature of behavioural-health treatment plans (problems,
     goals, objectives, interventions) — the active clinical record of planned care, i.e. clinical documentation.
     Left at L1 because a treatment plan is neither purely a clinical note nor order entry.
+- tag: TreatmentReviews
+  spec_file: alleva-treatmentreviews-api-openapi.yml
+  capability_id: BC-2810.60
+  capability_id_l1: BC-2810
+  capability_name: Behavioural Health Care Delivery
+  confidence: 0.7
+  evidence: GET /treatment-reviews, schema TxReviewDetails; vendor covers "treatment plans and reviews"
+    for substance use disorder and mental health treatment providers
+  reason: Treatment plan review records in a behavioral health EMR — clinical care delivery, behavioural
+    health setting. Could arguably be clinical documentation, hence moderate confidence on the L2.
+  recovered_from: healthcare-vertical-edges.json
