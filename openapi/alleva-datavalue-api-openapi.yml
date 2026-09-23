@@ -53,6 +53,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/DataValueWithKindResponse'
+      summary: Create data values search
+      x-summary-source: derived
+      operationId: postDataValuesSearch
+      x-operation-id-source: derived
   /v{version}/data-values/search:
     post:
       tags:
@@ -104,6 +108,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/DataValueWithKindResponse'
+      summary: Create v{version} data values search
+      x-summary-source: derived
+      operationId: postV{version}DataValuesSearch
+      x-operation-id-source: derived
   /data-values/{dataFacetId}:
     put:
       tags:
@@ -140,6 +148,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Replace data values by data facet id
+      x-summary-source: derived
+      operationId: putDataValuesByDataFacetId
+      x-operation-id-source: derived
   /v{version}/data-values/{dataFacetId}:
     put:
       tags:
@@ -181,6 +193,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Replace v{version} data values by data facet id
+      x-summary-source: derived
+      operationId: putV{version}DataValuesByDataFacetId
+      x-operation-id-source: derived
 components:
   schemas:
     DataValuesSearch:
@@ -203,6 +219,20 @@ components:
           type: integer
           format: int32
       additionalProperties: false
+    DataKind:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      type: integer
+      format: int32
     DataValueWithKind:
       type: object
       properties:
@@ -291,27 +321,6 @@ components:
         dataKind:
           $ref: '#/components/schemas/DataKind'
       additionalProperties: false
-    DataKind:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
-      - 8
-      - 9
-      type: integer
-      format: int32
-    UserType:
-      enum:
-      - 0
-      - 1
-      - 2
-      type: integer
-      format: int32
     DataValueWithKindResponse:
       type: object
       properties:
@@ -377,13 +386,16 @@ components:
         dataKind:
           $ref: '#/components/schemas/DataKind'
       additionalProperties: false
+    UserType:
+      enum:
+      - 0
+      - 1
+      - 2
+      type: integer
+      format: int32
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

@@ -65,6 +65,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Appointment'
+      summary: Get appointments
+      x-summary-source: derived
+      operationId: getAppointments
+      x-operation-id-source: derived
   /v{version}/appointments:
     get:
       tags:
@@ -128,6 +132,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Appointment'
+      summary: Get v{version} appointments
+      x-summary-source: derived
+      operationId: getV{version}Appointments
+      x-operation-id-source: derived
   /appointments/{id}:
     get:
       tags:
@@ -160,6 +168,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Appointment'
+      summary: Get appointments by id
+      x-summary-source: derived
+      operationId: getAppointmentsById
+      x-operation-id-source: derived
   /v{version}/appointments/{id}:
     get:
       tags:
@@ -197,6 +209,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Appointment'
+      summary: Get v{version} appointments by id
+      x-summary-source: derived
+      operationId: getV{version}AppointmentsById
+      x-operation-id-source: derived
 components:
   schemas:
     ResourceLink:
@@ -206,18 +222,6 @@ components:
           type: integer
           format: int32
         route:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    Transport:
-      type: object
-      properties:
-        pickupAddress:
-          type:
-          - string
-          - 'null'
-        dropoffAddress:
           type:
           - string
           - 'null'
@@ -290,6 +294,18 @@ components:
           - string
           - 'null'
         country:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Transport:
+      type: object
+      properties:
+        pickupAddress:
+          type:
+          - string
+          - 'null'
+        dropoffAddress:
           type:
           - string
           - 'null'
@@ -375,10 +391,6 @@ components:
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

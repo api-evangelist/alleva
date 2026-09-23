@@ -47,6 +47,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Pronoun'
+      summary: Create pronoun
+      x-summary-source: derived
+      operationId: postPronoun
+      x-operation-id-source: derived
     get:
       tags:
       - Pronoun
@@ -104,6 +108,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Pronoun'
+      summary: Get pronoun
+      x-summary-source: derived
+      operationId: getPronoun
+      x-operation-id-source: derived
   /v{version}/pronoun:
     post:
       tags:
@@ -149,6 +157,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Pronoun'
+      summary: Create v{version} pronoun
+      x-summary-source: derived
+      operationId: postV{version}Pronoun
+      x-operation-id-source: derived
     get:
       tags:
       - Pronoun
@@ -211,6 +223,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Pronoun'
+      summary: Get v{version} pronoun
+      x-summary-source: derived
+      operationId: getV{version}Pronoun
+      x-operation-id-source: derived
   /pronoun/{id}:
     delete:
       tags:
@@ -243,6 +259,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Pronoun'
+      summary: Delete pronoun by id
+      x-summary-source: derived
+      operationId: deletePronounById
+      x-operation-id-source: derived
     patch:
       tags:
       - Pronoun
@@ -296,6 +316,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Pronoun'
+      summary: Update pronoun by id
+      x-summary-source: derived
+      operationId: patchPronounById
+      x-operation-id-source: derived
     get:
       tags:
       - Pronoun
@@ -327,6 +351,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Pronoun'
+      summary: Get pronoun by id
+      x-summary-source: derived
+      operationId: getPronounById
+      x-operation-id-source: derived
   /v{version}/pronoun/{id}:
     delete:
       tags:
@@ -364,6 +392,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Pronoun'
+      summary: Delete v{version} pronoun by id
+      x-summary-source: derived
+      operationId: deleteV{version}PronounById
+      x-operation-id-source: derived
     patch:
       tags:
       - Pronoun
@@ -422,6 +454,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Pronoun'
+      summary: Update v{version} pronoun by id
+      x-summary-source: derived
+      operationId: patchV{version}PronounById
+      x-operation-id-source: derived
     get:
       tags:
       - Pronoun
@@ -458,12 +494,12 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Pronoun'
+      summary: Get v{version} pronoun by id
+      x-summary-source: derived
+      operationId: getV{version}PronounById
+      x-operation-id-source: derived
 components:
   schemas:
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
     Pronoun:
       type: object
       properties:
@@ -484,13 +520,13 @@ components:
         inUse:
           type: boolean
       additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

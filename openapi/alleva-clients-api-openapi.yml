@@ -39,6 +39,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create clients by id luin
+      x-summary-source: derived
+      operationId: postClientsByIdLuin
+      x-operation-id-source: derived
     patch:
       tags:
       - Clients
@@ -92,6 +96,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Update clients by id luin
+      x-summary-source: derived
+      operationId: patchClientsByIdLuin
+      x-operation-id-source: derived
     get:
       tags:
       - Clients
@@ -113,6 +121,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Get clients by id luin
+      x-summary-source: derived
+      operationId: getClientsByIdLuin
+      x-operation-id-source: derived
   /v{version}/clients/{id}/luin:
     post:
       tags:
@@ -150,6 +162,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create v{version} clients by id luin
+      x-summary-source: derived
+      operationId: postV{version}ClientsByIdLuin
+      x-operation-id-source: derived
     patch:
       tags:
       - Clients
@@ -208,6 +224,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Update v{version} clients by id luin
+      x-summary-source: derived
+      operationId: patchV{version}ClientsByIdLuin
+      x-operation-id-source: derived
     get:
       tags:
       - Clients
@@ -234,6 +254,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Get v{version} clients by id luin
+      x-summary-source: derived
+      operationId: getV{version}ClientsByIdLuin
+      x-operation-id-source: derived
   /clients/{id}/history:
     get:
       tags:
@@ -266,6 +290,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ClientHistory'
+      summary: Get clients by id history
+      x-summary-source: derived
+      operationId: getClientsByIdHistory
+      x-operation-id-source: derived
   /v{version}/clients/{id}/history:
     get:
       tags:
@@ -303,6 +331,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ClientHistory'
+      summary: Get v{version} clients by id history
+      x-summary-source: derived
+      operationId: getV{version}ClientsByIdHistory
+      x-operation-id-source: derived
   /clients/duplicates:
     get:
       tags:
@@ -355,6 +387,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Client'
+      summary: Get clients duplicates
+      x-summary-source: derived
+      operationId: getClientsDuplicates
+      x-operation-id-source: derived
   /v{version}/clients/duplicates:
     get:
       tags:
@@ -412,6 +448,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Client'
+      summary: Get v{version} clients duplicates
+      x-summary-source: derived
+      operationId: getV{version}ClientsDuplicates
+      x-operation-id-source: derived
   /clients/{id}/urgent-alerts:
     get:
       tags:
@@ -444,6 +484,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ClientUrgentAlert'
+      summary: Get clients by id urgent alerts
+      x-summary-source: derived
+      operationId: getClientsByIdUrgentAlerts
+      x-operation-id-source: derived
     post:
       tags:
       - Clients
@@ -489,6 +533,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create clients by id urgent alerts
+      x-summary-source: derived
+      operationId: postClientsByIdUrgentAlerts
+      x-operation-id-source: derived
     patch:
       tags:
       - Clients
@@ -534,6 +582,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Update clients by id urgent alerts
+      x-summary-source: derived
+      operationId: patchClientsByIdUrgentAlerts
+      x-operation-id-source: derived
   /v{version}/clients/{id}/urgent-alerts:
     get:
       tags:
@@ -571,6 +623,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ClientUrgentAlert'
+      summary: Get v{version} clients by id urgent alerts
+      x-summary-source: derived
+      operationId: getV{version}ClientsByIdUrgentAlerts
+      x-operation-id-source: derived
     post:
       tags:
       - Clients
@@ -621,6 +677,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create v{version} clients by id urgent alerts
+      x-summary-source: derived
+      operationId: postV{version}ClientsByIdUrgentAlerts
+      x-operation-id-source: derived
     patch:
       tags:
       - Clients
@@ -671,6 +731,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Update v{version} clients by id urgent alerts
+      x-summary-source: derived
+      operationId: patchV{version}ClientsByIdUrgentAlerts
+      x-operation-id-source: derived
   /clients/{id}/urgent-alerts/read:
     post:
       tags:
@@ -717,6 +781,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create clients by id urgent alerts read
+      x-summary-source: derived
+      operationId: postClientsByIdUrgentAlertsRead
+      x-operation-id-source: derived
   /v{version}/clients/{id}/urgent-alerts/read:
     post:
       tags:
@@ -768,6 +836,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create v{version} clients by id urgent alerts read
+      x-summary-source: derived
+      operationId: postV{version}ClientsByIdUrgentAlertsRead
+      x-operation-id-source: derived
   /clients/{id}/legacy-form:
     get:
       tags:
@@ -795,6 +867,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Get clients by id legacy form
+      x-summary-source: derived
+      operationId: getClientsByIdLegacyForm
+      x-operation-id-source: derived
   /v{version}/clients/{id}/legacy-form:
     get:
       tags:
@@ -827,6 +903,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Get v{version} clients by id legacy form
+      x-summary-source: derived
+      operationId: getV{version}ClientsByIdLegacyForm
+      x-operation-id-source: derived
   /clients/{id}/documents:
     get:
       tags:
@@ -865,6 +945,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Document'
+      summary: Get clients by id documents
+      x-summary-source: derived
+      operationId: getClientsByIdDocuments
+      x-operation-id-source: derived
     post:
       tags:
       - Clients
@@ -916,6 +1000,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/CreateResult'
+      summary: Create clients by id documents
+      x-summary-source: derived
+      operationId: postClientsByIdDocuments
+      x-operation-id-source: derived
   /v{version}/clients/{id}/documents:
     get:
       tags:
@@ -959,6 +1047,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Document'
+      summary: Get v{version} clients by id documents
+      x-summary-source: derived
+      operationId: getV{version}ClientsByIdDocuments
+      x-operation-id-source: derived
     post:
       tags:
       - Clients
@@ -1015,6 +1107,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/CreateResult'
+      summary: Create v{version} clients by id documents
+      x-summary-source: derived
+      operationId: postV{version}ClientsByIdDocuments
+      x-operation-id-source: derived
   /clients/{id}/documents/{docId}:
     delete:
       tags:
@@ -1053,6 +1149,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Delete clients by id documents by doc id
+      x-summary-source: derived
+      operationId: deleteClientsByIdDocumentsByDocId
+      x-operation-id-source: derived
   /v{version}/clients/{id}/documents/{docId}:
     delete:
       tags:
@@ -1096,6 +1196,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Delete v{version} clients by id documents by doc id
+      x-summary-source: derived
+      operationId: deleteV{version}ClientsByIdDocumentsByDocId
+      x-operation-id-source: derived
   /clients/{id}/image:
     post:
       tags:
@@ -1142,6 +1246,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Create clients by id image
+      x-summary-source: derived
+      operationId: postClientsByIdImage
+      x-operation-id-source: derived
   /v{version}/clients/{id}/image:
     post:
       tags:
@@ -1193,6 +1301,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Create v{version} clients by id image
+      x-summary-source: derived
+      operationId: postV{version}ClientsByIdImage
+      x-operation-id-source: derived
   /clients/{id}/contacts:
     get:
       tags:
@@ -1225,6 +1337,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Contact'
+      summary: Get clients by id contacts
+      x-summary-source: derived
+      operationId: getClientsByIdContacts
+      x-operation-id-source: derived
   /v{version}/clients/{id}/contacts:
     get:
       tags:
@@ -1262,6 +1378,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Contact'
+      summary: Get v{version} clients by id contacts
+      x-summary-source: derived
+      operationId: getV{version}ClientsByIdContacts
+      x-operation-id-source: derived
   /clients/{id}/step-down/documents:
     post:
       tags:
@@ -1308,6 +1428,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create clients by id step down documents
+      x-summary-source: derived
+      operationId: postClientsByIdStepDownDocuments
+      x-operation-id-source: derived
   /v{version}/clients/{id}/step-down/documents:
     post:
       tags:
@@ -1359,6 +1483,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create v{version} clients by id step down documents
+      x-summary-source: derived
+      operationId: postV{version}ClientsByIdStepDownDocuments
+      x-operation-id-source: derived
   /clients/{leadId}/pronoun:
     post:
       tags:
@@ -1405,6 +1533,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create clients by lead id pronoun
+      x-summary-source: derived
+      operationId: postClientsByLeadIdPronoun
+      x-operation-id-source: derived
     get:
       tags:
       - Clients
@@ -1436,6 +1568,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ClientPronoun'
+      summary: Get clients by lead id pronoun
+      x-summary-source: derived
+      operationId: getClientsByLeadIdPronoun
+      x-operation-id-source: derived
   /v{version}/clients/{leadId}/pronoun:
     post:
       tags:
@@ -1487,6 +1623,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create v{version} clients by lead id pronoun
+      x-summary-source: derived
+      operationId: postV{version}ClientsByLeadIdPronoun
+      x-operation-id-source: derived
     get:
       tags:
       - Clients
@@ -1523,6 +1663,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ClientPronoun'
+      summary: Get v{version} clients by lead id pronoun
+      x-summary-source: derived
+      operationId: getV{version}ClientsByLeadIdPronoun
+      x-operation-id-source: derived
   /clients/list:
     get:
       tags:
@@ -1555,6 +1699,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/ClientList'
+      summary: Get clients list
+      x-summary-source: derived
+      operationId: getClientsList
+      x-operation-id-source: derived
   /v{version}/clients/list:
     get:
       tags:
@@ -1592,6 +1740,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/ClientList'
+      summary: Get v{version} clients list
+      x-summary-source: derived
+      operationId: getV{version}ClientsList
+      x-operation-id-source: derived
   /clients/{id}/assessments/cows:
     post:
       tags:
@@ -1638,6 +1790,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create clients by id assessments cows
+      x-summary-source: derived
+      operationId: postClientsByIdAssessmentsCows
+      x-operation-id-source: derived
   /v{version}/clients/{id}/assessments/cows:
     post:
       tags:
@@ -1689,6 +1845,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create v{version} clients by id assessments cows
+      x-summary-source: derived
+      operationId: postV{version}ClientsByIdAssessmentsCows
+      x-operation-id-source: derived
   /clients/{id}/assessments/cows/{cowsId}:
     patch:
       tags:
@@ -1741,6 +1901,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Update clients by id assessments cows by cows id
+      x-summary-source: derived
+      operationId: patchClientsByIdAssessmentsCowsByCowsId
+      x-operation-id-source: derived
   /v{version}/clients/{id}/assessments/cows/{cowsId}:
     patch:
       tags:
@@ -1798,6 +1962,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Update v{version} clients by id assessments cows by cows id
+      x-summary-source: derived
+      operationId: patchV{version}ClientsByIdAssessmentsCowsByCowsId
+      x-operation-id-source: derived
   /clients/{id}/assessments/ciwa:
     post:
       tags:
@@ -1844,6 +2012,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create clients by id assessments ciwa
+      x-summary-source: derived
+      operationId: postClientsByIdAssessmentsCiwa
+      x-operation-id-source: derived
   /v{version}/clients/{id}/assessments/ciwa:
     post:
       tags:
@@ -1895,6 +2067,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create v{version} clients by id assessments ciwa
+      x-summary-source: derived
+      operationId: postV{version}ClientsByIdAssessmentsCiwa
+      x-operation-id-source: derived
   /clients/{id}/assessments/ciwa/{ciwaId}:
     patch:
       tags:
@@ -1947,6 +2123,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Update clients by id assessments ciwa by ciwa id
+      x-summary-source: derived
+      operationId: patchClientsByIdAssessmentsCiwaByCiwaId
+      x-operation-id-source: derived
   /v{version}/clients/{id}/assessments/ciwa/{ciwaId}:
     patch:
       tags:
@@ -2004,6 +2184,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Update v{version} clients by id assessments ciwa by ciwa id
+      x-summary-source: derived
+      operationId: patchV{version}ClientsByIdAssessmentsCiwaByCiwaId
+      x-operation-id-source: derived
   /clients:
     get:
       tags:
@@ -2062,6 +2246,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Client'
+      summary: Get clients
+      x-summary-source: derived
+      operationId: getClients
+      x-operation-id-source: derived
   /v{version}/clients:
     get:
       tags:
@@ -2125,6 +2313,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Client'
+      summary: Get v{version} clients
+      x-summary-source: derived
+      operationId: getV{version}Clients
+      x-operation-id-source: derived
   /clients/{id}:
     get:
       tags:
@@ -2157,6 +2349,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Client'
+      summary: Get clients by id
+      x-summary-source: derived
+      operationId: getClientsById
+      x-operation-id-source: derived
   /v{version}/clients/{id}:
     get:
       tags:
@@ -2194,72 +2390,24 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Client'
+      summary: Get v{version} clients by id
+      x-summary-source: derived
+      operationId: getV{version}ClientsById
+      x-operation-id-source: derived
 components:
   schemas:
-    ClientReferralContact:
+    ResourceLink:
       type: object
       properties:
         id:
-          type:
-          - string
-          - 'null'
-        firstName:
-          type:
-          - string
-          - 'null'
-        lastName:
-          type:
-          - string
-          - 'null'
-        phone:
-          type:
-          - string
-          - 'null'
-        email:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    ClientHistory:
-      type: object
-      properties:
-        client:
-          $ref: '#/components/schemas/Client'
-        admissionDate:
-          type:
-          - string
-          - 'null'
-        dischargeDate:
-          type:
-          - string
-          - 'null'
-        isDischarge:
-          type: boolean
-        luin:
-          type:
-          - string
-          - 'null'
-          format: uuid
-      additionalProperties: false
-    ClientOccupation:
-      type: object
-      properties:
-        name:
-          type:
-          - string
-          - 'null'
-        currentEmployer:
-          type:
-          - string
-          - 'null'
-        years:
           type: integer
           format: int32
-        months:
-          type: integer
-          format: int32
+        route:
+          type:
+          - string
+          - 'null'
       additionalProperties: false
-    DocumentUrl:
+    ClientImageUrl:
       type: object
       properties:
         fileName:
@@ -2277,7 +2425,11 @@ components:
           - 'null'
           readOnly: true
       additionalProperties: false
-    Pronoun:
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
+    Facility:
       type: object
       properties:
         id:
@@ -2292,18 +2444,58 @@ components:
           type:
           - string
           - 'null'
-        isActive:
-          type: boolean
-        inUse:
-          type: boolean
+        rehabName:
+          type:
+          - string
+          - 'null'
+        domainName:
+          type:
+          - string
+          - 'null'
+        email:
+          type:
+          - string
+          - 'null'
+        officePhone:
+          type:
+          - string
+          - 'null'
+        fax:
+          type:
+          - string
+          - 'null'
+        address1:
+          type:
+          - string
+          - 'null'
+        address2:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        city:
+          type:
+          - string
+          - 'null'
+        postalCode:
+          type:
+          - string
+          - 'null'
+        country:
+          type:
+          - string
+          - 'null'
       additionalProperties: false
-    ClientAssessmentsCows:
+    ClientAssessmentsCiwa:
       type: object
       properties:
         isReviewed:
           type: boolean
-        cows:
-          $ref: '#/components/schemas/Cows'
+        ciwa:
+          $ref: '#/components/schemas/Ciwa'
         reviewers:
           type:
           - array
@@ -2313,144 +2505,22 @@ components:
         vitals:
           $ref: '#/components/schemas/AssessmentVitals'
       additionalProperties: false
-    Reviewer:
+    DocumentData:
       type: object
       properties:
         id:
-          type: integer
-          format: int32
-      additionalProperties: false
-    UserName:
-      type: object
-      properties:
-        first:
-          type:
-          - string
-          - 'null'
-        last:
-          type:
-          - string
-          - 'null'
-        prefix:
-          type:
-          - string
-          - 'null'
-        suffix:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    State:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        stateId:
-          type: integer
-          format: int32
-        countryId:
-          type: integer
-          format: int32
-        stateName:
-          type:
-          - string
-          - 'null'
-        stateCode:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    Roi:
-      type: object
-      properties:
-        roiId:
           type: integer
           format: int64
-        startDate:
-          type: string
-          format: date-time
-        endDate:
-          type: string
-          format: date-time
-        expirationDate:
+        name:
           type:
           - string
           - 'null'
-        serviceFromDate:
+        base64String:
           type:
           - string
           - 'null'
-        serviceToDate:
-          type:
-          - string
-          - 'null'
-        clientSignature:
-          type:
-          - string
-          - 'null'
-        staffSignature:
-          type:
-          - string
-          - 'null'
-        gaurdianSignature:
-          type:
-          - string
-          - 'null'
-        signedDatetime:
-          type: string
-          format: date-time
-        permissionScreen:
-          type:
-          - string
-          - 'null'
-        informationRelease:
-          type:
-          - string
-          - 'null'
-        informationInclude:
-          type:
-          - string
-          - 'null'
-        otherInformation:
-          type:
-          - string
-          - 'null'
-        roiOtherRelease:
-          type:
-          - string
-          - 'null'
-        isCopyAccepted:
-          type:
-          - boolean
-          - 'null'
-        permissionScreenList:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/RoiInformationList'
-        informationReleaseList:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/RoiInformationList'
-        informationIncludeList:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/RoiInformationList'
-        staff:
-          $ref: '#/components/schemas/User'
-        revoke:
-          $ref: '#/components/schemas/RoiRevoke'
+        externalId:
+          $ref: '#/components/schemas/ExternalData'
       additionalProperties: false
     UpdateResult:
       type: object
@@ -2473,192 +2543,6 @@ components:
           - string
           - 'null'
       additionalProperties: false
-    AssessmentVitals:
-      type: object
-      properties:
-        bpSystolic:
-          type:
-          - number
-          - 'null'
-          format: double
-        bpDiastolic:
-          type:
-          - number
-          - 'null'
-          format: double
-        o2Saturation:
-          type:
-          - number
-          - 'null'
-          format: double
-        pulse:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        respirations:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        temperature:
-          type:
-          - number
-          - 'null'
-          format: double
-      additionalProperties: false
-    Contact:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        name:
-          type:
-          - string
-          - 'null'
-        address:
-          type:
-          - string
-          - 'null'
-        mobile:
-          type:
-          - string
-          - 'null'
-        fax:
-          type:
-          - string
-          - 'null'
-        emailAddress:
-          type:
-          - string
-          - 'null'
-        relationship:
-          type:
-          - string
-          - 'null'
-        responsibility:
-          type:
-          - string
-          - 'null'
-        dateOfBirth:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        facilityId:
-          type: integer
-          format: int32
-        facility:
-          $ref: '#/components/schemas/Facility'
-        client:
-          $ref: '#/components/schemas/Client'
-        roi:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/Roi'
-      additionalProperties: false
-    Cows:
-      type: object
-      properties:
-        anxiety:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        administratedSignature:
-          type:
-          - string
-          - 'null'
-        bone:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        cowsDateTime:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        date:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        gooseflesh:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        giUpset:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        id:
-          type: integer
-          format: int64
-        leadId:
-          type:
-          - integer
-          - 'null'
-          format: int64
-        note:
-          type:
-          - string
-          - 'null'
-        pupil:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        restlessness:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        runnynose:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        startDetoxDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        sweating:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        tremor:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        time:
-          type:
-          - string
-          - 'null'
-        totalCWSScore:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        yawning:
-          type:
-          - integer
-          - 'null'
-          format: int32
-      additionalProperties: false
     ClientPronoun:
       type: object
       properties:
@@ -2671,106 +2555,62 @@ components:
           items:
             $ref: '#/components/schemas/Pronoun'
       additionalProperties: false
-    Document:
+    RoiInformationList:
       type: object
       properties:
         id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        clientDocumentId:
           type: integer
           format: int64
         name:
           type:
           - string
           - 'null'
-        description:
-          type:
-          - string
-          - 'null'
+        isSelected:
+          type: boolean
+      additionalProperties: false
+    UserImageUrl:
+      type: object
+      properties:
         fileName:
           type:
           - string
           - 'null'
-        client:
-          $ref: '#/components/schemas/ResourceLink'
-        status:
+        host:
           type:
           - string
           - 'null'
-        type:
-          type:
-          - string
-          - 'null'
-        typeId:
-          type:
-          - integer
-          - 'null'
-          format: int64
-        uploadDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        url:
-          $ref: '#/components/schemas/DocumentUrl'
-        tableId:
-          type:
-          - integer
-          - 'null'
-          format: int64
-        tableName:
-          type:
-          - string
-          - 'null'
+          readOnly: true
         path:
           type:
           - string
           - 'null'
-        documentTypeId:
-          type: integer
-          format: int32
-        uploadedDocuments:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/DocumentData'
+          readOnly: true
       additionalProperties: false
-    ClientUrgentAlert:
+    UpdateOperationResult:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
+    DocumentUrl:
       type: object
       properties:
-        clientUrgentAlertId:
-          type: integer
-          format: int64
-        message:
+        fileName:
           type:
           - string
           - 'null'
-        status:
+        host:
           type:
           - string
           - 'null'
-        createdBy:
-          $ref: '#/components/schemas/User'
-        createdDatetime:
-          type: string
-          format: date-time
-        signature:
+          readOnly: true
+        path:
           type:
           - string
           - 'null'
-        readBy:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/AlertReadBy'
+          readOnly: true
       additionalProperties: false
     User:
       type: object
@@ -2850,93 +2690,32 @@ components:
           items:
             $ref: '#/components/schemas/UserLicense'
       additionalProperties: false
-    ResourceLink:
+    State:
       type: object
       properties:
         id:
           type: integer
           format: int32
-        route:
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        stateId:
+          type: integer
+          format: int32
+        countryId:
+          type: integer
+          format: int32
+        stateName:
+          type:
+          - string
+          - 'null'
+        stateCode:
           type:
           - string
           - 'null'
       additionalProperties: false
-    ClientList:
-      type: object
-      properties:
-        leadId:
-          type: integer
-          format: int64
-        clientId:
-          type: integer
-          format: int64
-        leadFullName:
-          type:
-          - string
-          - 'null'
-        dateOfBirth:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        isDischarge:
-          type: boolean
-        firstName:
-          type:
-          - string
-          - 'null'
-        lastName:
-          type:
-          - string
-          - 'null'
-        gender:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        statusId:
-          type: integer
-          format: int32
-        documentFilePath:
-          type:
-          - string
-          - 'null'
-        isAdmissionFormComplete:
-          type:
-          - boolean
-          - 'null'
-        levelOfCare:
-          type:
-          - string
-          - 'null'
-        stepDownId:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        admissionDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        actualSysDischargeDateTime:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        bedName:
-          type:
-          - string
-          - 'null'
-        genderName:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
     Room:
       type: object
       properties:
@@ -2961,30 +2740,102 @@ components:
           type: integer
           format: int32
       additionalProperties: false
-    RoiInformationList:
+    CreateOperationResult:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
+    ClientUrgentAlert:
       type: object
       properties:
-        id:
+        clientUrgentAlertId:
           type: integer
           format: int64
-        name:
+        message:
           type:
           - string
           - 'null'
-        isSelected:
-          type: boolean
+        status:
+          type:
+          - string
+          - 'null'
+        createdBy:
+          $ref: '#/components/schemas/User'
+        createdDatetime:
+          type: string
+          format: date-time
+        signature:
+          type:
+          - string
+          - 'null'
+        readBy:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/AlertReadBy'
       additionalProperties: false
-    ClientLogoData:
+    ClientHistory:
       type: object
       properties:
-        fileName:
+        client:
+          $ref: '#/components/schemas/Client'
+        admissionDate:
           type:
           - string
           - 'null'
-        base64String:
+        dischargeDate:
           type:
           - string
           - 'null'
+        isDischarge:
+          type: boolean
+        luin:
+          type:
+          - string
+          - 'null'
+          format: uuid
+      additionalProperties: false
+    ExternalData:
+      type: object
+      properties:
+        externalId:
+          type:
+          - string
+          - 'null'
+        externalIdType:
+          type:
+          - string
+          - 'null'
+        serviceIdentifier:
+          type:
+          - string
+          - 'null'
+        serviceId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+      additionalProperties: false
+    RoiRevoke:
+      type: object
+      properties:
+        reason:
+          type:
+          - string
+          - 'null'
+        signature:
+          type:
+          - string
+          - 'null'
+        datetime:
+          type:
+          - string
+          - 'null'
+          format: date-time
       additionalProperties: false
     ClientContact:
       type: object
@@ -3018,345 +2869,6 @@ components:
           writeOnly: true
         isEmergencyContact:
           type: boolean
-      additionalProperties: false
-    UserImageUrl:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        host:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        path:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-      additionalProperties: false
-    ClientName:
-      type: object
-      properties:
-        clientFullName:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        first:
-          type:
-          - string
-          - 'null'
-        last:
-          type:
-          - string
-          - 'null'
-        middle:
-          type:
-          - string
-          - 'null'
-        isLegalName:
-          type:
-          - boolean
-          - 'null'
-        former:
-          type:
-          - string
-          - 'null'
-        prefix:
-          type:
-          - string
-          - 'null'
-        preferred:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    ClientAssessmentsCiwa:
-      type: object
-      properties:
-        isReviewed:
-          type: boolean
-        ciwa:
-          $ref: '#/components/schemas/Ciwa'
-        reviewers:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/Reviewer'
-        vitals:
-          $ref: '#/components/schemas/AssessmentVitals'
-      additionalProperties: false
-    AlertReadBy:
-      type: object
-      properties:
-        user:
-          $ref: '#/components/schemas/User'
-        date:
-          type: string
-          format: date-time
-      additionalProperties: false
-    CreateResult:
-      type: object
-      properties:
-        operationResult:
-          $ref: '#/components/schemas/CreateOperationResult'
-        id:
-          type:
-          - integer
-          - 'null'
-          format: int64
-        messages:
-          type:
-          - array
-          - 'null'
-          items:
-            type: string
-        reason:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    ExternalData:
-      type: object
-      properties:
-        externalId:
-          type:
-          - string
-          - 'null'
-        externalIdType:
-          type:
-          - string
-          - 'null'
-        serviceIdentifier:
-          type:
-          - string
-          - 'null'
-        serviceId:
-          type:
-          - integer
-          - 'null'
-          format: int32
-      additionalProperties: false
-    UpdateOperationResult:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      type: integer
-      format: int32
-    Address:
-      type: object
-      properties:
-        line1:
-          type:
-          - string
-          - 'null'
-        line2:
-          type:
-          - string
-          - 'null'
-        city:
-          type:
-          - string
-          - 'null'
-        state:
-          type:
-          - string
-          - 'null'
-        stateAbbr:
-          type:
-          - string
-          - 'null'
-        country:
-          type:
-          - string
-          - 'null'
-        zipCode:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    Ciwa:
-      type: object
-      properties:
-        anxiety:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        agitation:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        administratedSignature:
-          type:
-          - string
-          - 'null'
-        auditoryDisturbances:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        ciwaDateTime:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        date:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        elevationOfBloodPressure:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        elevationOfHeartRate:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        headache:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        nausea:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        note:
-          type:
-          - string
-          - 'null'
-        orientation:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        paroxysmalSweats:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        tremors:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        tactileDisturbances:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        totalCiwaScore:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        visualDisturbances:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        time:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    ClientImageUrl:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        host:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        path:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-      additionalProperties: false
-    CreateOperationResult:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      type: integer
-      format: int32
-    Facility:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        name:
-          type:
-          - string
-          - 'null'
-        rehabName:
-          type:
-          - string
-          - 'null'
-        domainName:
-          type:
-          - string
-          - 'null'
-        email:
-          type:
-          - string
-          - 'null'
-        officePhone:
-          type:
-          - string
-          - 'null'
-        fax:
-          type:
-          - string
-          - 'null'
-        address1:
-          type:
-          - string
-          - 'null'
-        address2:
-          type:
-          - string
-          - 'null'
-        state:
-          type:
-          - string
-          - 'null'
-        city:
-          type:
-          - string
-          - 'null'
-        postalCode:
-          type:
-          - string
-          - 'null'
-        country:
-          type:
-          - string
-          - 'null'
       additionalProperties: false
     UserLicense:
       type: object
@@ -3399,64 +2911,53 @@ components:
         state:
           $ref: '#/components/schemas/State'
       additionalProperties: false
-    DocumentData:
+    ClientAssessmentsCows:
+      type: object
+      properties:
+        isReviewed:
+          type: boolean
+        cows:
+          $ref: '#/components/schemas/Cows'
+        reviewers:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/Reviewer'
+        vitals:
+          $ref: '#/components/schemas/AssessmentVitals'
+      additionalProperties: false
+    ClientReferralContact:
       type: object
       properties:
         id:
-          type: integer
-          format: int64
-        name:
           type:
           - string
           - 'null'
-        base64String:
+        firstName:
           type:
           - string
           - 'null'
-        externalId:
-          $ref: '#/components/schemas/ExternalData'
+        lastName:
+          type:
+          - string
+          - 'null'
+        phone:
+          type:
+          - string
+          - 'null'
+        email:
+          type:
+          - string
+          - 'null'
       additionalProperties: false
-    UserLicenseType:
+    AlertReadBy:
       type: object
       properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        name:
-          type:
-          - string
-          - 'null'
-        description:
-          type:
-          - string
-          - 'null'
-        isActive:
-          type: boolean
-        canModifyOrDelete:
-          type: boolean
-        inUse:
-          type: boolean
-      additionalProperties: false
-    RoiRevoke:
-      type: object
-      properties:
-        reason:
-          type:
-          - string
-          - 'null'
-        signature:
-          type:
-          - string
-          - 'null'
-        datetime:
-          type:
-          - string
-          - 'null'
+        user:
+          $ref: '#/components/schemas/User'
+        date:
+          type: string
           format: date-time
       additionalProperties: false
     UserUrgentAlertMarkAsRead:
@@ -3477,64 +2978,63 @@ components:
           - string
           - 'null'
       additionalProperties: false
-    ClientDocument:
+    Contact:
       type: object
       properties:
-        clientDocumentId:
+        id:
           type: integer
-          format: int64
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
         name:
           type:
           - string
           - 'null'
-        description:
+        address:
           type:
           - string
           - 'null'
-        fileName:
+        mobile:
           type:
           - string
           - 'null'
-        status:
+        fax:
           type:
           - string
           - 'null'
-        type:
+        emailAddress:
           type:
           - string
           - 'null'
-        typeId:
+        relationship:
           type:
-          - integer
+          - string
           - 'null'
-          format: int64
-        uploadDate:
+        responsibility:
+          type:
+          - string
+          - 'null'
+        dateOfBirth:
           type:
           - string
           - 'null'
           format: date-time
-        tableId:
-          type:
-          - integer
-          - 'null'
-          format: int64
-        tableName:
-          type:
-          - string
-          - 'null'
-        path:
-          type:
-          - string
-          - 'null'
-        documentTypeId:
+        facilityId:
           type: integer
           format: int32
-        uploadedDocuments:
+        facility:
+          $ref: '#/components/schemas/Facility'
+        client:
+          $ref: '#/components/schemas/Client'
+        roi:
           type:
           - array
           - 'null'
           items:
-            $ref: '#/components/schemas/DocumentData'
+            $ref: '#/components/schemas/Roi'
       additionalProperties: false
     Client:
       type: object
@@ -3657,6 +3157,706 @@ components:
           - string
           - 'null'
       additionalProperties: false
+    UserLicenseType:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        canModifyOrDelete:
+          type: boolean
+        inUse:
+          type: boolean
+      additionalProperties: false
+    ClientDocument:
+      type: object
+      properties:
+        clientDocumentId:
+          type: integer
+          format: int64
+        name:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        fileName:
+          type:
+          - string
+          - 'null'
+        status:
+          type:
+          - string
+          - 'null'
+        type:
+          type:
+          - string
+          - 'null'
+        typeId:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        uploadDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        tableId:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        tableName:
+          type:
+          - string
+          - 'null'
+        path:
+          type:
+          - string
+          - 'null'
+        documentTypeId:
+          type: integer
+          format: int32
+        uploadedDocuments:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/DocumentData'
+      additionalProperties: false
+    ClientList:
+      type: object
+      properties:
+        leadId:
+          type: integer
+          format: int64
+        clientId:
+          type: integer
+          format: int64
+        leadFullName:
+          type:
+          - string
+          - 'null'
+        dateOfBirth:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        isDischarge:
+          type: boolean
+        firstName:
+          type:
+          - string
+          - 'null'
+        lastName:
+          type:
+          - string
+          - 'null'
+        gender:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        statusId:
+          type: integer
+          format: int32
+        documentFilePath:
+          type:
+          - string
+          - 'null'
+        isAdmissionFormComplete:
+          type:
+          - boolean
+          - 'null'
+        levelOfCare:
+          type:
+          - string
+          - 'null'
+        stepDownId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        admissionDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        actualSysDischargeDateTime:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        bedName:
+          type:
+          - string
+          - 'null'
+        genderName:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    UserName:
+      type: object
+      properties:
+        first:
+          type:
+          - string
+          - 'null'
+        last:
+          type:
+          - string
+          - 'null'
+        prefix:
+          type:
+          - string
+          - 'null'
+        suffix:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Document:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        clientDocumentId:
+          type: integer
+          format: int64
+        name:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        fileName:
+          type:
+          - string
+          - 'null'
+        client:
+          $ref: '#/components/schemas/ResourceLink'
+        status:
+          type:
+          - string
+          - 'null'
+        type:
+          type:
+          - string
+          - 'null'
+        typeId:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        uploadDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        url:
+          $ref: '#/components/schemas/DocumentUrl'
+        tableId:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        tableName:
+          type:
+          - string
+          - 'null'
+        path:
+          type:
+          - string
+          - 'null'
+        documentTypeId:
+          type: integer
+          format: int32
+        uploadedDocuments:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/DocumentData'
+      additionalProperties: false
+    Cows:
+      type: object
+      properties:
+        anxiety:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        administratedSignature:
+          type:
+          - string
+          - 'null'
+        bone:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        cowsDateTime:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        date:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        gooseflesh:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        giUpset:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        id:
+          type: integer
+          format: int64
+        leadId:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        note:
+          type:
+          - string
+          - 'null'
+        pupil:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        restlessness:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        runnynose:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        startDetoxDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        sweating:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        tremor:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        time:
+          type:
+          - string
+          - 'null'
+        totalCWSScore:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        yawning:
+          type:
+          - integer
+          - 'null'
+          format: int32
+      additionalProperties: false
+    Ciwa:
+      type: object
+      properties:
+        anxiety:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        agitation:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        administratedSignature:
+          type:
+          - string
+          - 'null'
+        auditoryDisturbances:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        ciwaDateTime:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        date:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        elevationOfBloodPressure:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        elevationOfHeartRate:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        headache:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        nausea:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        note:
+          type:
+          - string
+          - 'null'
+        orientation:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        paroxysmalSweats:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        tremors:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        tactileDisturbances:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        totalCiwaScore:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        visualDisturbances:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        time:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Pronoun:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        inUse:
+          type: boolean
+      additionalProperties: false
+    Roi:
+      type: object
+      properties:
+        roiId:
+          type: integer
+          format: int64
+        startDate:
+          type: string
+          format: date-time
+        endDate:
+          type: string
+          format: date-time
+        expirationDate:
+          type:
+          - string
+          - 'null'
+        serviceFromDate:
+          type:
+          - string
+          - 'null'
+        serviceToDate:
+          type:
+          - string
+          - 'null'
+        clientSignature:
+          type:
+          - string
+          - 'null'
+        staffSignature:
+          type:
+          - string
+          - 'null'
+        gaurdianSignature:
+          type:
+          - string
+          - 'null'
+        signedDatetime:
+          type: string
+          format: date-time
+        permissionScreen:
+          type:
+          - string
+          - 'null'
+        informationRelease:
+          type:
+          - string
+          - 'null'
+        informationInclude:
+          type:
+          - string
+          - 'null'
+        otherInformation:
+          type:
+          - string
+          - 'null'
+        roiOtherRelease:
+          type:
+          - string
+          - 'null'
+        isCopyAccepted:
+          type:
+          - boolean
+          - 'null'
+        permissionScreenList:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/RoiInformationList'
+        informationReleaseList:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/RoiInformationList'
+        informationIncludeList:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/RoiInformationList'
+        staff:
+          $ref: '#/components/schemas/User'
+        revoke:
+          $ref: '#/components/schemas/RoiRevoke'
+      additionalProperties: false
+    ClientLogoData:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        base64String:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Reviewer:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+      additionalProperties: false
+    AssessmentVitals:
+      type: object
+      properties:
+        bpSystolic:
+          type:
+          - number
+          - 'null'
+          format: double
+        bpDiastolic:
+          type:
+          - number
+          - 'null'
+          format: double
+        o2Saturation:
+          type:
+          - number
+          - 'null'
+          format: double
+        pulse:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        respirations:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        temperature:
+          type:
+          - number
+          - 'null'
+          format: double
+      additionalProperties: false
+    Address:
+      type: object
+      properties:
+        line1:
+          type:
+          - string
+          - 'null'
+        line2:
+          type:
+          - string
+          - 'null'
+        city:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        stateAbbr:
+          type:
+          - string
+          - 'null'
+        country:
+          type:
+          - string
+          - 'null'
+        zipCode:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ClientOccupation:
+      type: object
+      properties:
+        name:
+          type:
+          - string
+          - 'null'
+        currentEmployer:
+          type:
+          - string
+          - 'null'
+        years:
+          type: integer
+          format: int32
+        months:
+          type: integer
+          format: int32
+      additionalProperties: false
+    ClientName:
+      type: object
+      properties:
+        clientFullName:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        first:
+          type:
+          - string
+          - 'null'
+        last:
+          type:
+          - string
+          - 'null'
+        middle:
+          type:
+          - string
+          - 'null'
+        isLegalName:
+          type:
+          - boolean
+          - 'null'
+        former:
+          type:
+          - string
+          - 'null'
+        prefix:
+          type:
+          - string
+          - 'null'
+        preferred:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    CreateResult:
+      type: object
+      properties:
+        operationResult:
+          $ref: '#/components/schemas/CreateOperationResult'
+        id:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        messages:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        reason:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
     Phone:
       type: object
       properties:
@@ -3684,10 +3884,6 @@ components:
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

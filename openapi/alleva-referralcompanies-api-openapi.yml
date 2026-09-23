@@ -47,6 +47,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ReferralCompany'
+      summary: Create referral companies
+      x-summary-source: derived
+      operationId: postReferralCompanies
+      x-operation-id-source: derived
     get:
       tags:
       - ReferralCompanies
@@ -104,6 +108,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/ReferralCompany'
+      summary: Get referral companies
+      x-summary-source: derived
+      operationId: getReferralCompanies
+      x-operation-id-source: derived
   /v{version}/referral-companies:
     post:
       tags:
@@ -149,6 +157,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ReferralCompany'
+      summary: Create v{version} referral companies
+      x-summary-source: derived
+      operationId: postV{version}ReferralCompanies
+      x-operation-id-source: derived
     get:
       tags:
       - ReferralCompanies
@@ -211,6 +223,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/ReferralCompany'
+      summary: Get v{version} referral companies
+      x-summary-source: derived
+      operationId: getV{version}ReferralCompanies
+      x-operation-id-source: derived
   /referral-companies/{id}:
     patch:
       tags:
@@ -265,6 +281,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ReferralCompany'
+      summary: Update referral companies by id
+      x-summary-source: derived
+      operationId: patchReferralCompaniesById
+      x-operation-id-source: derived
     get:
       tags:
       - ReferralCompanies
@@ -296,6 +316,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ReferralCompany'
+      summary: Get referral companies by id
+      x-summary-source: derived
+      operationId: getReferralCompaniesById
+      x-operation-id-source: derived
   /v{version}/referral-companies/{id}:
     patch:
       tags:
@@ -355,6 +379,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ReferralCompany'
+      summary: Update v{version} referral companies by id
+      x-summary-source: derived
+      operationId: patchV{version}ReferralCompaniesById
+      x-operation-id-source: derived
     get:
       tags:
       - ReferralCompanies
@@ -391,6 +419,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ReferralCompany'
+      summary: Get v{version} referral companies by id
+      x-summary-source: derived
+      operationId: getV{version}ReferralCompaniesById
+      x-operation-id-source: derived
   /referral-companies/{companyId}/notes/{noteId}:
     get:
       tags:
@@ -419,6 +451,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Get referral companies by company id notes by note id
+      x-summary-source: derived
+      operationId: getReferralCompaniesByCompanyIdNotesByNoteId
+      x-operation-id-source: derived
     put:
       tags:
       - ReferralCompanies
@@ -460,6 +496,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Replace referral companies by company id notes by note id
+      x-summary-source: derived
+      operationId: putReferralCompaniesByCompanyIdNotesByNoteId
+      x-operation-id-source: derived
     patch:
       tags:
       - ReferralCompanies
@@ -501,6 +541,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Update referral companies by company id notes by note id
+      x-summary-source: derived
+      operationId: patchReferralCompaniesByCompanyIdNotesByNoteId
+      x-operation-id-source: derived
   /v{version}/referral-companies/{companyId}/notes/{noteId}:
     get:
       tags:
@@ -534,6 +578,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Get v{version} referral companies by company id notes by note id
+      x-summary-source: derived
+      operationId: getV{version}ReferralCompaniesByCompanyIdNotesByNoteId
+      x-operation-id-source: derived
     put:
       tags:
       - ReferralCompanies
@@ -580,6 +628,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Replace v{version} referral companies by company id notes by note id
+      x-summary-source: derived
+      operationId: putV{version}ReferralCompaniesByCompanyIdNotesByNoteId
+      x-operation-id-source: derived
     patch:
       tags:
       - ReferralCompanies
@@ -626,6 +678,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Update v{version} referral companies by company id notes by note id
+      x-summary-source: derived
+      operationId: patchV{version}ReferralCompaniesByCompanyIdNotesByNoteId
+      x-operation-id-source: derived
   /referral-companies/{companyId}/notes:
     get:
       tags:
@@ -648,6 +704,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Get referral companies by company id notes
+      x-summary-source: derived
+      operationId: getReferralCompaniesByCompanyIdNotes
+      x-operation-id-source: derived
     post:
       tags:
       - ReferralCompanies
@@ -683,6 +743,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Create referral companies by company id notes
+      x-summary-source: derived
+      operationId: postReferralCompaniesByCompanyIdNotes
+      x-operation-id-source: derived
   /v{version}/referral-companies/{companyId}/notes:
     get:
       tags:
@@ -710,6 +774,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Get v{version} referral companies by company id notes
+      x-summary-source: derived
+      operationId: getV{version}ReferralCompaniesByCompanyIdNotes
+      x-operation-id-source: derived
     post:
       tags:
       - ReferralCompanies
@@ -750,6 +818,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Create v{version} referral companies by company id notes
+      x-summary-source: derived
+      operationId: postV{version}ReferralCompaniesByCompanyIdNotes
+      x-operation-id-source: derived
   /referral-companies/notes:
     get:
       tags:
@@ -766,6 +838,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Get referral companies notes
+      x-summary-source: derived
+      operationId: getReferralCompaniesNotes
+      x-operation-id-source: derived
   /v{version}/referral-companies/notes:
     get:
       tags:
@@ -787,6 +863,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Get v{version} referral companies notes
+      x-summary-source: derived
+      operationId: getV{version}ReferralCompaniesNotes
+      x-operation-id-source: derived
   /referral-companies/{id}/logo:
     post:
       tags:
@@ -833,6 +913,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Create referral companies by id logo
+      x-summary-source: derived
+      operationId: postReferralCompaniesByIdLogo
+      x-operation-id-source: derived
   /v{version}/referral-companies/{id}/logo:
     post:
       tags:
@@ -884,6 +968,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Create v{version} referral companies by id logo
+      x-summary-source: derived
+      operationId: postV{version}ReferralCompaniesByIdLogo
+      x-operation-id-source: derived
   /referral-companies/bulk:
     post:
       tags:
@@ -938,6 +1026,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/ReferralCompany'
+      summary: Create referral companies bulk
+      x-summary-source: derived
+      operationId: postReferralCompaniesBulk
+      x-operation-id-source: derived
   /v{version}/referral-companies/bulk:
     post:
       tags:
@@ -997,6 +1089,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/ReferralCompany'
+      summary: Create v{version} referral companies bulk
+      x-summary-source: derived
+      operationId: postV{version}ReferralCompaniesBulk
+      x-operation-id-source: derived
 components:
   schemas:
     ReferralCompany:
@@ -1037,51 +1133,6 @@ components:
         externalId:
           $ref: '#/components/schemas/ExternalData'
       additionalProperties: false
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
-    ExternalData:
-      type: object
-      properties:
-        externalId:
-          type:
-          - string
-          - 'null'
-        externalIdType:
-          type:
-          - string
-          - 'null'
-        serviceIdentifier:
-          type:
-          - string
-          - 'null'
-        serviceId:
-          type:
-          - integer
-          - 'null'
-          format: int32
-      additionalProperties: false
-    ReferralLogoData:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        base64String:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    UpdateOperationResult:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      type: integer
-      format: int32
     ReferralNoteCreationApiStruct:
       type: object
       properties:
@@ -1112,6 +1163,22 @@ components:
           format: int32
           writeOnly: true
       additionalProperties: false
+    ReferralLogoData:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        base64String:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
     Address:
       type: object
       properties:
@@ -1143,6 +1210,27 @@ components:
           type:
           - string
           - 'null'
+      additionalProperties: false
+    ExternalData:
+      type: object
+      properties:
+        externalId:
+          type:
+          - string
+          - 'null'
+        externalIdType:
+          type:
+          - string
+          - 'null'
+        serviceIdentifier:
+          type:
+          - string
+          - 'null'
+        serviceId:
+          type:
+          - integer
+          - 'null'
+          format: int32
       additionalProperties: false
     Phone:
       type: object
@@ -1189,13 +1277,17 @@ components:
           - string
           - 'null'
       additionalProperties: false
+    UpdateOperationResult:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

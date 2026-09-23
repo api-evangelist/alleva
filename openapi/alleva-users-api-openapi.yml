@@ -33,6 +33,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/User'
+      summary: Get users me
+      x-summary-source: derived
+      operationId: getUsersMe
+      x-operation-id-source: derived
   /v{version}/users/me:
     get:
       tags:
@@ -64,6 +68,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/User'
+      summary: Get v{version} users me
+      x-summary-source: derived
+      operationId: getV{version}UsersMe
+      x-operation-id-source: derived
   /users/licenses:
     get:
       tags:
@@ -102,6 +110,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicense'
+      summary: Get users licenses
+      x-summary-source: derived
+      operationId: getUsersLicenses
+      x-operation-id-source: derived
     post:
       tags:
       - Users
@@ -141,6 +153,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicense'
+      summary: Create users licenses
+      x-summary-source: derived
+      operationId: postUsersLicenses
+      x-operation-id-source: derived
   /v{version}/users/licenses:
     get:
       tags:
@@ -184,6 +200,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicense'
+      summary: Get v{version} users licenses
+      x-summary-source: derived
+      operationId: getV{version}UsersLicenses
+      x-operation-id-source: derived
     post:
       tags:
       - Users
@@ -228,6 +248,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicense'
+      summary: Create v{version} users licenses
+      x-summary-source: derived
+      operationId: postV{version}UsersLicenses
+      x-operation-id-source: derived
   /users/licenses/{licenseId}:
     get:
       tags:
@@ -266,6 +290,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicense'
+      summary: Get users licenses by license id
+      x-summary-source: derived
+      operationId: getUsersLicensesByLicenseId
+      x-operation-id-source: derived
     delete:
       tags:
       - Users
@@ -287,6 +315,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Delete users licenses by license id
+      x-summary-source: derived
+      operationId: deleteUsersLicensesByLicenseId
+      x-operation-id-source: derived
     patch:
       tags:
       - Users
@@ -340,6 +372,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicense'
+      summary: Update users licenses by license id
+      x-summary-source: derived
+      operationId: patchUsersLicensesByLicenseId
+      x-operation-id-source: derived
   /v{version}/users/licenses/{licenseId}:
     get:
       tags:
@@ -383,6 +419,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicense'
+      summary: Get v{version} users licenses by license id
+      x-summary-source: derived
+      operationId: getV{version}UsersLicensesByLicenseId
+      x-operation-id-source: derived
     delete:
       tags:
       - Users
@@ -409,6 +449,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Delete v{version} users licenses by license id
+      x-summary-source: derived
+      operationId: deleteV{version}UsersLicensesByLicenseId
+      x-operation-id-source: derived
     patch:
       tags:
       - Users
@@ -467,6 +511,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicense'
+      summary: Update v{version} users licenses by license id
+      x-summary-source: derived
+      operationId: patchV{version}UsersLicensesByLicenseId
+      x-operation-id-source: derived
   /users/{id}/licenses:
     get:
       tags:
@@ -505,6 +553,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicense'
+      summary: Get users by id licenses
+      x-summary-source: derived
+      operationId: getUsersByIdLicenses
+      x-operation-id-source: derived
     post:
       tags:
       - Users
@@ -549,6 +601,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicense'
+      summary: Create users by id licenses
+      x-summary-source: derived
+      operationId: postUsersByIdLicenses
+      x-operation-id-source: derived
     patch:
       tags:
       - Users
@@ -602,6 +658,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicense'
+      summary: Update users by id licenses
+      x-summary-source: derived
+      operationId: patchUsersByIdLicenses
+      x-operation-id-source: derived
   /v{version}/users/{id}/licenses:
     get:
       tags:
@@ -645,6 +705,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicense'
+      summary: Get v{version} users by id licenses
+      x-summary-source: derived
+      operationId: getV{version}UsersByIdLicenses
+      x-operation-id-source: derived
     post:
       tags:
       - Users
@@ -694,6 +758,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicense'
+      summary: Create v{version} users by id licenses
+      x-summary-source: derived
+      operationId: postV{version}UsersByIdLicenses
+      x-operation-id-source: derived
     patch:
       tags:
       - Users
@@ -752,6 +820,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicense'
+      summary: Update v{version} users by id licenses
+      x-summary-source: derived
+      operationId: patchV{version}UsersByIdLicenses
+      x-operation-id-source: derived
   /users/{id}/licenses/{licenseId}:
     delete:
       tags:
@@ -779,6 +851,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Delete users by id licenses by license id
+      x-summary-source: derived
+      operationId: deleteUsersByIdLicensesByLicenseId
+      x-operation-id-source: derived
     patch:
       tags:
       - Users
@@ -837,6 +913,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicense'
+      summary: Update users by id licenses by license id
+      x-summary-source: derived
+      operationId: patchUsersByIdLicensesByLicenseId
+      x-operation-id-source: derived
   /v{version}/users/{id}/licenses/{licenseId}:
     delete:
       tags:
@@ -869,6 +949,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Delete v{version} users by id licenses by license id
+      x-summary-source: derived
+      operationId: deleteV{version}UsersByIdLicensesByLicenseId
+      x-operation-id-source: derived
     patch:
       tags:
       - Users
@@ -932,6 +1016,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicense'
+      summary: Update v{version} users by id licenses by license id
+      x-summary-source: derived
+      operationId: patchV{version}UsersByIdLicensesByLicenseId
+      x-operation-id-source: derived
   /users/{id}/image:
     post:
       tags:
@@ -978,6 +1066,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Create users by id image
+      x-summary-source: derived
+      operationId: postUsersByIdImage
+      x-operation-id-source: derived
   /v{version}/users/{id}/image:
     post:
       tags:
@@ -1029,6 +1121,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Create v{version} users by id image
+      x-summary-source: derived
+      operationId: postV{version}UsersByIdImage
+      x-operation-id-source: derived
   /users/{id}/provider-image:
     post:
       tags:
@@ -1075,6 +1171,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Create users by id provider image
+      x-summary-source: derived
+      operationId: postUsersByIdProviderImage
+      x-operation-id-source: derived
   /v{version}/users/{id}/provider-image:
     post:
       tags:
@@ -1126,6 +1226,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Create v{version} users by id provider image
+      x-summary-source: derived
+      operationId: postV{version}UsersByIdProviderImage
+      x-operation-id-source: derived
   /users/{id}/admin-image:
     post:
       tags:
@@ -1172,6 +1276,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Create users by id admin image
+      x-summary-source: derived
+      operationId: postUsersByIdAdminImage
+      x-operation-id-source: derived
   /v{version}/users/{id}/admin-image:
     post:
       tags:
@@ -1223,6 +1331,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Create v{version} users by id admin image
+      x-summary-source: derived
+      operationId: postV{version}UsersByIdAdminImage
+      x-operation-id-source: derived
   /users:
     get:
       tags:
@@ -1281,6 +1393,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/User'
+      summary: Get users
+      x-summary-source: derived
+      operationId: getUsers
+      x-operation-id-source: derived
   /v{version}/users:
     get:
       tags:
@@ -1344,6 +1460,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/User'
+      summary: Get v{version} users
+      x-summary-source: derived
+      operationId: getV{version}Users
+      x-operation-id-source: derived
   /users/{id}:
     get:
       tags:
@@ -1376,6 +1496,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/User'
+      summary: Get users by id
+      x-summary-source: derived
+      operationId: getUsersById
+      x-operation-id-source: derived
   /v{version}/users/{id}:
     get:
       tags:
@@ -1413,68 +1537,28 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/User'
+      summary: Get v{version} users by id
+      x-summary-source: derived
+      operationId: getV{version}UsersById
+      x-operation-id-source: derived
 components:
   schemas:
-    UserLicense:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        acronym:
-          type:
-          - string
-          - 'null'
-        order:
-          type: integer
-          format: int32
-        number:
-          type:
-          - string
-          - 'null'
-        isActive:
-          type: boolean
-        effectiveDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        expiryDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        type:
-          $ref: '#/components/schemas/UserLicenseType'
-        user:
-          $ref: '#/components/schemas/User'
-        state:
-          $ref: '#/components/schemas/State'
-      additionalProperties: false
-    UserImageUrl:
+    ExternalProviderLogoData:
       type: object
       properties:
         fileName:
           type:
           - string
           - 'null'
-        host:
+        base64String:
           type:
           - string
           - 'null'
-          readOnly: true
-        path:
-          type:
-          - string
-          - 'null'
-          readOnly: true
+        rehabUserId:
+          type: integer
+          format: int64
       additionalProperties: false
-    UserLicenseType:
+    State:
       type: object
       properties:
         id:
@@ -1485,20 +1569,20 @@ components:
           - string
           - 'null'
           readOnly: true
-        name:
+        stateId:
+          type: integer
+          format: int32
+        countryId:
+          type: integer
+          format: int32
+        stateName:
           type:
           - string
           - 'null'
-        description:
+        stateCode:
           type:
           - string
           - 'null'
-        isActive:
-          type: boolean
-        canModifyOrDelete:
-          type: boolean
-        inUse:
-          type: boolean
       additionalProperties: false
     User:
       type: object
@@ -1578,51 +1662,7 @@ components:
           items:
             $ref: '#/components/schemas/UserLicense'
       additionalProperties: false
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
-    UpdateOperationResult:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      type: integer
-      format: int32
-    Address:
-      type: object
-      properties:
-        line1:
-          type:
-          - string
-          - 'null'
-        line2:
-          type:
-          - string
-          - 'null'
-        city:
-          type:
-          - string
-          - 'null'
-        state:
-          type:
-          - string
-          - 'null'
-        stateAbbr:
-          type:
-          - string
-          - 'null'
-        country:
-          type:
-          - string
-          - 'null'
-        zipCode:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    State:
+    UserLicenseType:
       type: object
       properties:
         id:
@@ -1633,20 +1673,20 @@ components:
           - string
           - 'null'
           readOnly: true
-        stateId:
-          type: integer
-          format: int32
-        countryId:
-          type: integer
-          format: int32
-        stateName:
+        name:
           type:
           - string
           - 'null'
-        stateCode:
+        description:
           type:
           - string
           - 'null'
+        isActive:
+          type: boolean
+        canModifyOrDelete:
+          type: boolean
+        inUse:
+          type: boolean
       additionalProperties: false
     UserName:
       type: object
@@ -1664,54 +1704,6 @@ components:
           - string
           - 'null'
         suffix:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    ExternalProviderLogoData:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        base64String:
-          type:
-          - string
-          - 'null'
-        rehabUserId:
-          type: integer
-          format: int64
-      additionalProperties: false
-    UserLogoData:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        base64String:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    UpdateResult:
-      type: object
-      properties:
-        operationResult:
-          $ref: '#/components/schemas/UpdateOperationResult'
-        success:
-          type: boolean
-        id:
-          type: integer
-          format: int64
-        messages:
-          type:
-          - array
-          - 'null'
-          items:
-            type: string
-        reason:
           type:
           - string
           - 'null'
@@ -1776,13 +1768,145 @@ components:
           - string
           - 'null'
       additionalProperties: false
+    Address:
+      type: object
+      properties:
+        line1:
+          type:
+          - string
+          - 'null'
+        line2:
+          type:
+          - string
+          - 'null'
+        city:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        stateAbbr:
+          type:
+          - string
+          - 'null'
+        country:
+          type:
+          - string
+          - 'null'
+        zipCode:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    UserLogoData:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        base64String:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
+    UpdateResult:
+      type: object
+      properties:
+        operationResult:
+          $ref: '#/components/schemas/UpdateOperationResult'
+        success:
+          type: boolean
+        id:
+          type: integer
+          format: int64
+        messages:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        reason:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    UserLicense:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        acronym:
+          type:
+          - string
+          - 'null'
+        order:
+          type: integer
+          format: int32
+        number:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        effectiveDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        expiryDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        type:
+          $ref: '#/components/schemas/UserLicenseType'
+        user:
+          $ref: '#/components/schemas/User'
+        state:
+          $ref: '#/components/schemas/State'
+      additionalProperties: false
+    UserImageUrl:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        host:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        path:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+      additionalProperties: false
+    UpdateOperationResult:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

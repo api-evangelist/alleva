@@ -47,6 +47,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/AdvancedFormInstance'
+      summary: Create advanced forms instance
+      x-summary-source: derived
+      operationId: postAdvancedFormsInstance
+      x-operation-id-source: derived
     get:
       tags:
       - AdvancedFormInstance
@@ -92,6 +96,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/AdvancedFormInstance'
+      summary: Get advanced forms instance
+      x-summary-source: derived
+      operationId: getAdvancedFormsInstance
+      x-operation-id-source: derived
   /v{version}/advanced-forms/instance:
     post:
       tags:
@@ -137,6 +145,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/AdvancedFormInstance'
+      summary: Create v{version} advanced forms instance
+      x-summary-source: derived
+      operationId: postV{version}AdvancedFormsInstance
+      x-operation-id-source: derived
     get:
       tags:
       - AdvancedFormInstance
@@ -187,8 +199,32 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/AdvancedFormInstance'
+      summary: Get v{version} advanced forms instance
+      x-summary-source: derived
+      operationId: getV{version}AdvancedFormsInstance
+      x-operation-id-source: derived
 components:
   schemas:
+    CustomFormSourceType:
+      enum:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      type: integer
+      format: int32
+    UserType:
+      enum:
+      - 0
+      - 1
+      - 2
+      type: integer
+      format: int32
     AdvancedFormInstance:
       type: object
       properties:
@@ -241,33 +277,9 @@ components:
           type: string
           format: date-time
       additionalProperties: false
-    UserType:
-      enum:
-      - 0
-      - 1
-      - 2
-      type: integer
-      format: int32
-    CustomFormSourceType:
-      enum:
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
-      - 8
-      - 9
-      type: integer
-      format: int32
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

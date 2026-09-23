@@ -43,6 +43,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Session'
+      summary: Get sessions by id
+      x-summary-source: derived
+      operationId: getSessionsById
+      x-operation-id-source: derived
     put:
       tags:
       - Sessions
@@ -88,57 +92,13 @@ paths:
             text/json; ver=1.0:
               schema:
                 type: boolean
+      summary: Replace sessions by id
+      x-summary-source: derived
+      operationId: putSessionsById
+      x-operation-id-source: derived
 components:
   schemas:
-    TimeSpan:
-      type: object
-      properties:
-        ticks:
-          type: integer
-          format: int64
-          readOnly: true
-        days:
-          type: integer
-          format: int32
-          readOnly: true
-        hours:
-          type: integer
-          format: int32
-          readOnly: true
-        milliseconds:
-          type: integer
-          format: int32
-          readOnly: true
-        minutes:
-          type: integer
-          format: int32
-          readOnly: true
-        seconds:
-          type: integer
-          format: int32
-          readOnly: true
-        totalDays:
-          type: number
-          format: double
-          readOnly: true
-        totalHours:
-          type: number
-          format: double
-          readOnly: true
-        totalMilliseconds:
-          type: number
-          format: double
-          readOnly: true
-        totalMinutes:
-          type: number
-          format: double
-          readOnly: true
-        totalSeconds:
-          type: number
-          format: double
-          readOnly: true
-      additionalProperties: false
-    BillingCodesDataModel:
+    OutreachSessionNote:
       type: object
       properties:
         id:
@@ -149,16 +109,20 @@ components:
           - string
           - 'null'
           readOnly: true
-        billingCodeDataId:
+        noteId:
           type: integer
-          format: int32
-        tableType:
+          format: int64
+        appointmentId:
           type: integer
-          format: int32
-        notesId:
+          format: int64
+        leadId:
           type: integer
-          format: int32
-        codeId:
+          format: int64
+        assesmentNote:
+          type:
+          - string
+          - 'null'
+        sessionStatus:
           type: integer
           format: int32
         createdBy:
@@ -177,6 +141,8 @@ components:
           - string
           - 'null'
           format: date-time
+        isDeleted:
+          type: boolean
         deletedBy:
           type:
           - integer
@@ -187,76 +153,13 @@ components:
           - string
           - 'null'
           format: date-time
-        isActive:
-          type: boolean
-        isDeleted:
-          type: boolean
-      additionalProperties: false
-    SectionSignaturesWithUser:
-      type: object
-      properties:
-        rowNumber:
+        startSession:
+          $ref: '#/components/schemas/TimeSpan'
+        endSession:
+          $ref: '#/components/schemas/TimeSpan'
+        duration:
           type: integer
           format: int32
-        signatureTypeId:
-          $ref: '#/components/schemas/SignatureType'
-        fullName:
-          type:
-          - string
-          - 'null'
-        signature:
-          type:
-          - string
-          - 'null'
-        createdDate:
-          type: string
-          format: date-time
-      additionalProperties: false
-    State:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        stateId:
-          type: integer
-          format: int32
-        countryId:
-          type: integer
-          format: int32
-        stateName:
-          type:
-          - string
-          - 'null'
-        stateCode:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    UserName:
-      type: object
-      properties:
-        first:
-          type:
-          - string
-          - 'null'
-        last:
-          type:
-          - string
-          - 'null'
-        prefix:
-          type:
-          - string
-          - 'null'
-        suffix:
-          type:
-          - string
-          - 'null'
       additionalProperties: false
     Gad7Model:
       type: object
@@ -367,152 +270,7 @@ components:
           format: date-time
           readOnly: true
       additionalProperties: false
-    SessionDetail:
-      type: object
-      properties:
-        sessionNote:
-          $ref: '#/components/schemas/OutreachSessionNote'
-        groupLeader:
-          $ref: '#/components/schemas/User'
-        mentalStatusModel:
-          $ref: '#/components/schemas/MentalStatusExamModel'
-        asamModel:
-          $ref: '#/components/schemas/ASAMModel'
-        signatures:
-          $ref: '#/components/schemas/SectionSignatures'
-        phq9Model:
-          $ref: '#/components/schemas/Phq9Model'
-        gad7Model:
-          $ref: '#/components/schemas/Gad7Model'
-        billingCode:
-          $ref: '#/components/schemas/BillingCodesDataModel'
-        staffSignature:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/SectionSignaturesWithUser'
-      additionalProperties: false
-    Phq9Model:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        phq9Id:
-          type: integer
-          format: int64
-        clientId:
-          type: integer
-          format: int64
-        sourceId:
-          type: integer
-          format: int64
-        sourceName:
-          type:
-          - string
-          - 'null'
-        phq9Date:
-          type: string
-          format: date-time
-        question1:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        question2:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        question3:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        question4:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        question5:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        question6:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        question7:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        question8:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        question9:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        question10:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        totalScore:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        createdBy:
-          type: integer
-          format: int32
-        createdDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-          readOnly: true
-        updatedBy:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        modifiedDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-          readOnly: true
-        isDeleted:
-          type: boolean
-        deletedBy:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        deletedDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-          readOnly: true
-        leadId:
-          type: integer
-          format: int64
-      additionalProperties: false
-    User:
+    Facility:
       type: object
       properties:
         id:
@@ -524,21 +282,14 @@ components:
           - 'null'
           readOnly: true
         name:
-          $ref: '#/components/schemas/UserName'
-        gender:
           type:
           - string
           - 'null'
-        userName:
+        rehabName:
           type:
           - string
           - 'null'
-        birthDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        ssn:
+        domainName:
           type:
           - string
           - 'null'
@@ -546,49 +297,38 @@ components:
           type:
           - string
           - 'null'
-        phone:
+        officePhone:
           type:
           - string
           - 'null'
-        address:
-          $ref: '#/components/schemas/Address'
-        facility:
-          $ref: '#/components/schemas/Facility'
-        tenant:
+        fax:
           type:
           - string
           - 'null'
-        role:
+        address1:
           type:
           - string
           - 'null'
-        profileImage:
-          $ref: '#/components/schemas/UserImageUrl'
-        isMedicalProvider:
-          type:
-          - boolean
-          - 'null'
-        hireDate:
+        address2:
           type:
           - string
           - 'null'
-          format: date-time
-        startDate:
+        state:
           type:
           - string
           - 'null'
-          format: date-time
-        endDate:
+        city:
           type:
           - string
           - 'null'
-          format: date-time
-        licenses:
+        postalCode:
           type:
-          - array
+          - string
           - 'null'
-          items:
-            $ref: '#/components/schemas/UserLicense'
+        country:
+          type:
+          - string
+          - 'null'
       additionalProperties: false
     Session:
       type: object
@@ -812,373 +552,6 @@ components:
           - 'null'
         details:
           $ref: '#/components/schemas/SessionDetail'
-      additionalProperties: false
-    ASAMModel:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        asamid:
-          type: integer
-          format: int64
-        sourceID:
-          type: integer
-          format: int64
-        riskLevel:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        riskWithdrawal:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        priorWithdrawal:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        physicalIllness:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        cronogicPain:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        chronicCondition:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        cognitiveProblem:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        problemConnection:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        manageActivity:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        selfMotivated:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        addictiveDisorder:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        memberLeverged:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        memberImminent:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        severeProblem:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        memberAware:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        poseThreat:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        memberResource:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        transportationIssue:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        totalScore:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        isDeleted:
-          type: boolean
-        deletedDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        deletedBy:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        updatedBy:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        updateDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        createdBy:
-          type: integer
-          format: int32
-        createdDate:
-          type: string
-          format: date-time
-        sourceName:
-          type:
-          - string
-          - 'null'
-        clientID:
-          type: integer
-          format: int64
-        asamDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        dimension1Detail:
-          type:
-          - string
-          - 'null'
-        dimension2Detail:
-          type:
-          - string
-          - 'null'
-        dimension3Detail:
-          type:
-          - string
-          - 'null'
-        dimension4Detail:
-          type:
-          - string
-          - 'null'
-        dimension5Detail:
-          type:
-          - string
-          - 'null'
-        dimension6Detail:
-          type:
-          - string
-          - 'null'
-        validFrom:
-          type: string
-          format: date-time
-        validTo:
-          type: string
-          format: date-time
-      additionalProperties: false
-    UserImageUrl:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        host:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        path:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-      additionalProperties: false
-    Address:
-      type: object
-      properties:
-        line1:
-          type:
-          - string
-          - 'null'
-        line2:
-          type:
-          - string
-          - 'null'
-        city:
-          type:
-          - string
-          - 'null'
-        state:
-          type:
-          - string
-          - 'null'
-        stateAbbr:
-          type:
-          - string
-          - 'null'
-        country:
-          type:
-          - string
-          - 'null'
-        zipCode:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    UserLicense:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        acronym:
-          type:
-          - string
-          - 'null'
-        order:
-          type: integer
-          format: int32
-        number:
-          type:
-          - string
-          - 'null'
-        isActive:
-          type: boolean
-        effectiveDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        expiryDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        type:
-          $ref: '#/components/schemas/UserLicenseType'
-        user:
-          $ref: '#/components/schemas/User'
-        state:
-          $ref: '#/components/schemas/State'
-      additionalProperties: false
-    Facility:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        name:
-          type:
-          - string
-          - 'null'
-        rehabName:
-          type:
-          - string
-          - 'null'
-        domainName:
-          type:
-          - string
-          - 'null'
-        email:
-          type:
-          - string
-          - 'null'
-        officePhone:
-          type:
-          - string
-          - 'null'
-        fax:
-          type:
-          - string
-          - 'null'
-        address1:
-          type:
-          - string
-          - 'null'
-        address2:
-          type:
-          - string
-          - 'null'
-        state:
-          type:
-          - string
-          - 'null'
-        city:
-          type:
-          - string
-          - 'null'
-        postalCode:
-          type:
-          - string
-          - 'null'
-        country:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    SignatureType:
-      enum:
-      - 1
-      - 2
-      - 3
-      type: integer
-      format: int32
-    UserLicenseType:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        name:
-          type:
-          - string
-          - 'null'
-        description:
-          type:
-          - string
-          - 'null'
-        isActive:
-          type: boolean
-        canModifyOrDelete:
-          type: boolean
-        inUse:
-          type: boolean
       additionalProperties: false
     MentalStatusExamModel:
       type: object
@@ -1643,6 +1016,321 @@ components:
         jud_WNL:
           type: boolean
       additionalProperties: false
+    UserImageUrl:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        host:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        path:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+      additionalProperties: false
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          $ref: '#/components/schemas/UserName'
+        gender:
+          type:
+          - string
+          - 'null'
+        userName:
+          type:
+          - string
+          - 'null'
+        birthDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        ssn:
+          type:
+          - string
+          - 'null'
+        email:
+          type:
+          - string
+          - 'null'
+        phone:
+          type:
+          - string
+          - 'null'
+        address:
+          $ref: '#/components/schemas/Address'
+        facility:
+          $ref: '#/components/schemas/Facility'
+        tenant:
+          type:
+          - string
+          - 'null'
+        role:
+          type:
+          - string
+          - 'null'
+        profileImage:
+          $ref: '#/components/schemas/UserImageUrl'
+        isMedicalProvider:
+          type:
+          - boolean
+          - 'null'
+        hireDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        startDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        endDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        licenses:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/UserLicense'
+      additionalProperties: false
+    State:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        stateId:
+          type: integer
+          format: int32
+        countryId:
+          type: integer
+          format: int32
+        stateName:
+          type:
+          - string
+          - 'null'
+        stateCode:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    UserLicense:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        acronym:
+          type:
+          - string
+          - 'null'
+        order:
+          type: integer
+          format: int32
+        number:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        effectiveDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        expiryDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        type:
+          $ref: '#/components/schemas/UserLicenseType'
+        user:
+          $ref: '#/components/schemas/User'
+        state:
+          $ref: '#/components/schemas/State'
+      additionalProperties: false
+    SignatureType:
+      enum:
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
+    UserLicenseType:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        canModifyOrDelete:
+          type: boolean
+        inUse:
+          type: boolean
+      additionalProperties: false
+    Phq9Model:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        phq9Id:
+          type: integer
+          format: int64
+        clientId:
+          type: integer
+          format: int64
+        sourceId:
+          type: integer
+          format: int64
+        sourceName:
+          type:
+          - string
+          - 'null'
+        phq9Date:
+          type: string
+          format: date-time
+        question1:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question2:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question3:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question4:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question5:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question6:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question7:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question8:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question9:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        question10:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        totalScore:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        createdBy:
+          type: integer
+          format: int32
+        createdDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+          readOnly: true
+        updatedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        modifiedDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+          readOnly: true
+        isDeleted:
+          type: boolean
+        deletedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        deletedDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+          readOnly: true
+        leadId:
+          type: integer
+          format: int64
+      additionalProperties: false
     SectionSignatures:
       type: object
       properties:
@@ -1662,7 +1350,53 @@ components:
           type: integer
           format: int32
       additionalProperties: false
-    OutreachSessionNote:
+    UserName:
+      type: object
+      properties:
+        first:
+          type:
+          - string
+          - 'null'
+        last:
+          type:
+          - string
+          - 'null'
+        prefix:
+          type:
+          - string
+          - 'null'
+        suffix:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    SessionDetail:
+      type: object
+      properties:
+        sessionNote:
+          $ref: '#/components/schemas/OutreachSessionNote'
+        groupLeader:
+          $ref: '#/components/schemas/User'
+        mentalStatusModel:
+          $ref: '#/components/schemas/MentalStatusExamModel'
+        asamModel:
+          $ref: '#/components/schemas/ASAMModel'
+        signatures:
+          $ref: '#/components/schemas/SectionSignatures'
+        phq9Model:
+          $ref: '#/components/schemas/Phq9Model'
+        gad7Model:
+          $ref: '#/components/schemas/Gad7Model'
+        billingCode:
+          $ref: '#/components/schemas/BillingCodesDataModel'
+        staffSignature:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/SectionSignaturesWithUser'
+      additionalProperties: false
+    BillingCodesDataModel:
       type: object
       properties:
         id:
@@ -1673,20 +1407,16 @@ components:
           - string
           - 'null'
           readOnly: true
-        noteId:
+        billingCodeDataId:
           type: integer
-          format: int64
-        appointmentId:
+          format: int32
+        tableType:
           type: integer
-          format: int64
-        leadId:
+          format: int32
+        notesId:
           type: integer
-          format: int64
-        assesmentNote:
-          type:
-          - string
-          - 'null'
-        sessionStatus:
+          format: int32
+        codeId:
           type: integer
           format: int32
         createdBy:
@@ -1705,8 +1435,6 @@ components:
           - string
           - 'null'
           format: date-time
-        isDeleted:
-          type: boolean
         deletedBy:
           type:
           - integer
@@ -1717,21 +1445,297 @@ components:
           - string
           - 'null'
           format: date-time
-        startSession:
-          $ref: '#/components/schemas/TimeSpan'
-        endSession:
-          $ref: '#/components/schemas/TimeSpan'
-        duration:
+        isActive:
+          type: boolean
+        isDeleted:
+          type: boolean
+      additionalProperties: false
+    SectionSignaturesWithUser:
+      type: object
+      properties:
+        rowNumber:
           type: integer
           format: int32
+        signatureTypeId:
+          $ref: '#/components/schemas/SignatureType'
+        fullName:
+          type:
+          - string
+          - 'null'
+        signature:
+          type:
+          - string
+          - 'null'
+        createdDate:
+          type: string
+          format: date-time
+      additionalProperties: false
+    ASAMModel:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        asamid:
+          type: integer
+          format: int64
+        sourceID:
+          type: integer
+          format: int64
+        riskLevel:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        riskWithdrawal:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        priorWithdrawal:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        physicalIllness:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        cronogicPain:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        chronicCondition:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        cognitiveProblem:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        problemConnection:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        manageActivity:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        selfMotivated:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        addictiveDisorder:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        memberLeverged:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        memberImminent:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        severeProblem:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        memberAware:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        poseThreat:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        memberResource:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        transportationIssue:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        totalScore:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        isDeleted:
+          type: boolean
+        deletedDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        deletedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        updatedBy:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        updateDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        createdBy:
+          type: integer
+          format: int32
+        createdDate:
+          type: string
+          format: date-time
+        sourceName:
+          type:
+          - string
+          - 'null'
+        clientID:
+          type: integer
+          format: int64
+        asamDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        dimension1Detail:
+          type:
+          - string
+          - 'null'
+        dimension2Detail:
+          type:
+          - string
+          - 'null'
+        dimension3Detail:
+          type:
+          - string
+          - 'null'
+        dimension4Detail:
+          type:
+          - string
+          - 'null'
+        dimension5Detail:
+          type:
+          - string
+          - 'null'
+        dimension6Detail:
+          type:
+          - string
+          - 'null'
+        validFrom:
+          type: string
+          format: date-time
+        validTo:
+          type: string
+          format: date-time
+      additionalProperties: false
+    Address:
+      type: object
+      properties:
+        line1:
+          type:
+          - string
+          - 'null'
+        line2:
+          type:
+          - string
+          - 'null'
+        city:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        stateAbbr:
+          type:
+          - string
+          - 'null'
+        country:
+          type:
+          - string
+          - 'null'
+        zipCode:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    TimeSpan:
+      type: object
+      properties:
+        ticks:
+          type: integer
+          format: int64
+          readOnly: true
+        days:
+          type: integer
+          format: int32
+          readOnly: true
+        hours:
+          type: integer
+          format: int32
+          readOnly: true
+        milliseconds:
+          type: integer
+          format: int32
+          readOnly: true
+        minutes:
+          type: integer
+          format: int32
+          readOnly: true
+        seconds:
+          type: integer
+          format: int32
+          readOnly: true
+        totalDays:
+          type: number
+          format: double
+          readOnly: true
+        totalHours:
+          type: number
+          format: double
+          readOnly: true
+        totalMilliseconds:
+          type: number
+          format: double
+          readOnly: true
+        totalMinutes:
+          type: number
+          format: double
+          readOnly: true
+        totalSeconds:
+          type: number
+          format: double
+          readOnly: true
       additionalProperties: false
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

@@ -65,6 +65,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/TxReviewDetails'
+      summary: Get treatment reviews
+      x-summary-source: derived
+      operationId: getTreatmentReviews
+      x-operation-id-source: derived
   /v{version}/treatment-reviews:
     get:
       tags:
@@ -128,6 +132,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/TxReviewDetails'
+      summary: Get v{version} treatment reviews
+      x-summary-source: derived
+      operationId: getV{version}TreatmentReviews
+      x-operation-id-source: derived
   /treatment-reviews/{id}:
     get:
       tags:
@@ -160,6 +168,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/TxReviewDetails'
+      summary: Get treatment reviews by id
+      x-summary-source: derived
+      operationId: getTreatmentReviewsById
+      x-operation-id-source: derived
   /v{version}/treatment-reviews/{id}:
     get:
       tags:
@@ -197,6 +209,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/TxReviewDetails'
+      summary: Get v{version} treatment reviews by id
+      x-summary-source: derived
+      operationId: getV{version}TreatmentReviewsById
+      x-operation-id-source: derived
 components:
   schemas:
     TxReviewDetails:
@@ -352,10 +368,6 @@ components:
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

@@ -38,6 +38,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Organization'
+      summary: Get organizations guid by guid
+      x-summary-source: derived
+      operationId: getOrganizationsGuidByGuid
+      x-operation-id-source: derived
   /v{version}/organizations/guid/{guid}:
     get:
       tags:
@@ -74,6 +78,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Organization'
+      summary: Get v{version} organizations guid by guid
+      x-summary-source: derived
+      operationId: getV{version}OrganizationsGuidByGuid
+      x-operation-id-source: derived
   /organizations:
     get:
       tags:
@@ -132,6 +140,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Organization'
+      summary: Get organizations
+      x-summary-source: derived
+      operationId: getOrganizations
+      x-operation-id-source: derived
   /v{version}/organizations:
     get:
       tags:
@@ -195,6 +207,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Organization'
+      summary: Get v{version} organizations
+      x-summary-source: derived
+      operationId: getV{version}Organizations
+      x-operation-id-source: derived
   /organizations/{id}:
     get:
       tags:
@@ -227,6 +243,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Organization'
+      summary: Get organizations by id
+      x-summary-source: derived
+      operationId: getOrganizationsById
+      x-operation-id-source: derived
   /v{version}/organizations/{id}:
     get:
       tags:
@@ -264,6 +284,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Organization'
+      summary: Get v{version} organizations by id
+      x-summary-source: derived
+      operationId: getV{version}OrganizationsById
+      x-operation-id-source: derived
 components:
   schemas:
     Organization:
@@ -292,10 +316,6 @@ components:
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

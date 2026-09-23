@@ -47,6 +47,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Room'
+      summary: Create rooms
+      x-summary-source: derived
+      operationId: postRooms
+      x-operation-id-source: derived
     get:
       tags:
       - Room
@@ -104,6 +108,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Room'
+      summary: Get rooms
+      x-summary-source: derived
+      operationId: getRooms
+      x-operation-id-source: derived
   /v{version}/rooms:
     post:
       tags:
@@ -149,6 +157,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Room'
+      summary: Create v{version} rooms
+      x-summary-source: derived
+      operationId: postV{version}Rooms
+      x-operation-id-source: derived
     get:
       tags:
       - Room
@@ -211,6 +223,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Room'
+      summary: Get v{version} rooms
+      x-summary-source: derived
+      operationId: getV{version}Rooms
+      x-operation-id-source: derived
   /rooms/{id}:
     delete:
       tags:
@@ -243,6 +259,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Room'
+      summary: Delete rooms by id
+      x-summary-source: derived
+      operationId: deleteRoomsById
+      x-operation-id-source: derived
     patch:
       tags:
       - Room
@@ -296,6 +316,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Room'
+      summary: Update rooms by id
+      x-summary-source: derived
+      operationId: patchRoomsById
+      x-operation-id-source: derived
     get:
       tags:
       - Room
@@ -327,6 +351,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Room'
+      summary: Get rooms by id
+      x-summary-source: derived
+      operationId: getRoomsById
+      x-operation-id-source: derived
   /v{version}/rooms/{id}:
     delete:
       tags:
@@ -364,6 +392,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Room'
+      summary: Delete v{version} rooms by id
+      x-summary-source: derived
+      operationId: deleteV{version}RoomsById
+      x-operation-id-source: derived
     patch:
       tags:
       - Room
@@ -422,6 +454,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Room'
+      summary: Update v{version} rooms by id
+      x-summary-source: derived
+      operationId: patchV{version}RoomsById
+      x-operation-id-source: derived
     get:
       tags:
       - Room
@@ -458,6 +494,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Room'
+      summary: Get v{version} rooms by id
+      x-summary-source: derived
+      operationId: getV{version}RoomsById
+      x-operation-id-source: derived
 components:
   schemas:
     JToken:
@@ -491,10 +531,6 @@ components:
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

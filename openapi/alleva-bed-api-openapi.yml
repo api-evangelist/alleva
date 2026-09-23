@@ -47,6 +47,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Bed'
+      summary: Create beds
+      x-summary-source: derived
+      operationId: postBeds
+      x-operation-id-source: derived
     get:
       tags:
       - Bed
@@ -104,6 +108,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Bed'
+      summary: Get beds
+      x-summary-source: derived
+      operationId: getBeds
+      x-operation-id-source: derived
   /v{version}/beds:
     post:
       tags:
@@ -149,6 +157,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Bed'
+      summary: Create v{version} beds
+      x-summary-source: derived
+      operationId: postV{version}Beds
+      x-operation-id-source: derived
     get:
       tags:
       - Bed
@@ -211,6 +223,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Bed'
+      summary: Get v{version} beds
+      x-summary-source: derived
+      operationId: getV{version}Beds
+      x-operation-id-source: derived
   /beds/{id}:
     delete:
       tags:
@@ -243,6 +259,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Bed'
+      summary: Delete beds by id
+      x-summary-source: derived
+      operationId: deleteBedsById
+      x-operation-id-source: derived
     patch:
       tags:
       - Bed
@@ -296,6 +316,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Bed'
+      summary: Update beds by id
+      x-summary-source: derived
+      operationId: patchBedsById
+      x-operation-id-source: derived
     get:
       tags:
       - Bed
@@ -327,6 +351,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Bed'
+      summary: Get beds by id
+      x-summary-source: derived
+      operationId: getBedsById
+      x-operation-id-source: derived
   /v{version}/beds/{id}:
     delete:
       tags:
@@ -364,6 +392,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Bed'
+      summary: Delete v{version} beds by id
+      x-summary-source: derived
+      operationId: deleteV{version}BedsById
+      x-operation-id-source: derived
     patch:
       tags:
       - Bed
@@ -422,6 +454,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Bed'
+      summary: Update v{version} beds by id
+      x-summary-source: derived
+      operationId: patchV{version}BedsById
+      x-operation-id-source: derived
     get:
       tags:
       - Bed
@@ -458,12 +494,12 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Bed'
+      summary: Get v{version} beds by id
+      x-summary-source: derived
+      operationId: getV{version}BedsById
+      x-operation-id-source: derived
 components:
   schemas:
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
     Bed:
       type: object
       properties:
@@ -500,6 +536,10 @@ components:
         room:
           $ref: '#/components/schemas/Room'
       additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
     Room:
       type: object
       properties:
@@ -527,10 +567,6 @@ components:
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

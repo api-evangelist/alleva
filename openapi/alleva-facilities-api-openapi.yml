@@ -53,6 +53,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Create facilities by id logo
+      x-summary-source: derived
+      operationId: postFacilitiesByIdLogo
+      x-operation-id-source: derived
   /v{version}/facilities/{id}/logo:
     post:
       tags:
@@ -104,6 +108,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Create v{version} facilities by id logo
+      x-summary-source: derived
+      operationId: postV{version}FacilitiesByIdLogo
+      x-operation-id-source: derived
   /facilities/{id}/npi:
     patch:
       tags:
@@ -150,6 +158,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Update facilities by id npi
+      x-summary-source: derived
+      operationId: patchFacilitiesByIdNpi
+      x-operation-id-source: derived
   /v{version}/facilities/{id}/npi:
     patch:
       tags:
@@ -201,6 +213,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UpdateResult'
+      summary: Update v{version} facilities by id npi
+      x-summary-source: derived
+      operationId: patchV{version}FacilitiesByIdNpi
+      x-operation-id-source: derived
   /facilities:
     get:
       tags:
@@ -259,6 +275,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Facility'
+      summary: Get facilities
+      x-summary-source: derived
+      operationId: getFacilities
+      x-operation-id-source: derived
   /v{version}/facilities:
     get:
       tags:
@@ -322,6 +342,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Facility'
+      summary: Get v{version} facilities
+      x-summary-source: derived
+      operationId: getV{version}Facilities
+      x-operation-id-source: derived
   /facilities/{id}:
     get:
       tags:
@@ -354,6 +378,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Facility'
+      summary: Get facilities by id
+      x-summary-source: derived
+      operationId: getFacilitiesById
+      x-operation-id-source: derived
   /v{version}/facilities/{id}:
     get:
       tags:
@@ -391,16 +419,12 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Facility'
+      summary: Get v{version} facilities by id
+      x-summary-source: derived
+      operationId: getV{version}FacilitiesById
+      x-operation-id-source: derived
 components:
   schemas:
-    UpdateOperationResult:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      type: integer
-      format: int32
     UpdateResult:
       type: object
       properties:
@@ -422,6 +446,26 @@ components:
           - string
           - 'null'
       additionalProperties: false
+    FacilityLogoData:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        base64String:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    UpdateOperationResult:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
     Facility:
       type: object
       properties:
@@ -482,25 +526,9 @@ components:
           - string
           - 'null'
       additionalProperties: false
-    FacilityLogoData:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        base64String:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

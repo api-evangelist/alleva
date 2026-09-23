@@ -45,6 +45,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Create surveys answers
+      x-summary-source: derived
+      operationId: postSurveysAnswers
+      x-operation-id-source: derived
   /v{version}/surveys/answers:
     post:
       tags:
@@ -88,6 +92,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Create v{version} surveys answers
+      x-summary-source: derived
+      operationId: postV{version}SurveysAnswers
+      x-operation-id-source: derived
   /surveys:
     get:
       tags:
@@ -146,6 +154,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Survey'
+      summary: Get surveys
+      x-summary-source: derived
+      operationId: getSurveys
+      x-operation-id-source: derived
   /v{version}/surveys:
     get:
       tags:
@@ -209,6 +221,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Survey'
+      summary: Get v{version} surveys
+      x-summary-source: derived
+      operationId: getV{version}Surveys
+      x-operation-id-source: derived
   /surveys/{id}:
     get:
       tags:
@@ -241,6 +257,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Survey'
+      summary: Get surveys by id
+      x-summary-source: derived
+      operationId: getSurveysById
+      x-operation-id-source: derived
   /v{version}/surveys/{id}:
     get:
       tags:
@@ -278,8 +298,35 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Survey'
+      summary: Get v{version} surveys by id
+      x-summary-source: derived
+      operationId: getV{version}SurveysById
+      x-operation-id-source: derived
 components:
   schemas:
+    SurveyAnswer:
+      type: object
+      properties:
+        clientId:
+          type: integer
+          format: int32
+        questionId:
+          type: integer
+          format: int32
+        score:
+          type: integer
+          format: int32
+        createdBy:
+          type: integer
+          format: int32
+        explanation:
+          type:
+          - string
+          - 'null'
+        submittedDateTime:
+          type: string
+          format: date-time
+      additionalProperties: false
     SurveyQuestion:
       type: object
       properties:
@@ -313,36 +360,9 @@ components:
           items:
             $ref: '#/components/schemas/SurveyQuestion'
       additionalProperties: false
-    SurveyAnswer:
-      type: object
-      properties:
-        clientId:
-          type: integer
-          format: int32
-        questionId:
-          type: integer
-          format: int32
-        score:
-          type: integer
-          format: int32
-        createdBy:
-          type: integer
-          format: int32
-        explanation:
-          type:
-          - string
-          - 'null'
-        submittedDateTime:
-          type: string
-          format: date-time
-      additionalProperties: false
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

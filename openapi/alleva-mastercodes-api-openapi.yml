@@ -53,6 +53,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/MasterCodesResponse'
+      summary: Create master codes search
+      x-summary-source: derived
+      operationId: postMasterCodesSearch
+      x-operation-id-source: derived
   /v{version}/master-codes/search:
     post:
       tags:
@@ -104,16 +108,12 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/MasterCodesResponse'
+      summary: Create v{version} master codes search
+      x-summary-source: derived
+      operationId: postV{version}MasterCodesSearch
+      x-operation-id-source: derived
 components:
   schemas:
-    MasterCodesSearch:
-      type: object
-      properties:
-        category:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
     MasterCodesResponse:
       type: object
       properties:
@@ -125,13 +125,17 @@ components:
           - string
           - 'null'
       additionalProperties: false
+    MasterCodesSearch:
+      type: object
+      properties:
+        category:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

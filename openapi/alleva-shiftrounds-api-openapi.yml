@@ -47,6 +47,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ShiftRounds'
+      summary: Create rounds
+      x-summary-source: derived
+      operationId: postRounds
+      x-operation-id-source: derived
     get:
       tags:
       - ShiftRounds
@@ -104,6 +108,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/ShiftRounds'
+      summary: Get rounds
+      x-summary-source: derived
+      operationId: getRounds
+      x-operation-id-source: derived
   /v{version}/rounds:
     post:
       tags:
@@ -149,6 +157,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ShiftRounds'
+      summary: Create v{version} rounds
+      x-summary-source: derived
+      operationId: postV{version}Rounds
+      x-operation-id-source: derived
     get:
       tags:
       - ShiftRounds
@@ -211,6 +223,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/ShiftRounds'
+      summary: Get v{version} rounds
+      x-summary-source: derived
+      operationId: getV{version}Rounds
+      x-operation-id-source: derived
   /rounds/{id}:
     patch:
       tags:
@@ -265,6 +281,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ShiftRounds'
+      summary: Update rounds by id
+      x-summary-source: derived
+      operationId: patchRoundsById
+      x-operation-id-source: derived
     get:
       tags:
       - ShiftRounds
@@ -296,6 +316,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ShiftRounds'
+      summary: Get rounds by id
+      x-summary-source: derived
+      operationId: getRoundsById
+      x-operation-id-source: derived
   /v{version}/rounds/{id}:
     patch:
       tags:
@@ -355,6 +379,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ShiftRounds'
+      summary: Update v{version} rounds by id
+      x-summary-source: derived
+      operationId: patchV{version}RoundsById
+      x-operation-id-source: derived
     get:
       tags:
       - ShiftRounds
@@ -391,6 +419,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ShiftRounds'
+      summary: Get v{version} rounds by id
+      x-summary-source: derived
+      operationId: getV{version}RoundsById
+      x-operation-id-source: derived
   /rounds/locations:
     get:
       tags:
@@ -423,6 +455,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/ShiftRoundLocation'
+      summary: Get rounds locations
+      x-summary-source: derived
+      operationId: getRoundsLocations
+      x-operation-id-source: derived
   /v{version}/rounds/locations:
     get:
       tags:
@@ -460,51 +496,46 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/ShiftRoundLocation'
+      summary: Get v{version} rounds locations
+      x-summary-source: derived
+      operationId: getV{version}RoundsLocations
+      x-operation-id-source: derived
 components:
   schemas:
-    ClientReferralContact:
+    ResourceLink:
       type: object
       properties:
         id:
-          type:
-          - string
-          - 'null'
-        firstName:
-          type:
-          - string
-          - 'null'
-        lastName:
-          type:
-          - string
-          - 'null'
-        phone:
-          type:
-          - string
-          - 'null'
-        email:
+          type: integer
+          format: int32
+        route:
           type:
           - string
           - 'null'
       additionalProperties: false
-    ClientOccupation:
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
+    ClientImageUrl:
       type: object
       properties:
-        name:
+        fileName:
           type:
           - string
           - 'null'
-        currentEmployer:
+        host:
           type:
           - string
           - 'null'
-        years:
-          type: integer
-          format: int32
-        months:
-          type: integer
-          format: int32
+          readOnly: true
+        path:
+          type:
+          - string
+          - 'null'
+          readOnly: true
       additionalProperties: false
-    State:
+    Facility:
       type: object
       properties:
         id:
@@ -515,40 +546,72 @@ components:
           - string
           - 'null'
           readOnly: true
-        stateId:
-          type: integer
-          format: int32
-        countryId:
-          type: integer
-          format: int32
-        stateName:
+        name:
           type:
           - string
           - 'null'
-        stateCode:
+        rehabName:
+          type:
+          - string
+          - 'null'
+        domainName:
+          type:
+          - string
+          - 'null'
+        email:
+          type:
+          - string
+          - 'null'
+        officePhone:
+          type:
+          - string
+          - 'null'
+        fax:
+          type:
+          - string
+          - 'null'
+        address1:
+          type:
+          - string
+          - 'null'
+        address2:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        city:
+          type:
+          - string
+          - 'null'
+        postalCode:
+          type:
+          - string
+          - 'null'
+        country:
           type:
           - string
           - 'null'
       additionalProperties: false
-    UserName:
+    UserImageUrl:
       type: object
       properties:
-        first:
+        fileName:
           type:
           - string
           - 'null'
-        last:
+        host:
           type:
           - string
           - 'null'
-        prefix:
+          readOnly: true
+        path:
           type:
           - string
           - 'null'
-        suffix:
-          type:
-          - string
-          - 'null'
+          readOnly: true
       additionalProperties: false
     User:
       type: object
@@ -628,17 +691,28 @@ components:
           items:
             $ref: '#/components/schemas/UserLicense'
       additionalProperties: false
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
-    ResourceLink:
+    State:
       type: object
       properties:
         id:
           type: integer
           format: int32
-        route:
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        stateId:
+          type: integer
+          format: int32
+        countryId:
+          type: integer
+          format: int32
+        stateName:
+          type:
+          - string
+          - 'null'
+        stateCode:
           type:
           - string
           - 'null'
@@ -666,6 +740,32 @@ components:
         totalBeds:
           type: integer
           format: int32
+      additionalProperties: false
+    ShiftRoundLocation:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        name:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ClientShiftRounds:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        client:
+          $ref: '#/components/schemas/Client'
+        location:
+          $ref: '#/components/schemas/ShiftRoundLocation'
+        notes:
+          type:
+          - string
+          - 'null'
       additionalProperties: false
     ClientContact:
       type: object
@@ -699,220 +799,6 @@ components:
           writeOnly: true
         isEmergencyContact:
           type: boolean
-      additionalProperties: false
-    UserImageUrl:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        host:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        path:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-      additionalProperties: false
-    ClientName:
-      type: object
-      properties:
-        clientFullName:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        first:
-          type:
-          - string
-          - 'null'
-        last:
-          type:
-          - string
-          - 'null'
-        middle:
-          type:
-          - string
-          - 'null'
-        isLegalName:
-          type:
-          - boolean
-          - 'null'
-        former:
-          type:
-          - string
-          - 'null'
-        prefix:
-          type:
-          - string
-          - 'null'
-        preferred:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    ShiftRounds:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        isSigned:
-          type: boolean
-        signedBy:
-          $ref: '#/components/schemas/User'
-        signature:
-          type:
-          - string
-          - 'null'
-        createdDate:
-          type: string
-          format: date-time
-        createdBy:
-          $ref: '#/components/schemas/User'
-        roundName:
-          type:
-          - string
-          - 'null'
-        facilityId:
-          type: integer
-          format: int32
-        clients:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/ClientShiftRounds'
-      additionalProperties: false
-    ShiftRoundLocation:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        name:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    Address:
-      type: object
-      properties:
-        line1:
-          type:
-          - string
-          - 'null'
-        line2:
-          type:
-          - string
-          - 'null'
-        city:
-          type:
-          - string
-          - 'null'
-        state:
-          type:
-          - string
-          - 'null'
-        stateAbbr:
-          type:
-          - string
-          - 'null'
-        country:
-          type:
-          - string
-          - 'null'
-        zipCode:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    ClientImageUrl:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        host:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        path:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-      additionalProperties: false
-    Facility:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        name:
-          type:
-          - string
-          - 'null'
-        rehabName:
-          type:
-          - string
-          - 'null'
-        domainName:
-          type:
-          - string
-          - 'null'
-        email:
-          type:
-          - string
-          - 'null'
-        officePhone:
-          type:
-          - string
-          - 'null'
-        fax:
-          type:
-          - string
-          - 'null'
-        address1:
-          type:
-          - string
-          - 'null'
-        address2:
-          type:
-          - string
-          - 'null'
-        state:
-          type:
-          - string
-          - 'null'
-        city:
-          type:
-          - string
-          - 'null'
-        postalCode:
-          type:
-          - string
-          - 'null'
-        country:
-          type:
-          - string
-          - 'null'
       additionalProperties: false
     UserLicense:
       type: object
@@ -955,43 +841,26 @@ components:
         state:
           $ref: '#/components/schemas/State'
       additionalProperties: false
-    UserLicenseType:
+    ClientReferralContact:
       type: object
       properties:
         id:
-          type: integer
-          format: int32
-        href:
           type:
           - string
           - 'null'
-          readOnly: true
-        name:
+        firstName:
           type:
           - string
           - 'null'
-        description:
+        lastName:
           type:
           - string
           - 'null'
-        isActive:
-          type: boolean
-        canModifyOrDelete:
-          type: boolean
-        inUse:
-          type: boolean
-      additionalProperties: false
-    ClientShiftRounds:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int64
-        client:
-          $ref: '#/components/schemas/Client'
-        location:
-          $ref: '#/components/schemas/ShiftRoundLocation'
-        notes:
+        phone:
+          type:
+          - string
+          - 'null'
+        email:
           type:
           - string
           - 'null'
@@ -1117,6 +986,177 @@ components:
           - string
           - 'null'
       additionalProperties: false
+    UserLicenseType:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        canModifyOrDelete:
+          type: boolean
+        inUse:
+          type: boolean
+      additionalProperties: false
+    UserName:
+      type: object
+      properties:
+        first:
+          type:
+          - string
+          - 'null'
+        last:
+          type:
+          - string
+          - 'null'
+        prefix:
+          type:
+          - string
+          - 'null'
+        suffix:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ShiftRounds:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        isSigned:
+          type: boolean
+        signedBy:
+          $ref: '#/components/schemas/User'
+        signature:
+          type:
+          - string
+          - 'null'
+        createdDate:
+          type: string
+          format: date-time
+        createdBy:
+          $ref: '#/components/schemas/User'
+        roundName:
+          type:
+          - string
+          - 'null'
+        facilityId:
+          type: integer
+          format: int32
+        clients:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/ClientShiftRounds'
+      additionalProperties: false
+    Address:
+      type: object
+      properties:
+        line1:
+          type:
+          - string
+          - 'null'
+        line2:
+          type:
+          - string
+          - 'null'
+        city:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        stateAbbr:
+          type:
+          - string
+          - 'null'
+        country:
+          type:
+          - string
+          - 'null'
+        zipCode:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ClientOccupation:
+      type: object
+      properties:
+        name:
+          type:
+          - string
+          - 'null'
+        currentEmployer:
+          type:
+          - string
+          - 'null'
+        years:
+          type: integer
+          format: int32
+        months:
+          type: integer
+          format: int32
+      additionalProperties: false
+    ClientName:
+      type: object
+      properties:
+        clientFullName:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        first:
+          type:
+          - string
+          - 'null'
+        last:
+          type:
+          - string
+          - 'null'
+        middle:
+          type:
+          - string
+          - 'null'
+        isLegalName:
+          type:
+          - boolean
+          - 'null'
+        former:
+          type:
+          - string
+          - 'null'
+        prefix:
+          type:
+          - string
+          - 'null'
+        preferred:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
     Phone:
       type: object
       properties:
@@ -1144,10 +1184,6 @@ components:
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

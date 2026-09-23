@@ -47,6 +47,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/MasterIntakeSections'
+      summary: Create manage intake
+      x-summary-source: derived
+      operationId: postManageIntake
+      x-operation-id-source: derived
     get:
       tags:
       - ManageIntake
@@ -104,6 +108,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/MasterIntakeSections'
+      summary: Get manage intake
+      x-summary-source: derived
+      operationId: getManageIntake
+      x-operation-id-source: derived
   /v{version}/manage-intake:
     post:
       tags:
@@ -149,6 +157,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/MasterIntakeSections'
+      summary: Create v{version} manage intake
+      x-summary-source: derived
+      operationId: postV{version}ManageIntake
+      x-operation-id-source: derived
     get:
       tags:
       - ManageIntake
@@ -211,6 +223,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/MasterIntakeSections'
+      summary: Get v{version} manage intake
+      x-summary-source: derived
+      operationId: getV{version}ManageIntake
+      x-operation-id-source: derived
   /manage-intake/get-list-at-time:
     get:
       tags:
@@ -258,6 +274,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/MasterIntakeSections'
+      summary: Get manage intake get list at time
+      x-summary-source: derived
+      operationId: getManageIntakeGetListAtTime
+      x-operation-id-source: derived
   /v{version}/manage-intake/get-list-at-time:
     get:
       tags:
@@ -310,6 +330,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/MasterIntakeSections'
+      summary: Get v{version} manage intake get list at time
+      x-summary-source: derived
+      operationId: getV{version}ManageIntakeGetListAtTime
+      x-operation-id-source: derived
   /manage-intake/{id}:
     patch:
       tags:
@@ -364,6 +388,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/MasterIntakeSections'
+      summary: Update manage intake by id
+      x-summary-source: derived
+      operationId: patchManageIntakeById
+      x-operation-id-source: derived
     get:
       tags:
       - ManageIntake
@@ -395,6 +423,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/MasterIntakeSections'
+      summary: Get manage intake by id
+      x-summary-source: derived
+      operationId: getManageIntakeById
+      x-operation-id-source: derived
   /v{version}/manage-intake/{id}:
     patch:
       tags:
@@ -454,6 +486,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/MasterIntakeSections'
+      summary: Update v{version} manage intake by id
+      x-summary-source: derived
+      operationId: patchV{version}ManageIntakeById
+      x-operation-id-source: derived
     get:
       tags:
       - ManageIntake
@@ -490,6 +526,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/MasterIntakeSections'
+      summary: Get v{version} manage intake by id
+      x-summary-source: derived
+      operationId: getV{version}ManageIntakeById
+      x-operation-id-source: derived
   /manage-intake/order:
     post:
       tags:
@@ -530,6 +570,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create manage intake order
+      x-summary-source: derived
+      operationId: postManageIntakeOrder
+      x-operation-id-source: derived
   /v{version}/manage-intake/order:
     post:
       tags:
@@ -575,6 +619,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create v{version} manage intake order
+      x-summary-source: derived
+      operationId: postV{version}ManageIntakeOrder
+      x-operation-id-source: derived
   /manage-intake/custom-forms:
     get:
       tags:
@@ -617,6 +665,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/IntakeSectionCustomForm'
+      summary: Get manage intake custom forms
+      x-summary-source: derived
+      operationId: getManageIntakeCustomForms
+      x-operation-id-source: derived
     post:
       tags:
       - ManageIntake
@@ -656,6 +708,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create manage intake custom forms
+      x-summary-source: derived
+      operationId: postManageIntakeCustomForms
+      x-operation-id-source: derived
   /v{version}/manage-intake/custom-forms:
     get:
       tags:
@@ -703,6 +759,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/IntakeSectionCustomForm'
+      summary: Get v{version} manage intake custom forms
+      x-summary-source: derived
+      operationId: getV{version}ManageIntakeCustomForms
+      x-operation-id-source: derived
     post:
       tags:
       - ManageIntake
@@ -747,6 +807,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create v{version} manage intake custom forms
+      x-summary-source: derived
+      operationId: postV{version}ManageIntakeCustomForms
+      x-operation-id-source: derived
   /manage-intake/custom-sections:
     post:
       tags:
@@ -787,6 +851,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create manage intake custom sections
+      x-summary-source: derived
+      operationId: postManageIntakeCustomSections
+      x-operation-id-source: derived
   /v{version}/manage-intake/custom-sections:
     post:
       tags:
@@ -832,8 +900,81 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/CreateResult'
+      summary: Create v{version} manage intake custom sections
+      x-summary-source: derived
+      operationId: postV{version}ManageIntakeCustomSections
+      x-operation-id-source: derived
 components:
   schemas:
+    IntakeSectionOrder:
+      type: object
+      properties:
+        facilityId:
+          type: integer
+          format: int32
+        intakeId:
+          type: integer
+          format: int32
+        sections:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/MasterIntakeSections'
+      additionalProperties: false
+    IntakeSectionCustomFormUpdate:
+      type: object
+      properties:
+        facilityId:
+          type: integer
+          format: int32
+        intakeId:
+          type: integer
+          format: int32
+        forms:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/IntakeSectionCustomForm'
+      additionalProperties: false
+    CreateOperationResult:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
+    IntakeSectionDetails:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        advancedFormId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        isActive:
+          type: boolean
+        isCopyIntakeSection:
+          type: boolean
+        sortOrder:
+          type: integer
+          format: int32
+        formId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        formInfoId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+      additionalProperties: false
     MasterIntakeSections:
       type: object
       properties:
@@ -873,6 +1014,10 @@ components:
         details:
           $ref: '#/components/schemas/IntakeSectionDetails'
       additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
     CreateResult:
       type: object
       properties:
@@ -893,42 +1038,6 @@ components:
           type:
           - string
           - 'null'
-      additionalProperties: false
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
-    IntakeSectionOrder:
-      type: object
-      properties:
-        facilityId:
-          type: integer
-          format: int32
-        intakeId:
-          type: integer
-          format: int32
-        sections:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/MasterIntakeSections'
-      additionalProperties: false
-    IntakeSectionCustomFormUpdate:
-      type: object
-      properties:
-        facilityId:
-          type: integer
-          format: int32
-        intakeId:
-          type: integer
-          format: int32
-        forms:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/IntakeSectionCustomForm'
       additionalProperties: false
     IntakeSectionCustomForm:
       type: object
@@ -959,50 +1068,9 @@ components:
           type: integer
           format: int32
       additionalProperties: false
-    IntakeSectionDetails:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        advancedFormId:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        isActive:
-          type: boolean
-        isCopyIntakeSection:
-          type: boolean
-        sortOrder:
-          type: integer
-          format: int32
-        formId:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        formInfoId:
-          type:
-          - integer
-          - 'null'
-          format: int32
-      additionalProperties: false
-    CreateOperationResult:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      type: integer
-      format: int32
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

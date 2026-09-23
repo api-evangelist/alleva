@@ -44,6 +44,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/AdvancedForm'
+      summary: Get advanced forms by id published
+      x-summary-source: derived
+      operationId: getAdvancedFormsByIdPublished
+      x-operation-id-source: derived
   /v{version}/advanced-forms/{id}/published:
     get:
       tags:
@@ -86,6 +90,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/AdvancedForm'
+      summary: Get v{version} advanced forms by id published
+      x-summary-source: derived
+      operationId: getV{version}AdvancedFormsByIdPublished
+      x-operation-id-source: derived
   /advanced-forms/{id}/data/{leadId}:
     get:
       tags:
@@ -130,6 +138,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/DataValueWithKindResponse'
+      summary: Get advanced forms by id data by lead id
+      x-summary-source: derived
+      operationId: getAdvancedFormsByIdDataByLeadId
+      x-operation-id-source: derived
     post:
       tags:
       - AdvancedForm
@@ -187,6 +199,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/DataValueWithKindResponse'
+      summary: Create advanced forms by id data by lead id
+      x-summary-source: derived
+      operationId: postAdvancedFormsByIdDataByLeadId
+      x-operation-id-source: derived
   /v{version}/advanced-forms/{id}/data/{leadId}:
     get:
       tags:
@@ -236,6 +252,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/DataValueWithKindResponse'
+      summary: Get v{version} advanced forms by id data by lead id
+      x-summary-source: derived
+      operationId: getV{version}AdvancedFormsByIdDataByLeadId
+      x-operation-id-source: derived
     post:
       tags:
       - AdvancedForm
@@ -298,6 +318,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/DataValueWithKindResponse'
+      summary: Create v{version} advanced forms by id data by lead id
+      x-summary-source: derived
+      operationId: postV{version}AdvancedFormsByIdDataByLeadId
+      x-operation-id-source: derived
   /advanced-forms/{id}/copy:
     post:
       tags:
@@ -350,6 +374,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/AdvancedForm'
+      summary: Create advanced forms by id copy
+      x-summary-source: derived
+      operationId: postAdvancedFormsByIdCopy
+      x-operation-id-source: derived
   /v{version}/advanced-forms/{id}/copy:
     post:
       tags:
@@ -407,6 +435,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/AdvancedForm'
+      summary: Create v{version} advanced forms by id copy
+      x-summary-source: derived
+      operationId: postV{version}AdvancedFormsByIdCopy
+      x-operation-id-source: derived
   /advanced-forms/update-autofill:
     post:
       tags:
@@ -447,6 +479,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 type: boolean
+      summary: Create advanced forms update autofill
+      x-summary-source: derived
+      operationId: postAdvancedFormsUpdateAutofill
+      x-operation-id-source: derived
   /v{version}/advanced-forms/update-autofill:
     post:
       tags:
@@ -492,32 +528,49 @@ paths:
             text/json; ver=1.0:
               schema:
                 type: boolean
+      summary: Create v{version} advanced forms update autofill
+      x-summary-source: derived
+      operationId: postV{version}AdvancedFormsUpdateAutofill
+      x-operation-id-source: derived
 components:
   schemas:
-    AdvancedFormSaveRequest:
+    AdvancedForm:
       type: object
       properties:
-        dataValues:
+        id:
+          type: integer
+          format: int64
+        advancedFormGroupId:
+          type: string
+          format: uuid
+        body:
           type:
-          - array
+          - string
           - 'null'
-          items:
-            $ref: '#/components/schemas/DataValueRequest'
+        draftBody:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        facilityId:
+          type: integer
+          format: int32
+        isModified:
+          type: boolean
+        isPublished:
+          type: boolean
+        isDeleted:
+          type: boolean
+        name:
+          type:
+          - string
+          - 'null'
+        isAutoFillEnabled:
+          type: boolean
       additionalProperties: false
-    DataKind:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
-      - 8
-      - 9
-      type: integer
-      format: int32
     DataValueRequest:
       type: object
       properties:
@@ -587,6 +640,20 @@ components:
             type: integer
             format: int32
       additionalProperties: false
+    DataKind:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      type: integer
+      format: int32
     AutofillRequest:
       type: object
       properties:
@@ -601,43 +668,6 @@ components:
             type: integer
             format: int32
         isAutofillEnabled:
-          type: boolean
-      additionalProperties: false
-    AdvancedForm:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int64
-        advancedFormGroupId:
-          type: string
-          format: uuid
-        body:
-          type:
-          - string
-          - 'null'
-        draftBody:
-          type:
-          - string
-          - 'null'
-        description:
-          type:
-          - string
-          - 'null'
-        facilityId:
-          type: integer
-          format: int32
-        isModified:
-          type: boolean
-        isPublished:
-          type: boolean
-        isDeleted:
-          type: boolean
-        name:
-          type:
-          - string
-          - 'null'
-        isAutoFillEnabled:
           type: boolean
       additionalProperties: false
     DataValueWithKindResponse:
@@ -705,13 +735,19 @@ components:
         dataKind:
           $ref: '#/components/schemas/DataKind'
       additionalProperties: false
+    AdvancedFormSaveRequest:
+      type: object
+      properties:
+        dataValues:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/DataValueRequest'
+      additionalProperties: false
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

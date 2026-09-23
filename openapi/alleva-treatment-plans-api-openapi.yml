@@ -5,12 +5,12 @@ info:
 security:
 - Bearer: []
 tags:
-- name: TreatmentPlans
+- name: Treatment Plans
 paths:
   /treatment-plans/{id}/signature:
     post:
       tags:
-      - TreatmentPlans
+      - Treatment Plans
       parameters:
       - name: id
         in: path
@@ -43,10 +43,14 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Create treatment plans by id signature
+      x-summary-source: derived
+      operationId: postTreatmentPlansByIdSignature
+      x-operation-id-source: derived
   /v{version}/treatment-plans/{id}/signature:
     post:
       tags:
-      - TreatmentPlans
+      - Treatment Plans
       parameters:
       - name: id
         in: path
@@ -84,10 +88,14 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Create v{version} treatment plans by id signature
+      x-summary-source: derived
+      operationId: postV{version}TreatmentPlansByIdSignature
+      x-operation-id-source: derived
   /treatment-plans/{id}/review-signature:
     post:
       tags:
-      - TreatmentPlans
+      - Treatment Plans
       parameters:
       - name: id
         in: path
@@ -120,10 +128,14 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Create treatment plans by id review signature
+      x-summary-source: derived
+      operationId: postTreatmentPlansByIdReviewSignature
+      x-operation-id-source: derived
   /v{version}/treatment-plans/{id}/review-signature:
     post:
       tags:
-      - TreatmentPlans
+      - Treatment Plans
       parameters:
       - name: id
         in: path
@@ -161,10 +173,14 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Create v{version} treatment plans by id review signature
+      x-summary-source: derived
+      operationId: postV{version}TreatmentPlansByIdReviewSignature
+      x-operation-id-source: derived
   /treatment-plans/{id}/diagnosis:
     get:
       tags:
-      - TreatmentPlans
+      - Treatment Plans
       parameters:
       - name: id
         in: path
@@ -199,10 +215,14 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/ClientDiagnosis'
+      summary: Get treatment plans by id diagnosis
+      x-summary-source: derived
+      operationId: getTreatmentPlansByIdDiagnosis
+      x-operation-id-source: derived
   /v{version}/treatment-plans/{id}/diagnosis:
     get:
       tags:
-      - TreatmentPlans
+      - Treatment Plans
       parameters:
       - name: id
         in: path
@@ -242,10 +262,14 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/ClientDiagnosis'
+      summary: Get v{version} treatment plans by id diagnosis
+      x-summary-source: derived
+      operationId: getV{version}TreatmentPlansByIdDiagnosis
+      x-operation-id-source: derived
   /treatment-plans:
     get:
       tags:
-      - TreatmentPlans
+      - Treatment Plans
       parameters:
       - name: Limit
         in: query
@@ -300,10 +324,14 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/TreatmentPlan'
+      summary: Get treatment plans
+      x-summary-source: derived
+      operationId: getTreatmentPlans
+      x-operation-id-source: derived
   /v{version}/treatment-plans:
     get:
       tags:
-      - TreatmentPlans
+      - Treatment Plans
       parameters:
       - name: Limit
         in: query
@@ -363,10 +391,14 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/TreatmentPlan'
+      summary: Get v{version} treatment plans
+      x-summary-source: derived
+      operationId: getV{version}TreatmentPlans
+      x-operation-id-source: derived
   /treatment-plans/{id}:
     get:
       tags:
-      - TreatmentPlans
+      - Treatment Plans
       parameters:
       - name: id
         in: path
@@ -395,10 +427,14 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/TreatmentPlan'
+      summary: Get treatment plans by id
+      x-summary-source: derived
+      operationId: getTreatmentPlansById
+      x-operation-id-source: derived
   /v{version}/treatment-plans/{id}:
     get:
       tags:
-      - TreatmentPlans
+      - Treatment Plans
       parameters:
       - name: id
         in: path
@@ -432,45 +468,13 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/TreatmentPlan'
+      summary: Get v{version} treatment plans by id
+      x-summary-source: derived
+      operationId: getV{version}TreatmentPlansById
+      x-operation-id-source: derived
 components:
   schemas:
-    Objective:
-      type: object
-      properties:
-        description:
-          type:
-          - string
-          - 'null'
-        isWiley:
-          type: boolean
-        isEvidenceBased:
-          type: boolean
-        interventions:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/Intervention'
-      additionalProperties: false
-    UserImageUrl:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        host:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        path:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-      additionalProperties: false
-    UserLicenseType:
+    ClientDiagnosis:
       type: object
       properties:
         id:
@@ -481,80 +485,68 @@ components:
           - string
           - 'null'
           readOnly: true
-        name:
+        clientId:
+          type: integer
+          format: int32
+        leadId:
+          type: integer
+          format: int32
+        groupId:
+          type: integer
+          format: int32
+        group:
           type:
           - string
           - 'null'
+        diagnosisNumber:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        problemId:
+          type: integer
+          format: int32
+        problem:
+          type:
+          - string
+          - 'null'
+        problemNumber:
+          type: integer
+          format: int32
+        diagnosisId:
+          type: integer
+          format: int32
         description:
           type:
           - string
           - 'null'
+        icD10Code:
+          type:
+          - string
+          - 'null'
+          deprecated: true
+        code:
+          type:
+          - string
+          - 'null'
+        createdBy:
+          $ref: '#/components/schemas/User'
+        priority:
+          $ref: '#/components/schemas/DiagnosisPriority'
+        resolvedDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        createdDate:
+          type: string
+          format: date-time
+        isRuleOut:
+          type: boolean
+        isPrimary:
+          type: boolean
         isActive:
           type: boolean
-        canModifyOrDelete:
-          type: boolean
-        inUse:
-          type: boolean
-      additionalProperties: false
-    Facility:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        name:
-          type:
-          - string
-          - 'null'
-        rehabName:
-          type:
-          - string
-          - 'null'
-        domainName:
-          type:
-          - string
-          - 'null'
-        email:
-          type:
-          - string
-          - 'null'
-        officePhone:
-          type:
-          - string
-          - 'null'
-        fax:
-          type:
-          - string
-          - 'null'
-        address1:
-          type:
-          - string
-          - 'null'
-        address2:
-          type:
-          - string
-          - 'null'
-        state:
-          type:
-          - string
-          - 'null'
-        city:
-          type:
-          - string
-          - 'null'
-        postalCode:
-          type:
-          - string
-          - 'null'
-        country:
-          type:
-          - string
-          - 'null'
       additionalProperties: false
     User:
       type: object
@@ -634,29 +626,49 @@ components:
           items:
             $ref: '#/components/schemas/UserLicense'
       additionalProperties: false
-    Signature:
+    State:
       type: object
       properties:
-        entityId:
+        id:
           type: integer
           format: int32
-        signerName:
+        href:
           type:
           - string
           - 'null'
-        data:
+          readOnly: true
+        stateId:
+          type: integer
+          format: int32
+        countryId:
+          type: integer
+          format: int32
+        stateName:
           type:
           - string
           - 'null'
-        type:
+        stateCode:
           type:
           - string
           - 'null'
-        signatureDateTime:
+      additionalProperties: false
+    UserImageUrl:
+      type: object
+      properties:
+        fileName:
           type:
           - string
           - 'null'
-          format: date-time
+        host:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        path:
+          type:
+          - string
+          - 'null'
+          readOnly: true
       additionalProperties: false
     ResourceLink:
       type: object
@@ -665,6 +677,211 @@ components:
           type: integer
           format: int32
         route:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    UserLicenseType:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        canModifyOrDelete:
+          type: boolean
+        inUse:
+          type: boolean
+      additionalProperties: false
+    BehavioralDefinition:
+      type: object
+      properties:
+        description:
+          type:
+          - string
+          - 'null'
+        isWiley:
+          type: boolean
+      additionalProperties: false
+    Objective:
+      type: object
+      properties:
+        description:
+          type:
+          - string
+          - 'null'
+        isWiley:
+          type: boolean
+        isEvidenceBased:
+          type: boolean
+        interventions:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/Intervention'
+      additionalProperties: false
+    DiagnosisPriority:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        name:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Facility:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        rehabName:
+          type:
+          - string
+          - 'null'
+        domainName:
+          type:
+          - string
+          - 'null'
+        email:
+          type:
+          - string
+          - 'null'
+        officePhone:
+          type:
+          - string
+          - 'null'
+        fax:
+          type:
+          - string
+          - 'null'
+        address1:
+          type:
+          - string
+          - 'null'
+        address2:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        city:
+          type:
+          - string
+          - 'null'
+        postalCode:
+          type:
+          - string
+          - 'null'
+        country:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Address:
+      type: object
+      properties:
+        line1:
+          type:
+          - string
+          - 'null'
+        line2:
+          type:
+          - string
+          - 'null'
+        city:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        stateAbbr:
+          type:
+          - string
+          - 'null'
+        country:
+          type:
+          - string
+          - 'null'
+        zipCode:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Problem:
+      type: object
+      properties:
+        description:
+          type:
+          - string
+          - 'null'
+        isWiley:
+          type: boolean
+        diagnoses:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/ClientDiagnosis'
+        behavioralDefinitions:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/BehavioralDefinition'
+        goals:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/Goal'
+      additionalProperties: false
+    UserName:
+      type: object
+      properties:
+        first:
+          type:
+          - string
+          - 'null'
+        last:
+          type:
+          - string
+          - 'null'
+        prefix:
+          type:
+          - string
+          - 'null'
+        suffix:
           type:
           - string
           - 'null'
@@ -729,235 +946,6 @@ components:
         guardianSignature:
           $ref: '#/components/schemas/Signature'
       additionalProperties: false
-    Goal:
-      type: object
-      properties:
-        description:
-          type:
-          - string
-          - 'null'
-        isWiley:
-          type: boolean
-        objectives:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/Objective'
-      additionalProperties: false
-    Intervention:
-      type: object
-      properties:
-        description:
-          type:
-          - string
-          - 'null'
-        isWiley:
-          type: boolean
-        isEvidenceBased:
-          type: boolean
-      additionalProperties: false
-    BehavioralDefinition:
-      type: object
-      properties:
-        description:
-          type:
-          - string
-          - 'null'
-        isWiley:
-          type: boolean
-      additionalProperties: false
-    Address:
-      type: object
-      properties:
-        line1:
-          type:
-          - string
-          - 'null'
-        line2:
-          type:
-          - string
-          - 'null'
-        city:
-          type:
-          - string
-          - 'null'
-        state:
-          type:
-          - string
-          - 'null'
-        stateAbbr:
-          type:
-          - string
-          - 'null'
-        country:
-          type:
-          - string
-          - 'null'
-        zipCode:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    DiagnosisPriority:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        name:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    State:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        stateId:
-          type: integer
-          format: int32
-        countryId:
-          type: integer
-          format: int32
-        stateName:
-          type:
-          - string
-          - 'null'
-        stateCode:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    UserName:
-      type: object
-      properties:
-        first:
-          type:
-          - string
-          - 'null'
-        last:
-          type:
-          - string
-          - 'null'
-        prefix:
-          type:
-          - string
-          - 'null'
-        suffix:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    ClientDiagnosis:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        clientId:
-          type: integer
-          format: int32
-        leadId:
-          type: integer
-          format: int32
-        groupId:
-          type: integer
-          format: int32
-        group:
-          type:
-          - string
-          - 'null'
-        diagnosisNumber:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        problemId:
-          type: integer
-          format: int32
-        problem:
-          type:
-          - string
-          - 'null'
-        problemNumber:
-          type: integer
-          format: int32
-        diagnosisId:
-          type: integer
-          format: int32
-        description:
-          type:
-          - string
-          - 'null'
-        icD10Code:
-          type:
-          - string
-          - 'null'
-          deprecated: true
-        code:
-          type:
-          - string
-          - 'null'
-        createdBy:
-          $ref: '#/components/schemas/User'
-        priority:
-          $ref: '#/components/schemas/DiagnosisPriority'
-        resolvedDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        createdDate:
-          type: string
-          format: date-time
-        isRuleOut:
-          type: boolean
-        isPrimary:
-          type: boolean
-        isActive:
-          type: boolean
-      additionalProperties: false
-    Problem:
-      type: object
-      properties:
-        description:
-          type:
-          - string
-          - 'null'
-        isWiley:
-          type: boolean
-        diagnoses:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/ClientDiagnosis'
-        behavioralDefinitions:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/BehavioralDefinition'
-        goals:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/Goal'
-      additionalProperties: false
     UserLicense:
       type: object
       properties:
@@ -999,13 +987,61 @@ components:
         state:
           $ref: '#/components/schemas/State'
       additionalProperties: false
+    Intervention:
+      type: object
+      properties:
+        description:
+          type:
+          - string
+          - 'null'
+        isWiley:
+          type: boolean
+        isEvidenceBased:
+          type: boolean
+      additionalProperties: false
+    Signature:
+      type: object
+      properties:
+        entityId:
+          type: integer
+          format: int32
+        signerName:
+          type:
+          - string
+          - 'null'
+        data:
+          type:
+          - string
+          - 'null'
+        type:
+          type:
+          - string
+          - 'null'
+        signatureDateTime:
+          type:
+          - string
+          - 'null'
+          format: date-time
+      additionalProperties: false
+    Goal:
+      type: object
+      properties:
+        description:
+          type:
+          - string
+          - 'null'
+        isWiley:
+          type: boolean
+        objectives:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/Objective'
+      additionalProperties: false
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

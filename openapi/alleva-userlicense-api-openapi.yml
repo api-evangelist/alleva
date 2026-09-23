@@ -47,6 +47,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicenseType'
+      summary: Create licenses
+      x-summary-source: derived
+      operationId: postLicenses
+      x-operation-id-source: derived
     get:
       tags:
       - UserLicense
@@ -104,6 +108,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/UserLicenseType'
+      summary: Get licenses
+      x-summary-source: derived
+      operationId: getLicenses
+      x-operation-id-source: derived
   /v{version}/licenses:
     post:
       tags:
@@ -149,6 +157,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicenseType'
+      summary: Create v{version} licenses
+      x-summary-source: derived
+      operationId: postV{version}Licenses
+      x-operation-id-source: derived
     get:
       tags:
       - UserLicense
@@ -211,6 +223,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/UserLicenseType'
+      summary: Get v{version} licenses
+      x-summary-source: derived
+      operationId: getV{version}Licenses
+      x-operation-id-source: derived
   /licenses/{id}:
     delete:
       tags:
@@ -243,6 +259,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicenseType'
+      summary: Delete licenses by id
+      x-summary-source: derived
+      operationId: deleteLicensesById
+      x-operation-id-source: derived
     patch:
       tags:
       - UserLicense
@@ -296,6 +316,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicenseType'
+      summary: Update licenses by id
+      x-summary-source: derived
+      operationId: patchLicensesById
+      x-operation-id-source: derived
     get:
       tags:
       - UserLicense
@@ -327,6 +351,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicenseType'
+      summary: Get licenses by id
+      x-summary-source: derived
+      operationId: getLicensesById
+      x-operation-id-source: derived
   /v{version}/licenses/{id}:
     delete:
       tags:
@@ -364,6 +392,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicenseType'
+      summary: Delete v{version} licenses by id
+      x-summary-source: derived
+      operationId: deleteV{version}LicensesById
+      x-operation-id-source: derived
     patch:
       tags:
       - UserLicense
@@ -422,6 +454,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicenseType'
+      summary: Update v{version} licenses by id
+      x-summary-source: derived
+      operationId: patchV{version}LicensesById
+      x-operation-id-source: derived
     get:
       tags:
       - UserLicense
@@ -458,6 +494,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/UserLicenseType'
+      summary: Get v{version} licenses by id
+      x-summary-source: derived
+      operationId: getV{version}LicensesById
+      x-operation-id-source: derived
 components:
   schemas:
     JToken:
@@ -493,10 +533,6 @@ components:
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

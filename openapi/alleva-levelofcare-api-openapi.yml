@@ -47,6 +47,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/LevelOfCare'
+      summary: Create levels of care
+      x-summary-source: derived
+      operationId: postLevelsOfCare
+      x-operation-id-source: derived
     get:
       tags:
       - LevelOfCare
@@ -104,6 +108,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/LevelOfCare'
+      summary: Get levels of care
+      x-summary-source: derived
+      operationId: getLevelsOfCare
+      x-operation-id-source: derived
   /v{version}/levels-of-care:
     post:
       tags:
@@ -149,6 +157,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/LevelOfCare'
+      summary: Create v{version} levels of care
+      x-summary-source: derived
+      operationId: postV{version}LevelsOfCare
+      x-operation-id-source: derived
     get:
       tags:
       - LevelOfCare
@@ -211,6 +223,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/LevelOfCare'
+      summary: Get v{version} levels of care
+      x-summary-source: derived
+      operationId: getV{version}LevelsOfCare
+      x-operation-id-source: derived
   /levels-of-care/{id}:
     delete:
       tags:
@@ -243,6 +259,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/LevelOfCare'
+      summary: Delete levels of care by id
+      x-summary-source: derived
+      operationId: deleteLevelsOfCareById
+      x-operation-id-source: derived
     patch:
       tags:
       - LevelOfCare
@@ -296,6 +316,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/LevelOfCare'
+      summary: Update levels of care by id
+      x-summary-source: derived
+      operationId: patchLevelsOfCareById
+      x-operation-id-source: derived
     get:
       tags:
       - LevelOfCare
@@ -327,6 +351,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/LevelOfCare'
+      summary: Get levels of care by id
+      x-summary-source: derived
+      operationId: getLevelsOfCareById
+      x-operation-id-source: derived
   /v{version}/levels-of-care/{id}:
     delete:
       tags:
@@ -364,6 +392,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/LevelOfCare'
+      summary: Delete v{version} levels of care by id
+      x-summary-source: derived
+      operationId: deleteV{version}LevelsOfCareById
+      x-operation-id-source: derived
     patch:
       tags:
       - LevelOfCare
@@ -422,6 +454,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/LevelOfCare'
+      summary: Update v{version} levels of care by id
+      x-summary-source: derived
+      operationId: patchV{version}LevelsOfCareById
+      x-operation-id-source: derived
     get:
       tags:
       - LevelOfCare
@@ -458,6 +494,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/LevelOfCare'
+      summary: Get v{version} levels of care by id
+      x-summary-source: derived
+      operationId: getV{version}LevelsOfCareById
+      x-operation-id-source: derived
 components:
   schemas:
     LevelOfCare:
@@ -502,10 +542,6 @@ components:
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

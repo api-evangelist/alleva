@@ -47,6 +47,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ClientDevice'
+      summary: Create client devices
+      x-summary-source: derived
+      operationId: postClientDevices
+      x-operation-id-source: derived
     get:
       tags:
       - ClientDevice
@@ -104,6 +108,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/ClientDevice'
+      summary: Get client devices
+      x-summary-source: derived
+      operationId: getClientDevices
+      x-operation-id-source: derived
   /v{version}/client-devices:
     post:
       tags:
@@ -149,6 +157,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ClientDevice'
+      summary: Create v{version} client devices
+      x-summary-source: derived
+      operationId: postV{version}ClientDevices
+      x-operation-id-source: derived
     get:
       tags:
       - ClientDevice
@@ -211,6 +223,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/ClientDevice'
+      summary: Get v{version} client devices
+      x-summary-source: derived
+      operationId: getV{version}ClientDevices
+      x-operation-id-source: derived
   /client-devices/{id}:
     get:
       tags:
@@ -243,6 +259,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ClientDevice'
+      summary: Get client devices by id
+      x-summary-source: derived
+      operationId: getClientDevicesById
+      x-operation-id-source: derived
   /v{version}/client-devices/{id}:
     get:
       tags:
@@ -280,6 +300,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/ClientDevice'
+      summary: Get v{version} client devices by id
+      x-summary-source: derived
+      operationId: getV{version}ClientDevicesById
+      x-operation-id-source: derived
 components:
   schemas:
     ClientDevice:
@@ -308,10 +332,6 @@ components:
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

@@ -47,6 +47,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/BedOccupancy'
+      summary: Create bed  occupancies
+      x-summary-source: derived
+      operationId: postBedOccupancies
+      x-operation-id-source: derived
     get:
       tags:
       - BedOccupancy
@@ -104,6 +108,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/BedOccupancy'
+      summary: Get bed  occupancies
+      x-summary-source: derived
+      operationId: getBedOccupancies
+      x-operation-id-source: derived
   /bed/{bedId}/occupancies:
     post:
       tags:
@@ -149,6 +157,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/BedOccupancy'
+      summary: Create bed by bed id occupancies
+      x-summary-source: derived
+      operationId: postBedByBedIdOccupancies
+      x-operation-id-source: derived
     get:
       tags:
       - BedOccupancy
@@ -211,6 +223,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/BedOccupancy'
+      summary: Get bed by bed id occupancies
+      x-summary-source: derived
+      operationId: getBedByBedIdOccupancies
+      x-operation-id-source: derived
   /v{version}/bed/-/occupancies:
     post:
       tags:
@@ -256,6 +272,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/BedOccupancy'
+      summary: Create v{version} bed  occupancies
+      x-summary-source: derived
+      operationId: postV{version}BedOccupancies
+      x-operation-id-source: derived
     get:
       tags:
       - BedOccupancy
@@ -318,6 +338,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/BedOccupancy'
+      summary: Get v{version} bed  occupancies
+      x-summary-source: derived
+      operationId: getV{version}BedOccupancies
+      x-operation-id-source: derived
   /v{version}/bed/{bedId}/occupancies:
     post:
       tags:
@@ -368,6 +392,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/BedOccupancy'
+      summary: Create v{version} bed by bed id occupancies
+      x-summary-source: derived
+      operationId: postV{version}BedByBedIdOccupancies
+      x-operation-id-source: derived
     get:
       tags:
       - BedOccupancy
@@ -435,6 +463,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/BedOccupancy'
+      summary: Get v{version} bed by bed id occupancies
+      x-summary-source: derived
+      operationId: getV{version}BedByBedIdOccupancies
+      x-operation-id-source: derived
   /bed/-/occupancies/{id}:
     delete:
       tags:
@@ -467,6 +499,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/BedOccupancy'
+      summary: Delete bed  occupancies by id
+      x-summary-source: derived
+      operationId: deleteBedOccupanciesById
+      x-operation-id-source: derived
     get:
       tags:
       - BedOccupancy
@@ -498,6 +534,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/BedOccupancy'
+      summary: Get bed  occupancies by id
+      x-summary-source: derived
+      operationId: getBedOccupanciesById
+      x-operation-id-source: derived
   /bed/{bedId}/occupancies/{id}:
     delete:
       tags:
@@ -535,6 +575,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/BedOccupancy'
+      summary: Delete bed by bed id occupancies by id
+      x-summary-source: derived
+      operationId: deleteBedByBedIdOccupanciesById
+      x-operation-id-source: derived
     get:
       tags:
       - BedOccupancy
@@ -571,6 +615,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/BedOccupancy'
+      summary: Get bed by bed id occupancies by id
+      x-summary-source: derived
+      operationId: getBedByBedIdOccupanciesById
+      x-operation-id-source: derived
   /v{version}/bed/-/occupancies/{id}:
     delete:
       tags:
@@ -608,6 +656,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/BedOccupancy'
+      summary: Delete v{version} bed  occupancies by id
+      x-summary-source: derived
+      operationId: deleteV{version}BedOccupanciesById
+      x-operation-id-source: derived
     get:
       tags:
       - BedOccupancy
@@ -644,6 +696,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/BedOccupancy'
+      summary: Get v{version} bed  occupancies by id
+      x-summary-source: derived
+      operationId: getV{version}BedOccupanciesById
+      x-operation-id-source: derived
   /v{version}/bed/{bedId}/occupancies/{id}:
     delete:
       tags:
@@ -686,6 +742,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/BedOccupancy'
+      summary: Delete v{version} bed by bed id occupancies by id
+      x-summary-source: derived
+      operationId: deleteV{version}BedByBedIdOccupanciesById
+      x-operation-id-source: derived
     get:
       tags:
       - BedOccupancy
@@ -727,6 +787,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/BedOccupancy'
+      summary: Get v{version} bed by bed id occupancies by id
+      x-summary-source: derived
+      operationId: getV{version}BedByBedIdOccupanciesById
+      x-operation-id-source: derived
   /bed/-/occupancies/end-lead/{leadId}:
     delete:
       tags:
@@ -749,6 +813,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Delete bed  occupancies end lead by lead id
+      x-summary-source: derived
+      operationId: deleteBedOccupanciesEndLeadByLeadId
+      x-operation-id-source: derived
   /bed/{bedId}/occupancies/end-lead/{leadId}:
     delete:
       tags:
@@ -776,6 +844,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Delete bed by bed id occupancies end lead by lead id
+      x-summary-source: derived
+      operationId: deleteBedByBedIdOccupanciesEndLeadByLeadId
+      x-operation-id-source: derived
   /v{version}/bed/-/occupancies/end-lead/{leadId}:
     delete:
       tags:
@@ -803,6 +875,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Delete v{version} bed  occupancies end lead by lead id
+      x-summary-source: derived
+      operationId: deleteV{version}BedOccupanciesEndLeadByLeadId
+      x-operation-id-source: derived
   /v{version}/bed/{bedId}/occupancies/end-lead/{leadId}:
     delete:
       tags:
@@ -835,6 +911,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Delete v{version} bed by bed id occupancies end lead by lead id
+      x-summary-source: derived
+      operationId: deleteV{version}BedByBedIdOccupanciesEndLeadByLeadId
+      x-operation-id-source: derived
   /bed/-/occupancies/end/{id}:
     delete:
       tags:
@@ -857,6 +937,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Delete bed  occupancies end by id
+      x-summary-source: derived
+      operationId: deleteBedOccupanciesEndById
+      x-operation-id-source: derived
   /bed/{bedId}/occupancies/end/{id}:
     delete:
       tags:
@@ -884,6 +968,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Delete bed by bed id occupancies end by id
+      x-summary-source: derived
+      operationId: deleteBedByBedIdOccupanciesEndById
+      x-operation-id-source: derived
   /v{version}/bed/-/occupancies/end/{id}:
     delete:
       tags:
@@ -911,6 +999,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Delete v{version} bed  occupancies end by id
+      x-summary-source: derived
+      operationId: deleteV{version}BedOccupanciesEndById
+      x-operation-id-source: derived
   /v{version}/bed/{bedId}/occupancies/end/{id}:
     delete:
       tags:
@@ -943,6 +1035,10 @@ paths:
       responses:
         '200':
           description: Success
+      summary: Delete v{version} bed by bed id occupancies end by id
+      x-summary-source: derived
+      operationId: deleteV{version}BedByBedIdOccupanciesEndById
+      x-operation-id-source: derived
   /bed/-/occupancies/transfer:
     post:
       tags:
@@ -983,6 +1079,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/BedOccupancy'
+      summary: Create bed  occupancies transfer
+      x-summary-source: derived
+      operationId: postBedOccupanciesTransfer
+      x-operation-id-source: derived
   /bed/{bedId}/occupancies/transfer:
     post:
       tags:
@@ -1028,6 +1128,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/BedOccupancy'
+      summary: Create bed by bed id occupancies transfer
+      x-summary-source: derived
+      operationId: postBedByBedIdOccupanciesTransfer
+      x-operation-id-source: derived
   /v{version}/bed/-/occupancies/transfer:
     post:
       tags:
@@ -1073,6 +1177,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/BedOccupancy'
+      summary: Create v{version} bed  occupancies transfer
+      x-summary-source: derived
+      operationId: postV{version}BedOccupanciesTransfer
+      x-operation-id-source: derived
   /v{version}/bed/{bedId}/occupancies/transfer:
     post:
       tags:
@@ -1123,6 +1231,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/BedOccupancy'
+      summary: Create v{version} bed by bed id occupancies transfer
+      x-summary-source: derived
+      operationId: postV{version}BedByBedIdOccupanciesTransfer
+      x-operation-id-source: derived
   /bed/-/occupancies/occupants:
     get:
       tags:
@@ -1170,6 +1282,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Occupant'
+      summary: Get bed  occupancies occupants
+      x-summary-source: derived
+      operationId: getBedOccupanciesOccupants
+      x-operation-id-source: derived
   /bed/{bedId}/occupancies/occupants:
     get:
       tags:
@@ -1217,6 +1333,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Occupant'
+      summary: Get bed by bed id occupancies occupants
+      x-summary-source: derived
+      operationId: getBedByBedIdOccupanciesOccupants
+      x-operation-id-source: derived
   /v{version}/bed/-/occupancies/occupants:
     get:
       tags:
@@ -1269,6 +1389,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Occupant'
+      summary: Get v{version} bed  occupancies occupants
+      x-summary-source: derived
+      operationId: getV{version}BedOccupanciesOccupants
+      x-operation-id-source: derived
   /v{version}/bed/{bedId}/occupancies/occupants:
     get:
       tags:
@@ -1321,6 +1445,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Occupant'
+      summary: Get v{version} bed by bed id occupancies occupants
+      x-summary-source: derived
+      operationId: getV{version}BedByBedIdOccupanciesOccupants
+      x-operation-id-source: derived
   /bed/-/occupancies/occupants/{leadId}:
     get:
       tags:
@@ -1353,6 +1481,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Occupant'
+      summary: Get bed  occupancies occupants by lead id
+      x-summary-source: derived
+      operationId: getBedOccupanciesOccupantsByLeadId
+      x-operation-id-source: derived
   /bed/{bedId}/occupancies/occupants/{leadId}:
     get:
       tags:
@@ -1390,6 +1522,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Occupant'
+      summary: Get bed by bed id occupancies occupants by lead id
+      x-summary-source: derived
+      operationId: getBedByBedIdOccupanciesOccupantsByLeadId
+      x-operation-id-source: derived
   /v{version}/bed/-/occupancies/occupants/{leadId}:
     get:
       tags:
@@ -1427,6 +1563,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Occupant'
+      summary: Get v{version} bed  occupancies occupants by lead id
+      x-summary-source: derived
+      operationId: getV{version}BedOccupanciesOccupantsByLeadId
+      x-operation-id-source: derived
   /v{version}/bed/{bedId}/occupancies/occupants/{leadId}:
     get:
       tags:
@@ -1469,109 +1609,12 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/Occupant'
+      summary: Get v{version} bed by bed id occupancies occupants by lead id
+      x-summary-source: derived
+      operationId: getV{version}BedByBedIdOccupanciesOccupantsByLeadId
+      x-operation-id-source: derived
 components:
   schemas:
-    BedOccupancy:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        client:
-          $ref: '#/components/schemas/Occupant'
-        createdBy:
-          type: integer
-          format: int32
-        comments:
-          type:
-          - string
-          - 'null'
-        startDate:
-          type: string
-          format: date-time
-        endDate:
-          type: string
-          format: date-time
-        bed:
-          $ref: '#/components/schemas/Bed'
-        fromTransfer:
-          type: boolean
-          writeOnly: true
-      additionalProperties: false
-    ClientName:
-      type: object
-      properties:
-        clientFullName:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        first:
-          type:
-          - string
-          - 'null'
-        last:
-          type:
-          - string
-          - 'null'
-        middle:
-          type:
-          - string
-          - 'null'
-        isLegalName:
-          type:
-          - boolean
-          - 'null'
-        former:
-          type:
-          - string
-          - 'null'
-        prefix:
-          type:
-          - string
-          - 'null'
-        preferred:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    Occupant:
-      type: object
-      properties:
-        leadId:
-          type: integer
-          format: int32
-        name:
-          $ref: '#/components/schemas/ClientName'
-        gender:
-          type:
-          - string
-          - 'null'
-        admissionDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        dischargeDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        dateOfBirth:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        imageUrl:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
     OccupancyTransfer:
       type: object
       properties:
@@ -1649,13 +1692,110 @@ components:
         room:
           $ref: '#/components/schemas/Room'
       additionalProperties: false
+    Occupant:
+      type: object
+      properties:
+        leadId:
+          type: integer
+          format: int32
+        name:
+          $ref: '#/components/schemas/ClientName'
+        gender:
+          type:
+          - string
+          - 'null'
+        admissionDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        dischargeDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        dateOfBirth:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        imageUrl:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    BedOccupancy:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        client:
+          $ref: '#/components/schemas/Occupant'
+        createdBy:
+          type: integer
+          format: int32
+        comments:
+          type:
+          - string
+          - 'null'
+        startDate:
+          type: string
+          format: date-time
+        endDate:
+          type: string
+          format: date-time
+        bed:
+          $ref: '#/components/schemas/Bed'
+        fromTransfer:
+          type: boolean
+          writeOnly: true
+      additionalProperties: false
+    ClientName:
+      type: object
+      properties:
+        clientFullName:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        first:
+          type:
+          - string
+          - 'null'
+        last:
+          type:
+          - string
+          - 'null'
+        middle:
+          type:
+          - string
+          - 'null'
+        isLegalName:
+          type:
+          - boolean
+          - 'null'
+        former:
+          type:
+          - string
+          - 'null'
+        prefix:
+          type:
+          - string
+          - 'null'
+        preferred:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

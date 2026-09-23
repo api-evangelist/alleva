@@ -65,6 +65,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/MedicationData'
+      summary: Get medications
+      x-summary-source: derived
+      operationId: getMedications
+      x-operation-id-source: derived
   /v{version}/medications:
     get:
       tags:
@@ -128,6 +132,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/MedicationData'
+      summary: Get v{version} medications
+      x-summary-source: derived
+      operationId: getV{version}Medications
+      x-operation-id-source: derived
   /medications/{id}:
     get:
       tags:
@@ -160,6 +168,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/MedicationData'
+      summary: Get medications by id
+      x-summary-source: derived
+      operationId: getMedicationsById
+      x-operation-id-source: derived
   /v{version}/medications/{id}:
     get:
       tags:
@@ -197,6 +209,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/MedicationData'
+      summary: Get v{version} medications by id
+      x-summary-source: derived
+      operationId: getV{version}MedicationsById
+      x-operation-id-source: derived
 components:
   schemas:
     MedicationData:
@@ -254,10 +270,6 @@ components:
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml

@@ -65,6 +65,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/IncidentReport'
+      summary: Get incident report
+      x-summary-source: derived
+      operationId: getIncidentReport
+      x-operation-id-source: derived
   /v{version}/incident-report:
     get:
       tags:
@@ -128,6 +132,10 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/IncidentReport'
+      summary: Get v{version} incident report
+      x-summary-source: derived
+      operationId: getV{version}IncidentReport
+      x-operation-id-source: derived
   /incident-report/{id}:
     get:
       tags:
@@ -160,6 +168,10 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/IncidentReport'
+      summary: Get incident report by id
+      x-summary-source: derived
+      operationId: getIncidentReportById
+      x-operation-id-source: derived
   /v{version}/incident-report/{id}:
     get:
       tags:
@@ -197,32 +209,12 @@ paths:
             text/json; ver=1.0:
               schema:
                 $ref: '#/components/schemas/IncidentReport'
+      summary: Get v{version} incident report by id
+      x-summary-source: derived
+      operationId: getV{version}IncidentReportById
+      x-operation-id-source: derived
 components:
   schemas:
-    Signature:
-      type: object
-      properties:
-        entityId:
-          type: integer
-          format: int32
-        signerName:
-          type:
-          - string
-          - 'null'
-        data:
-          type:
-          - string
-          - 'null'
-        type:
-          type:
-          - string
-          - 'null'
-        signatureDateTime:
-          type:
-          - string
-          - 'null'
-          format: date-time
-      additionalProperties: false
     IncidentReport:
       type: object
       properties:
@@ -336,13 +328,33 @@ components:
           items:
             $ref: '#/components/schemas/Signature'
       additionalProperties: false
+    Signature:
+      type: object
+      properties:
+        entityId:
+          type: integer
+          format: int32
+        signerName:
+          type:
+          - string
+          - 'null'
+        data:
+          type:
+          - string
+          - 'null'
+        type:
+          type:
+          - string
+          - 'null'
+        signatureDateTime:
+          type:
+          - string
+          - 'null'
+          format: date-time
+      additionalProperties: false
   securitySchemes:
     Bearer:
       type: apiKey
-      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then\
-        \ your token in the text input below.\n\nExample: Bearer 12345abcdef"
+      description: "JWT Authorization header using the Bearer scheme. \n\n Enter Bearer [space] and then your token in the text input below.\n\nExample: Bearer 12345abcdef"
       name: Authorization
       in: header
-servers:
-- url: https://api.helloalleva.com
-  description: Base URL reconciled from apis.yml
