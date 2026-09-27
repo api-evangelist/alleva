@@ -199,38 +199,11 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    DataValuesSearch:
-      type: object
-      properties:
-        datafacetIds:
-          type:
-          - array
-          - 'null'
-          items:
-            type: integer
-            format: int32
-        leadId:
-          type: integer
-          format: int32
-        advancedFormInstanceId:
-          type: integer
-          format: int64
-        advancedFormId:
-          type: integer
-          format: int32
-      additionalProperties: false
-    DataKind:
+    UserType:
       enum:
       - 0
       - 1
       - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
-      - 8
-      - 9
       type: integer
       format: int32
     DataValueWithKind:
@@ -386,11 +359,38 @@ components:
         dataKind:
           $ref: '#/components/schemas/DataKind'
       additionalProperties: false
-    UserType:
+    DataValuesSearch:
+      type: object
+      properties:
+        datafacetIds:
+          type:
+          - array
+          - 'null'
+          items:
+            type: integer
+            format: int32
+        leadId:
+          type: integer
+          format: int32
+        advancedFormInstanceId:
+          type: integer
+          format: int64
+        advancedFormId:
+          type: integer
+          format: int32
+      additionalProperties: false
+    DataKind:
       enum:
       - 0
       - 1
       - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
       type: integer
       format: int32
   securitySchemes:

@@ -1095,35 +1095,17 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    ReferralNoteCreationApiStruct:
+    ReferralLogoData:
       type: object
       properties:
-        type:
+        fileName:
           type:
           - string
           - 'null'
-        level:
+        base64String:
           type:
           - string
           - 'null'
-        content:
-          type:
-          - string
-          - 'null'
-        noteDate:
-          type: string
-          format: date-time
-        authorId:
-          type: integer
-          format: int32
-        creatorId:
-          type: integer
-          format: int32
-          writeOnly: true
-        modifierId:
-          type: integer
-          format: int32
-          writeOnly: true
       additionalProperties: false
     ReferralContact:
       type: object
@@ -1175,14 +1157,68 @@ components:
         externalId:
           $ref: '#/components/schemas/ExternalData'
       additionalProperties: false
-    ReferralLogoData:
+    Phone:
       type: object
       properties:
-        fileName:
+        home:
           type:
           - string
           - 'null'
-        base64String:
+        office:
+          type:
+          - string
+          - 'null'
+        other:
+          type:
+          - string
+          - 'null'
+        number:
+          type:
+          - string
+          - 'null'
+        fax:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ExternalData:
+      type: object
+      properties:
+        externalId:
+          type:
+          - string
+          - 'null'
+        externalIdType:
+          type:
+          - string
+          - 'null'
+        serviceIdentifier:
+          type:
+          - string
+          - 'null'
+        serviceId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+      additionalProperties: false
+    UpdateResult:
+      type: object
+      properties:
+        operationResult:
+          $ref: '#/components/schemas/UpdateOperationResult'
+        success:
+          type: boolean
+        id:
+          type: integer
+          format: int64
+        messages:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        reason:
           type:
           - string
           - 'null'
@@ -1191,6 +1227,36 @@ components:
       type: array
       items:
         $ref: '#/components/schemas/JToken'
+    ReferralNoteCreationApiStruct:
+      type: object
+      properties:
+        type:
+          type:
+          - string
+          - 'null'
+        level:
+          type:
+          - string
+          - 'null'
+        content:
+          type:
+          - string
+          - 'null'
+        noteDate:
+          type: string
+          format: date-time
+        authorId:
+          type: integer
+          format: int32
+        creatorId:
+          type: integer
+          format: int32
+          writeOnly: true
+        modifierId:
+          type: integer
+          format: int32
+          writeOnly: true
+      additionalProperties: false
     Address:
       type: object
       properties:
@@ -1219,72 +1285,6 @@ components:
           - string
           - 'null'
         zipCode:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    ExternalData:
-      type: object
-      properties:
-        externalId:
-          type:
-          - string
-          - 'null'
-        externalIdType:
-          type:
-          - string
-          - 'null'
-        serviceIdentifier:
-          type:
-          - string
-          - 'null'
-        serviceId:
-          type:
-          - integer
-          - 'null'
-          format: int32
-      additionalProperties: false
-    Phone:
-      type: object
-      properties:
-        home:
-          type:
-          - string
-          - 'null'
-        office:
-          type:
-          - string
-          - 'null'
-        other:
-          type:
-          - string
-          - 'null'
-        number:
-          type:
-          - string
-          - 'null'
-        fax:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    UpdateResult:
-      type: object
-      properties:
-        operationResult:
-          $ref: '#/components/schemas/UpdateOperationResult'
-        success:
-          type: boolean
-        id:
-          type: integer
-          format: int64
-        messages:
-          type:
-          - array
-          - 'null'
-          items:
-            type: string
-        reason:
           type:
           - string
           - 'null'

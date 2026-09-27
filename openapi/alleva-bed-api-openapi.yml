@@ -500,6 +500,34 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    Room:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        facilityId:
+          type: integer
+          format: int32
+        roomName:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        totalBeds:
+          type: integer
+          format: int32
+      additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
     Bed:
       type: object
       properties:
@@ -535,34 +563,6 @@ components:
           - 'null'
         room:
           $ref: '#/components/schemas/Room'
-      additionalProperties: false
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
-    Room:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        facilityId:
-          type: integer
-          format: int32
-        roomName:
-          type:
-          - string
-          - 'null'
-        isActive:
-          type: boolean
-        totalBeds:
-          type: integer
-          format: int32
       additionalProperties: false
   securitySchemes:
     Bearer:

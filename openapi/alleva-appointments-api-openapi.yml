@@ -226,18 +226,6 @@ components:
           - string
           - 'null'
       additionalProperties: false
-    ZoomMeetingDetails:
-      type: object
-      properties:
-        id:
-          type:
-          - string
-          - 'null'
-        password:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
     Facility:
       type: object
       properties:
@@ -306,6 +294,18 @@ components:
           - string
           - 'null'
         dropoffAddress:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ZoomMeetingDetails:
+      type: object
+      properties:
+        id:
+          type:
+          - string
+          - 'null'
+        password:
           type:
           - string
           - 'null'

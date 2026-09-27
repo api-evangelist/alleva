@@ -500,10 +500,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
     Room:
       type: object
       properties:
@@ -528,6 +524,10 @@ components:
           type: integer
           format: int32
       additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
   securitySchemes:
     Bearer:
       type: apiKey

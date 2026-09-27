@@ -841,18 +841,7 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    ResourceLink:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        route:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    ClientImageUrl:
+    DocumentUrl:
       type: object
       properties:
         fileName:
@@ -869,42 +858,6 @@ components:
           - string
           - 'null'
           readOnly: true
-      additionalProperties: false
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
-    DocumentData:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int64
-        name:
-          type:
-          - string
-          - 'null'
-        base64String:
-          type:
-          - string
-          - 'null'
-        externalId:
-          $ref: '#/components/schemas/ExternalData'
-      additionalProperties: false
-    BulkProspectReturn:
-      type: object
-      properties:
-        prospectId:
-          type: integer
-          format: int32
-        bulkProspect:
-          $ref: '#/components/schemas/BulkProspectReturnObject'
-        errors:
-          type:
-          - array
-          - 'null'
-          items:
-            type: string
       additionalProperties: false
     AdmissionScreening:
       type: object
@@ -1146,149 +1099,6 @@ components:
           - string
           - 'null'
       additionalProperties: false
-    DocumentUrl:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        host:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        path:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-      additionalProperties: false
-    BillingIntake:
-      type: object
-      additionalProperties: false
-    ExternalData:
-      type: object
-      properties:
-        externalId:
-          type:
-          - string
-          - 'null'
-        externalIdType:
-          type:
-          - string
-          - 'null'
-        serviceIdentifier:
-          type:
-          - string
-          - 'null'
-        serviceId:
-          type:
-          - integer
-          - 'null'
-          format: int32
-      additionalProperties: false
-    ClientContact:
-      type: object
-      properties:
-        firstName:
-          type:
-          - string
-          - 'null'
-        lastName:
-          type:
-          - string
-          - 'null'
-        name:
-          type:
-          - string
-          - 'null'
-        phone:
-          type:
-          - string
-          - 'null'
-        relationship:
-          type:
-          - string
-          - 'null'
-        email:
-          type:
-          - string
-          - 'null'
-        isPrimary:
-          type: boolean
-          writeOnly: true
-        isEmergencyContact:
-          type: boolean
-      additionalProperties: false
-    FaceToFace:
-      type: object
-      properties:
-        levelOfCare:
-          type:
-          - string
-          - 'null'
-        treatments:
-          type:
-          - string
-          - 'null'
-        referralCompanyName:
-          type:
-          - string
-          - 'null'
-        referralContactName:
-          type:
-          - string
-          - 'null'
-        facility:
-          type:
-          - string
-          - 'null'
-        admissionDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        dischargeOrTransfer:
-          type:
-          - string
-          - 'null'
-        leadIntakeBy:
-          type:
-          - string
-          - 'null'
-        firstContactDate:
-          type: string
-          format: date-time
-        leadSelfStatusName:
-          type:
-          - string
-          - 'null'
-        status:
-          type:
-          - string
-          - 'null'
-        primaryClinicianName:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    InsuranceReturn:
-      type: object
-      properties:
-        insuranceId:
-          type:
-          - integer
-          - 'null'
-          format: int64
-        documentIds:
-          type:
-          - array
-          - 'null'
-          items:
-            type: integer
-            format: int64
-      additionalProperties: false
     BulkProspectReturnObject:
       type: object
       properties:
@@ -1386,6 +1196,55 @@ components:
           items:
             $ref: '#/components/schemas/DocumentData'
       additionalProperties: false
+    InsuranceReturn:
+      type: object
+      properties:
+        insuranceId:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        documentIds:
+          type:
+          - array
+          - 'null'
+          items:
+            type: integer
+            format: int64
+      additionalProperties: false
+    ClientContact:
+      type: object
+      properties:
+        firstName:
+          type:
+          - string
+          - 'null'
+        lastName:
+          type:
+          - string
+          - 'null'
+        name:
+          type:
+          - string
+          - 'null'
+        phone:
+          type:
+          - string
+          - 'null'
+        relationship:
+          type:
+          - string
+          - 'null'
+        email:
+          type:
+          - string
+          - 'null'
+        isPrimary:
+          type: boolean
+          writeOnly: true
+        isEmergencyContact:
+          type: boolean
+      additionalProperties: false
     BulkProspect:
       type: object
       properties:
@@ -1406,37 +1265,231 @@ components:
         billingIntake:
           $ref: '#/components/schemas/BillingIntake'
       additionalProperties: false
-    Address:
+    Phone:
       type: object
       properties:
-        line1:
+        home:
           type:
           - string
           - 'null'
-        line2:
+        office:
           type:
           - string
           - 'null'
-        city:
+        other:
           type:
           - string
           - 'null'
-        state:
+        number:
           type:
           - string
           - 'null'
-        stateAbbr:
+        fax:
           type:
           - string
           - 'null'
-        country:
+      additionalProperties: false
+    BillingIntake:
+      type: object
+      additionalProperties: false
+    ExternalData:
+      type: object
+      properties:
+        externalId:
           type:
           - string
           - 'null'
-        zipCode:
+        externalIdType:
           type:
           - string
           - 'null'
+        serviceIdentifier:
+          type:
+          - string
+          - 'null'
+        serviceId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+      additionalProperties: false
+    BulkProspectReturn:
+      type: object
+      properties:
+        prospectId:
+          type: integer
+          format: int32
+        bulkProspect:
+          $ref: '#/components/schemas/BulkProspectReturnObject'
+        errors:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+      additionalProperties: false
+    DocumentData:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type:
+          - string
+          - 'null'
+        base64String:
+          type:
+          - string
+          - 'null'
+        externalId:
+          $ref: '#/components/schemas/ExternalData'
+      additionalProperties: false
+    FaceToFace:
+      type: object
+      properties:
+        levelOfCare:
+          type:
+          - string
+          - 'null'
+        treatments:
+          type:
+          - string
+          - 'null'
+        referralCompanyName:
+          type:
+          - string
+          - 'null'
+        referralContactName:
+          type:
+          - string
+          - 'null'
+        facility:
+          type:
+          - string
+          - 'null'
+        admissionDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        dischargeOrTransfer:
+          type:
+          - string
+          - 'null'
+        leadIntakeBy:
+          type:
+          - string
+          - 'null'
+        firstContactDate:
+          type: string
+          format: date-time
+        leadSelfStatusName:
+          type:
+          - string
+          - 'null'
+        status:
+          type:
+          - string
+          - 'null'
+        primaryClinicianName:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Prospect:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          $ref: '#/components/schemas/ClientName'
+        gender:
+          type:
+          - string
+          - 'null'
+        primaryLanguage:
+          type:
+          - string
+          - 'null'
+        ssn:
+          type:
+          - string
+          - 'null'
+        dateOfBirth:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        address:
+          $ref: '#/components/schemas/Address'
+        phone:
+          $ref: '#/components/schemas/Phone'
+        email:
+          type:
+          - string
+          - 'null'
+        contact:
+          $ref: '#/components/schemas/ClientContact'
+        facilityName:
+          type:
+          - string
+          - 'null'
+        status:
+          type:
+          - string
+          - 'null'
+        selfStatus:
+          type:
+          - string
+          - 'null'
+        mrn:
+          type:
+          - string
+          - 'null'
+        admissionDate:
+          type:
+          - string
+          - 'null'
+          writeOnly: true
+        firstContactDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        profileImage:
+          $ref: '#/components/schemas/ClientImageUrl'
+        referralCompanyId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        referralContactId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        referralCompanyName:
+          type:
+          - string
+          - 'null'
+        referralContactName:
+          type:
+          - string
+          - 'null'
+        luin:
+          type:
+          - string
+          - 'null'
+          format: uuid
+        externalId:
+          $ref: '#/components/schemas/ExternalData'
       additionalProperties: false
     ClientName:
       type: object
@@ -1475,6 +1528,39 @@ components:
           - string
           - 'null'
       additionalProperties: false
+    ResourceLink:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        route:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ClientImageUrl:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        host:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        path:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+      additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
     ClientInsurances:
       type: object
       properties:
@@ -1584,123 +1670,37 @@ components:
           - 'null'
           format: byte
       additionalProperties: false
-    Phone:
+    Address:
       type: object
       properties:
-        home:
+        line1:
           type:
           - string
           - 'null'
-        office:
+        line2:
           type:
           - string
           - 'null'
-        other:
+        city:
           type:
           - string
           - 'null'
-        number:
+        state:
           type:
           - string
           - 'null'
-        fax:
+        stateAbbr:
           type:
           - string
           - 'null'
-      additionalProperties: false
-    Prospect:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
+        country:
           type:
           - string
           - 'null'
-          readOnly: true
-        name:
-          $ref: '#/components/schemas/ClientName'
-        gender:
+        zipCode:
           type:
           - string
           - 'null'
-        primaryLanguage:
-          type:
-          - string
-          - 'null'
-        ssn:
-          type:
-          - string
-          - 'null'
-        dateOfBirth:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        address:
-          $ref: '#/components/schemas/Address'
-        phone:
-          $ref: '#/components/schemas/Phone'
-        email:
-          type:
-          - string
-          - 'null'
-        contact:
-          $ref: '#/components/schemas/ClientContact'
-        facilityName:
-          type:
-          - string
-          - 'null'
-        status:
-          type:
-          - string
-          - 'null'
-        selfStatus:
-          type:
-          - string
-          - 'null'
-        mrn:
-          type:
-          - string
-          - 'null'
-        admissionDate:
-          type:
-          - string
-          - 'null'
-          writeOnly: true
-        firstContactDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        profileImage:
-          $ref: '#/components/schemas/ClientImageUrl'
-        referralCompanyId:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        referralContactId:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        referralCompanyName:
-          type:
-          - string
-          - 'null'
-        referralContactName:
-          type:
-          - string
-          - 'null'
-        luin:
-          type:
-          - string
-          - 'null'
-          format: uuid
-        externalId:
-          $ref: '#/components/schemas/ExternalData'
       additionalProperties: false
   securitySchemes:
     Bearer:

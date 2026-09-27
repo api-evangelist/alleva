@@ -906,6 +906,99 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    MasterIntakeSections:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        createdBy:
+          type: integer
+          format: int32
+        facilityId:
+          type: integer
+          format: int32
+        intakeType:
+          type: integer
+          format: int32
+        isActiveRequire:
+          type: boolean
+        isCopyAvailable:
+          type: boolean
+        isDefaultSection:
+          type: boolean
+        isDeleted:
+          type: boolean
+        sectionCode:
+          type:
+          - string
+          - 'null'
+        sectionName:
+          type:
+          - string
+          - 'null'
+        details:
+          $ref: '#/components/schemas/IntakeSectionDetails'
+      additionalProperties: false
+    CreateResult:
+      type: object
+      properties:
+        operationResult:
+          $ref: '#/components/schemas/CreateOperationResult'
+        id:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        messages:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        reason:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    IntakeSectionDetails:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        advancedFormId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        isActive:
+          type: boolean
+        isCopyIntakeSection:
+          type: boolean
+        sortOrder:
+          type: integer
+          format: int32
+        formId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        formInfoId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+      additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
     IntakeSectionOrder:
       type: object
       properties:
@@ -946,99 +1039,6 @@ components:
       - 3
       type: integer
       format: int32
-    IntakeSectionDetails:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        advancedFormId:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        isActive:
-          type: boolean
-        isCopyIntakeSection:
-          type: boolean
-        sortOrder:
-          type: integer
-          format: int32
-        formId:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        formInfoId:
-          type:
-          - integer
-          - 'null'
-          format: int32
-      additionalProperties: false
-    MasterIntakeSections:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        createdBy:
-          type: integer
-          format: int32
-        facilityId:
-          type: integer
-          format: int32
-        intakeType:
-          type: integer
-          format: int32
-        isActiveRequire:
-          type: boolean
-        isCopyAvailable:
-          type: boolean
-        isDefaultSection:
-          type: boolean
-        isDeleted:
-          type: boolean
-        sectionCode:
-          type:
-          - string
-          - 'null'
-        sectionName:
-          type:
-          - string
-          - 'null'
-        details:
-          $ref: '#/components/schemas/IntakeSectionDetails'
-      additionalProperties: false
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
-    CreateResult:
-      type: object
-      properties:
-        operationResult:
-          $ref: '#/components/schemas/CreateOperationResult'
-        id:
-          type:
-          - integer
-          - 'null'
-          format: int64
-        messages:
-          type:
-          - array
-          - 'null'
-          items:
-            type: string
-        reason:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
     IntakeSectionCustomForm:
       type: object
       properties:

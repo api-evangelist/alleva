@@ -544,6 +544,45 @@ components:
           - string
           - 'null'
       additionalProperties: false
+    DocumentUrl:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        host:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        path:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+      additionalProperties: false
+    ExternalData:
+      type: object
+      properties:
+        externalId:
+          type:
+          - string
+          - 'null'
+        externalIdType:
+          type:
+          - string
+          - 'null'
+        serviceIdentifier:
+          type:
+          - string
+          - 'null'
+        serviceId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+      additionalProperties: false
     DocumentTypeModal:
       type: object
       properties:
@@ -626,27 +665,6 @@ components:
           items:
             $ref: '#/components/schemas/DocumentData'
       additionalProperties: false
-    ExternalData:
-      type: object
-      properties:
-        externalId:
-          type:
-          - string
-          - 'null'
-        externalIdType:
-          type:
-          - string
-          - 'null'
-        serviceIdentifier:
-          type:
-          - string
-          - 'null'
-        serviceId:
-          type:
-          - integer
-          - 'null'
-          format: int32
-      additionalProperties: false
     DocumentData:
       type: object
       properties:
@@ -663,24 +681,6 @@ components:
           - 'null'
         externalId:
           $ref: '#/components/schemas/ExternalData'
-      additionalProperties: false
-    DocumentUrl:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        host:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        path:
-          type:
-          - string
-          - 'null'
-          readOnly: true
       additionalProperties: false
   securitySchemes:
     Bearer:

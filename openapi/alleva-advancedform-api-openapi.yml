@@ -534,6 +534,22 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    AutofillRequest:
+      type: object
+      properties:
+        advancedFormId:
+          type: integer
+          format: int32
+        facilityIds:
+          type:
+          - array
+          - 'null'
+          items:
+            type: integer
+            format: int32
+        isAutofillEnabled:
+          type: boolean
+      additionalProperties: false
     AdvancedForm:
       type: object
       properties:
@@ -629,46 +645,15 @@ components:
           - string
           - 'null'
       additionalProperties: false
-    CopyParameters:
+    AdvancedFormSaveRequest:
       type: object
       properties:
-        destinationFacilityIds:
+        dataValues:
           type:
           - array
           - 'null'
           items:
-            type: integer
-            format: int32
-      additionalProperties: false
-    DataKind:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
-      - 8
-      - 9
-      type: integer
-      format: int32
-    AutofillRequest:
-      type: object
-      properties:
-        advancedFormId:
-          type: integer
-          format: int32
-        facilityIds:
-          type:
-          - array
-          - 'null'
-          items:
-            type: integer
-            format: int32
-        isAutofillEnabled:
-          type: boolean
+            $ref: '#/components/schemas/DataValueRequest'
       additionalProperties: false
     DataValueWithKindResponse:
       type: object
@@ -735,16 +720,31 @@ components:
         dataKind:
           $ref: '#/components/schemas/DataKind'
       additionalProperties: false
-    AdvancedFormSaveRequest:
+    CopyParameters:
       type: object
       properties:
-        dataValues:
+        destinationFacilityIds:
           type:
           - array
           - 'null'
           items:
-            $ref: '#/components/schemas/DataValueRequest'
+            type: integer
+            format: int32
       additionalProperties: false
+    DataKind:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      type: integer
+      format: int32
   securitySchemes:
     Bearer:
       type: apiKey

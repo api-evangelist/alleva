@@ -215,6 +215,30 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    Signature:
+      type: object
+      properties:
+        entityId:
+          type: integer
+          format: int32
+        signerName:
+          type:
+          - string
+          - 'null'
+        data:
+          type:
+          - string
+          - 'null'
+        type:
+          type:
+          - string
+          - 'null'
+        signatureDateTime:
+          type:
+          - string
+          - 'null'
+          format: date-time
+      additionalProperties: false
     IncidentReport:
       type: object
       properties:
@@ -327,30 +351,6 @@ components:
           - 'null'
           items:
             $ref: '#/components/schemas/Signature'
-      additionalProperties: false
-    Signature:
-      type: object
-      properties:
-        entityId:
-          type: integer
-          format: int32
-        signerName:
-          type:
-          - string
-          - 'null'
-        data:
-          type:
-          - string
-          - 'null'
-        type:
-          type:
-          - string
-          - 'null'
-        signatureDateTime:
-          type:
-          - string
-          - 'null'
-          format: date-time
       additionalProperties: false
   securitySchemes:
     Bearer:

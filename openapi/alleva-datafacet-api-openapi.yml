@@ -206,6 +206,15 @@ components:
         isBuiltIn:
           type: boolean
       additionalProperties: false
+    DataScopeKind:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      type: integer
+      format: int32
     DataKind:
       enum:
       - 0
@@ -218,15 +227,6 @@ components:
       - 7
       - 8
       - 9
-      type: integer
-      format: int32
-    DataScopeKind:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      - 4
       type: integer
       format: int32
   securitySchemes:

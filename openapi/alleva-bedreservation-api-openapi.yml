@@ -1539,134 +1539,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    Room:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        facilityId:
-          type: integer
-          format: int32
-        roomName:
-          type:
-          - string
-          - 'null'
-        isActive:
-          type: boolean
-        totalBeds:
-          type: integer
-          format: int32
-      additionalProperties: false
-    Bed:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        name:
-          type:
-          - string
-          - 'null'
-        description:
-          type:
-          - string
-          - 'null'
-        forFemale:
-          type: boolean
-        isActive:
-          type: boolean
-        isMaintenance:
-          type: boolean
-        isOccupied:
-          type:
-          - boolean
-          - 'null'
-        isReserved:
-          type:
-          - boolean
-          - 'null'
-        room:
-          $ref: '#/components/schemas/Room'
-      additionalProperties: false
-    Occupant:
-      type: object
-      properties:
-        leadId:
-          type: integer
-          format: int32
-        name:
-          $ref: '#/components/schemas/ClientName'
-        gender:
-          type:
-          - string
-          - 'null'
-        admissionDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        dischargeDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        dateOfBirth:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        imageUrl:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
-    BedOccupancy:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        client:
-          $ref: '#/components/schemas/Occupant'
-        createdBy:
-          type: integer
-          format: int32
-        comments:
-          type:
-          - string
-          - 'null'
-        startDate:
-          type: string
-          format: date-time
-        endDate:
-          type: string
-          format: date-time
-        bed:
-          $ref: '#/components/schemas/Bed'
-        fromTransfer:
-          type: boolean
-          writeOnly: true
-      additionalProperties: false
     ClientName:
       type: object
       properties:
@@ -1704,6 +1576,42 @@ components:
           - string
           - 'null'
       additionalProperties: false
+    Bed:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        forFemale:
+          type: boolean
+        isActive:
+          type: boolean
+        isMaintenance:
+          type: boolean
+        isOccupied:
+          type:
+          - boolean
+          - 'null'
+        isReserved:
+          type:
+          - boolean
+          - 'null'
+        room:
+          $ref: '#/components/schemas/Room'
+      additionalProperties: false
     BedReservation:
       type: object
       properties:
@@ -1728,6 +1636,98 @@ components:
           format: date-time
         bed:
           $ref: '#/components/schemas/Bed'
+      additionalProperties: false
+    Occupant:
+      type: object
+      properties:
+        leadId:
+          type: integer
+          format: int32
+        name:
+          $ref: '#/components/schemas/ClientName'
+        gender:
+          type:
+          - string
+          - 'null'
+        admissionDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        dischargeDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        dateOfBirth:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        imageUrl:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Room:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        facilityId:
+          type: integer
+          format: int32
+        roomName:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        totalBeds:
+          type: integer
+          format: int32
+      additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
+    BedOccupancy:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        client:
+          $ref: '#/components/schemas/Occupant'
+        createdBy:
+          type: integer
+          format: int32
+        comments:
+          type:
+          - string
+          - 'null'
+        startDate:
+          type: string
+          format: date-time
+        endDate:
+          type: string
+          format: date-time
+        bed:
+          $ref: '#/components/schemas/Bed'
+        fromTransfer:
+          type: boolean
+          writeOnly: true
       additionalProperties: false
   securitySchemes:
     Bearer:

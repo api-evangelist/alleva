@@ -1543,7 +1543,7 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    ExternalProviderLogoData:
+    UserLogoData:
       type: object
       properties:
         fileName:
@@ -1554,113 +1554,6 @@ components:
           type:
           - string
           - 'null'
-        rehabUserId:
-          type: integer
-          format: int64
-      additionalProperties: false
-    State:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        stateId:
-          type: integer
-          format: int32
-        countryId:
-          type: integer
-          format: int32
-        stateName:
-          type:
-          - string
-          - 'null'
-        stateCode:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    User:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        name:
-          $ref: '#/components/schemas/UserName'
-        gender:
-          type:
-          - string
-          - 'null'
-        userName:
-          type:
-          - string
-          - 'null'
-        birthDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        ssn:
-          type:
-          - string
-          - 'null'
-        email:
-          type:
-          - string
-          - 'null'
-        phone:
-          type:
-          - string
-          - 'null'
-        address:
-          $ref: '#/components/schemas/Address'
-        facility:
-          $ref: '#/components/schemas/Facility'
-        tenant:
-          type:
-          - string
-          - 'null'
-        role:
-          type:
-          - string
-          - 'null'
-        profileImage:
-          $ref: '#/components/schemas/UserImageUrl'
-        isMedicalProvider:
-          type:
-          - boolean
-          - 'null'
-        hireDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        startDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        endDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        licenses:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/UserLicense'
       additionalProperties: false
     UserLicenseType:
       type: object
@@ -1768,74 +1661,83 @@ components:
           - string
           - 'null'
       additionalProperties: false
-    Address:
+    User:
       type: object
       properties:
-        line1:
-          type:
-          - string
-          - 'null'
-        line2:
-          type:
-          - string
-          - 'null'
-        city:
-          type:
-          - string
-          - 'null'
-        state:
-          type:
-          - string
-          - 'null'
-        stateAbbr:
-          type:
-          - string
-          - 'null'
-        country:
-          type:
-          - string
-          - 'null'
-        zipCode:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    UserLogoData:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        base64String:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
-    UpdateResult:
-      type: object
-      properties:
-        operationResult:
-          $ref: '#/components/schemas/UpdateOperationResult'
-        success:
-          type: boolean
         id:
           type: integer
-          format: int64
-        messages:
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          $ref: '#/components/schemas/UserName'
+        gender:
+          type:
+          - string
+          - 'null'
+        userName:
+          type:
+          - string
+          - 'null'
+        birthDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        ssn:
+          type:
+          - string
+          - 'null'
+        email:
+          type:
+          - string
+          - 'null'
+        phone:
+          type:
+          - string
+          - 'null'
+        address:
+          $ref: '#/components/schemas/Address'
+        facility:
+          $ref: '#/components/schemas/Facility'
+        tenant:
+          type:
+          - string
+          - 'null'
+        role:
+          type:
+          - string
+          - 'null'
+        profileImage:
+          $ref: '#/components/schemas/UserImageUrl'
+        isMedicalProvider:
+          type:
+          - boolean
+          - 'null'
+        hireDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        startDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        endDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        licenses:
           type:
           - array
           - 'null'
           items:
-            type: string
-        reason:
-          type:
-          - string
-          - 'null'
+            $ref: '#/components/schemas/UserLicense'
       additionalProperties: false
     UserLicense:
       type: object
@@ -1878,6 +1780,89 @@ components:
         state:
           $ref: '#/components/schemas/State'
       additionalProperties: false
+    UpdateResult:
+      type: object
+      properties:
+        operationResult:
+          $ref: '#/components/schemas/UpdateOperationResult'
+        success:
+          type: boolean
+        id:
+          type: integer
+          format: int64
+        messages:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        reason:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
+    State:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        stateId:
+          type: integer
+          format: int32
+        countryId:
+          type: integer
+          format: int32
+        stateName:
+          type:
+          - string
+          - 'null'
+        stateCode:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Address:
+      type: object
+      properties:
+        line1:
+          type:
+          - string
+          - 'null'
+        line2:
+          type:
+          - string
+          - 'null'
+        city:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        stateAbbr:
+          type:
+          - string
+          - 'null'
+        country:
+          type:
+          - string
+          - 'null'
+        zipCode:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
     UserImageUrl:
       type: object
       properties:
@@ -1895,6 +1880,21 @@ components:
           - string
           - 'null'
           readOnly: true
+      additionalProperties: false
+    ExternalProviderLogoData:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        base64String:
+          type:
+          - string
+          - 'null'
+        rehabUserId:
+          type: integer
+          format: int64
       additionalProperties: false
     UpdateOperationResult:
       enum:

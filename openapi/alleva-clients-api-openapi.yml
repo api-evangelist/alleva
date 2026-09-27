@@ -2396,646 +2396,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    ResourceLink:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        route:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    ClientImageUrl:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        host:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        path:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-      additionalProperties: false
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
-    Facility:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        name:
-          type:
-          - string
-          - 'null'
-        rehabName:
-          type:
-          - string
-          - 'null'
-        domainName:
-          type:
-          - string
-          - 'null'
-        email:
-          type:
-          - string
-          - 'null'
-        officePhone:
-          type:
-          - string
-          - 'null'
-        fax:
-          type:
-          - string
-          - 'null'
-        address1:
-          type:
-          - string
-          - 'null'
-        address2:
-          type:
-          - string
-          - 'null'
-        state:
-          type:
-          - string
-          - 'null'
-        city:
-          type:
-          - string
-          - 'null'
-        postalCode:
-          type:
-          - string
-          - 'null'
-        country:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    ClientAssessmentsCiwa:
-      type: object
-      properties:
-        isReviewed:
-          type: boolean
-        ciwa:
-          $ref: '#/components/schemas/Ciwa'
-        reviewers:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/Reviewer'
-        vitals:
-          $ref: '#/components/schemas/AssessmentVitals'
-      additionalProperties: false
-    DocumentData:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int64
-        name:
-          type:
-          - string
-          - 'null'
-        base64String:
-          type:
-          - string
-          - 'null'
-        externalId:
-          $ref: '#/components/schemas/ExternalData'
-      additionalProperties: false
-    UpdateResult:
-      type: object
-      properties:
-        operationResult:
-          $ref: '#/components/schemas/UpdateOperationResult'
-        success:
-          type: boolean
-        id:
-          type: integer
-          format: int64
-        messages:
-          type:
-          - array
-          - 'null'
-          items:
-            type: string
-        reason:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    ClientPronoun:
-      type: object
-      properties:
-        client:
-          $ref: '#/components/schemas/Client'
-        pronoun:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/Pronoun'
-      additionalProperties: false
-    RoiInformationList:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int64
-        name:
-          type:
-          - string
-          - 'null'
-        isSelected:
-          type: boolean
-      additionalProperties: false
-    UserImageUrl:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        host:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        path:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-      additionalProperties: false
-    UpdateOperationResult:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      type: integer
-      format: int32
-    DocumentUrl:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        host:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        path:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-      additionalProperties: false
-    User:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        name:
-          $ref: '#/components/schemas/UserName'
-        gender:
-          type:
-          - string
-          - 'null'
-        userName:
-          type:
-          - string
-          - 'null'
-        birthDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        ssn:
-          type:
-          - string
-          - 'null'
-        email:
-          type:
-          - string
-          - 'null'
-        phone:
-          type:
-          - string
-          - 'null'
-        address:
-          $ref: '#/components/schemas/Address'
-        facility:
-          $ref: '#/components/schemas/Facility'
-        tenant:
-          type:
-          - string
-          - 'null'
-        role:
-          type:
-          - string
-          - 'null'
-        profileImage:
-          $ref: '#/components/schemas/UserImageUrl'
-        isMedicalProvider:
-          type:
-          - boolean
-          - 'null'
-        hireDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        startDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        endDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        licenses:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/UserLicense'
-      additionalProperties: false
-    State:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        stateId:
-          type: integer
-          format: int32
-        countryId:
-          type: integer
-          format: int32
-        stateName:
-          type:
-          - string
-          - 'null'
-        stateCode:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    Room:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        facilityId:
-          type: integer
-          format: int32
-        roomName:
-          type:
-          - string
-          - 'null'
-        isActive:
-          type: boolean
-        totalBeds:
-          type: integer
-          format: int32
-      additionalProperties: false
-    CreateOperationResult:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      type: integer
-      format: int32
-    ClientUrgentAlert:
-      type: object
-      properties:
-        clientUrgentAlertId:
-          type: integer
-          format: int64
-        message:
-          type:
-          - string
-          - 'null'
-        status:
-          type:
-          - string
-          - 'null'
-        createdBy:
-          $ref: '#/components/schemas/User'
-        createdDatetime:
-          type: string
-          format: date-time
-        signature:
-          type:
-          - string
-          - 'null'
-        readBy:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/AlertReadBy'
-      additionalProperties: false
-    ClientHistory:
-      type: object
-      properties:
-        client:
-          $ref: '#/components/schemas/Client'
-        admissionDate:
-          type:
-          - string
-          - 'null'
-        dischargeDate:
-          type:
-          - string
-          - 'null'
-        isDischarge:
-          type: boolean
-        luin:
-          type:
-          - string
-          - 'null'
-          format: uuid
-      additionalProperties: false
-    ExternalData:
-      type: object
-      properties:
-        externalId:
-          type:
-          - string
-          - 'null'
-        externalIdType:
-          type:
-          - string
-          - 'null'
-        serviceIdentifier:
-          type:
-          - string
-          - 'null'
-        serviceId:
-          type:
-          - integer
-          - 'null'
-          format: int32
-      additionalProperties: false
-    RoiRevoke:
-      type: object
-      properties:
-        reason:
-          type:
-          - string
-          - 'null'
-        signature:
-          type:
-          - string
-          - 'null'
-        datetime:
-          type:
-          - string
-          - 'null'
-          format: date-time
-      additionalProperties: false
-    ClientContact:
-      type: object
-      properties:
-        firstName:
-          type:
-          - string
-          - 'null'
-        lastName:
-          type:
-          - string
-          - 'null'
-        name:
-          type:
-          - string
-          - 'null'
-        phone:
-          type:
-          - string
-          - 'null'
-        relationship:
-          type:
-          - string
-          - 'null'
-        email:
-          type:
-          - string
-          - 'null'
-        isPrimary:
-          type: boolean
-          writeOnly: true
-        isEmergencyContact:
-          type: boolean
-      additionalProperties: false
-    UserLicense:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        acronym:
-          type:
-          - string
-          - 'null'
-        order:
-          type: integer
-          format: int32
-        number:
-          type:
-          - string
-          - 'null'
-        isActive:
-          type: boolean
-        effectiveDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        expiryDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        type:
-          $ref: '#/components/schemas/UserLicenseType'
-        user:
-          $ref: '#/components/schemas/User'
-        state:
-          $ref: '#/components/schemas/State'
-      additionalProperties: false
-    ClientAssessmentsCows:
-      type: object
-      properties:
-        isReviewed:
-          type: boolean
-        cows:
-          $ref: '#/components/schemas/Cows'
-        reviewers:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/Reviewer'
-        vitals:
-          $ref: '#/components/schemas/AssessmentVitals'
-      additionalProperties: false
-    ClientReferralContact:
-      type: object
-      properties:
-        id:
-          type:
-          - string
-          - 'null'
-        firstName:
-          type:
-          - string
-          - 'null'
-        lastName:
-          type:
-          - string
-          - 'null'
-        phone:
-          type:
-          - string
-          - 'null'
-        email:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    AlertReadBy:
-      type: object
-      properties:
-        user:
-          $ref: '#/components/schemas/User'
-        date:
-          type: string
-          format: date-time
-      additionalProperties: false
-    UserUrgentAlertMarkAsRead:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        ids:
-          type:
-          - array
-          - 'null'
-          items:
-            type: integer
-            format: int32
-        signature:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    Contact:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        name:
-          type:
-          - string
-          - 'null'
-        address:
-          type:
-          - string
-          - 'null'
-        mobile:
-          type:
-          - string
-          - 'null'
-        fax:
-          type:
-          - string
-          - 'null'
-        emailAddress:
-          type:
-          - string
-          - 'null'
-        relationship:
-          type:
-          - string
-          - 'null'
-        responsibility:
-          type:
-          - string
-          - 'null'
-        dateOfBirth:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        facilityId:
-          type: integer
-          format: int32
-        facility:
-          $ref: '#/components/schemas/Facility'
-        client:
-          $ref: '#/components/schemas/Client'
-        roi:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/Roi'
-      additionalProperties: false
     Client:
       type: object
       properties:
@@ -3183,6 +2543,137 @@ components:
         inUse:
           type: boolean
       additionalProperties: false
+    DocumentUrl:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        host:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        path:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+      additionalProperties: false
+    Facility:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        rehabName:
+          type:
+          - string
+          - 'null'
+        domainName:
+          type:
+          - string
+          - 'null'
+        email:
+          type:
+          - string
+          - 'null'
+        officePhone:
+          type:
+          - string
+          - 'null'
+        fax:
+          type:
+          - string
+          - 'null'
+        address1:
+          type:
+          - string
+          - 'null'
+        address2:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        city:
+          type:
+          - string
+          - 'null'
+        postalCode:
+          type:
+          - string
+          - 'null'
+        country:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    UserLicense:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        acronym:
+          type:
+          - string
+          - 'null'
+        order:
+          type: integer
+          format: int32
+        number:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        effectiveDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        expiryDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        type:
+          $ref: '#/components/schemas/UserLicenseType'
+        user:
+          $ref: '#/components/schemas/User'
+        state:
+          $ref: '#/components/schemas/State'
+      additionalProperties: false
+    ClientLogoData:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        base64String:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
     ClientDocument:
       type: object
       properties:
@@ -3241,6 +2732,610 @@ components:
           - 'null'
           items:
             $ref: '#/components/schemas/DocumentData'
+      additionalProperties: false
+    ClientOccupation:
+      type: object
+      properties:
+        name:
+          type:
+          - string
+          - 'null'
+        currentEmployer:
+          type:
+          - string
+          - 'null'
+        years:
+          type: integer
+          format: int32
+        months:
+          type: integer
+          format: int32
+      additionalProperties: false
+    Ciwa:
+      type: object
+      properties:
+        anxiety:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        agitation:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        administratedSignature:
+          type:
+          - string
+          - 'null'
+        auditoryDisturbances:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        ciwaDateTime:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        date:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        elevationOfBloodPressure:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        elevationOfHeartRate:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        headache:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        nausea:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        note:
+          type:
+          - string
+          - 'null'
+        orientation:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        paroxysmalSweats:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        tremors:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        tactileDisturbances:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        totalCiwaScore:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        visualDisturbances:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        time:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ClientHistory:
+      type: object
+      properties:
+        client:
+          $ref: '#/components/schemas/Client'
+        admissionDate:
+          type:
+          - string
+          - 'null'
+        dischargeDate:
+          type:
+          - string
+          - 'null'
+        isDischarge:
+          type: boolean
+        luin:
+          type:
+          - string
+          - 'null'
+          format: uuid
+      additionalProperties: false
+    Reviewer:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+      additionalProperties: false
+    ClientPronoun:
+      type: object
+      properties:
+        client:
+          $ref: '#/components/schemas/Client'
+        pronoun:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/Pronoun'
+      additionalProperties: false
+    UserName:
+      type: object
+      properties:
+        first:
+          type:
+          - string
+          - 'null'
+        last:
+          type:
+          - string
+          - 'null'
+        prefix:
+          type:
+          - string
+          - 'null'
+        suffix:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Roi:
+      type: object
+      properties:
+        roiId:
+          type: integer
+          format: int64
+        startDate:
+          type: string
+          format: date-time
+        endDate:
+          type: string
+          format: date-time
+        expirationDate:
+          type:
+          - string
+          - 'null'
+        serviceFromDate:
+          type:
+          - string
+          - 'null'
+        serviceToDate:
+          type:
+          - string
+          - 'null'
+        clientSignature:
+          type:
+          - string
+          - 'null'
+        staffSignature:
+          type:
+          - string
+          - 'null'
+        gaurdianSignature:
+          type:
+          - string
+          - 'null'
+        signedDatetime:
+          type: string
+          format: date-time
+        permissionScreen:
+          type:
+          - string
+          - 'null'
+        informationRelease:
+          type:
+          - string
+          - 'null'
+        informationInclude:
+          type:
+          - string
+          - 'null'
+        otherInformation:
+          type:
+          - string
+          - 'null'
+        roiOtherRelease:
+          type:
+          - string
+          - 'null'
+        isCopyAccepted:
+          type:
+          - boolean
+          - 'null'
+        permissionScreenList:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/RoiInformationList'
+        informationReleaseList:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/RoiInformationList'
+        informationIncludeList:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/RoiInformationList'
+        staff:
+          $ref: '#/components/schemas/User'
+        revoke:
+          $ref: '#/components/schemas/RoiRevoke'
+      additionalProperties: false
+    RoiInformationList:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type:
+          - string
+          - 'null'
+        isSelected:
+          type: boolean
+      additionalProperties: false
+    UpdateOperationResult:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
+    UpdateResult:
+      type: object
+      properties:
+        operationResult:
+          $ref: '#/components/schemas/UpdateOperationResult'
+        success:
+          type: boolean
+        id:
+          type: integer
+          format: int64
+        messages:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        reason:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    RoiRevoke:
+      type: object
+      properties:
+        reason:
+          type:
+          - string
+          - 'null'
+        signature:
+          type:
+          - string
+          - 'null'
+        datetime:
+          type:
+          - string
+          - 'null'
+          format: date-time
+      additionalProperties: false
+    Document:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        clientDocumentId:
+          type: integer
+          format: int64
+        name:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        fileName:
+          type:
+          - string
+          - 'null'
+        client:
+          $ref: '#/components/schemas/ResourceLink'
+        status:
+          type:
+          - string
+          - 'null'
+        type:
+          type:
+          - string
+          - 'null'
+        typeId:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        uploadDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        url:
+          $ref: '#/components/schemas/DocumentUrl'
+        tableId:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        tableName:
+          type:
+          - string
+          - 'null'
+        path:
+          type:
+          - string
+          - 'null'
+        documentTypeId:
+          type: integer
+          format: int32
+        uploadedDocuments:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/DocumentData'
+      additionalProperties: false
+    ClientAssessmentsCiwa:
+      type: object
+      properties:
+        isReviewed:
+          type: boolean
+        ciwa:
+          $ref: '#/components/schemas/Ciwa'
+        reviewers:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/Reviewer'
+        vitals:
+          $ref: '#/components/schemas/AssessmentVitals'
+      additionalProperties: false
+    ClientContact:
+      type: object
+      properties:
+        firstName:
+          type:
+          - string
+          - 'null'
+        lastName:
+          type:
+          - string
+          - 'null'
+        name:
+          type:
+          - string
+          - 'null'
+        phone:
+          type:
+          - string
+          - 'null'
+        relationship:
+          type:
+          - string
+          - 'null'
+        email:
+          type:
+          - string
+          - 'null'
+        isPrimary:
+          type: boolean
+          writeOnly: true
+        isEmergencyContact:
+          type: boolean
+      additionalProperties: false
+    CreateOperationResult:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
+    UserUrgentAlertMarkAsRead:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        ids:
+          type:
+          - array
+          - 'null'
+          items:
+            type: integer
+            format: int32
+        signature:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Phone:
+      type: object
+      properties:
+        home:
+          type:
+          - string
+          - 'null'
+        office:
+          type:
+          - string
+          - 'null'
+        other:
+          type:
+          - string
+          - 'null'
+        number:
+          type:
+          - string
+          - 'null'
+        fax:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    CreateResult:
+      type: object
+      properties:
+        operationResult:
+          $ref: '#/components/schemas/CreateOperationResult'
+        id:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        messages:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        reason:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          $ref: '#/components/schemas/UserName'
+        gender:
+          type:
+          - string
+          - 'null'
+        userName:
+          type:
+          - string
+          - 'null'
+        birthDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        ssn:
+          type:
+          - string
+          - 'null'
+        email:
+          type:
+          - string
+          - 'null'
+        phone:
+          type:
+          - string
+          - 'null'
+        address:
+          $ref: '#/components/schemas/Address'
+        facility:
+          $ref: '#/components/schemas/Facility'
+        tenant:
+          type:
+          - string
+          - 'null'
+        role:
+          type:
+          - string
+          - 'null'
+        profileImage:
+          $ref: '#/components/schemas/UserImageUrl'
+        isMedicalProvider:
+          type:
+          - boolean
+          - 'null'
+        hireDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        startDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        endDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        licenses:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/UserLicense'
+      additionalProperties: false
+    ExternalData:
+      type: object
+      properties:
+        externalId:
+          type:
+          - string
+          - 'null'
+        externalIdType:
+          type:
+          - string
+          - 'null'
+        serviceIdentifier:
+          type:
+          - string
+          - 'null'
+        serviceId:
+          type:
+          - integer
+          - 'null'
+          format: int32
       additionalProperties: false
     ClientList:
       type: object
@@ -3314,27 +3409,7 @@ components:
           - string
           - 'null'
       additionalProperties: false
-    UserName:
-      type: object
-      properties:
-        first:
-          type:
-          - string
-          - 'null'
-        last:
-          type:
-          - string
-          - 'null'
-        prefix:
-          type:
-          - string
-          - 'null'
-        suffix:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    Document:
+    Room:
       type: object
       properties:
         id:
@@ -3345,65 +3420,93 @@ components:
           - string
           - 'null'
           readOnly: true
-        clientDocumentId:
+        facilityId:
+          type: integer
+          format: int32
+        roomName:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        totalBeds:
+          type: integer
+          format: int32
+      additionalProperties: false
+    ClientReferralContact:
+      type: object
+      properties:
+        id:
+          type:
+          - string
+          - 'null'
+        firstName:
+          type:
+          - string
+          - 'null'
+        lastName:
+          type:
+          - string
+          - 'null'
+        phone:
+          type:
+          - string
+          - 'null'
+        email:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    DocumentData:
+      type: object
+      properties:
+        id:
           type: integer
           format: int64
         name:
           type:
           - string
           - 'null'
-        description:
+        base64String:
           type:
           - string
           - 'null'
+        externalId:
+          $ref: '#/components/schemas/ExternalData'
+      additionalProperties: false
+    UserImageUrl:
+      type: object
+      properties:
         fileName:
           type:
           - string
           - 'null'
-        client:
-          $ref: '#/components/schemas/ResourceLink'
-        status:
+        host:
           type:
           - string
           - 'null'
-        type:
-          type:
-          - string
-          - 'null'
-        typeId:
-          type:
-          - integer
-          - 'null'
-          format: int64
-        uploadDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        url:
-          $ref: '#/components/schemas/DocumentUrl'
-        tableId:
-          type:
-          - integer
-          - 'null'
-          format: int64
-        tableName:
-          type:
-          - string
-          - 'null'
+          readOnly: true
         path:
           type:
           - string
           - 'null'
-        documentTypeId:
-          type: integer
-          format: int32
-        uploadedDocuments:
+          readOnly: true
+      additionalProperties: false
+    ClientAssessmentsCows:
+      type: object
+      properties:
+        isReviewed:
+          type: boolean
+        cows:
+          $ref: '#/components/schemas/Cows'
+        reviewers:
           type:
           - array
           - 'null'
           items:
-            $ref: '#/components/schemas/DocumentData'
+            $ref: '#/components/schemas/Reviewer'
+        vitals:
+          $ref: '#/components/schemas/AssessmentVitals'
       additionalProperties: false
     Cows:
       type: object
@@ -3499,306 +3602,6 @@ components:
           - 'null'
           format: int32
       additionalProperties: false
-    Ciwa:
-      type: object
-      properties:
-        anxiety:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        agitation:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        administratedSignature:
-          type:
-          - string
-          - 'null'
-        auditoryDisturbances:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        ciwaDateTime:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        date:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        elevationOfBloodPressure:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        elevationOfHeartRate:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        headache:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        nausea:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        note:
-          type:
-          - string
-          - 'null'
-        orientation:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        paroxysmalSweats:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        tremors:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        tactileDisturbances:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        totalCiwaScore:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        visualDisturbances:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        time:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    Pronoun:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        name:
-          type:
-          - string
-          - 'null'
-        isActive:
-          type: boolean
-        inUse:
-          type: boolean
-      additionalProperties: false
-    Roi:
-      type: object
-      properties:
-        roiId:
-          type: integer
-          format: int64
-        startDate:
-          type: string
-          format: date-time
-        endDate:
-          type: string
-          format: date-time
-        expirationDate:
-          type:
-          - string
-          - 'null'
-        serviceFromDate:
-          type:
-          - string
-          - 'null'
-        serviceToDate:
-          type:
-          - string
-          - 'null'
-        clientSignature:
-          type:
-          - string
-          - 'null'
-        staffSignature:
-          type:
-          - string
-          - 'null'
-        gaurdianSignature:
-          type:
-          - string
-          - 'null'
-        signedDatetime:
-          type: string
-          format: date-time
-        permissionScreen:
-          type:
-          - string
-          - 'null'
-        informationRelease:
-          type:
-          - string
-          - 'null'
-        informationInclude:
-          type:
-          - string
-          - 'null'
-        otherInformation:
-          type:
-          - string
-          - 'null'
-        roiOtherRelease:
-          type:
-          - string
-          - 'null'
-        isCopyAccepted:
-          type:
-          - boolean
-          - 'null'
-        permissionScreenList:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/RoiInformationList'
-        informationReleaseList:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/RoiInformationList'
-        informationIncludeList:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/RoiInformationList'
-        staff:
-          $ref: '#/components/schemas/User'
-        revoke:
-          $ref: '#/components/schemas/RoiRevoke'
-      additionalProperties: false
-    ClientLogoData:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        base64String:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    Reviewer:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-      additionalProperties: false
-    AssessmentVitals:
-      type: object
-      properties:
-        bpSystolic:
-          type:
-          - number
-          - 'null'
-          format: double
-        bpDiastolic:
-          type:
-          - number
-          - 'null'
-          format: double
-        o2Saturation:
-          type:
-          - number
-          - 'null'
-          format: double
-        pulse:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        respirations:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        temperature:
-          type:
-          - number
-          - 'null'
-          format: double
-      additionalProperties: false
-    Address:
-      type: object
-      properties:
-        line1:
-          type:
-          - string
-          - 'null'
-        line2:
-          type:
-          - string
-          - 'null'
-        city:
-          type:
-          - string
-          - 'null'
-        state:
-          type:
-          - string
-          - 'null'
-        stateAbbr:
-          type:
-          - string
-          - 'null'
-        country:
-          type:
-          - string
-          - 'null'
-        zipCode:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    ClientOccupation:
-      type: object
-      properties:
-        name:
-          type:
-          - string
-          - 'null'
-        currentEmployer:
-          type:
-          - string
-          - 'null'
-        years:
-          type: integer
-          format: int32
-        months:
-          type: integer
-          format: int32
-      additionalProperties: false
     ClientName:
       type: object
       properties:
@@ -3836,47 +3639,244 @@ components:
           - string
           - 'null'
       additionalProperties: false
-    CreateResult:
+    ClientUrgentAlert:
       type: object
       properties:
-        operationResult:
-          $ref: '#/components/schemas/CreateOperationResult'
-        id:
-          type:
-          - integer
-          - 'null'
+        clientUrgentAlertId:
+          type: integer
           format: int64
-        messages:
+        message:
+          type:
+          - string
+          - 'null'
+        status:
+          type:
+          - string
+          - 'null'
+        createdBy:
+          $ref: '#/components/schemas/User'
+        createdDatetime:
+          type: string
+          format: date-time
+        signature:
+          type:
+          - string
+          - 'null'
+        readBy:
           type:
           - array
           - 'null'
           items:
-            type: string
-        reason:
+            $ref: '#/components/schemas/AlertReadBy'
+      additionalProperties: false
+    ResourceLink:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        route:
           type:
           - string
           - 'null'
       additionalProperties: false
-    Phone:
+    AlertReadBy:
       type: object
       properties:
-        home:
+        user:
+          $ref: '#/components/schemas/User'
+        date:
+          type: string
+          format: date-time
+      additionalProperties: false
+    ClientImageUrl:
+      type: object
+      properties:
+        fileName:
           type:
           - string
           - 'null'
-        office:
+        host:
           type:
           - string
           - 'null'
-        other:
+          readOnly: true
+        path:
           type:
           - string
           - 'null'
-        number:
+          readOnly: true
+      additionalProperties: false
+    Contact:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        address:
+          type:
+          - string
+          - 'null'
+        mobile:
           type:
           - string
           - 'null'
         fax:
+          type:
+          - string
+          - 'null'
+        emailAddress:
+          type:
+          - string
+          - 'null'
+        relationship:
+          type:
+          - string
+          - 'null'
+        responsibility:
+          type:
+          - string
+          - 'null'
+        dateOfBirth:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        facilityId:
+          type: integer
+          format: int32
+        facility:
+          $ref: '#/components/schemas/Facility'
+        client:
+          $ref: '#/components/schemas/Client'
+        roi:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/Roi'
+      additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
+    Pronoun:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        inUse:
+          type: boolean
+      additionalProperties: false
+    AssessmentVitals:
+      type: object
+      properties:
+        bpSystolic:
+          type:
+          - number
+          - 'null'
+          format: double
+        bpDiastolic:
+          type:
+          - number
+          - 'null'
+          format: double
+        o2Saturation:
+          type:
+          - number
+          - 'null'
+          format: double
+        pulse:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        respirations:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        temperature:
+          type:
+          - number
+          - 'null'
+          format: double
+      additionalProperties: false
+    State:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        stateId:
+          type: integer
+          format: int32
+        countryId:
+          type: integer
+          format: int32
+        stateName:
+          type:
+          - string
+          - 'null'
+        stateCode:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    Address:
+      type: object
+      properties:
+        line1:
+          type:
+          - string
+          - 'null'
+        line2:
+          type:
+          - string
+          - 'null'
+        city:
+          type:
+          - string
+          - 'null'
+        state:
+          type:
+          - string
+          - 'null'
+        stateAbbr:
+          type:
+          - string
+          - 'null'
+        country:
+          type:
+          - string
+          - 'null'
+        zipCode:
           type:
           - string
           - 'null'

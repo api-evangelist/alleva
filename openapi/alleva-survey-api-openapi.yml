@@ -327,17 +327,6 @@ components:
           type: string
           format: date-time
       additionalProperties: false
-    SurveyQuestion:
-      type: object
-      properties:
-        questionId:
-          type: integer
-          format: int32
-        question:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
     Survey:
       type: object
       properties:
@@ -359,6 +348,17 @@ components:
           - 'null'
           items:
             $ref: '#/components/schemas/SurveyQuestion'
+      additionalProperties: false
+    SurveyQuestion:
+      type: object
+      properties:
+        questionId:
+          type: integer
+          format: int32
+        question:
+          type:
+          - string
+          - 'null'
       additionalProperties: false
   securitySchemes:
     Bearer:
