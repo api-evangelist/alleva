@@ -212,6 +212,19 @@ components:
       - 2
       type: integer
       format: int32
+    CustomFormSourceType:
+      enum:
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      type: integer
+      format: int32
     AdvancedFormInstance:
       type: object
       properties:
@@ -264,19 +277,6 @@ components:
           type: string
           format: date-time
       additionalProperties: false
-    CustomFormSourceType:
-      enum:
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
-      - 8
-      - 9
-      type: integer
-      format: int32
   securitySchemes:
     Bearer:
       type: apiKey

@@ -437,15 +437,23 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    CreateResult:
+    UpdateOperationResult:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
+    UpdateResult:
       type: object
       properties:
         operationResult:
-          $ref: '#/components/schemas/CreateOperationResult'
+          $ref: '#/components/schemas/UpdateOperationResult'
+        success:
+          type: boolean
         id:
-          type:
-          - integer
-          - 'null'
+          type: integer
           format: int64
         messages:
           type:
@@ -458,17 +466,26 @@ components:
           - string
           - 'null'
       additionalProperties: false
-    RehabLogoData:
+    ExternalData:
       type: object
       properties:
-        fileName:
+        externalId:
           type:
           - string
           - 'null'
-        base64String:
+        externalIdType:
           type:
           - string
           - 'null'
+        serviceIdentifier:
+          type:
+          - string
+          - 'null'
+        serviceId:
+          type:
+          - integer
+          - 'null'
+          format: int32
       additionalProperties: false
     Rehab:
       type: object
@@ -495,48 +512,26 @@ components:
           - 'null'
           format: uuid
       additionalProperties: false
-    ExternalData:
+    RehabLogoData:
       type: object
       properties:
-        externalId:
+        fileName:
           type:
           - string
           - 'null'
-        externalIdType:
-          type:
-          - string
-          - 'null'
-        serviceIdentifier:
-          type:
-          - string
-          - 'null'
-        serviceId:
-          type:
-          - integer
-          - 'null'
-          format: int32
-      additionalProperties: false
-    UpdateResult:
-      type: object
-      properties:
-        operationResult:
-          $ref: '#/components/schemas/UpdateOperationResult'
-        success:
-          type: boolean
-        id:
-          type: integer
-          format: int64
-        messages:
-          type:
-          - array
-          - 'null'
-          items:
-            type: string
-        reason:
+        base64String:
           type:
           - string
           - 'null'
       additionalProperties: false
+    CreateOperationResult:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
     DocumentData:
       type: object
       properties:
@@ -553,6 +548,27 @@ components:
           - 'null'
         externalId:
           $ref: '#/components/schemas/ExternalData'
+      additionalProperties: false
+    CreateResult:
+      type: object
+      properties:
+        operationResult:
+          $ref: '#/components/schemas/CreateOperationResult'
+        id:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        messages:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        reason:
+          type:
+          - string
+          - 'null'
       additionalProperties: false
     RehabDocument:
       type: object
@@ -575,22 +591,6 @@ components:
           items:
             $ref: '#/components/schemas/DocumentData'
       additionalProperties: false
-    CreateOperationResult:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      type: integer
-      format: int32
-    UpdateOperationResult:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      type: integer
-      format: int32
   securitySchemes:
     Bearer:
       type: apiKey

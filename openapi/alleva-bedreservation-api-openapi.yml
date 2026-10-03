@@ -1576,6 +1576,42 @@ components:
           - string
           - 'null'
       additionalProperties: false
+    BedOccupancy:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        client:
+          $ref: '#/components/schemas/Occupant'
+        createdBy:
+          type: integer
+          format: int32
+        comments:
+          type:
+          - string
+          - 'null'
+        startDate:
+          type: string
+          format: date-time
+        endDate:
+          type: string
+          format: date-time
+        bed:
+          $ref: '#/components/schemas/Bed'
+        fromTransfer:
+          type: boolean
+          writeOnly: true
+      additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
     Bed:
       type: object
       properties:
@@ -1611,6 +1647,30 @@ components:
           - 'null'
         room:
           $ref: '#/components/schemas/Room'
+      additionalProperties: false
+    Room:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        facilityId:
+          type: integer
+          format: int32
+        roomName:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        totalBeds:
+          type: integer
+          format: int32
       additionalProperties: false
     BedReservation:
       type: object
@@ -1668,66 +1728,6 @@ components:
           type:
           - string
           - 'null'
-      additionalProperties: false
-    Room:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        facilityId:
-          type: integer
-          format: int32
-        roomName:
-          type:
-          - string
-          - 'null'
-        isActive:
-          type: boolean
-        totalBeds:
-          type: integer
-          format: int32
-      additionalProperties: false
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
-    BedOccupancy:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        client:
-          $ref: '#/components/schemas/Occupant'
-        createdBy:
-          type: integer
-          format: int32
-        comments:
-          type:
-          - string
-          - 'null'
-        startDate:
-          type: string
-          format: date-time
-        endDate:
-          type: string
-          format: date-time
-        bed:
-          $ref: '#/components/schemas/Bed'
-        fromTransfer:
-          type: boolean
-          writeOnly: true
       additionalProperties: false
   securitySchemes:
     Bearer:

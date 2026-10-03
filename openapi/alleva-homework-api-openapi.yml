@@ -476,10 +476,17 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
+    ResourceLink:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        route:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
     HomeworkNote:
       type: object
       properties:
@@ -507,17 +514,6 @@ components:
         createdDate:
           type: string
           format: date-time
-      additionalProperties: false
-    ResourceLink:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        route:
-          type:
-          - string
-          - 'null'
       additionalProperties: false
     Homework:
       type: object
@@ -577,6 +573,10 @@ components:
           items:
             $ref: '#/components/schemas/HomeworkNote'
       additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
   securitySchemes:
     Bearer:
       type: apiKey

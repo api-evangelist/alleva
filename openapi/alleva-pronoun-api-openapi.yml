@@ -500,10 +500,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
     Pronoun:
       type: object
       properties:
@@ -524,6 +520,10 @@ components:
         inUse:
           type: boolean
       additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
   securitySchemes:
     Bearer:
       type: apiKey

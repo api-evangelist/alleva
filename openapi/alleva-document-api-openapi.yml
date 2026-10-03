@@ -533,17 +533,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    ResourceLink:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        route:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
     DocumentUrl:
       type: object
       properties:
@@ -561,6 +550,17 @@ components:
           - string
           - 'null'
           readOnly: true
+      additionalProperties: false
+    ResourceLink:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        route:
+          type:
+          - string
+          - 'null'
       additionalProperties: false
     ExternalData:
       type: object
@@ -582,6 +582,23 @@ components:
           - integer
           - 'null'
           format: int32
+      additionalProperties: false
+    DocumentData:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type:
+          - string
+          - 'null'
+        base64String:
+          type:
+          - string
+          - 'null'
+        externalId:
+          $ref: '#/components/schemas/ExternalData'
       additionalProperties: false
     DocumentTypeModal:
       type: object
@@ -664,23 +681,6 @@ components:
           - 'null'
           items:
             $ref: '#/components/schemas/DocumentData'
-      additionalProperties: false
-    DocumentData:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int64
-        name:
-          type:
-          - string
-          - 'null'
-        base64String:
-          type:
-          - string
-          - 'null'
-        externalId:
-          $ref: '#/components/schemas/ExternalData'
       additionalProperties: false
   securitySchemes:
     Bearer:

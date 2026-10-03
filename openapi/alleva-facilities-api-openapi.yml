@@ -425,6 +425,47 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    UpdateOperationResult:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
+    FacilityLogoData:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        base64String:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    UpdateResult:
+      type: object
+      properties:
+        operationResult:
+          $ref: '#/components/schemas/UpdateOperationResult'
+        success:
+          type: boolean
+        id:
+          type: integer
+          format: int64
+        messages:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        reason:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
     Facility:
       type: object
       properties:
@@ -481,47 +522,6 @@ components:
           - string
           - 'null'
         country:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    FacilityLogoData:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        base64String:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    UpdateOperationResult:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      type: integer
-      format: int32
-    UpdateResult:
-      type: object
-      properties:
-        operationResult:
-          $ref: '#/components/schemas/UpdateOperationResult'
-        success:
-          type: boolean
-        id:
-          type: integer
-          format: int64
-        messages:
-          type:
-          - array
-          - 'null'
-          items:
-            type: string
-        reason:
           type:
           - string
           - 'null'

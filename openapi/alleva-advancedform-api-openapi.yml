@@ -534,22 +534,20 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    AutofillRequest:
-      type: object
-      properties:
-        advancedFormId:
-          type: integer
-          format: int32
-        facilityIds:
-          type:
-          - array
-          - 'null'
-          items:
-            type: integer
-            format: int32
-        isAutofillEnabled:
-          type: boolean
-      additionalProperties: false
+    DataKind:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      - 5
+      - 6
+      - 7
+      - 8
+      - 9
+      type: integer
+      format: int32
     AdvancedForm:
       type: object
       properties:
@@ -587,63 +585,32 @@ components:
         isAutoFillEnabled:
           type: boolean
       additionalProperties: false
-    DataValueRequest:
+    CopyParameters:
       type: object
       properties:
-        id:
+        destinationFacilityIds:
           type:
-          - integer
+          - array
           - 'null'
-          format: int32
-        advancedFormInstanceId:
-          type: integer
-          format: int64
-        booleanValue:
-          type:
-          - boolean
-          - 'null'
-        dataFacetId:
-          type: integer
-          format: int32
-        dateTimeValue:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        decimalValue:
-          type:
-          - number
-          - 'null'
-          format: double
-        fileValue:
-          type:
-          - string
-          - 'null'
-        integerValue:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        imageValue:
-          type:
-          - string
-          - 'null'
-          format: byte
-        jsonValue:
-          type:
-          - string
-          - 'null'
-        leadId:
+          items:
+            type: integer
+            format: int32
+      additionalProperties: false
+    AutofillRequest:
+      type: object
+      properties:
+        advancedFormId:
           type: integer
           format: int32
-        signatureValue:
+        facilityIds:
           type:
-          - string
+          - array
           - 'null'
-        stringValue:
-          type:
-          - string
-          - 'null'
+          items:
+            type: integer
+            format: int32
+        isAutofillEnabled:
+          type: boolean
       additionalProperties: false
     AdvancedFormSaveRequest:
       type: object
@@ -720,31 +687,64 @@ components:
         dataKind:
           $ref: '#/components/schemas/DataKind'
       additionalProperties: false
-    CopyParameters:
+    DataValueRequest:
       type: object
       properties:
-        destinationFacilityIds:
+        id:
           type:
-          - array
+          - integer
           - 'null'
-          items:
-            type: integer
-            format: int32
+          format: int32
+        advancedFormInstanceId:
+          type: integer
+          format: int64
+        booleanValue:
+          type:
+          - boolean
+          - 'null'
+        dataFacetId:
+          type: integer
+          format: int32
+        dateTimeValue:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        decimalValue:
+          type:
+          - number
+          - 'null'
+          format: double
+        fileValue:
+          type:
+          - string
+          - 'null'
+        integerValue:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        imageValue:
+          type:
+          - string
+          - 'null'
+          format: byte
+        jsonValue:
+          type:
+          - string
+          - 'null'
+        leadId:
+          type: integer
+          format: int32
+        signatureValue:
+          type:
+          - string
+          - 'null'
+        stringValue:
+          type:
+          - string
+          - 'null'
       additionalProperties: false
-    DataKind:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      - 4
-      - 5
-      - 6
-      - 7
-      - 8
-      - 9
-      type: integer
-      format: int32
   securitySchemes:
     Bearer:
       type: apiKey

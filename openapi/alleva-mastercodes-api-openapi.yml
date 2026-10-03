@@ -114,14 +114,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    MasterCodesSearch:
-      type: object
-      properties:
-        category:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
     MasterCodesResponse:
       type: object
       properties:
@@ -129,6 +121,14 @@ components:
           type: integer
           format: int32
         name:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    MasterCodesSearch:
+      type: object
+      properties:
+        category:
           type:
           - string
           - 'null'

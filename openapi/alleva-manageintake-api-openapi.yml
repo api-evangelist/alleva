@@ -906,6 +906,26 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    IntakeSectionOrder:
+      type: object
+      properties:
+        facilityId:
+          type: integer
+          format: int32
+        intakeId:
+          type: integer
+          format: int32
+        sections:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/MasterIntakeSections'
+      additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
     MasterIntakeSections:
       type: object
       properties:
@@ -945,27 +965,43 @@ components:
         details:
           $ref: '#/components/schemas/IntakeSectionDetails'
       additionalProperties: false
-    CreateResult:
+    IntakeSectionCustomForm:
       type: object
       properties:
-        operationResult:
-          $ref: '#/components/schemas/CreateOperationResult'
-        id:
+        advancedFormId:
           type:
           - integer
           - 'null'
-          format: int64
-        messages:
+          format: int32
+        createdDate:
+          type: string
+          format: date-time
+        formId:
           type:
-          - array
+          - integer
           - 'null'
-          items:
-            type: string
-        reason:
+          format: int32
+        formInfoId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        title:
           type:
           - string
           - 'null'
+        version:
+          type: integer
+          format: int32
       additionalProperties: false
+    CreateOperationResult:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
     IntakeSectionDetails:
       type: object
       properties:
@@ -995,26 +1031,6 @@ components:
           - 'null'
           format: int32
       additionalProperties: false
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
-    IntakeSectionOrder:
-      type: object
-      properties:
-        facilityId:
-          type: integer
-          format: int32
-        intakeId:
-          type: integer
-          format: int32
-        sections:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/MasterIntakeSections'
-      additionalProperties: false
     IntakeSectionCustomFormUpdate:
       type: object
       properties:
@@ -1031,42 +1047,26 @@ components:
           items:
             $ref: '#/components/schemas/IntakeSectionCustomForm'
       additionalProperties: false
-    CreateOperationResult:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      type: integer
-      format: int32
-    IntakeSectionCustomForm:
+    CreateResult:
       type: object
       properties:
-        advancedFormId:
+        operationResult:
+          $ref: '#/components/schemas/CreateOperationResult'
+        id:
           type:
           - integer
           - 'null'
-          format: int32
-        createdDate:
-          type: string
-          format: date-time
-        formId:
+          format: int64
+        messages:
           type:
-          - integer
+          - array
           - 'null'
-          format: int32
-        formInfoId:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        title:
+          items:
+            type: string
+        reason:
           type:
           - string
           - 'null'
-        version:
-          type: integer
-          format: int32
       additionalProperties: false
   securitySchemes:
     Bearer:

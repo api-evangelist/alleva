@@ -304,6 +304,17 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    SurveyQuestion:
+      type: object
+      properties:
+        questionId:
+          type: integer
+          format: int32
+        question:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
     SurveyAnswer:
       type: object
       properties:
@@ -348,17 +359,6 @@ components:
           - 'null'
           items:
             $ref: '#/components/schemas/SurveyQuestion'
-      additionalProperties: false
-    SurveyQuestion:
-      type: object
-      properties:
-        questionId:
-          type: integer
-          format: int32
-        question:
-          type:
-          - string
-          - 'null'
       additionalProperties: false
   securitySchemes:
     Bearer:

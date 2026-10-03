@@ -1543,7 +1543,60 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    UserLogoData:
+    UpdateOperationResult:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
+    UpdateResult:
+      type: object
+      properties:
+        operationResult:
+          $ref: '#/components/schemas/UpdateOperationResult'
+        success:
+          type: boolean
+        id:
+          type: integer
+          format: int64
+        messages:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        reason:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    UserName:
+      type: object
+      properties:
+        first:
+          type:
+          - string
+          - 'null'
+        last:
+          type:
+          - string
+          - 'null'
+        prefix:
+          type:
+          - string
+          - 'null'
+        suffix:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
+    ExternalProviderLogoData:
       type: object
       properties:
         fileName:
@@ -1554,6 +1607,9 @@ components:
           type:
           - string
           - 'null'
+        rehabUserId:
+          type: integer
+          format: int64
       additionalProperties: false
     UserLicenseType:
       type: object
@@ -1581,27 +1637,39 @@ components:
         inUse:
           type: boolean
       additionalProperties: false
-    UserName:
+    Address:
       type: object
       properties:
-        first:
+        line1:
           type:
           - string
           - 'null'
-        last:
+        line2:
           type:
           - string
           - 'null'
-        prefix:
+        city:
           type:
           - string
           - 'null'
-        suffix:
+        state:
+          type:
+          - string
+          - 'null'
+        stateAbbr:
+          type:
+          - string
+          - 'null'
+        country:
+          type:
+          - string
+          - 'null'
+        zipCode:
           type:
           - string
           - 'null'
       additionalProperties: false
-    Facility:
+    UserLicense:
       type: object
       properties:
         id:
@@ -1612,51 +1680,62 @@ components:
           - string
           - 'null'
           readOnly: true
-        name:
+        acronym:
           type:
           - string
           - 'null'
-        rehabName:
+        order:
+          type: integer
+          format: int32
+        number:
           type:
           - string
           - 'null'
-        domainName:
+        isActive:
+          type: boolean
+        effectiveDate:
           type:
           - string
           - 'null'
-        email:
+          format: date-time
+        expiryDate:
           type:
           - string
           - 'null'
-        officePhone:
-          type:
-          - string
-          - 'null'
-        fax:
-          type:
-          - string
-          - 'null'
-        address1:
-          type:
-          - string
-          - 'null'
-        address2:
-          type:
-          - string
-          - 'null'
+          format: date-time
+        type:
+          $ref: '#/components/schemas/UserLicenseType'
+        user:
+          $ref: '#/components/schemas/User'
         state:
+          $ref: '#/components/schemas/State'
+      additionalProperties: false
+    UserImageUrl:
+      type: object
+      properties:
+        fileName:
           type:
           - string
           - 'null'
-        city:
+        host:
           type:
           - string
           - 'null'
-        postalCode:
+          readOnly: true
+        path:
           type:
           - string
           - 'null'
-        country:
+          readOnly: true
+      additionalProperties: false
+    UserLogoData:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        base64String:
           type:
           - string
           - 'null'
@@ -1739,72 +1818,6 @@ components:
           items:
             $ref: '#/components/schemas/UserLicense'
       additionalProperties: false
-    UserLicense:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        acronym:
-          type:
-          - string
-          - 'null'
-        order:
-          type: integer
-          format: int32
-        number:
-          type:
-          - string
-          - 'null'
-        isActive:
-          type: boolean
-        effectiveDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        expiryDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        type:
-          $ref: '#/components/schemas/UserLicenseType'
-        user:
-          $ref: '#/components/schemas/User'
-        state:
-          $ref: '#/components/schemas/State'
-      additionalProperties: false
-    UpdateResult:
-      type: object
-      properties:
-        operationResult:
-          $ref: '#/components/schemas/UpdateOperationResult'
-        success:
-          type: boolean
-        id:
-          type: integer
-          format: int64
-        messages:
-          type:
-          - array
-          - 'null'
-          items:
-            type: string
-        reason:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
     State:
       type: object
       properties:
@@ -1831,18 +1844,46 @@ components:
           - string
           - 'null'
       additionalProperties: false
-    Address:
+    Facility:
       type: object
       properties:
-        line1:
+        id:
+          type: integer
+          format: int32
+        href:
           type:
           - string
           - 'null'
-        line2:
+          readOnly: true
+        name:
           type:
           - string
           - 'null'
-        city:
+        rehabName:
+          type:
+          - string
+          - 'null'
+        domainName:
+          type:
+          - string
+          - 'null'
+        email:
+          type:
+          - string
+          - 'null'
+        officePhone:
+          type:
+          - string
+          - 'null'
+        fax:
+          type:
+          - string
+          - 'null'
+        address1:
+          type:
+          - string
+          - 'null'
+        address2:
           type:
           - string
           - 'null'
@@ -1850,7 +1891,11 @@ components:
           type:
           - string
           - 'null'
-        stateAbbr:
+        city:
+          type:
+          - string
+          - 'null'
+        postalCode:
           type:
           - string
           - 'null'
@@ -1858,52 +1903,7 @@ components:
           type:
           - string
           - 'null'
-        zipCode:
-          type:
-          - string
-          - 'null'
       additionalProperties: false
-    UserImageUrl:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        host:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        path:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-      additionalProperties: false
-    ExternalProviderLogoData:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        base64String:
-          type:
-          - string
-          - 'null'
-        rehabUserId:
-          type: integer
-          format: int64
-      additionalProperties: false
-    UpdateOperationResult:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      type: integer
-      format: int32
   securitySchemes:
     Bearer:
       type: apiKey

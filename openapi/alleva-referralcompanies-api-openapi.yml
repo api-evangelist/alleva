@@ -1095,42 +1095,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    ReferralLogoData:
-      type: object
-      properties:
-        fileName:
-          type:
-          - string
-          - 'null'
-        base64String:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    Phone:
-      type: object
-      properties:
-        home:
-          type:
-          - string
-          - 'null'
-        office:
-          type:
-          - string
-          - 'null'
-        other:
-          type:
-          - string
-          - 'null'
-        number:
-          type:
-          - string
-          - 'null'
-        fax:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
     UpdateOperationResult:
       enum:
       - 0
@@ -1139,27 +1103,6 @@ components:
       - 3
       type: integer
       format: int32
-    ExternalData:
-      type: object
-      properties:
-        externalId:
-          type:
-          - string
-          - 'null'
-        externalIdType:
-          type:
-          - string
-          - 'null'
-        serviceIdentifier:
-          type:
-          - string
-          - 'null'
-        serviceId:
-          type:
-          - integer
-          - 'null'
-          format: int32
-      additionalProperties: false
     UpdateResult:
       type: object
       properties:
@@ -1180,36 +1123,6 @@ components:
           type:
           - string
           - 'null'
-      additionalProperties: false
-    ReferralNoteCreationApiStruct:
-      type: object
-      properties:
-        type:
-          type:
-          - string
-          - 'null'
-        level:
-          type:
-          - string
-          - 'null'
-        content:
-          type:
-          - string
-          - 'null'
-        noteDate:
-          type: string
-          format: date-time
-        authorId:
-          type: integer
-          format: int32
-        creatorId:
-          type: integer
-          format: int32
-          writeOnly: true
-        modifierId:
-          type: integer
-          format: int32
-          writeOnly: true
       additionalProperties: false
     JToken:
       type: array
@@ -1281,6 +1194,93 @@ components:
           - string
           - 'null'
         zipCode:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ExternalData:
+      type: object
+      properties:
+        externalId:
+          type:
+          - string
+          - 'null'
+        externalIdType:
+          type:
+          - string
+          - 'null'
+        serviceIdentifier:
+          type:
+          - string
+          - 'null'
+        serviceId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+      additionalProperties: false
+    ReferralLogoData:
+      type: object
+      properties:
+        fileName:
+          type:
+          - string
+          - 'null'
+        base64String:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ReferralNoteCreationApiStruct:
+      type: object
+      properties:
+        type:
+          type:
+          - string
+          - 'null'
+        level:
+          type:
+          - string
+          - 'null'
+        content:
+          type:
+          - string
+          - 'null'
+        noteDate:
+          type: string
+          format: date-time
+        authorId:
+          type: integer
+          format: int32
+        creatorId:
+          type: integer
+          format: int32
+          writeOnly: true
+        modifierId:
+          type: integer
+          format: int32
+          writeOnly: true
+      additionalProperties: false
+    Phone:
+      type: object
+      properties:
+        home:
+          type:
+          - string
+          - 'null'
+        office:
+          type:
+          - string
+          - 'null'
+        other:
+          type:
+          - string
+          - 'null'
+        number:
+          type:
+          - string
+          - 'null'
+        fax:
           type:
           - string
           - 'null'
