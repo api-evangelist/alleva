@@ -459,46 +459,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    CreateOperationResult:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      type: integer
-      format: int32
-    SnapshotType:
-      enum:
-      - 1346
-      - 1347
-      - 1348
-      - 1349
-      - 1389
-      - 1431
-      - 1521
-      type: integer
-      format: int32
-    CreateResult:
-      type: object
-      properties:
-        operationResult:
-          $ref: '#/components/schemas/CreateOperationResult'
-        id:
-          type:
-          - integer
-          - 'null'
-          format: int64
-        messages:
-          type:
-          - array
-          - 'null'
-          items:
-            type: string
-        reason:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
     Snapshot:
       type: object
       properties:
@@ -529,6 +489,46 @@ components:
           type: integer
           format: int64
       additionalProperties: false
+    CreateResult:
+      type: object
+      properties:
+        operationResult:
+          $ref: '#/components/schemas/CreateOperationResult'
+        id:
+          type:
+          - integer
+          - 'null'
+          format: int64
+        messages:
+          type:
+          - array
+          - 'null'
+          items:
+            type: string
+        reason:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    CreateOperationResult:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
+    SnapshotType:
+      enum:
+      - 1346
+      - 1347
+      - 1348
+      - 1349
+      - 1389
+      - 1431
+      - 1521
+      type: integer
+      format: int32
   securitySchemes:
     Bearer:
       type: apiKey

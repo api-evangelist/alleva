@@ -138,6 +138,15 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    DataScopeKind:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      - 4
+      type: integer
+      format: int32
     DataKind:
       enum:
       - 0
@@ -220,15 +229,6 @@ components:
         isBuiltIn:
           type: boolean
       additionalProperties: false
-    DataScopeKind:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      - 4
-      type: integer
-      format: int32
   securitySchemes:
     Bearer:
       type: apiKey

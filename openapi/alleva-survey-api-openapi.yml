@@ -304,17 +304,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    SurveyQuestion:
-      type: object
-      properties:
-        questionId:
-          type: integer
-          format: int32
-        question:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
     SurveyAnswer:
       type: object
       properties:
@@ -337,6 +326,17 @@ components:
         submittedDateTime:
           type: string
           format: date-time
+      additionalProperties: false
+    SurveyQuestion:
+      type: object
+      properties:
+        questionId:
+          type: integer
+          format: int32
+        question:
+          type:
+          - string
+          - 'null'
       additionalProperties: false
     Survey:
       type: object

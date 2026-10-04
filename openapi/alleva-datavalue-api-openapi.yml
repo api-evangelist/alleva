@@ -199,6 +199,71 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
+    DataValueWithKindResponse:
+      type: object
+      properties:
+        id:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        advancedFormInstanceId:
+          type: integer
+          format: int64
+        booleanValue:
+          type:
+          - boolean
+          - 'null'
+        dataFacetId:
+          type: integer
+          format: int32
+        dateTimeValue:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        decimalValue:
+          type:
+          - number
+          - 'null'
+          format: double
+        fileValue:
+          type:
+          - string
+          - 'null'
+        integerValue:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        imageValue:
+          type:
+          - string
+          - 'null'
+          format: byte
+        jsonValue:
+          type:
+          - string
+          - 'null'
+        leadId:
+          type: integer
+          format: int32
+        signatureValue:
+          type:
+          - string
+          - 'null'
+        stringValue:
+          type:
+          - string
+          - 'null'
+        createdDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        dataKind:
+          $ref: '#/components/schemas/DataKind'
+      additionalProperties: false
     DataKind:
       enum:
       - 0
@@ -213,6 +278,26 @@ components:
       - 9
       type: integer
       format: int32
+    DataValuesSearch:
+      type: object
+      properties:
+        datafacetIds:
+          type:
+          - array
+          - 'null'
+          items:
+            type: integer
+            format: int32
+        leadId:
+          type: integer
+          format: int32
+        advancedFormInstanceId:
+          type: integer
+          format: int64
+        advancedFormId:
+          type: integer
+          format: int32
+      additionalProperties: false
     DataValueWithKind:
       type: object
       properties:
@@ -308,91 +393,6 @@ components:
       - 2
       type: integer
       format: int32
-    DataValuesSearch:
-      type: object
-      properties:
-        datafacetIds:
-          type:
-          - array
-          - 'null'
-          items:
-            type: integer
-            format: int32
-        leadId:
-          type: integer
-          format: int32
-        advancedFormInstanceId:
-          type: integer
-          format: int64
-        advancedFormId:
-          type: integer
-          format: int32
-      additionalProperties: false
-    DataValueWithKindResponse:
-      type: object
-      properties:
-        id:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        advancedFormInstanceId:
-          type: integer
-          format: int64
-        booleanValue:
-          type:
-          - boolean
-          - 'null'
-        dataFacetId:
-          type: integer
-          format: int32
-        dateTimeValue:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        decimalValue:
-          type:
-          - number
-          - 'null'
-          format: double
-        fileValue:
-          type:
-          - string
-          - 'null'
-        integerValue:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        imageValue:
-          type:
-          - string
-          - 'null'
-          format: byte
-        jsonValue:
-          type:
-          - string
-          - 'null'
-        leadId:
-          type: integer
-          format: int32
-        signatureValue:
-          type:
-          - string
-          - 'null'
-        stringValue:
-          type:
-          - string
-          - 'null'
-        createdDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        dataKind:
-          $ref: '#/components/schemas/DataKind'
-      additionalProperties: false
   securitySchemes:
     Bearer:
       type: apiKey

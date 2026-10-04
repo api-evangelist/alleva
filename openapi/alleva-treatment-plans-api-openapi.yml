@@ -474,18 +474,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    Intervention:
-      type: object
-      properties:
-        description:
-          type:
-          - string
-          - 'null'
-        isWiley:
-          type: boolean
-        isEvidenceBased:
-          type: boolean
-      additionalProperties: false
     DiagnosisPriority:
       type: object
       properties:
@@ -497,101 +485,7 @@ components:
           - string
           - 'null'
       additionalProperties: false
-    UserName:
-      type: object
-      properties:
-        first:
-          type:
-          - string
-          - 'null'
-        last:
-          type:
-          - string
-          - 'null'
-        prefix:
-          type:
-          - string
-          - 'null'
-        suffix:
-          type:
-          - string
-          - 'null'
-      additionalProperties: false
-    ClientDiagnosis:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
-          type:
-          - string
-          - 'null'
-          readOnly: true
-        clientId:
-          type: integer
-          format: int32
-        leadId:
-          type: integer
-          format: int32
-        groupId:
-          type: integer
-          format: int32
-        group:
-          type:
-          - string
-          - 'null'
-        diagnosisNumber:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        problemId:
-          type: integer
-          format: int32
-        problem:
-          type:
-          - string
-          - 'null'
-        problemNumber:
-          type: integer
-          format: int32
-        diagnosisId:
-          type: integer
-          format: int32
-        description:
-          type:
-          - string
-          - 'null'
-        icD10Code:
-          type:
-          - string
-          - 'null'
-          deprecated: true
-        code:
-          type:
-          - string
-          - 'null'
-        createdBy:
-          $ref: '#/components/schemas/User'
-        priority:
-          $ref: '#/components/schemas/DiagnosisPriority'
-        resolvedDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        createdDate:
-          type: string
-          format: date-time
-        isRuleOut:
-          type: boolean
-        isPrimary:
-          type: boolean
-        isActive:
-          type: boolean
-      additionalProperties: false
-    BehavioralDefinition:
+    Problem:
       type: object
       properties:
         description:
@@ -600,17 +494,24 @@ components:
           - 'null'
         isWiley:
           type: boolean
-      additionalProperties: false
-    ResourceLink:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        route:
+        diagnoses:
           type:
-          - string
+          - array
           - 'null'
+          items:
+            $ref: '#/components/schemas/ClientDiagnosis'
+        behavioralDefinitions:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/BehavioralDefinition'
+        goals:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/Goal'
       additionalProperties: false
     User:
       type: object
@@ -690,23 +591,7 @@ components:
           items:
             $ref: '#/components/schemas/UserLicense'
       additionalProperties: false
-    Goal:
-      type: object
-      properties:
-        description:
-          type:
-          - string
-          - 'null'
-        isWiley:
-          type: boolean
-        objectives:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/Objective'
-      additionalProperties: false
-    UserLicenseType:
+    Facility:
       type: object
       properties:
         id:
@@ -721,25 +606,35 @@ components:
           type:
           - string
           - 'null'
-        description:
+        rehabName:
           type:
           - string
           - 'null'
-        isActive:
-          type: boolean
-        canModifyOrDelete:
-          type: boolean
-        inUse:
-          type: boolean
-      additionalProperties: false
-    Address:
-      type: object
-      properties:
-        line1:
+        domainName:
           type:
           - string
           - 'null'
-        line2:
+        email:
+          type:
+          - string
+          - 'null'
+        officePhone:
+          type:
+          - string
+          - 'null'
+        fax:
+          type:
+          - string
+          - 'null'
+        address1:
+          type:
+          - string
+          - 'null'
+        address2:
+          type:
+          - string
+          - 'null'
+        state:
           type:
           - string
           - 'null'
@@ -747,11 +642,7 @@ components:
           type:
           - string
           - 'null'
-        state:
-          type:
-          - string
-          - 'null'
-        stateAbbr:
+        postalCode:
           type:
           - string
           - 'null'
@@ -759,97 +650,24 @@ components:
           type:
           - string
           - 'null'
-        zipCode:
+      additionalProperties: false
+    UserImageUrl:
+      type: object
+      properties:
+        fileName:
           type:
           - string
           - 'null'
-      additionalProperties: false
-    Objective:
-      type: object
-      properties:
-        description:
-          type:
-          - string
-          - 'null'
-        isWiley:
-          type: boolean
-        isEvidenceBased:
-          type: boolean
-        interventions:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/Intervention'
-      additionalProperties: false
-    UserLicense:
-      type: object
-      properties:
-        id:
-          type: integer
-          format: int32
-        href:
+        host:
           type:
           - string
           - 'null'
           readOnly: true
-        acronym:
+        path:
           type:
           - string
           - 'null'
-        order:
-          type: integer
-          format: int32
-        number:
-          type:
-          - string
-          - 'null'
-        isActive:
-          type: boolean
-        effectiveDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        expiryDate:
-          type:
-          - string
-          - 'null'
-          format: date-time
-        type:
-          $ref: '#/components/schemas/UserLicenseType'
-        user:
-          $ref: '#/components/schemas/User'
-        state:
-          $ref: '#/components/schemas/State'
-      additionalProperties: false
-    Problem:
-      type: object
-      properties:
-        description:
-          type:
-          - string
-          - 'null'
-        isWiley:
-          type: boolean
-        diagnoses:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/ClientDiagnosis'
-        behavioralDefinitions:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/BehavioralDefinition'
-        goals:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/Goal'
+          readOnly: true
       additionalProperties: false
     TreatmentPlan:
       type: object
@@ -911,23 +729,148 @@ components:
         guardianSignature:
           $ref: '#/components/schemas/Signature'
       additionalProperties: false
-    UserImageUrl:
+    BehavioralDefinition:
       type: object
       properties:
-        fileName:
+        description:
           type:
           - string
           - 'null'
-        host:
+        isWiley:
+          type: boolean
+      additionalProperties: false
+    ClientDiagnosis:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
           type:
           - string
           - 'null'
           readOnly: true
-        path:
+        clientId:
+          type: integer
+          format: int32
+        leadId:
+          type: integer
+          format: int32
+        groupId:
+          type: integer
+          format: int32
+        group:
+          type:
+          - string
+          - 'null'
+        diagnosisNumber:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        problemId:
+          type: integer
+          format: int32
+        problem:
+          type:
+          - string
+          - 'null'
+        problemNumber:
+          type: integer
+          format: int32
+        diagnosisId:
+          type: integer
+          format: int32
+        description:
+          type:
+          - string
+          - 'null'
+        icD10Code:
+          type:
+          - string
+          - 'null'
+          deprecated: true
+        code:
+          type:
+          - string
+          - 'null'
+        createdBy:
+          $ref: '#/components/schemas/User'
+        priority:
+          $ref: '#/components/schemas/DiagnosisPriority'
+        resolvedDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        createdDate:
+          type: string
+          format: date-time
+        isRuleOut:
+          type: boolean
+        isPrimary:
+          type: boolean
+        isActive:
+          type: boolean
+      additionalProperties: false
+    UserLicense:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
           type:
           - string
           - 'null'
           readOnly: true
+        acronym:
+          type:
+          - string
+          - 'null'
+        order:
+          type: integer
+          format: int32
+        number:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        effectiveDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        expiryDate:
+          type:
+          - string
+          - 'null'
+          format: date-time
+        type:
+          $ref: '#/components/schemas/UserLicenseType'
+        user:
+          $ref: '#/components/schemas/User'
+        state:
+          $ref: '#/components/schemas/State'
+      additionalProperties: false
+    Objective:
+      type: object
+      properties:
+        description:
+          type:
+          - string
+          - 'null'
+        isWiley:
+          type: boolean
+        isEvidenceBased:
+          type: boolean
+        interventions:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/Intervention'
       additionalProperties: false
     Signature:
       type: object
@@ -952,6 +895,60 @@ components:
           - string
           - 'null'
           format: date-time
+      additionalProperties: false
+    Intervention:
+      type: object
+      properties:
+        description:
+          type:
+          - string
+          - 'null'
+        isWiley:
+          type: boolean
+        isEvidenceBased:
+          type: boolean
+      additionalProperties: false
+    UserLicenseType:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int32
+        href:
+          type:
+          - string
+          - 'null'
+          readOnly: true
+        name:
+          type:
+          - string
+          - 'null'
+        description:
+          type:
+          - string
+          - 'null'
+        isActive:
+          type: boolean
+        canModifyOrDelete:
+          type: boolean
+        inUse:
+          type: boolean
+      additionalProperties: false
+    Goal:
+      type: object
+      properties:
+        description:
+          type:
+          - string
+          - 'null'
+        isWiley:
+          type: boolean
+        objectives:
+          type:
+          - array
+          - 'null'
+          items:
+            $ref: '#/components/schemas/Objective'
       additionalProperties: false
     State:
       type: object
@@ -979,50 +976,45 @@ components:
           - string
           - 'null'
       additionalProperties: false
-    Facility:
+    UserName:
+      type: object
+      properties:
+        first:
+          type:
+          - string
+          - 'null'
+        last:
+          type:
+          - string
+          - 'null'
+        prefix:
+          type:
+          - string
+          - 'null'
+        suffix:
+          type:
+          - string
+          - 'null'
+      additionalProperties: false
+    ResourceLink:
       type: object
       properties:
         id:
           type: integer
           format: int32
-        href:
+        route:
           type:
           - string
           - 'null'
-          readOnly: true
-        name:
+      additionalProperties: false
+    Address:
+      type: object
+      properties:
+        line1:
           type:
           - string
           - 'null'
-        rehabName:
-          type:
-          - string
-          - 'null'
-        domainName:
-          type:
-          - string
-          - 'null'
-        email:
-          type:
-          - string
-          - 'null'
-        officePhone:
-          type:
-          - string
-          - 'null'
-        fax:
-          type:
-          - string
-          - 'null'
-        address1:
-          type:
-          - string
-          - 'null'
-        address2:
-          type:
-          - string
-          - 'null'
-        state:
+        line2:
           type:
           - string
           - 'null'
@@ -1030,11 +1022,19 @@ components:
           type:
           - string
           - 'null'
-        postalCode:
+        state:
+          type:
+          - string
+          - 'null'
+        stateAbbr:
           type:
           - string
           - 'null'
         country:
+          type:
+          - string
+          - 'null'
+        zipCode:
           type:
           - string
           - 'null'

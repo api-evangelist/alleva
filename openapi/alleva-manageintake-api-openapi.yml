@@ -906,26 +906,6 @@ paths:
       x-operation-id-source: derived
 components:
   schemas:
-    IntakeSectionOrder:
-      type: object
-      properties:
-        facilityId:
-          type: integer
-          format: int32
-        intakeId:
-          type: integer
-          format: int32
-        sections:
-          type:
-          - array
-          - 'null'
-          items:
-            $ref: '#/components/schemas/MasterIntakeSections'
-      additionalProperties: false
-    JToken:
-      type: array
-      items:
-        $ref: '#/components/schemas/JToken'
     MasterIntakeSections:
       type: object
       properties:
@@ -965,43 +945,31 @@ components:
         details:
           $ref: '#/components/schemas/IntakeSectionDetails'
       additionalProperties: false
-    IntakeSectionCustomForm:
+    CreateResult:
       type: object
       properties:
-        advancedFormId:
+        operationResult:
+          $ref: '#/components/schemas/CreateOperationResult'
+        id:
           type:
           - integer
           - 'null'
-          format: int32
-        createdDate:
-          type: string
-          format: date-time
-        formId:
+          format: int64
+        messages:
           type:
-          - integer
+          - array
           - 'null'
-          format: int32
-        formInfoId:
-          type:
-          - integer
-          - 'null'
-          format: int32
-        title:
+          items:
+            type: string
+        reason:
           type:
           - string
           - 'null'
-        version:
-          type: integer
-          format: int32
       additionalProperties: false
-    CreateOperationResult:
-      enum:
-      - 0
-      - 1
-      - 2
-      - 3
-      type: integer
-      format: int32
+    JToken:
+      type: array
+      items:
+        $ref: '#/components/schemas/JToken'
     IntakeSectionDetails:
       type: object
       properties:
@@ -1047,26 +1015,58 @@ components:
           items:
             $ref: '#/components/schemas/IntakeSectionCustomForm'
       additionalProperties: false
-    CreateResult:
+    IntakeSectionOrder:
       type: object
       properties:
-        operationResult:
-          $ref: '#/components/schemas/CreateOperationResult'
-        id:
-          type:
-          - integer
-          - 'null'
-          format: int64
-        messages:
+        facilityId:
+          type: integer
+          format: int32
+        intakeId:
+          type: integer
+          format: int32
+        sections:
           type:
           - array
           - 'null'
           items:
-            type: string
-        reason:
+            $ref: '#/components/schemas/MasterIntakeSections'
+      additionalProperties: false
+    CreateOperationResult:
+      enum:
+      - 0
+      - 1
+      - 2
+      - 3
+      type: integer
+      format: int32
+    IntakeSectionCustomForm:
+      type: object
+      properties:
+        advancedFormId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        createdDate:
+          type: string
+          format: date-time
+        formId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        formInfoId:
+          type:
+          - integer
+          - 'null'
+          format: int32
+        title:
           type:
           - string
           - 'null'
+        version:
+          type: integer
+          format: int32
       additionalProperties: false
   securitySchemes:
     Bearer:
